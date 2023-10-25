@@ -1,0 +1,4 @@
+/home/baptiste/3tek/rtype/push/CMakeFiles/ServerRTYPE.dir
+/home/baptiste/3tek/rtype/push/CMakeFiles/ClientRTYPE.dir
+/home/baptiste/3tek/rtype/push/CMakeFiles/edit_cache.dir
+/home/baptiste/3tek/rtype/push/CMakeFiles/rebuild_cache.dir
