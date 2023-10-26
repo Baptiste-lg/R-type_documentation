@@ -24,7 +24,7 @@ extensions = [
 
 # Breathe Configuration
 breathe_default_project = "R-type"
-breathe_projects = {"R-type": "./doxyoutput/xml"}
+breathe_projects = {"R-type": "./xml"}
 breathe_domain_by_extension = {"h": "cpp"}
 
 # Add any paths that contain templates here, relative to this directory.
