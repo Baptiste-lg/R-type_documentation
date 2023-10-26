@@ -3,8 +3,8 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'R-type'
-copyright = '2023, Your Name'
-author = 'Your Name'
+copyright = '2023'
+author = ''
 
 # The full version, including alpha/beta/rc tags
 release = '1.0.0'
