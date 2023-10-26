@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structGameConfig" kind="struct" language="C++" prot="public">
+    <compoundname>GameConfig</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structGameConfig_1a4aadf51b101b8d807bef67d2d2bd9798" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float GameConfig::screenWidth</definition>
+        <argsstring></argsstring>
+        <name>screenWidth</name>
+        <qualifiedname>GameConfig::screenWidth</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="101" column="11" bodyfile="include/Component.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGameConfig_1a3107d0cdc7648ff0c30a015c9fbd1ea3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float GameConfig::screenHeight</definition>
+        <argsstring></argsstring>
+        <name>screenHeight</name>
+        <qualifiedname>GameConfig::screenHeight</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="102" column="11" bodyfile="include/Component.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGameConfig_1ad24882453746b688f21b0dff4b68fcf7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float GameConfig::playerSpeed</definition>
+        <argsstring></argsstring>
+        <name>playerSpeed</name>
+        <qualifiedname>GameConfig::playerSpeed</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="103" column="11" bodyfile="include/Component.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Component.hpp" line="100" column="1" bodyfile="include/Component.hpp" bodystart="100" bodyend="104"/>
+    <listofallmembers>
+      <member refid="structGameConfig_1ad24882453746b688f21b0dff4b68fcf7" prot="public" virt="non-virtual"><scope>GameConfig</scope><name>playerSpeed</name></member>
+      <member refid="structGameConfig_1a3107d0cdc7648ff0c30a015c9fbd1ea3" prot="public" virt="non-virtual"><scope>GameConfig</scope><name>screenHeight</name></member>
+      <member refid="structGameConfig_1a4aadf51b101b8d807bef67d2d2bd9798" prot="public" virt="non-virtual"><scope>GameConfig</scope><name>screenWidth</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

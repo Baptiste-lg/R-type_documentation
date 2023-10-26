@@ -1,0 +1,592 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="Behaviour_8hpp" kind="file" language="C++">
+    <compoundname>Behaviour.hpp</compoundname>
+    <includes refid="Component_8hpp" local="yes">Component.hpp</includes>
+    <includes local="no">functional</includes>
+    <includedby refid="Spawner_8hpp" local="yes">include/Spawner.hpp</includedby>
+    <includedby refid="System_8hpp" local="yes">include/System.hpp</includedby>
+    <includedby refid="Behaviour_8cpp" local="yes">src/Behaviour.cpp</includedby>
+    <includedby refid="Component_8cpp" local="yes">src/Component.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/Behaviour.hpp</label>
+        <link refid="Behaviour_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Component.hpp</label>
+        <link refid="Component_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Entity.hpp</label>
+        <link refid="Entity_8hpp_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Event.hpp</label>
+        <link refid="Event_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>ISystem.hpp</label>
+        <link refid="ISystem_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Registry.hpp</label>
+        <link refid="Registry_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>SparseArray.hpp</label>
+        <link refid="SparseArray_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>TextureManager.hpp</label>
+        <link refid="TextureManager_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>ThreadPool.hpp</label>
+        <link refid="ThreadPool_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="3">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="31">
+        <label>algorithm</label>
+      </node>
+      <node id="5">
+        <label>any</label>
+      </node>
+      <node id="39">
+        <label>array</label>
+      </node>
+      <node id="30">
+        <label>chrono</label>
+      </node>
+      <node id="37">
+        <label>cmath</label>
+      </node>
+      <node id="35">
+        <label>complex</label>
+      </node>
+      <node id="27">
+        <label>condition_variable</label>
+      </node>
+      <node id="22">
+        <label>cstddef</label>
+      </node>
+      <node id="23">
+        <label>fftw3.h</label>
+      </node>
+      <node id="9">
+        <label>functional</label>
+      </node>
+      <node id="28">
+        <label>future</label>
+      </node>
+      <node id="15">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>libconfig.h++</label>
+      </node>
+      <node id="40">
+        <label>map</label>
+      </node>
+      <node id="19">
+        <label>memory</label>
+      </node>
+      <node id="13">
+        <label>mutex</label>
+      </node>
+      <node id="38">
+        <label>numeric</label>
+      </node>
+      <node id="12">
+        <label>optional</label>
+      </node>
+      <node id="25">
+        <label>queue</label>
+      </node>
+      <node id="41">
+        <label>set</label>
+      </node>
+      <node id="32">
+        <label>shared_mutex</label>
+      </node>
+      <node id="18">
+        <label>string</label>
+      </node>
+      <node id="26">
+        <label>thread</label>
+      </node>
+      <node id="17">
+        <label>tuple</label>
+      </node>
+      <node id="8">
+        <label>typeindex</label>
+      </node>
+      <node id="7">
+        <label>unordered_map</label>
+      </node>
+      <node id="29">
+        <label>unordered_set</label>
+      </node>
+      <node id="20">
+        <label>utility</label>
+      </node>
+      <node id="36">
+        <label>valarray</label>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/Behaviour.hpp</label>
+        <link refid="Behaviour_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/ServerMain.hpp</label>
+        <link refid="ServerMain_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>include/Spawner.hpp</label>
+        <link refid="Spawner_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/System.hpp</label>
+        <link refid="System_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="Behaviour_8hpp_1aae35c55b0173dc02e08033ec552de932" prot="public" static="no">
+        <type>std::function&lt; void(<ref refid="structPosition" kindref="compound">Position</ref> &amp;, float)&gt;</type>
+        <definition>using BehaviorFunc =  std::function&lt;void(Position&amp;, float)&gt;</definition>
+        <argsstring></argsstring>
+        <name>BehaviorFunc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Behaviour.hpp" line="12" column="1" bodyfile="include/Behaviour.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="Behaviour_8hpp_1a670ca5aa0604c09387aec2d6aa9972c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void moveLeft</definition>
+        <argsstring>(Position &amp;pos, float deltaTime)</argsstring>
+        <name>moveLeft</name>
+        <param>
+          <type><ref refid="structPosition" kindref="compound">Position</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Behaviour.hpp" line="14" column="6" bodyfile="src/Behaviour.cpp" bodystart="6" bodyend="8" declfile="include/Behaviour.hpp" declline="14" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Behaviour_8hpp_1a83d38f3af3b67bf72cd093efddc0a7b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void zigzagMovement</definition>
+        <argsstring>(Position &amp;pos, float deltaTime)</argsstring>
+        <name>zigzagMovement</name>
+        <param>
+          <type><ref refid="structPosition" kindref="compound">Position</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Behaviour.hpp" line="15" column="6" bodyfile="src/Behaviour.cpp" bodystart="10" bodyend="24" declfile="include/Behaviour.hpp" declline="15" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Behaviour_8hpp_1a40571d1724d25e44dbd3e2685fcd438e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sliderLoopFixMovement</definition>
+        <argsstring>(Position &amp;pos, float deltaTime)</argsstring>
+        <name>sliderLoopFixMovement</name>
+        <param>
+          <type><ref refid="structPosition" kindref="compound">Position</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Behaviour.hpp" line="16" column="6" bodyfile="src/Behaviour.cpp" bodystart="26" bodyend="40" declfile="include/Behaviour.hpp" declline="16" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Behaviour_8hpp_1ab92a4cc24ea567628f1dcef1bdea67a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void circularMovement</definition>
+        <argsstring>(Position &amp;pos, float deltaTime)</argsstring>
+        <name>circularMovement</name>
+        <param>
+          <type><ref refid="structPosition" kindref="compound">Position</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Behaviour.hpp" line="17" column="6" bodyfile="src/Behaviour.cpp" bodystart="42" bodyend="48" declfile="include/Behaviour.hpp" declline="17" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Behaviour_8hpp_1a7186fc25ba643db6cabbe1255705724e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void diagonalMovement</definition>
+        <argsstring>(Position &amp;pos, float deltaTime)</argsstring>
+        <name>diagonalMovement</name>
+        <param>
+          <type><ref refid="structPosition" kindref="compound">Position</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Behaviour.hpp" line="18" column="6" bodyfile="src/Behaviour.cpp" bodystart="49" bodyend="53" declfile="include/Behaviour.hpp" declline="18" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Behaviour_8hpp_1adce62e3c05136e9be9933f58cbd62a91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sineWaveMovement</definition>
+        <argsstring>(Position &amp;pos, float deltaTime)</argsstring>
+        <name>sineWaveMovement</name>
+        <param>
+          <type><ref refid="structPosition" kindref="compound">Position</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Behaviour.hpp" line="19" column="6" bodyfile="src/Behaviour.cpp" bodystart="54" bodyend="57" declfile="include/Behaviour.hpp" declline="19" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Behaviour_8hpp_1addf8fd9eb077325c02bffae6d6dc9dc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void backAndForthMovement</definition>
+        <argsstring>(Position &amp;pos, float deltaTime)</argsstring>
+        <name>backAndForthMovement</name>
+        <param>
+          <type><ref refid="structPosition" kindref="compound">Position</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Behaviour.hpp" line="20" column="6" bodyfile="src/Behaviour.cpp" bodystart="58" bodyend="70" declfile="include/Behaviour.hpp" declline="20" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Behaviour_8hpp_1ae2c5565b87f6c6fbdc842bf168df3857" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lShapeMovement</definition>
+        <argsstring>(Position &amp;pos, float deltaTime)</argsstring>
+        <name>lShapeMovement</name>
+        <param>
+          <type><ref refid="structPosition" kindref="compound">Position</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Behaviour.hpp" line="21" column="6" bodyfile="src/Behaviour.cpp" bodystart="71" bodyend="91" declfile="include/Behaviour.hpp" declline="21" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Behaviour_8hpp_1a4ba370e8bdb0caf637f7b4c8a227def4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void randomMovement</definition>
+        <argsstring>(Position &amp;pos, float deltaTime)</argsstring>
+        <name>randomMovement</name>
+        <param>
+          <type><ref refid="structPosition" kindref="compound">Position</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Behaviour.hpp" line="22" column="6" bodyfile="src/Behaviour.cpp" bodystart="93" bodyend="125" declfile="include/Behaviour.hpp" declline="22" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Behaviour_8hpp_1a16f07dc1a7833d5624e736e4082f3e26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fixedMovement</definition>
+        <argsstring>(Position &amp;pos, float deltaTime)</argsstring>
+        <name>fixedMovement</name>
+        <param>
+          <type><ref refid="structPosition" kindref="compound">Position</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Behaviour.hpp" line="23" column="6" bodyfile="src/Behaviour.cpp" bodystart="127" bodyend="130" declfile="include/Behaviour.hpp" declline="23" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Behaviour_8hpp_1ad592c3fae26d2bf4235acbc2aa04f15e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loopDiagonalMovementRight</definition>
+        <argsstring>(Position &amp;pos, float deltaTime)</argsstring>
+        <name>loopDiagonalMovementRight</name>
+        <param>
+          <type><ref refid="structPosition" kindref="compound">Position</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Behaviour.hpp" line="24" column="6" bodyfile="src/Behaviour.cpp" bodystart="132" bodyend="143" declfile="include/Behaviour.hpp" declline="24" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>ECS</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>REGISTRY</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BEHAVIOUR_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BEHAVIOUR_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Component.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//need<sp/>to<sp/>move<sp/>to<sp/>behavior.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">BehaviorFunc<sp/>=<sp/>std::function&lt;void(<ref refid="structPosition" kindref="compound">Position</ref>&amp;,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)&gt;;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>moveLeft(<ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>pos,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>zigzagMovement(<ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>pos,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sliderLoopFixMovement(<ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>pos,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>circularMovement(<ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>pos,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>diagonalMovement(<ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>pos,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sineWaveMovement(<ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>pos,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>backAndForthMovement(<ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>pos,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>lShapeMovement(<ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>pos,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>randomMovement(<ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>pos,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fixedMovement(<ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>pos,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loopDiagonalMovementRight(<ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>pos,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!BEHAVIOUR_HPP_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/Behaviour.hpp"/>
+  </compounddef>
+</doxygen>

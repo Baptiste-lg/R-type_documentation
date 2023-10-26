@@ -1,0 +1,470 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classzipper__iterator" kind="class" language="C++" prot="public">
+    <compoundname>zipper_iterator</compoundname>
+    <templateparamlist>
+      <param>
+        <type>class...</type>
+        <declname>Containers</declname>
+        <defname>Containers</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classzipper__iterator_1a04365e3ee1ef1276579c24a136fa21cd" prot="private" static="no">
+        <templateparamlist>
+          <param>
+            <type>class Container</type>
+          </param>
+        </templateparamlist>
+        <type>typename Container::iterator</type>
+        <definition>using zipper_iterator&lt; Containers &gt;::iterator_t =  typename Container::iterator</definition>
+        <argsstring></argsstring>
+        <name>iterator_t</name>
+        <qualifiedname>zipper_iterator::iterator_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="20" column="5" bodyfile="include/ZipperIterator.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classzipper__iterator_1af5b8c35226ffa342dffefd20db50fc0d" prot="private" static="no">
+        <templateparamlist>
+          <param>
+            <type>class Container</type>
+          </param>
+        </templateparamlist>
+        <type>typename iterator_t&lt; Container &gt;::reference</type>
+        <definition>using zipper_iterator&lt; Containers &gt;::it_reference_t =  typename iterator_t&lt;Container&gt;::reference</definition>
+        <argsstring></argsstring>
+        <name>it_reference_t</name>
+        <qualifiedname>zipper_iterator::it_reference_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="23" column="5" bodyfile="include/ZipperIterator.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classzipper__iterator_1ad350682a790694a813fa1193cf99ba2f" prot="private" static="no">
+        <type>std::tuple&lt; it_reference_t&lt; Containers &gt;... &gt;</type>
+        <definition>using zipper_iterator&lt; Containers &gt;::value_type =  std::tuple&lt;it_reference_t&lt;Containers&gt;...&gt;</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>zipper_iterator::value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="26" column="5" bodyfile="include/ZipperIterator.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classzipper__iterator_1ac22f9af35da6b7afa0a6def5836d972b" prot="private" static="no">
+        <type>value_type</type>
+        <definition>using zipper_iterator&lt; Containers &gt;::reference =  value_type</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <qualifiedname>zipper_iterator::reference</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="27" column="5" bodyfile="include/ZipperIterator.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classzipper__iterator_1a2a95bfdc5a6527977daa6c8dfa2c63eb" prot="private" static="no">
+        <type>void</type>
+        <definition>using zipper_iterator&lt; Containers &gt;::pointer =  void</definition>
+        <argsstring></argsstring>
+        <name>pointer</name>
+        <qualifiedname>zipper_iterator::pointer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="28" column="5" bodyfile="include/ZipperIterator.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classzipper__iterator_1a00d2f77338051f8c980507c9402096b6" prot="private" static="no">
+        <type>size_t</type>
+        <definition>using zipper_iterator&lt; Containers &gt;::difference_type =  size_t</definition>
+        <argsstring></argsstring>
+        <name>difference_type</name>
+        <qualifiedname>zipper_iterator::difference_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="29" column="5" bodyfile="include/ZipperIterator.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classzipper__iterator_1a0f55cce82c24f990e58d4597462e8d7a" prot="private" static="no">
+        <type>std::forward_iterator_tag</type>
+        <definition>using zipper_iterator&lt; Containers &gt;::iterator_category =  std::forward_iterator_tag</definition>
+        <argsstring></argsstring>
+        <name>iterator_category</name>
+        <qualifiedname>zipper_iterator::iterator_category</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="30" column="5" bodyfile="include/ZipperIterator.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classzipper__iterator_1ad0d535e3400fd7ad9fef802093d67838" prot="private" static="no">
+        <type>std::tuple&lt; iterator_t&lt; Containers &gt;... &gt;</type>
+        <definition>using zipper_iterator&lt; Containers &gt;::iterator_tuple =  std::tuple&lt;iterator_t&lt;Containers&gt;...&gt;</definition>
+        <argsstring></argsstring>
+        <name>iterator_tuple</name>
+        <qualifiedname>zipper_iterator::iterator_tuple</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="33" column="5" bodyfile="include/ZipperIterator.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classzipper__iterator_1a6871f9898f75c62c4053a845c5ae2cd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class zipper&lt; Containers... &gt;</definition>
+        <argsstring></argsstring>
+        <name>zipper&lt; Containers... &gt;</name>
+        <qualifiedname>zipper_iterator::zipper&lt; Containers... &gt;</qualifiedname>
+        <param>
+          <type><ref refid="classzipper" kindref="compound">zipper</ref>&lt; Containers... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="37" column="5" bodyfile="include/ZipperIterator.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classzipper__iterator_1a8eec2806817ff84c5568eb84c0acf5e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const zipper_iterator &amp;lhs, const zipper_iterator &amp;rhs)</argsstring>
+        <name>operator==</name>
+        <qualifiedname>zipper_iterator::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classzipper__iterator" kindref="compound">zipper_iterator</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classzipper__iterator" kindref="compound">zipper_iterator</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="72" column="17" bodyfile="include/ZipperIterator.hpp" bodystart="72" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="friend" id="classzipper__iterator_1a245a1e3612d529a73301cff8e319f895" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const zipper_iterator &amp;lhs, const zipper_iterator &amp;rhs)</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>zipper_iterator::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="classzipper__iterator" kindref="compound">zipper_iterator</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classzipper__iterator" kindref="compound">zipper_iterator</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="77" column="17" bodyfile="include/ZipperIterator.hpp" bodystart="77" bodyend="79"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classzipper__iterator_1abd9fba01997741947c4787c67696a393" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t zipper_iterator&lt; Containers &gt;::_max</definition>
+        <argsstring></argsstring>
+        <name>_max</name>
+        <qualifiedname>zipper_iterator::_max</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="100" column="12" bodyfile="include/ZipperIterator.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classzipper__iterator_1ad712b61bd4656c5dfeed08b5b835a0d4" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t zipper_iterator&lt; Containers &gt;::_idx</definition>
+        <argsstring></argsstring>
+        <name>_idx</name>
+        <qualifiedname>zipper_iterator::_idx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="101" column="12" bodyfile="include/ZipperIterator.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classzipper__iterator_1a91e04b6ee6eadfbee083a942dffef898" prot="private" static="no" mutable="no">
+        <type>iterator_tuple</type>
+        <definition>iterator_tuple zipper_iterator&lt; Containers &gt;::_current</definition>
+        <argsstring></argsstring>
+        <name>_current</name>
+        <qualifiedname>zipper_iterator::_current</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="102" column="20" bodyfile="include/ZipperIterator.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classzipper__iterator_1a0db4e603c8b7ab62d7e2778b5c431a34" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr std::index_sequence_for&lt; Containers... &gt;</type>
+        <definition>constexpr std::index_sequence_for&lt;Containers...&gt; zipper_iterator&lt; Containers &gt;::_seq</definition>
+        <argsstring></argsstring>
+        <name>_seq</name>
+        <qualifiedname>zipper_iterator::_seq</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="103" column="46" bodyfile="include/ZipperIterator.hpp" bodystart="103" bodyend="103"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classzipper__iterator_1a84b00d3f9fbd379844660abcdd4cf703" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>zipper_iterator&lt; Containers &gt;::zipper_iterator</definition>
+        <argsstring>(const zipper_iterator &amp;z)</argsstring>
+        <name>zipper_iterator</name>
+        <qualifiedname>zipper_iterator::zipper_iterator</qualifiedname>
+        <param>
+          <type>const <ref refid="classzipper__iterator" kindref="compound">zipper_iterator</ref> &amp;</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="37" column="5" bodyfile="include/ZipperIterator.hpp" bodystart="37" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classzipper__iterator_1adc00ab1b7e58d2a30676b01567ee5815" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>zipper_iterator&lt; Containers &gt;::zipper_iterator</definition>
+        <argsstring>(iterator_tuple const &amp;it_tuple, size_t max, size_t idx=0)</argsstring>
+        <name>zipper_iterator</name>
+        <qualifiedname>zipper_iterator::zipper_iterator</qualifiedname>
+        <param>
+          <type>iterator_tuple const &amp;</type>
+          <declname>it_tuple</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>idx</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="44" column="5" bodyfile="include/ZipperIterator.hpp" bodystart="44" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classzipper__iterator_1a4b587babcdac3e04e7030ff806b5c38b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classzipper__iterator" kindref="compound">zipper_iterator</ref> &amp;</type>
+        <definition>zipper_iterator &amp; zipper_iterator&lt; Containers &gt;::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <qualifiedname>zipper_iterator::operator++</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="48" column="21" bodyfile="include/ZipperIterator.hpp" bodystart="48" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classzipper__iterator_1a198ac54b1690d5a76b9c89525f3b8328" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classzipper__iterator" kindref="compound">zipper_iterator</ref></type>
+        <definition>zipper_iterator zipper_iterator&lt; Containers &gt;::operator++</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator++</name>
+        <qualifiedname>zipper_iterator::operator++</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="55" column="21" bodyfile="include/ZipperIterator.hpp" bodystart="55" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classzipper__iterator_1af8bf6fc35bc37461403e691d860d15f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>reference</type>
+        <definition>reference zipper_iterator&lt; Containers &gt;::operator*</definition>
+        <argsstring>()</argsstring>
+        <name>operator*</name>
+        <qualifiedname>zipper_iterator::operator*</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="62" column="15" bodyfile="include/ZipperIterator.hpp" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classzipper__iterator_1abdb83a3822f042bebad3f48db60cf5e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>pointer</type>
+        <definition>pointer zipper_iterator&lt; Containers &gt;::operator-&gt;</definition>
+        <argsstring>()</argsstring>
+        <name>operator-&gt;</name>
+        <qualifiedname>zipper_iterator::operator-&gt;</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="67" column="13" bodyfile="include/ZipperIterator.hpp" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classzipper__iterator_1af7d9241e28fae016f5e95afddb420818" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t...</type>
+            <declname>Is</declname>
+            <defname>Is</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void zipper_iterator&lt; Containers &gt;::incr_all</definition>
+        <argsstring>(std::index_sequence&lt; Is... &gt;)</argsstring>
+        <name>incr_all</name>
+        <qualifiedname>zipper_iterator::incr_all</qualifiedname>
+        <param>
+          <type>std::index_sequence&lt; Is... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="83" column="10" bodyfile="include/ZipperIterator.hpp" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classzipper__iterator_1a3be2d87ff838fb18a3c254a53ed71c86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t...</type>
+            <declname>Is</declname>
+            <defname>Is</defname>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool zipper_iterator&lt; Containers &gt;::all_set</definition>
+        <argsstring>(std::index_sequence&lt; Is... &gt;)</argsstring>
+        <name>all_set</name>
+        <qualifiedname>zipper_iterator::all_set</qualifiedname>
+        <param>
+          <type>std::index_sequence&lt; Is... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="89" column="10" bodyfile="include/ZipperIterator.hpp" bodystart="89" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classzipper__iterator_1a3018c25870b803e60630e72dd364ffd1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t...</type>
+            <declname>Is</declname>
+            <defname>Is</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto zipper_iterator&lt; Containers &gt;::to_value</definition>
+        <argsstring>(std::index_sequence&lt; Is... &gt;)</argsstring>
+        <name>to_value</name>
+        <qualifiedname>zipper_iterator::to_value</qualifiedname>
+        <param>
+          <type>std::index_sequence&lt; Is... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ZipperIterator.hpp" line="95" column="10" bodyfile="include/ZipperIterator.hpp" bodystart="95" bodyend="97"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/ZipperIterator.hpp" line="18" column="1" bodyfile="include/ZipperIterator.hpp" bodystart="18" bodyend="104"/>
+    <listofallmembers>
+      <member refid="classzipper__iterator_1a91e04b6ee6eadfbee083a942dffef898" prot="private" virt="non-virtual"><scope>zipper_iterator</scope><name>_current</name></member>
+      <member refid="classzipper__iterator_1ad712b61bd4656c5dfeed08b5b835a0d4" prot="private" virt="non-virtual"><scope>zipper_iterator</scope><name>_idx</name></member>
+      <member refid="classzipper__iterator_1abd9fba01997741947c4787c67696a393" prot="private" virt="non-virtual"><scope>zipper_iterator</scope><name>_max</name></member>
+      <member refid="classzipper__iterator_1a0db4e603c8b7ab62d7e2778b5c431a34" prot="private" virt="non-virtual"><scope>zipper_iterator</scope><name>_seq</name></member>
+      <member refid="classzipper__iterator_1a3be2d87ff838fb18a3c254a53ed71c86" prot="public" virt="non-virtual"><scope>zipper_iterator</scope><name>all_set</name></member>
+      <member refid="classzipper__iterator_1a00d2f77338051f8c980507c9402096b6" prot="private" virt="non-virtual"><scope>zipper_iterator</scope><name>difference_type</name></member>
+      <member refid="classzipper__iterator_1af7d9241e28fae016f5e95afddb420818" prot="public" virt="non-virtual"><scope>zipper_iterator</scope><name>incr_all</name></member>
+      <member refid="classzipper__iterator_1af5b8c35226ffa342dffefd20db50fc0d" prot="private" virt="non-virtual"><scope>zipper_iterator</scope><name>it_reference_t</name></member>
+      <member refid="classzipper__iterator_1a0f55cce82c24f990e58d4597462e8d7a" prot="private" virt="non-virtual"><scope>zipper_iterator</scope><name>iterator_category</name></member>
+      <member refid="classzipper__iterator_1a04365e3ee1ef1276579c24a136fa21cd" prot="private" virt="non-virtual"><scope>zipper_iterator</scope><name>iterator_t</name></member>
+      <member refid="classzipper__iterator_1ad0d535e3400fd7ad9fef802093d67838" prot="private" virt="non-virtual"><scope>zipper_iterator</scope><name>iterator_tuple</name></member>
+      <member refid="classzipper__iterator_1a245a1e3612d529a73301cff8e319f895" prot="public" virt="non-virtual"><scope>zipper_iterator</scope><name>operator!=</name></member>
+      <member refid="classzipper__iterator_1af8bf6fc35bc37461403e691d860d15f0" prot="public" virt="non-virtual"><scope>zipper_iterator</scope><name>operator*</name></member>
+      <member refid="classzipper__iterator_1a4b587babcdac3e04e7030ff806b5c38b" prot="public" virt="non-virtual"><scope>zipper_iterator</scope><name>operator++</name></member>
+      <member refid="classzipper__iterator_1a198ac54b1690d5a76b9c89525f3b8328" prot="public" virt="non-virtual"><scope>zipper_iterator</scope><name>operator++</name></member>
+      <member refid="classzipper__iterator_1abdb83a3822f042bebad3f48db60cf5e9" prot="public" virt="non-virtual"><scope>zipper_iterator</scope><name>operator-&gt;</name></member>
+      <member refid="classzipper__iterator_1a8eec2806817ff84c5568eb84c0acf5e6" prot="public" virt="non-virtual"><scope>zipper_iterator</scope><name>operator==</name></member>
+      <member refid="classzipper__iterator_1a2a95bfdc5a6527977daa6c8dfa2c63eb" prot="private" virt="non-virtual"><scope>zipper_iterator</scope><name>pointer</name></member>
+      <member refid="classzipper__iterator_1ac22f9af35da6b7afa0a6def5836d972b" prot="private" virt="non-virtual"><scope>zipper_iterator</scope><name>reference</name></member>
+      <member refid="classzipper__iterator_1a3018c25870b803e60630e72dd364ffd1" prot="public" virt="non-virtual"><scope>zipper_iterator</scope><name>to_value</name></member>
+      <member refid="classzipper__iterator_1ad350682a790694a813fa1193cf99ba2f" prot="private" virt="non-virtual"><scope>zipper_iterator</scope><name>value_type</name></member>
+      <member refid="classzipper__iterator_1a6871f9898f75c62c4053a845c5ae2cd4" prot="public" virt="non-virtual"><scope>zipper_iterator</scope><name>zipper&lt; Containers... &gt;</name></member>
+      <member refid="classzipper__iterator_1a84b00d3f9fbd379844660abcdd4cf703" prot="public" virt="non-virtual"><scope>zipper_iterator</scope><name>zipper_iterator</name></member>
+      <member refid="classzipper__iterator_1adc00ab1b7e58d2a30676b01567ee5815" prot="public" virt="non-virtual"><scope>zipper_iterator</scope><name>zipper_iterator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

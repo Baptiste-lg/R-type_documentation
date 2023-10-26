@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classCollisionSystem" kind="class" language="C++" prot="public">
+    <compoundname>CollisionSystem</compoundname>
+    <basecompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Position, Drawable, Collision &gt;</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCollisionSystem_1ad6ed7310a4a9107fab509fa37bf8ffa3" prot="private" static="no" mutable="no">
+        <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+        <definition>Registry&amp; CollisionSystem::registry</definition>
+        <argsstring></argsstring>
+        <name>registry</name>
+        <qualifiedname>CollisionSystem::registry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Quadtree.hpp" line="107" column="14" bodyfile="include/Quadtree.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCollisionSystem_1a752591b55944bfe8e0a6ee8711df5dab" prot="private" static="no" mutable="no">
+        <type><ref refid="classQuadtree" kindref="compound">Quadtree</ref></type>
+        <definition>Quadtree CollisionSystem::quadtree</definition>
+        <argsstring></argsstring>
+        <name>quadtree</name>
+        <qualifiedname>CollisionSystem::quadtree</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Quadtree.hpp" line="108" column="14" bodyfile="include/Quadtree.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCollisionSystem_1a1f080d897a046b031b4719ebac927c03" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CollisionSystem::firstRun</definition>
+        <argsstring></argsstring>
+        <name>firstRun</name>
+        <qualifiedname>CollisionSystem::firstRun</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Quadtree.hpp" line="109" column="10" bodyfile="include/Quadtree.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCollisionSystem_1ada518fc8db81c8e9af3477cb7453fc75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CollisionSystem::CollisionSystem</definition>
+        <argsstring>(Registry &amp;registry)</argsstring>
+        <name>CollisionSystem</name>
+        <qualifiedname>CollisionSystem::CollisionSystem</qualifiedname>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Quadtree.hpp" line="112" column="5" bodyfile="include/Quadtree.hpp" bodystart="112" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classCollisionSystem_1a2c11308285784fabc10ee1f6638c766e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CollisionSystem::operator()</definition>
+        <argsstring>(entity_t entity, sparse_array&lt; Position &gt; &amp;positions, sparse_array&lt; Drawable &gt; &amp;drawables, sparse_array&lt; Collision &gt; &amp;collisions) override</argsstring>
+        <name>operator()</name>
+        <qualifiedname>CollisionSystem::operator()</qualifiedname>
+        <param>
+          <type>entity_t</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structPosition" kindref="compound">Position</ref> &gt; &amp;</type>
+          <declname>positions</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structDrawable" kindref="compound">Drawable</ref> &gt; &amp;</type>
+          <declname>drawables</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structCollision" kindref="compound">Collision</ref> &gt; &amp;</type>
+          <declname>collisions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Quadtree.hpp" line="115" column="10" bodyfile="include/Quadtree.hpp" bodystart="115" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classCollisionSystem_1aabcd9ff651eace4465b4cdaeda6dc76e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void CollisionSystem::PostUpdate</definition>
+        <argsstring>() override</argsstring>
+        <name>PostUpdate</name>
+        <qualifiedname>CollisionSystem::PostUpdate</qualifiedname>
+        <reimplements refid="classISystemBase_1a15450364e9f21ebae6e2633eef35d7d5">PostUpdate</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Quadtree.hpp" line="182" column="10" bodyfile="include/Quadtree.hpp" bodystart="182" bodyend="186"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CollisionSystem</label>
+        <link refid="classCollisionSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ISystem&lt; Position, Drawable, Collision &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ISystemBase</label>
+        <link refid="classISystemBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>CollisionSystem</label>
+        <link refid="classCollisionSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ISystem&lt; Position, Drawable, Collision &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ISystemBase</label>
+        <link refid="classISystemBase"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/Quadtree.hpp" line="105" column="1" bodyfile="include/Quadtree.hpp" bodystart="105" bodyend="187"/>
+    <listofallmembers>
+      <member refid="classCollisionSystem_1ada518fc8db81c8e9af3477cb7453fc75" prot="public" virt="non-virtual"><scope>CollisionSystem</scope><name>CollisionSystem</name></member>
+      <member refid="classCollisionSystem_1a1f080d897a046b031b4719ebac927c03" prot="private" virt="non-virtual"><scope>CollisionSystem</scope><name>firstRun</name></member>
+      <member refid="classCollisionSystem_1a2c11308285784fabc10ee1f6638c766e" prot="public" virt="non-virtual"><scope>CollisionSystem</scope><name>operator()</name></member>
+      <member refid="classISystem_1a31573ab1dbe256ad82453452bc1a76b8" prot="public" virt="pure-virtual" ambiguityscope="ISystem&lt; Position, Drawable, Collision &gt;::"><scope>CollisionSystem</scope><name>operator()</name></member>
+      <member refid="classCollisionSystem_1aabcd9ff651eace4465b4cdaeda6dc76e" prot="public" virt="virtual"><scope>CollisionSystem</scope><name>PostUpdate</name></member>
+      <member refid="classCollisionSystem_1a752591b55944bfe8e0a6ee8711df5dab" prot="private" virt="non-virtual"><scope>CollisionSystem</scope><name>quadtree</name></member>
+      <member refid="classCollisionSystem_1ad6ed7310a4a9107fab509fa37bf8ffa3" prot="private" virt="non-virtual"><scope>CollisionSystem</scope><name>registry</name></member>
+      <member refid="classISystem_1a8b403989cf1780ab99f91272b3098648" prot="public" virt="virtual"><scope>CollisionSystem</scope><name>~ISystem</name></member>
+      <member refid="classISystemBase_1ae71b84b72f1d4eab3f8acdf50d5ee540" prot="public" virt="virtual"><scope>CollisionSystem</scope><name>~ISystemBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

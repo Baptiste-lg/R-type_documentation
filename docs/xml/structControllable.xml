@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structControllable" kind="struct" language="C++" prot="public">
+    <compoundname>Controllable</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structControllable_1aed3a7f2b710decd4d31279768b2be58c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Controllable::isLocal</definition>
+        <argsstring></argsstring>
+        <name>isLocal</name>
+        <qualifiedname>Controllable::isLocal</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="108" column="10" bodyfile="include/Component.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structControllable_1a2f2e73ece2be299663aca8c9d6034109" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Controllable::client_id</definition>
+        <argsstring></argsstring>
+        <name>client_id</name>
+        <qualifiedname>Controllable::client_id</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="109" column="9" bodyfile="include/Component.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Component.hpp" line="106" column="1" bodyfile="include/Component.hpp" bodystart="107" bodyend="110"/>
+    <listofallmembers>
+      <member refid="structControllable_1a2f2e73ece2be299663aca8c9d6034109" prot="public" virt="non-virtual"><scope>Controllable</scope><name>client_id</name></member>
+      <member refid="structControllable_1aed3a7f2b710decd4d31279768b2be58c" prot="public" virt="non-virtual"><scope>Controllable</scope><name>isLocal</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

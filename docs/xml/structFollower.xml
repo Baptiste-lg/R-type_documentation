@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structFollower" kind="struct" language="C++" prot="public">
+    <compoundname>Follower</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structFollower_1adbc6e1af1a348bc1252586055e06c9e4" prot="public" static="no" mutable="no">
+        <type>entity_t</type>
+        <definition>entity_t Follower::target</definition>
+        <argsstring></argsstring>
+        <name>target</name>
+        <qualifiedname>Follower::target</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="81" column="14" bodyfile="include/Component.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFollower_1a714d1cb1011feeeec91699774e04fe73" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Follower::xOffset</definition>
+        <argsstring></argsstring>
+        <name>xOffset</name>
+        <qualifiedname>Follower::xOffset</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="82" column="11" bodyfile="include/Component.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFollower_1a524429c6f80517b90f23f6ac7588010a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Follower::yOffset</definition>
+        <argsstring></argsstring>
+        <name>yOffset</name>
+        <qualifiedname>Follower::yOffset</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="83" column="11" bodyfile="include/Component.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Component.hpp" line="80" column="1" bodyfile="include/Component.hpp" bodystart="80" bodyend="84"/>
+    <listofallmembers>
+      <member refid="structFollower_1adbc6e1af1a348bc1252586055e06c9e4" prot="public" virt="non-virtual"><scope>Follower</scope><name>target</name></member>
+      <member refid="structFollower_1a714d1cb1011feeeec91699774e04fe73" prot="public" virt="non-virtual"><scope>Follower</scope><name>xOffset</name></member>
+      <member refid="structFollower_1a524429c6f80517b90f23f6ac7588010a" prot="public" virt="non-virtual"><scope>Follower</scope><name>yOffset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

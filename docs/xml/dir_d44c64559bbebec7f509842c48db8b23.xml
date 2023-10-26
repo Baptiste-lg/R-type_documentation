@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>include</compoundname>
+    <innerfile refid="Batch_8hpp">Batch.hpp</innerfile>
+    <innerfile refid="Behaviour_8hpp">Behaviour.hpp</innerfile>
+    <innerfile refid="ClientMain_8hpp">ClientMain.hpp</innerfile>
+    <innerfile refid="Component_8hpp">Component.hpp</innerfile>
+    <innerfile refid="ConfigServer_8hpp">ConfigServer.hpp</innerfile>
+    <innerfile refid="Entity_8hpp">Entity.hpp</innerfile>
+    <innerfile refid="Event_8hpp">Event.hpp</innerfile>
+    <innerfile refid="Global_8hpp">Global.hpp</innerfile>
+    <innerfile refid="ISystem_8hpp">ISystem.hpp</innerfile>
+    <innerfile refid="Quadtree_8hpp">Quadtree.hpp</innerfile>
+    <innerfile refid="Registry_8hpp">Registry.hpp</innerfile>
+    <innerfile refid="SceneParsing_8hpp">SceneParsing.hpp</innerfile>
+    <innerfile refid="ServerMain_8hpp">ServerMain.hpp</innerfile>
+    <innerfile refid="SparseArray_8hpp">SparseArray.hpp</innerfile>
+    <innerfile refid="Spawner_8hpp">Spawner.hpp</innerfile>
+    <innerfile refid="SpritePool_8hpp">SpritePool.hpp</innerfile>
+    <innerfile refid="System_8hpp">System.hpp</innerfile>
+    <innerfile refid="taskLoader_8hpp">taskLoader.hpp</innerfile>
+    <innerfile refid="TextureManager_8hpp">TextureManager.hpp</innerfile>
+    <innerfile refid="ThreadPool_8hpp">ThreadPool.hpp</innerfile>
+    <innerfile refid="Zipper_8hpp">Zipper.hpp</innerfile>
+    <innerfile refid="ZipperIterator_8hpp">ZipperIterator.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/"/>
+  </compounddef>
+</doxygen>

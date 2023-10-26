@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="Event_8cpp" kind="file" language="C++">
+    <compoundname>Event.cpp</compoundname>
+    <includes refid="Event_8hpp" local="yes">Event.hpp</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>Event.hpp</label>
+        <link refid="Event_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/Event.cpp</label>
+        <link refid="Event_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>functional</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="Event_8cpp_1adcb92cd1192a3e7276ccbf1d68152975" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>EventType</type>
+        <definition>EventType parseEventType</definition>
+        <argsstring>(const std::string &amp;eventIdentifier)</argsstring>
+        <name>parseEventType</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>eventIdentifier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Event.cpp" line="3" column="11" bodyfile="src/Event.cpp" bodystart="3" bodyend="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;Event.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">EventType<sp/>parseEventType(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>eventIdentifier){</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>eventIdentifierMap.at(eventIdentifier);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Event.cpp"/>
+  </compounddef>
+</doxygen>

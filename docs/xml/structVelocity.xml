@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structVelocity" kind="struct" language="C++" prot="public">
+    <compoundname>Velocity</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structVelocity_1a187e49dd195f35d9566d87e75c2bd43d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Velocity::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>Velocity::x</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="67" column="11" bodyfile="include/Component.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structVelocity_1adf369bfba58dde57499b342b5e7b77f8" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Velocity::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>Velocity::y</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="68" column="11" bodyfile="include/Component.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="structVelocity_1a78e7ac4ea76a2d5470de016a4a8dd33b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const Velocity &amp;vel)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>Velocity::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structVelocity" kindref="compound">Velocity</ref> &amp;</type>
+          <declname>vel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="69" column="12" bodyfile="include/Component.hpp" bodystart="69" bodyend="72"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Component.hpp" line="65" column="1" bodyfile="include/Component.hpp" bodystart="66" bodyend="73"/>
+    <listofallmembers>
+      <member refid="structVelocity_1a78e7ac4ea76a2d5470de016a4a8dd33b" prot="public" virt="non-virtual"><scope>Velocity</scope><name>operator&lt;&lt;</name></member>
+      <member refid="structVelocity_1a187e49dd195f35d9566d87e75c2bd43d" prot="public" virt="non-virtual"><scope>Velocity</scope><name>x</name></member>
+      <member refid="structVelocity_1adf369bfba58dde57499b342b5e7b77f8" prot="public" virt="non-virtual"><scope>Velocity</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

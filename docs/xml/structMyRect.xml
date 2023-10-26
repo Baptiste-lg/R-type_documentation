@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structMyRect" kind="struct" language="C++" prot="public">
+    <compoundname>MyRect</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structMyRect_1a569053d3522c6b0c48e25a320bea6452" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MyRect::left</definition>
+        <argsstring></argsstring>
+        <name>left</name>
+        <qualifiedname>MyRect::left</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="34" column="9" bodyfile="include/Component.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMyRect_1a94385ca9c5d62c5dcf8e0fe8cdb38697" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MyRect::top</definition>
+        <argsstring></argsstring>
+        <name>top</name>
+        <qualifiedname>MyRect::top</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="34" column="14" bodyfile="include/Component.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMyRect_1ac1dd73b368cbcaf36ec4dad5bb121cb2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MyRect::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <qualifiedname>MyRect::width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="34" column="18" bodyfile="include/Component.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMyRect_1a3b6c3d05ad02636a2a8253c20be60aaf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MyRect::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <qualifiedname>MyRect::height</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="34" column="24" bodyfile="include/Component.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Component.hpp" line="33" column="1" bodyfile="include/Component.hpp" bodystart="33" bodyend="35"/>
+    <listofallmembers>
+      <member refid="structMyRect_1a3b6c3d05ad02636a2a8253c20be60aaf" prot="public" virt="non-virtual"><scope>MyRect</scope><name>height</name></member>
+      <member refid="structMyRect_1a569053d3522c6b0c48e25a320bea6452" prot="public" virt="non-virtual"><scope>MyRect</scope><name>left</name></member>
+      <member refid="structMyRect_1a94385ca9c5d62c5dcf8e0fe8cdb38697" prot="public" virt="non-virtual"><scope>MyRect</scope><name>top</name></member>
+      <member refid="structMyRect_1ac1dd73b368cbcaf36ec4dad5bb121cb2" prot="public" virt="non-virtual"><scope>MyRect</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

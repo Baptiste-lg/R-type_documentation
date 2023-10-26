@@ -1,0 +1,733 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classFFTSystem" kind="class" language="C++" prot="public">
+    <compoundname>FFTSystem</compoundname>
+    <basecompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; FFT &gt;</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classFFTSystem_1a52af62cf6d0894ccc1fcb955846179da" prot="private" static="no" mutable="no">
+        <type>float &amp;</type>
+        <definition>float&amp; FFTSystem::deltaTime</definition>
+        <argsstring></argsstring>
+        <name>deltaTime</name>
+        <qualifiedname>FFTSystem::deltaTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="98" column="11" bodyfile="include/System.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1aee4b3cd4941d1373e329681a8820e335" prot="private" static="no" mutable="no">
+        <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+        <definition>Registry&amp; FFTSystem::registry</definition>
+        <argsstring></argsstring>
+        <name>registry</name>
+        <qualifiedname>FFTSystem::registry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="99" column="14" bodyfile="include/System.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1ad373de64421ad6f880ac03380c6566bb" prot="private" static="no" mutable="no">
+        <type>FFTState</type>
+        <definition>FFTState FFTSystem::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <qualifiedname>FFTSystem::state</qualifiedname>
+        <initializer>= FFTState::NOTLOADED</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="100" column="14" bodyfile="include/System.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1a9d78678e9d9464dde7f53770f7f192ec" prot="private" static="no" mutable="no">
+        <type>sf::SoundBuffer</type>
+        <definition>sf::SoundBuffer FFTSystem::buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <qualifiedname>FFTSystem::buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="101" column="21" bodyfile="include/System.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1a1c07818efd6a52dcd811a386c674c3f9" prot="private" static="no" mutable="no">
+        <type>sf::Sound</type>
+        <definition>sf::Sound FFTSystem::song</definition>
+        <argsstring></argsstring>
+        <name>song</name>
+        <qualifiedname>FFTSystem::song</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="102" column="15" bodyfile="include/System.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1a666df2213c0d9e0f5169cc33b4ce535f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FFTSystem::globalAverage</definition>
+        <argsstring></argsstring>
+        <name>globalAverage</name>
+        <qualifiedname>FFTSystem::globalAverage</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="103" column="11" bodyfile="include/System.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1ade94f53b0c677543243c80a1d5f2c797" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FFTSystem::globalPeak</definition>
+        <argsstring></argsstring>
+        <name>globalPeak</name>
+        <qualifiedname>FFTSystem::globalPeak</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="104" column="11" bodyfile="include/System.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1aedd9fe6f423683329b257586ceac9648" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FFTSystem::averageCalculated</definition>
+        <argsstring></argsstring>
+        <name>averageCalculated</name>
+        <qualifiedname>FFTSystem::averageCalculated</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="105" column="10" bodyfile="include/System.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1a8da66e98c9f29000ef8a984a56cf5578" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FFTSystem::needsUpdate</definition>
+        <argsstring></argsstring>
+        <name>needsUpdate</name>
+        <qualifiedname>FFTSystem::needsUpdate</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="106" column="10" bodyfile="include/System.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1aeaf1cf03df347bbe4c045b6672dbdf3d" prot="private" static="no" mutable="no">
+        <type>sf::Clock</type>
+        <definition>sf::Clock FFTSystem::fftClock</definition>
+        <argsstring></argsstring>
+        <name>fftClock</name>
+        <qualifiedname>FFTSystem::fftClock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="107" column="15" bodyfile="include/System.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1af1cd795d8deb689222c1285bd8799907" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FFTSystem::sample_rate</definition>
+        <argsstring></argsstring>
+        <name>sample_rate</name>
+        <qualifiedname>FFTSystem::sample_rate</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="109" column="11" bodyfile="include/System.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1a017b1bbbcf48653b6e2cdba98e8afc0d" prot="private" static="no" mutable="no">
+        <type>sf::Uint64</type>
+        <definition>sf::Uint64 FFTSystem::sample_count</definition>
+        <argsstring></argsstring>
+        <name>sample_count</name>
+        <qualifiedname>FFTSystem::sample_count</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="110" column="16" bodyfile="include/System.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1a7ab54e487e51d1ea8d279426999c6ae1" prot="private" static="no" mutable="no">
+        <type>sf::Uint64</type>
+        <definition>sf::Uint64 FFTSystem::buffer_size</definition>
+        <argsstring></argsstring>
+        <name>buffer_size</name>
+        <qualifiedname>FFTSystem::buffer_size</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="111" column="16" bodyfile="include/System.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1a3c9640a73bfb1793a473fae234279e17" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FFTSystem::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <qualifiedname>FFTSystem::path</qualifiedname>
+        <initializer>= &quot;asset/Song/music.wav&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="112" column="17" bodyfile="include/System.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1ae4b59a3ef416751fa67086b9aaf61c0b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FFTSystem::pathAnalised</definition>
+        <argsstring></argsstring>
+        <name>pathAnalised</name>
+        <qualifiedname>FFTSystem::pathAnalised</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="113" column="17" bodyfile="include/System.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1ae8251a305af4021a500434f59290b845" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Complex &gt;</type>
+        <definition>std::vector&lt;Complex&gt; FFTSystem::samples</definition>
+        <argsstring></argsstring>
+        <name>samples</name>
+        <qualifiedname>FFTSystem::samples</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="114" column="17" bodyfile="include/System.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1ac8e1e4944be150f21125978805318a80" prot="private" static="no" mutable="no">
+        <type>fftwf_complex *</type>
+        <definition>fftwf_complex* FFTSystem::in</definition>
+        <argsstring></argsstring>
+        <name>in</name>
+        <qualifiedname>FFTSystem::in</qualifiedname>
+        <initializer>=(fftwf_complex*) fftw_malloc(sizeof(fftwf_complex) * BUFFER_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="115" column="19" bodyfile="include/System.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1a09b02493078a9bccd4960d85e018ba4b" prot="private" static="no" mutable="no">
+        <type>fftwf_complex *</type>
+        <definition>fftwf_complex* FFTSystem::out</definition>
+        <argsstring></argsstring>
+        <name>out</name>
+        <qualifiedname>FFTSystem::out</qualifiedname>
+        <initializer>= (fftwf_complex*) fftw_malloc(sizeof(fftwf_complex) * BUFFER_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="116" column="19" bodyfile="include/System.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1ad12ba42de655203f05a2877574db323b" prot="private" static="no" mutable="no">
+        <type>fftwf_plan</type>
+        <definition>fftwf_plan FFTSystem::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <qualifiedname>FFTSystem::p</qualifiedname>
+        <initializer>= fftwf_plan_dft_1d(BUFFER_SIZE, in, out, FFTW_FORWARD, FFTW_ESTIMATE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="117" column="16" bodyfile="include/System.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1a980b035d9b09cb581efbbbcd1c64af56" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::complex&lt; float &gt; &gt;</type>
+        <definition>std::vector&lt;std::complex&lt;float&gt; &gt; FFTSystem::bin</definition>
+        <argsstring></argsstring>
+        <name>bin</name>
+        <qualifiedname>FFTSystem::bin</qualifiedname>
+        <initializer>= std::vector&lt;std::complex&lt;float&gt;&gt;(BUFFER_SIZE / 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="118" column="17" bodyfile="include/System.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1a74ac6d626e4e4e1c6137f531a49f971e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; FFTSystem::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <qualifiedname>FFTSystem::window</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="119" column="17" bodyfile="include/System.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1aaec13d7414f2379ba4131bdc4902ff4a" prot="private" static="no" mutable="no">
+        <type>sf::Time</type>
+        <definition>sf::Time FFTSystem::duration</definition>
+        <argsstring></argsstring>
+        <name>duration</name>
+        <qualifiedname>FFTSystem::duration</qualifiedname>
+        <initializer>= sf::seconds(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="120" column="14" bodyfile="include/System.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1aa3af4cc896cab2228eda3968fc6f4f67" prot="private" static="no" mutable="no">
+        <type>sf::Time</type>
+        <definition>sf::Time FFTSystem::offsetTime</definition>
+        <argsstring></argsstring>
+        <name>offsetTime</name>
+        <qualifiedname>FFTSystem::offsetTime</qualifiedname>
+        <initializer>= sf::seconds(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="121" column="14" bodyfile="include/System.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1abd2cab905afcc8d9366c15ce779a6f56" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FFTSystem::spawnCooldown</definition>
+        <argsstring></argsstring>
+        <name>spawnCooldown</name>
+        <qualifiedname>FFTSystem::spawnCooldown</qualifiedname>
+        <initializer>= 1.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="122" column="11" bodyfile="include/System.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1aaf831b644886fb75d07288468472b310" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structFFTActive" kindref="compound">FFTActive</ref> &gt;</type>
+        <definition>std::vector&lt;FFTActive&gt; FFTSystem::FFTActiveVector</definition>
+        <argsstring></argsstring>
+        <name>FFTActiveVector</name>
+        <qualifiedname>FFTSystem::FFTActiveVector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="124" column="17" bodyfile="include/System.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1afd48cd96eb7b3fd1d8c47214fc8b2453" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structSpawnEvent" kindref="compound">SpawnEvent</ref> &gt;</type>
+        <definition>std::vector&lt;SpawnEvent&gt; FFTSystem::precalculatedSpawns</definition>
+        <argsstring></argsstring>
+        <name>precalculatedSpawns</name>
+        <qualifiedname>FFTSystem::precalculatedSpawns</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="125" column="17" bodyfile="include/System.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1a21cda415ad7fa209197de63a9c03157b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FFTSystem::thresholdBass</definition>
+        <argsstring></argsstring>
+        <name>thresholdBass</name>
+        <qualifiedname>FFTSystem::thresholdBass</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="126" column="11" bodyfile="include/System.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1a294914632c5ed2120590c07f7d6c9599" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FFTSystem::thresholdSubBass</definition>
+        <argsstring></argsstring>
+        <name>thresholdSubBass</name>
+        <qualifiedname>FFTSystem::thresholdSubBass</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="127" column="11" bodyfile="include/System.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFFTSystem_1a5cb8b93a84fc03f327b487c6482f06b9" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; float, float &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;float, float&gt; &gt; FFTSystem::frequencyRange</definition>
+        <argsstring></argsstring>
+        <name>frequencyRange</name>
+        <qualifiedname>FFTSystem::frequencyRange</qualifiedname>
+        <initializer>= {
+            {0, 60},
+            {60, 250},
+            {250, 500},
+            {500, 2000},
+            {2000, 4000},
+            {4000, 6000},
+            {6000, 20000}
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="129" column="17" bodyfile="include/System.hpp" bodystart="129" bodyend="137"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFFTSystem_1a66879e0022fe812d20e7b8e664b2a2f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float FFTSystem::map_amplitude_to_radius</definition>
+        <argsstring>(float amplitude)</argsstring>
+        <name>map_amplitude_to_radius</name>
+        <qualifiedname>FFTSystem::map_amplitude_to_radius</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>amplitude</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="141" column="11" bodyfile="include/System.hpp" bodystart="141" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classFFTSystem_1a3d596b9374ded7cb4ac52e9afca9a475" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FFTSystem::FFTSystem</definition>
+        <argsstring>(float &amp;deltaTime, Registry &amp;registry)</argsstring>
+        <name>FFTSystem</name>
+        <qualifiedname>FFTSystem::FFTSystem</qualifiedname>
+        <param>
+          <type>float &amp;</type>
+          <declname>deltaTime</declname>
+        </param>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="144" column="5" bodyfile="include/System.hpp" bodystart="144" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classFFTSystem_1aa4078c7dee8679ec8cca0912c3518ea2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FFTSystem::operator()</definition>
+        <argsstring>(entity_t entity, sparse_array&lt; FFT &gt; &amp;ffts) override</argsstring>
+        <name>operator()</name>
+        <qualifiedname>FFTSystem::operator()</qualifiedname>
+        <param>
+          <type>entity_t</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structFFT" kindref="compound">FFT</ref> &gt; &amp;</type>
+          <declname>ffts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="151" column="10" bodyfile="include/System.hpp" bodystart="151" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classFFTSystem_1a574e9351838e62348c3579f3ef525b6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FFTSystem::spawnEnemiesBasedOnFFT</definition>
+        <argsstring>()</argsstring>
+        <name>spawnEnemiesBasedOnFFT</name>
+        <qualifiedname>FFTSystem::spawnEnemiesBasedOnFFT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="185" column="10" bodyfile="include/System.hpp" bodystart="185" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="classFFTSystem_1a551f281b5c8412893989cb49f9c6393a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void FFTSystem::PostUpdate</definition>
+        <argsstring>() override</argsstring>
+        <name>PostUpdate</name>
+        <qualifiedname>FFTSystem::PostUpdate</qualifiedname>
+        <reimplements refid="classISystemBase_1a15450364e9f21ebae6e2633eef35d7d5">PostUpdate</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="202" column="10" bodyfile="include/System.hpp" bodystart="202" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classFFTSystem_1ad95154a2d2e5d6c7eeee841ac8ea1881" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FFTSystem::load</definition>
+        <argsstring>()</argsstring>
+        <name>load</name>
+        <qualifiedname>FFTSystem::load</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="212" column="10" bodyfile="include/System.hpp" bodystart="212" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classFFTSystem_1aa7721c0fbfb812b9da6b18ceffea4cb9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FFTSystem::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <qualifiedname>FFTSystem::update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="249" column="10" bodyfile="include/System.hpp" bodystart="249" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="classFFTSystem_1a9e481ea118144518541a9128ee76903f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FFTSystem::create_hamming_window</definition>
+        <argsstring>()</argsstring>
+        <name>create_hamming_window</name>
+        <qualifiedname>FFTSystem::create_hamming_window</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="255" column="10" bodyfile="include/System.hpp" bodystart="255" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="classFFTSystem_1ad320c64c8e1209af6afed4d7c2138333" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FFTSystem::analyzeSong</definition>
+        <argsstring>()</argsstring>
+        <name>analyzeSong</name>
+        <qualifiedname>FFTSystem::analyzeSong</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="263" column="10" bodyfile="include/System.hpp" bodystart="263" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="classFFTSystem_1a2d633b702f27385cee343d1640e841cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float FFTSystem::update_by_sound</definition>
+        <argsstring>(const float from, const float to, const float scale_factor)</argsstring>
+        <name>update_by_sound</name>
+        <qualifiedname>FFTSystem::update_by_sound</qualifiedname>
+        <param>
+          <type>const float</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>to</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>scale_factor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="355" column="11" bodyfile="include/System.hpp" bodystart="355" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="classFFTSystem_1a0bb4dc899efec0c551cf23c1f63d4df8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FFTSystem::precalculateSpawns</definition>
+        <argsstring>()</argsstring>
+        <name>precalculateSpawns</name>
+        <qualifiedname>FFTSystem::precalculateSpawns</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="371" column="10" bodyfile="include/System.hpp" bodystart="371" bodyend="488"/>
+      </memberdef>
+      <memberdef kind="function" id="classFFTSystem_1a63654c83084af4ba107f22b2e4854a84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FFTSystem::~FFTSystem</definition>
+        <argsstring>() override</argsstring>
+        <name>~FFTSystem</name>
+        <qualifiedname>FFTSystem::~FFTSystem</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="490" column="5" bodyfile="include/System.hpp" bodystart="490" bodyend="495"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>FFTSystem</label>
+        <link refid="classFFTSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ISystem&lt; FFT &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ISystemBase</label>
+        <link refid="classISystemBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>FFTSystem</label>
+        <link refid="classFFTSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ISystem&lt; FFT &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ISystemBase</label>
+        <link refid="classISystemBase"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/System.hpp" line="96" column="1" bodyfile="include/System.hpp" bodystart="96" bodyend="496"/>
+    <listofallmembers>
+      <member refid="classFFTSystem_1ad320c64c8e1209af6afed4d7c2138333" prot="public" virt="non-virtual"><scope>FFTSystem</scope><name>analyzeSong</name></member>
+      <member refid="classFFTSystem_1aedd9fe6f423683329b257586ceac9648" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>averageCalculated</name></member>
+      <member refid="classFFTSystem_1a980b035d9b09cb581efbbbcd1c64af56" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>bin</name></member>
+      <member refid="classFFTSystem_1a9d78678e9d9464dde7f53770f7f192ec" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>buffer</name></member>
+      <member refid="classFFTSystem_1a7ab54e487e51d1ea8d279426999c6ae1" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>buffer_size</name></member>
+      <member refid="classFFTSystem_1a9e481ea118144518541a9128ee76903f" prot="public" virt="non-virtual"><scope>FFTSystem</scope><name>create_hamming_window</name></member>
+      <member refid="classFFTSystem_1a52af62cf6d0894ccc1fcb955846179da" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>deltaTime</name></member>
+      <member refid="classFFTSystem_1aaec13d7414f2379ba4131bdc4902ff4a" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>duration</name></member>
+      <member refid="classFFTSystem_1aaf831b644886fb75d07288468472b310" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>FFTActiveVector</name></member>
+      <member refid="classFFTSystem_1aeaf1cf03df347bbe4c045b6672dbdf3d" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>fftClock</name></member>
+      <member refid="classFFTSystem_1a3d596b9374ded7cb4ac52e9afca9a475" prot="public" virt="non-virtual"><scope>FFTSystem</scope><name>FFTSystem</name></member>
+      <member refid="classFFTSystem_1a5cb8b93a84fc03f327b487c6482f06b9" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>frequencyRange</name></member>
+      <member refid="classFFTSystem_1a666df2213c0d9e0f5169cc33b4ce535f" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>globalAverage</name></member>
+      <member refid="classFFTSystem_1ade94f53b0c677543243c80a1d5f2c797" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>globalPeak</name></member>
+      <member refid="classFFTSystem_1ac8e1e4944be150f21125978805318a80" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>in</name></member>
+      <member refid="classFFTSystem_1ad95154a2d2e5d6c7eeee841ac8ea1881" prot="public" virt="non-virtual"><scope>FFTSystem</scope><name>load</name></member>
+      <member refid="classFFTSystem_1a66879e0022fe812d20e7b8e664b2a2f2" prot="public" virt="non-virtual"><scope>FFTSystem</scope><name>map_amplitude_to_radius</name></member>
+      <member refid="classFFTSystem_1a8da66e98c9f29000ef8a984a56cf5578" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>needsUpdate</name></member>
+      <member refid="classFFTSystem_1aa3af4cc896cab2228eda3968fc6f4f67" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>offsetTime</name></member>
+      <member refid="classFFTSystem_1aa4078c7dee8679ec8cca0912c3518ea2" prot="public" virt="non-virtual"><scope>FFTSystem</scope><name>operator()</name></member>
+      <member refid="classISystem_1a31573ab1dbe256ad82453452bc1a76b8" prot="public" virt="pure-virtual" ambiguityscope="ISystem&lt; FFT &gt;::"><scope>FFTSystem</scope><name>operator()</name></member>
+      <member refid="classFFTSystem_1a09b02493078a9bccd4960d85e018ba4b" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>out</name></member>
+      <member refid="classFFTSystem_1ad12ba42de655203f05a2877574db323b" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>p</name></member>
+      <member refid="classFFTSystem_1a3c9640a73bfb1793a473fae234279e17" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>path</name></member>
+      <member refid="classFFTSystem_1ae4b59a3ef416751fa67086b9aaf61c0b" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>pathAnalised</name></member>
+      <member refid="classFFTSystem_1a551f281b5c8412893989cb49f9c6393a" prot="public" virt="virtual"><scope>FFTSystem</scope><name>PostUpdate</name></member>
+      <member refid="classFFTSystem_1afd48cd96eb7b3fd1d8c47214fc8b2453" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>precalculatedSpawns</name></member>
+      <member refid="classFFTSystem_1a0bb4dc899efec0c551cf23c1f63d4df8" prot="public" virt="non-virtual"><scope>FFTSystem</scope><name>precalculateSpawns</name></member>
+      <member refid="classFFTSystem_1aee4b3cd4941d1373e329681a8820e335" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>registry</name></member>
+      <member refid="classFFTSystem_1a017b1bbbcf48653b6e2cdba98e8afc0d" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>sample_count</name></member>
+      <member refid="classFFTSystem_1af1cd795d8deb689222c1285bd8799907" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>sample_rate</name></member>
+      <member refid="classFFTSystem_1ae8251a305af4021a500434f59290b845" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>samples</name></member>
+      <member refid="classFFTSystem_1a1c07818efd6a52dcd811a386c674c3f9" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>song</name></member>
+      <member refid="classFFTSystem_1abd2cab905afcc8d9366c15ce779a6f56" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>spawnCooldown</name></member>
+      <member refid="classFFTSystem_1a574e9351838e62348c3579f3ef525b6a" prot="public" virt="non-virtual"><scope>FFTSystem</scope><name>spawnEnemiesBasedOnFFT</name></member>
+      <member refid="classFFTSystem_1ad373de64421ad6f880ac03380c6566bb" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>state</name></member>
+      <member refid="classFFTSystem_1a21cda415ad7fa209197de63a9c03157b" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>thresholdBass</name></member>
+      <member refid="classFFTSystem_1a294914632c5ed2120590c07f7d6c9599" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>thresholdSubBass</name></member>
+      <member refid="classFFTSystem_1aa7721c0fbfb812b9da6b18ceffea4cb9" prot="public" virt="non-virtual"><scope>FFTSystem</scope><name>update</name></member>
+      <member refid="classFFTSystem_1a2d633b702f27385cee343d1640e841cf" prot="public" virt="non-virtual"><scope>FFTSystem</scope><name>update_by_sound</name></member>
+      <member refid="classFFTSystem_1a74ac6d626e4e4e1c6137f531a49f971e" prot="private" virt="non-virtual"><scope>FFTSystem</scope><name>window</name></member>
+      <member refid="classFFTSystem_1a63654c83084af4ba107f22b2e4854a84" prot="public" virt="non-virtual"><scope>FFTSystem</scope><name>~FFTSystem</name></member>
+      <member refid="classISystem_1a8b403989cf1780ab99f91272b3098648" prot="public" virt="virtual"><scope>FFTSystem</scope><name>~ISystem</name></member>
+      <member refid="classISystemBase_1ae71b84b72f1d4eab3f8acdf50d5ee540" prot="public" virt="virtual"><scope>FFTSystem</scope><name>~ISystemBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

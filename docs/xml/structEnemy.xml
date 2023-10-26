@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structEnemy" kind="struct" language="C++" prot="public">
+    <compoundname>Enemy</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structEnemy_1aab044b8716b6d8fddf220df8d021e1e3" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Enemy::health</definition>
+        <argsstring></argsstring>
+        <name>health</name>
+        <qualifiedname>Enemy::health</qualifiedname>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="125" column="12" bodyfile="include/Component.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Component.hpp" line="124" column="1" bodyfile="include/Component.hpp" bodystart="124" bodyend="126"/>
+    <listofallmembers>
+      <member refid="structEnemy_1aab044b8716b6d8fddf220df8d021e1e3" prot="public" virt="non-virtual"><scope>Enemy</scope><name>health</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

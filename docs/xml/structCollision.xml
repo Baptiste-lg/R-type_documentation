@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structCollision" kind="struct" language="C++" prot="public">
+    <compoundname>Collision</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structCollision_1ae409ca09aaec305a56e96acc92a5e0e8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Collision::isEnemy</definition>
+        <argsstring></argsstring>
+        <name>isEnemy</name>
+        <qualifiedname>Collision::isEnemy</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="59" column="10" bodyfile="include/Component.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Component.hpp" line="58" column="1" bodyfile="include/Component.hpp" bodystart="58" bodyend="61"/>
+    <listofallmembers>
+      <member refid="structCollision_1ae409ca09aaec305a56e96acc92a5e0e8" prot="public" virt="non-virtual"><scope>Collision</scope><name>isEnemy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

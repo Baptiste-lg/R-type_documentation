@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="TextureManager_8cpp" kind="file" language="C++">
+    <compoundname>TextureManager.cpp</compoundname>
+    <includes refid="TextureManager_8hpp" local="yes">TextureManager.hpp</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>TextureManager.hpp</label>
+        <link refid="TextureManager_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/TextureManager.cpp</label>
+        <link refid="TextureManager_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="3">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>unordered_map</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="TextureManager_8cpp_1aa649d9d8bdae77bbf0d5c85b9bd6d640" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loadAllTexture</definition>
+        <argsstring>(AssetManager &amp;assetManager)</argsstring>
+        <name>loadAllTexture</name>
+        <param>
+          <type><ref refid="classAssetManager" kindref="compound">AssetManager</ref> &amp;</type>
+          <declname>assetManager</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/TextureManager.cpp" line="5" column="6" bodyfile="src/TextureManager.cpp" bodystart="5" bodyend="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TextureManager.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadAllTexture(<ref refid="classAssetManager" kindref="compound">AssetManager</ref>&amp;<sp/>assetManager)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;green_planet&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/GreenPlanet.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;background&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/layers/parallax-space-backgound.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;big_planet&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/layers/parallax-space-big-planet.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;far_planets&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/layers/parallax-space-far-planets.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;ring_planet&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/layers/parallax-space-ring-planet.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;stars&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/layers/parallax-space-stars.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;laser&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Spaceship/laser.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;laserAnimated&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Spaceship/shootingSheet.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;p_spaceship&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Spaceship/vehicle-1.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;p_thruster&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Spaceship/thrust/thrust.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;e_ship1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/ennemy_ship/Ship2/Ship2.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;e_ship2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/ennemy_ship/Ship3/Ship3.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;e_ship3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/ennemy_ship/Ship4/Ship4.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/TextureManager.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structNetwork" kind="struct" language="C++" prot="public">
+    <compoundname>Network</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structNetwork_1a581d7031a09e7bf6715b6ee010546e74" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Network::socket</definition>
+        <argsstring></argsstring>
+        <name>socket</name>
+        <qualifiedname>Network::socket</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="150" column="9" bodyfile="include/Component.hpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structNetwork_1a844d126e60b67a90c56f4e27869568ad" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Network::ip</definition>
+        <argsstring></argsstring>
+        <name>ip</name>
+        <qualifiedname>Network::ip</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="151" column="17" bodyfile="include/Component.hpp" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structNetwork_1aa4b84b9f9799331720f66699fec906ca" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Network::port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <qualifiedname>Network::port</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="152" column="9" bodyfile="include/Component.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structNetwork_1afac44cc031c2b5f0e6d198e27920c128" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Network::client_id</definition>
+        <argsstring></argsstring>
+        <name>client_id</name>
+        <qualifiedname>Network::client_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="153" column="9" bodyfile="include/Component.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structNetwork_1a015117af5ae6e8739a074334ec2a0e9b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Network::latency</definition>
+        <argsstring></argsstring>
+        <name>latency</name>
+        <qualifiedname>Network::latency</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="154" column="9" bodyfile="include/Component.hpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structNetwork_1a179b4ea0116dc508dffe95cb75027ef6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Network::last_packet_time</definition>
+        <argsstring></argsstring>
+        <name>last_packet_time</name>
+        <qualifiedname>Network::last_packet_time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="155" column="9" bodyfile="include/Component.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structNetwork_1a27e05eaa8d744dad8fcde174a3cc37a2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Network::last_packet_id</definition>
+        <argsstring></argsstring>
+        <name>last_packet_id</name>
+        <qualifiedname>Network::last_packet_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="156" column="9" bodyfile="include/Component.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Component.hpp" line="149" column="1" bodyfile="include/Component.hpp" bodystart="149" bodyend="157"/>
+    <listofallmembers>
+      <member refid="structNetwork_1afac44cc031c2b5f0e6d198e27920c128" prot="public" virt="non-virtual"><scope>Network</scope><name>client_id</name></member>
+      <member refid="structNetwork_1a844d126e60b67a90c56f4e27869568ad" prot="public" virt="non-virtual"><scope>Network</scope><name>ip</name></member>
+      <member refid="structNetwork_1a27e05eaa8d744dad8fcde174a3cc37a2" prot="public" virt="non-virtual"><scope>Network</scope><name>last_packet_id</name></member>
+      <member refid="structNetwork_1a179b4ea0116dc508dffe95cb75027ef6" prot="public" virt="non-virtual"><scope>Network</scope><name>last_packet_time</name></member>
+      <member refid="structNetwork_1a015117af5ae6e8739a074334ec2a0e9b" prot="public" virt="non-virtual"><scope>Network</scope><name>latency</name></member>
+      <member refid="structNetwork_1aa4b84b9f9799331720f66699fec906ca" prot="public" virt="non-virtual"><scope>Network</scope><name>port</name></member>
+      <member refid="structNetwork_1a581d7031a09e7bf6715b6ee010546e74" prot="public" virt="non-virtual"><scope>Network</scope><name>socket</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

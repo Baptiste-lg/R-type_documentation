@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classServerSystem" kind="class" language="C++" prot="public">
+    <compoundname>ServerSystem</compoundname>
+    <basecompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Network, State &gt;</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classServerSystem_1a7f77111a2b99f7e89ba4437dfe19094b" prot="private" static="no" mutable="no">
+        <type>float &amp;</type>
+        <definition>float&amp; ServerSystem::deltaTime</definition>
+        <argsstring></argsstring>
+        <name>deltaTime</name>
+        <qualifiedname>ServerSystem::deltaTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="829" column="11" bodyfile="include/System.hpp" bodystart="829" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classServerSystem_1a9c94e40099eb047d60bed3d90350098f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; struct sockaddr_in, int &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;struct sockaddr_in, int&gt; &gt; ServerSystem::clients</definition>
+        <argsstring></argsstring>
+        <name>clients</name>
+        <qualifiedname>ServerSystem::clients</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="830" column="17" bodyfile="include/System.hpp" bodystart="830" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classServerSystem_1af25fcf93ad60758fe2794ae39f0e9746" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ServerSystem::clientIdCounter</definition>
+        <argsstring></argsstring>
+        <name>clientIdCounter</name>
+        <qualifiedname>ServerSystem::clientIdCounter</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="831" column="9" bodyfile="include/System.hpp" bodystart="831" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classServerSystem_1a6d03c792ba3183f1334e2aebb6c897ed" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ServerSystem::tcp_sockfd</definition>
+        <argsstring></argsstring>
+        <name>tcp_sockfd</name>
+        <qualifiedname>ServerSystem::tcp_sockfd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="832" column="9" bodyfile="include/System.hpp" bodystart="832" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classServerSystem_1a5c02ad866e0af46ee4cb68d393387f5f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ServerSystem::udp_sockfd</definition>
+        <argsstring></argsstring>
+        <name>udp_sockfd</name>
+        <qualifiedname>ServerSystem::udp_sockfd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="833" column="9" bodyfile="include/System.hpp" bodystart="833" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classServerSystem_1a46d9ba852315feb51ea1b9c12044dd8d" prot="private" static="no" mutable="no">
+        <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+        <definition>Registry&amp; ServerSystem::registry</definition>
+        <argsstring></argsstring>
+        <name>registry</name>
+        <qualifiedname>ServerSystem::registry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="834" column="14" bodyfile="include/System.hpp" bodystart="834" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classServerSystem_1aad9f4ed96cca191d2780d6d02b70a0b4" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; EventType, std::function&lt; void(const <ref refid="structEvent" kindref="compound">Event</ref> &amp;)&gt;</type>
+        <definition>std::unordered_map&lt;EventType, std::function&lt;void(const Event&amp;)&gt; ServerSystem::eventHandlerMap) </definition>
+        <argsstring>)</argsstring>
+        <name>eventHandlerMap</name>
+        <qualifiedname>ServerSystem::eventHandlerMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="835" column="24" bodyfile="include/System.hpp" bodystart="835" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classServerSystem_1a17ac41ccc9710593520f280fe7a8ca1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ServerSystem::ServerSystem</definition>
+        <argsstring>(Registry &amp;registry, float &amp;deltaTime)</argsstring>
+        <name>ServerSystem</name>
+        <qualifiedname>ServerSystem::ServerSystem</qualifiedname>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="838" column="5" bodyfile="include/System.hpp" bodystart="838" bodyend="904"/>
+      </memberdef>
+      <memberdef kind="function" id="classServerSystem_1ac96532214823ef19033d0cf157554ddf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ServerSystem::add_client</definition>
+        <argsstring>(struct sockaddr_in new_client)</argsstring>
+        <name>add_client</name>
+        <qualifiedname>ServerSystem::add_client</qualifiedname>
+        <param>
+          <type>struct sockaddr_in</type>
+          <declname>new_client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="907" column="10" bodyfile="include/System.hpp" bodystart="907" bodyend="915"/>
+      </memberdef>
+      <memberdef kind="function" id="classServerSystem_1a97a615978fcc0f868d3427a80549504c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ServerSystem::broadcast</definition>
+        <argsstring>(const char *message, ssize_t len, struct sockaddr_in *exclude_addr=nullptr)</argsstring>
+        <name>broadcast</name>
+        <qualifiedname>ServerSystem::broadcast</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>ssize_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>struct sockaddr_in *</type>
+          <declname>exclude_addr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="917" column="10" bodyfile="include/System.hpp" bodystart="917" bodyend="925"/>
+      </memberdef>
+      <memberdef kind="function" id="classServerSystem_1a30091f5af5b92065c25ffe2400adf557" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ServerSystem::operator()</definition>
+        <argsstring>(entity_t entity, sparse_array&lt; Network &gt; &amp;networks, sparse_array&lt; State &gt; &amp;states) override</argsstring>
+        <name>operator()</name>
+        <qualifiedname>ServerSystem::operator()</qualifiedname>
+        <param>
+          <type>entity_t</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structNetwork" kindref="compound">Network</ref> &gt; &amp;</type>
+          <declname>networks</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structState" kindref="compound">State</ref> &gt; &amp;</type>
+          <declname>states</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="927" column="10" bodyfile="include/System.hpp" bodystart="927" bodyend="1004"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ISystem&lt; Network, State &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ISystemBase</label>
+        <link refid="classISystemBase"/>
+      </node>
+      <node id="1">
+        <label>ServerSystem</label>
+        <link refid="classServerSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ISystem&lt; Network, State &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ISystemBase</label>
+        <link refid="classISystemBase"/>
+      </node>
+      <node id="1">
+        <label>ServerSystem</label>
+        <link refid="classServerSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/System.hpp" line="827" column="1" bodyfile="include/System.hpp" bodystart="827" bodyend="1005"/>
+    <listofallmembers>
+      <member refid="classServerSystem_1ac96532214823ef19033d0cf157554ddf" prot="public" virt="non-virtual"><scope>ServerSystem</scope><name>add_client</name></member>
+      <member refid="classServerSystem_1a97a615978fcc0f868d3427a80549504c" prot="public" virt="non-virtual"><scope>ServerSystem</scope><name>broadcast</name></member>
+      <member refid="classServerSystem_1af25fcf93ad60758fe2794ae39f0e9746" prot="private" virt="non-virtual"><scope>ServerSystem</scope><name>clientIdCounter</name></member>
+      <member refid="classServerSystem_1a9c94e40099eb047d60bed3d90350098f" prot="private" virt="non-virtual"><scope>ServerSystem</scope><name>clients</name></member>
+      <member refid="classServerSystem_1a7f77111a2b99f7e89ba4437dfe19094b" prot="private" virt="non-virtual"><scope>ServerSystem</scope><name>deltaTime</name></member>
+      <member refid="classServerSystem_1aad9f4ed96cca191d2780d6d02b70a0b4" prot="private" virt="non-virtual"><scope>ServerSystem</scope><name>eventHandlerMap</name></member>
+      <member refid="classServerSystem_1a30091f5af5b92065c25ffe2400adf557" prot="public" virt="non-virtual"><scope>ServerSystem</scope><name>operator()</name></member>
+      <member refid="classISystem_1a31573ab1dbe256ad82453452bc1a76b8" prot="public" virt="pure-virtual" ambiguityscope="ISystem&lt; Network, State &gt;::"><scope>ServerSystem</scope><name>operator()</name></member>
+      <member refid="classISystemBase_1a15450364e9f21ebae6e2633eef35d7d5" prot="public" virt="virtual"><scope>ServerSystem</scope><name>PostUpdate</name></member>
+      <member refid="classServerSystem_1a46d9ba852315feb51ea1b9c12044dd8d" prot="private" virt="non-virtual"><scope>ServerSystem</scope><name>registry</name></member>
+      <member refid="classServerSystem_1a17ac41ccc9710593520f280fe7a8ca1d" prot="public" virt="non-virtual"><scope>ServerSystem</scope><name>ServerSystem</name></member>
+      <member refid="classServerSystem_1a6d03c792ba3183f1334e2aebb6c897ed" prot="private" virt="non-virtual"><scope>ServerSystem</scope><name>tcp_sockfd</name></member>
+      <member refid="classServerSystem_1a5c02ad866e0af46ee4cb68d393387f5f" prot="private" virt="non-virtual"><scope>ServerSystem</scope><name>udp_sockfd</name></member>
+      <member refid="classISystem_1a8b403989cf1780ab99f91272b3098648" prot="public" virt="virtual"><scope>ServerSystem</scope><name>~ISystem</name></member>
+      <member refid="classISystemBase_1ae71b84b72f1d4eab3f8acdf50d5ee540" prot="public" virt="virtual"><scope>ServerSystem</scope><name>~ISystemBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

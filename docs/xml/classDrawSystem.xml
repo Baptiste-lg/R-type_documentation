@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classDrawSystem" kind="class" language="C++" prot="public">
+    <compoundname>DrawSystem</compoundname>
+    <basecompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Drawable, Position, Depth &gt;</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classDrawSystem_1a3089970008f97d383d5cbd1873f1b8a2" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; entity_t &gt;</type>
+        <definition>std::vector&lt;entity_t&gt; DrawSystem::sortedEntities</definition>
+        <argsstring></argsstring>
+        <name>sortedEntities</name>
+        <qualifiedname>DrawSystem::sortedEntities</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="502" column="17" bodyfile="include/System.hpp" bodystart="502" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrawSystem_1ae66c69a4a696c7740490cd72bdcb7828" prot="private" static="no" mutable="no">
+        <type>sf::RenderWindow &amp;</type>
+        <definition>sf::RenderWindow&amp; DrawSystem::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <qualifiedname>DrawSystem::window</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="503" column="22" bodyfile="include/System.hpp" bodystart="503" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrawSystem_1ac28bc3af5c8ffc34a3c6486a35a4362a" prot="private" static="no" mutable="no">
+        <type><ref refid="classAssetManager" kindref="compound">AssetManager</ref> &amp;</type>
+        <definition>AssetManager&amp; DrawSystem::assetManager</definition>
+        <argsstring></argsstring>
+        <name>assetManager</name>
+        <qualifiedname>DrawSystem::assetManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="504" column="18" bodyfile="include/System.hpp" bodystart="504" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrawSystem_1a66791c756f49054bbd1dacb5bbf9c139" prot="private" static="no" mutable="no">
+        <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+        <definition>Registry&amp; DrawSystem::registry</definition>
+        <argsstring></argsstring>
+        <name>registry</name>
+        <qualifiedname>DrawSystem::registry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="505" column="14" bodyfile="include/System.hpp" bodystart="505" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrawSystem_1a9c4dd7fba8aeb82229c8582e2ce12d5e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DrawSystem::firstRun</definition>
+        <argsstring></argsstring>
+        <name>firstRun</name>
+        <qualifiedname>DrawSystem::firstRun</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="506" column="10" bodyfile="include/System.hpp" bodystart="506" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrawSystem_1a633dcce50986cc37193a30d0059b09de" prot="private" static="no" mutable="no">
+        <type><ref refid="classSpritePool" kindref="compound">SpritePool</ref></type>
+        <definition>SpritePool DrawSystem::spritePool</definition>
+        <argsstring></argsstring>
+        <name>spritePool</name>
+        <qualifiedname>DrawSystem::spritePool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="507" column="16" bodyfile="include/System.hpp" bodystart="507" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDrawSystem_1ab84e0d2919764a539596f15a008bd967" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DrawSystem::DrawSystem</definition>
+        <argsstring>(sf::RenderWindow &amp;window, AssetManager &amp;assetManager, Registry &amp;registry)</argsstring>
+        <name>DrawSystem</name>
+        <qualifiedname>DrawSystem::DrawSystem</qualifiedname>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="classAssetManager" kindref="compound">AssetManager</ref> &amp;</type>
+          <declname>assetManager</declname>
+        </param>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="510" column="5" bodyfile="include/System.hpp" bodystart="510" bodyend="513"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrawSystem_1afcb08365ae4bc4ea5967598dc0261cba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DrawSystem::sortEntities</definition>
+        <argsstring>(sparse_array&lt; Drawable &gt; &amp;drawables, sparse_array&lt; Depth &gt; &amp;depths)</argsstring>
+        <name>sortEntities</name>
+        <qualifiedname>DrawSystem::sortEntities</qualifiedname>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structDrawable" kindref="compound">Drawable</ref> &gt; &amp;</type>
+          <declname>drawables</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structDepth" kindref="compound">Depth</ref> &gt; &amp;</type>
+          <declname>depths</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="515" column="10" bodyfile="include/System.hpp" bodystart="515" bodyend="531"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrawSystem_1a152b690ae2bc7a531d95c5fb113d006d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DrawSystem::operator()</definition>
+        <argsstring>(entity_t entity, sparse_array&lt; Drawable &gt; &amp;drawables, sparse_array&lt; Position &gt; &amp;positions, sparse_array&lt; Depth &gt; &amp;depths) override</argsstring>
+        <name>operator()</name>
+        <qualifiedname>DrawSystem::operator()</qualifiedname>
+        <param>
+          <type>entity_t</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structDrawable" kindref="compound">Drawable</ref> &gt; &amp;</type>
+          <declname>drawables</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structPosition" kindref="compound">Position</ref> &gt; &amp;</type>
+          <declname>positions</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structDepth" kindref="compound">Depth</ref> &gt; &amp;</type>
+          <declname>depths</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="534" column="10" bodyfile="include/System.hpp" bodystart="534" bodyend="569"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrawSystem_1ac85b929de9cd60ea4c74f80ea7183681" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DrawSystem::invalidateSort</definition>
+        <argsstring>()</argsstring>
+        <name>invalidateSort</name>
+        <qualifiedname>DrawSystem::invalidateSort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="573" column="10" bodyfile="include/System.hpp" bodystart="573" bodyend="575"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrawSystem_1ae4d1a9ff9776fc33a2b092ca352b4c5d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void DrawSystem::PostUpdate</definition>
+        <argsstring>() override</argsstring>
+        <name>PostUpdate</name>
+        <qualifiedname>DrawSystem::PostUpdate</qualifiedname>
+        <reimplements refid="classISystemBase_1a15450364e9f21ebae6e2633eef35d7d5">PostUpdate</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="576" column="10" bodyfile="include/System.hpp" bodystart="576" bodyend="578"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DrawSystem</label>
+        <link refid="classDrawSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ISystem&lt; Drawable, Position, Depth &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ISystemBase</label>
+        <link refid="classISystemBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DrawSystem</label>
+        <link refid="classDrawSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ISystem&lt; Drawable, Position, Depth &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ISystemBase</label>
+        <link refid="classISystemBase"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/System.hpp" line="500" column="1" bodyfile="include/System.hpp" bodystart="500" bodyend="579"/>
+    <listofallmembers>
+      <member refid="classDrawSystem_1ac28bc3af5c8ffc34a3c6486a35a4362a" prot="private" virt="non-virtual"><scope>DrawSystem</scope><name>assetManager</name></member>
+      <member refid="classDrawSystem_1ab84e0d2919764a539596f15a008bd967" prot="public" virt="non-virtual"><scope>DrawSystem</scope><name>DrawSystem</name></member>
+      <member refid="classDrawSystem_1a9c4dd7fba8aeb82229c8582e2ce12d5e" prot="private" virt="non-virtual"><scope>DrawSystem</scope><name>firstRun</name></member>
+      <member refid="classDrawSystem_1ac85b929de9cd60ea4c74f80ea7183681" prot="public" virt="non-virtual"><scope>DrawSystem</scope><name>invalidateSort</name></member>
+      <member refid="classDrawSystem_1a152b690ae2bc7a531d95c5fb113d006d" prot="public" virt="non-virtual"><scope>DrawSystem</scope><name>operator()</name></member>
+      <member refid="classISystem_1a31573ab1dbe256ad82453452bc1a76b8" prot="public" virt="pure-virtual" ambiguityscope="ISystem&lt; Drawable, Position, Depth &gt;::"><scope>DrawSystem</scope><name>operator()</name></member>
+      <member refid="classDrawSystem_1ae4d1a9ff9776fc33a2b092ca352b4c5d" prot="public" virt="virtual"><scope>DrawSystem</scope><name>PostUpdate</name></member>
+      <member refid="classDrawSystem_1a66791c756f49054bbd1dacb5bbf9c139" prot="private" virt="non-virtual"><scope>DrawSystem</scope><name>registry</name></member>
+      <member refid="classDrawSystem_1a3089970008f97d383d5cbd1873f1b8a2" prot="private" virt="non-virtual"><scope>DrawSystem</scope><name>sortedEntities</name></member>
+      <member refid="classDrawSystem_1afcb08365ae4bc4ea5967598dc0261cba" prot="public" virt="non-virtual"><scope>DrawSystem</scope><name>sortEntities</name></member>
+      <member refid="classDrawSystem_1a633dcce50986cc37193a30d0059b09de" prot="private" virt="non-virtual"><scope>DrawSystem</scope><name>spritePool</name></member>
+      <member refid="classDrawSystem_1ae66c69a4a696c7740490cd72bdcb7828" prot="private" virt="non-virtual"><scope>DrawSystem</scope><name>window</name></member>
+      <member refid="classISystem_1a8b403989cf1780ab99f91272b3098648" prot="public" virt="virtual"><scope>DrawSystem</scope><name>~ISystem</name></member>
+      <member refid="classISystemBase_1ae71b84b72f1d4eab3f8acdf50d5ee540" prot="public" virt="virtual"><scope>DrawSystem</scope><name>~ISystemBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classAnimationSystem" kind="class" language="C++" prot="public">
+    <compoundname>AnimationSystem</compoundname>
+    <basecompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Animation, Drawable &gt;</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classAnimationSystem_1a295b4d7d936b371e3d3115a22af90ec3" prot="private" static="no" mutable="no">
+        <type>float &amp;</type>
+        <definition>float&amp; AnimationSystem::deltaTime</definition>
+        <argsstring></argsstring>
+        <name>deltaTime</name>
+        <qualifiedname>AnimationSystem::deltaTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="705" column="11" bodyfile="include/System.hpp" bodystart="705" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAnimationSystem_1adab0fd4fbadf16eff05d9f4b0308a37c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AnimationSystem::AnimationSystem</definition>
+        <argsstring>(float &amp;deltaTime)</argsstring>
+        <name>AnimationSystem</name>
+        <qualifiedname>AnimationSystem::AnimationSystem</qualifiedname>
+        <param>
+          <type>float &amp;</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="708" column="5" bodyfile="include/System.hpp" bodystart="708" bodyend="708"/>
+      </memberdef>
+      <memberdef kind="function" id="classAnimationSystem_1af588b319ed68c08197a8d35266b7cd52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnimationSystem::operator()</definition>
+        <argsstring>(entity_t e, sparse_array&lt; Animation &gt; &amp;animations, sparse_array&lt; Drawable &gt; &amp;drawables) override</argsstring>
+        <name>operator()</name>
+        <qualifiedname>AnimationSystem::operator()</qualifiedname>
+        <param>
+          <type>entity_t</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structAnimation" kindref="compound">Animation</ref> &gt; &amp;</type>
+          <declname>animations</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structDrawable" kindref="compound">Drawable</ref> &gt; &amp;</type>
+          <declname>drawables</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="710" column="10" bodyfile="include/System.hpp" bodystart="710" bodyend="738"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AnimationSystem</label>
+        <link refid="classAnimationSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ISystem&lt; Animation, Drawable &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ISystemBase</label>
+        <link refid="classISystemBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AnimationSystem</label>
+        <link refid="classAnimationSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ISystem&lt; Animation, Drawable &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ISystemBase</label>
+        <link refid="classISystemBase"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/System.hpp" line="703" column="1" bodyfile="include/System.hpp" bodystart="703" bodyend="739"/>
+    <listofallmembers>
+      <member refid="classAnimationSystem_1adab0fd4fbadf16eff05d9f4b0308a37c" prot="public" virt="non-virtual"><scope>AnimationSystem</scope><name>AnimationSystem</name></member>
+      <member refid="classAnimationSystem_1a295b4d7d936b371e3d3115a22af90ec3" prot="private" virt="non-virtual"><scope>AnimationSystem</scope><name>deltaTime</name></member>
+      <member refid="classAnimationSystem_1af588b319ed68c08197a8d35266b7cd52" prot="public" virt="non-virtual"><scope>AnimationSystem</scope><name>operator()</name></member>
+      <member refid="classISystem_1a31573ab1dbe256ad82453452bc1a76b8" prot="public" virt="pure-virtual" ambiguityscope="ISystem&lt; Animation, Drawable &gt;::"><scope>AnimationSystem</scope><name>operator()</name></member>
+      <member refid="classISystemBase_1a15450364e9f21ebae6e2633eef35d7d5" prot="public" virt="virtual"><scope>AnimationSystem</scope><name>PostUpdate</name></member>
+      <member refid="classISystem_1a8b403989cf1780ab99f91272b3098648" prot="public" virt="virtual"><scope>AnimationSystem</scope><name>~ISystem</name></member>
+      <member refid="classISystemBase_1ae71b84b72f1d4eab3f8acdf50d5ee540" prot="public" virt="virtual"><scope>AnimationSystem</scope><name>~ISystemBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

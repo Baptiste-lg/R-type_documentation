@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classBehaviorSystem" kind="class" language="C++" prot="public">
+    <compoundname>BehaviorSystem</compoundname>
+    <basecompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Behavior, Position &gt;</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classBehaviorSystem_1a82345b881042f145782b1b5e985f39f7" prot="private" static="no" mutable="no">
+        <type>float &amp;</type>
+        <definition>float&amp; BehaviorSystem::deltaTime</definition>
+        <argsstring></argsstring>
+        <name>deltaTime</name>
+        <qualifiedname>BehaviorSystem::deltaTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="785" column="11" bodyfile="include/System.hpp" bodystart="785" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classBehaviorSystem_1a07b4dbe89dfe425e2989081621b533cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BehaviorSystem::BehaviorSystem</definition>
+        <argsstring>(float &amp;deltaTime)</argsstring>
+        <name>BehaviorSystem</name>
+        <qualifiedname>BehaviorSystem::BehaviorSystem</qualifiedname>
+        <param>
+          <type>float &amp;</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="788" column="5" bodyfile="include/System.hpp" bodystart="788" bodyend="788"/>
+      </memberdef>
+      <memberdef kind="function" id="classBehaviorSystem_1adaaf509299c7f9fa66f522139efea797" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BehaviorSystem::operator()</definition>
+        <argsstring>(entity_t e, sparse_array&lt; Behavior &gt; &amp;behaviors, sparse_array&lt; Position &gt; &amp;positions) override</argsstring>
+        <name>operator()</name>
+        <qualifiedname>BehaviorSystem::operator()</qualifiedname>
+        <param>
+          <type>entity_t</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structBehavior" kindref="compound">Behavior</ref> &gt; &amp;</type>
+          <declname>behaviors</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structPosition" kindref="compound">Position</ref> &gt; &amp;</type>
+          <declname>positions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System.hpp" line="790" column="10" bodyfile="include/System.hpp" bodystart="790" bodyend="806"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>BehaviorSystem</label>
+        <link refid="classBehaviorSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ISystem&lt; Behavior, Position &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ISystemBase</label>
+        <link refid="classISystemBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>BehaviorSystem</label>
+        <link refid="classBehaviorSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ISystem&lt; Behavior, Position &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ISystemBase</label>
+        <link refid="classISystemBase"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/System.hpp" line="783" column="1" bodyfile="include/System.hpp" bodystart="783" bodyend="807"/>
+    <listofallmembers>
+      <member refid="classBehaviorSystem_1a07b4dbe89dfe425e2989081621b533cc" prot="public" virt="non-virtual"><scope>BehaviorSystem</scope><name>BehaviorSystem</name></member>
+      <member refid="classBehaviorSystem_1a82345b881042f145782b1b5e985f39f7" prot="private" virt="non-virtual"><scope>BehaviorSystem</scope><name>deltaTime</name></member>
+      <member refid="classBehaviorSystem_1adaaf509299c7f9fa66f522139efea797" prot="public" virt="non-virtual"><scope>BehaviorSystem</scope><name>operator()</name></member>
+      <member refid="classISystem_1a31573ab1dbe256ad82453452bc1a76b8" prot="public" virt="pure-virtual" ambiguityscope="ISystem&lt; Behavior, Position &gt;::"><scope>BehaviorSystem</scope><name>operator()</name></member>
+      <member refid="classISystemBase_1a15450364e9f21ebae6e2633eef35d7d5" prot="public" virt="virtual"><scope>BehaviorSystem</scope><name>PostUpdate</name></member>
+      <member refid="classISystem_1a8b403989cf1780ab99f91272b3098648" prot="public" virt="virtual"><scope>BehaviorSystem</scope><name>~ISystem</name></member>
+      <member refid="classISystemBase_1ae71b84b72f1d4eab3f8acdf50d5ee540" prot="public" virt="virtual"><scope>BehaviorSystem</scope><name>~ISystemBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structClient" kind="struct" language="C++" prot="public">
+    <compoundname>Client</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structClient_1ab79ad95264939f089a2f0b8e0ca62d37" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Client::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>Client::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="166" column="9" bodyfile="include/Component.hpp" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structClient_1a348f007b5a17a83995f8d6be25ece283" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Client::ip</definition>
+        <argsstring></argsstring>
+        <name>ip</name>
+        <qualifiedname>Client::ip</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="167" column="17" bodyfile="include/Component.hpp" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structClient_1a8574d8e82fc410328966665308dc07e9" prot="public" static="no" mutable="no">
+        <type>entity_t</type>
+        <definition>entity_t Client::entity_id</definition>
+        <argsstring></argsstring>
+        <name>entity_id</name>
+        <qualifiedname>Client::entity_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="168" column="14" bodyfile="include/Component.hpp" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structClient_1aad8864d1362eae7c50e53c0d131b7442" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Client::port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <qualifiedname>Client::port</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="169" column="9" bodyfile="include/Component.hpp" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structClient_1adf9eaa204339306eb1a783469dc23d5d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Client::latency</definition>
+        <argsstring></argsstring>
+        <name>latency</name>
+        <qualifiedname>Client::latency</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="170" column="9" bodyfile="include/Component.hpp" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structClient_1a92c6e560ac69d3be3399528577331892" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Client::last_packet_time</definition>
+        <argsstring></argsstring>
+        <name>last_packet_time</name>
+        <qualifiedname>Client::last_packet_time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="171" column="9" bodyfile="include/Component.hpp" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structClient_1a2b8e2813b59d5fde0b8148b4445408d3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Client::last_packet_id</definition>
+        <argsstring></argsstring>
+        <name>last_packet_id</name>
+        <qualifiedname>Client::last_packet_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="172" column="9" bodyfile="include/Component.hpp" bodystart="172" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Component.hpp" line="164" column="1" bodyfile="include/Component.hpp" bodystart="165" bodyend="173"/>
+    <listofallmembers>
+      <member refid="structClient_1a8574d8e82fc410328966665308dc07e9" prot="public" virt="non-virtual"><scope>Client</scope><name>entity_id</name></member>
+      <member refid="structClient_1ab79ad95264939f089a2f0b8e0ca62d37" prot="public" virt="non-virtual"><scope>Client</scope><name>id</name></member>
+      <member refid="structClient_1a348f007b5a17a83995f8d6be25ece283" prot="public" virt="non-virtual"><scope>Client</scope><name>ip</name></member>
+      <member refid="structClient_1a2b8e2813b59d5fde0b8148b4445408d3" prot="public" virt="non-virtual"><scope>Client</scope><name>last_packet_id</name></member>
+      <member refid="structClient_1a92c6e560ac69d3be3399528577331892" prot="public" virt="non-virtual"><scope>Client</scope><name>last_packet_time</name></member>
+      <member refid="structClient_1adf9eaa204339306eb1a783469dc23d5d" prot="public" virt="non-virtual"><scope>Client</scope><name>latency</name></member>
+      <member refid="structClient_1aad8864d1362eae7c50e53c0d131b7442" prot="public" virt="non-virtual"><scope>Client</scope><name>port</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
