@@ -8,7 +8,6 @@ build:
 sphinx:
   configuration: docs/conf.py
 
-# Uncomment the following lines if you have a requirements.txt file
-# python:
-#   install:
-#   - requirements: docs/requirements.txt
+python:
+  install:
+  - requirements: docs/requirements.txt
