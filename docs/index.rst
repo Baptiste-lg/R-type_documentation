@@ -4,13 +4,8 @@ R-type Documentation
 
 Welcome to the R-type documentation!
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Table of Contents:
-
-   page1
-   page2
-   ...
+.. doxygenindex::
+   :project: R-type
 
 Indices and tables
 ==================
