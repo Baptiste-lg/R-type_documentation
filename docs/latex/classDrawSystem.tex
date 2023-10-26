@@ -1,0 +1,48 @@
+\doxysection{Draw\+System Class Reference}
+\hypertarget{classDrawSystem}{}\label{classDrawSystem}\index{DrawSystem@{DrawSystem}}
+Inheritance diagram for Draw\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classDrawSystem}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classDrawSystem_ab84e0d2919764a539596f15a008bd967}\label{classDrawSystem_ab84e0d2919764a539596f15a008bd967} 
+{\bfseries Draw\+System} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classAssetManager}{Asset\+Manager}} \&asset\+Manager, \mbox{\hyperlink{classRegistry}{Registry}} \&registry)
+\item 
+\Hypertarget{classDrawSystem_afcb08365ae4bc4ea5967598dc0261cba}\label{classDrawSystem_afcb08365ae4bc4ea5967598dc0261cba} 
+void {\bfseries sort\+Entities} (\mbox{\hyperlink{classsparse__array}{sparse\+\_\+array}}$<$ \mbox{\hyperlink{structDrawable}{Drawable}} $>$ \&drawables, \mbox{\hyperlink{classsparse__array}{sparse\+\_\+array}}$<$ \mbox{\hyperlink{structDepth}{Depth}} $>$ \&depths)
+\item 
+\Hypertarget{classDrawSystem_a152b690ae2bc7a531d95c5fb113d006d}\label{classDrawSystem_a152b690ae2bc7a531d95c5fb113d006d} 
+void {\bfseries operator()} (entity\+\_\+t entity, \mbox{\hyperlink{classsparse__array}{sparse\+\_\+array}}$<$ \mbox{\hyperlink{structDrawable}{Drawable}} $>$ \&drawables, \mbox{\hyperlink{classsparse__array}{sparse\+\_\+array}}$<$ \mbox{\hyperlink{structPosition}{Position}} $>$ \&positions, \mbox{\hyperlink{classsparse__array}{sparse\+\_\+array}}$<$ \mbox{\hyperlink{structDepth}{Depth}} $>$ \&depths) override
+\item 
+\Hypertarget{classDrawSystem_ac85b929de9cd60ea4c74f80ea7183681}\label{classDrawSystem_ac85b929de9cd60ea4c74f80ea7183681} 
+void {\bfseries invalidate\+Sort} ()
+\item 
+void \mbox{\hyperlink{classDrawSystem_ae4d1a9ff9776fc33a2b092ca352b4c5d}{Post\+Update}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classISystem}{ISystem$<$ Drawable, Position, Depth $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries operator()} (entity\+\_\+t entity, \mbox{\hyperlink{classsparse__array}{sparse\+\_\+array}}$<$ Components $>$ \&... components)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classDrawSystem_ae4d1a9ff9776fc33a2b092ca352b4c5d}\label{classDrawSystem_ae4d1a9ff9776fc33a2b092ca352b4c5d} 
+\index{DrawSystem@{DrawSystem}!PostUpdate@{PostUpdate}}
+\index{PostUpdate@{PostUpdate}!DrawSystem@{DrawSystem}}
+\doxysubsubsection{\texorpdfstring{PostUpdate()}{PostUpdate()}}
+{\footnotesize\ttfamily void Draw\+System\+::\+Post\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classISystemBase}{ISystem\+Base}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/System.\+hpp\end{DoxyCompactItemize}

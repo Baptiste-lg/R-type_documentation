@@ -1,0 +1,112 @@
+\doxysection{Zipper\+Iterator.\+hpp}
+\hypertarget{ZipperIterator_8hpp_source}{}\label{ZipperIterator_8hpp_source}\index{include/ZipperIterator.hpp@{include/ZipperIterator.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ZIPPERITTERATOR\_HPP\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ZIPPERITTERATOR\_HPP\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <tuple>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iterator>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Entity.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}SparseArray.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Component.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Zipper.hpp"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}...\ Containers>}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classzipper}{zipper}};\ \ \textcolor{comment}{//\ Forward\ declaration}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ Define\ a\ zipper\_iterator\ for\ Containers}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}...\ Containers>}
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classzipper__iterator}{zipper\_iterator}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Container>}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{using\ }iterator\_t\ =\ \textcolor{keyword}{typename}\ Container::iterator;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Container>}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{using\ }it\_reference\_t\ =\ \textcolor{keyword}{typename}\ iterator\_t<Container>::reference;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ Define\ iterator\ properties}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{using\ }value\_type\ =\ std::tuple<it\_reference\_t<Containers>...>;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{using\ }reference\ =\ value\_type;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{using\ }pointer\ =\ void;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{using\ }difference\_type\ =\ size\_t;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{using\ }iterator\_category\ =\ std::forward\_iterator\_tag;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Use\ a\ tuple\ to\ hold\ iterators\ for\ each\ Container}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{using\ }iterator\_tuple\ =\ std::tuple<iterator\_t<Containers>...>;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ Copy\ constructor}}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classzipper__iterator}{zipper\_iterator}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classzipper__iterator}{zipper\_iterator}}\&\ z)}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \_current(z.\_current),\ \_max(z.\_max),\ \_idx(z.\_idx)\ \{\}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Allow\ zipper\ class\ to\ access\ private\ members}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classzipper}{zipper}}<Containers...>;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ Construct\ a\ zipper\_iterator}}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{classzipper__iterator}{zipper\_iterator}}(iterator\_tuple\ \textcolor{keyword}{const}\&\ it\_tuple,\ \textcolor{keywordtype}{size\_t}\ max,\ \textcolor{keywordtype}{size\_t}\ idx\ =\ 0)}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \_current(it\_tuple),\ \_max(max),\ \_idx(idx)\ \{\}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ Prefix\ increment}}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{classzipper__iterator}{zipper\_iterator}}\&\ operator++()\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ ++\_idx;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ incr\_all(\_seq);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//\ Postfix\ increment}}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{classzipper__iterator}{zipper\_iterator}}\ operator++(\textcolor{keywordtype}{int})\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classzipper__iterator}{zipper\_iterator}}\ tmp(*\textcolor{keyword}{this});}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ operator++();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tmp;}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ Dereference\ iterator}}
+\DoxyCodeLine{00062\ \ \ \ \ reference\ operator*()\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ to\_value(\_seq);}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ Arrow\ operator\ overload}}
+\DoxyCodeLine{00067\ \ \ \ \ pointer\ operator-\/>()\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&to\_value(\_seq);}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//\ Equality\ operator}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{classzipper__iterator}{zipper\_iterator}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classzipper__iterator}{zipper\_iterator}}\&\ rhs)\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lhs.\_idx\ ==\ rhs.\_idx;}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{//\ Inequality\ operator}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ operator!=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classzipper__iterator}{zipper\_iterator}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classzipper__iterator}{zipper\_iterator}}\&\ rhs)\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lhs.\_idx\ !=\ rhs.\_idx;}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//\ Increment\ all\ underlying\ iterators}}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{template}\ <std::size\_t...\ Is>}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ incr\_all(std::index\_sequence<Is...>)\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ ((++std::get<Is>(\_current)),\ ...);}
+\DoxyCodeLine{00085\ \ \ \ \ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//\ Check\ if\ all\ elements\ are\ set}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{template}\ <std::size\_t...\ Is>}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{bool}\ all\_set(std::index\_sequence<Is...>)\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (...\ \&\&\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{bool}\textcolor{keyword}{>}(std::get<Is>(\_current)));}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//\ Convert\ to\ value\_type\ (tuple)}}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{template}\ <std::size\_t...\ Is>}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{auto}\ to\_value(std::index\_sequence<Is...>)\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::tie(*std::get<Is>(\_current)...);}
+\DoxyCodeLine{00097\ \ \ \ \ \}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \_max;}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \_idx;}
+\DoxyCodeLine{00102\ \ \ \ \ iterator\_tuple\ \_current;}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ std::index\_sequence\_for<Containers...>\ \_seq\{\};}
+\DoxyCodeLine{00104\ \};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !ZIPPERITTERATOR\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

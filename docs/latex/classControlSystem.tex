@@ -1,0 +1,32 @@
+\doxysection{Control\+System Class Reference}
+\hypertarget{classControlSystem}{}\label{classControlSystem}\index{ControlSystem@{ControlSystem}}
+Inheritance diagram for Control\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classControlSystem}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classControlSystem_a503d4175898c757edc99547c0c4d9668}\label{classControlSystem_a503d4175898c757edc99547c0c4d9668} 
+{\bfseries Control\+System} (float \&delta\+Time, \mbox{\hyperlink{classRegistry}{Registry}} \&registry)
+\item 
+\Hypertarget{classControlSystem_a7581a8067638dfca0ee54528f32973f9}\label{classControlSystem_a7581a8067638dfca0ee54528f32973f9} 
+void {\bfseries operator()} (entity\+\_\+t entity, \mbox{\hyperlink{classsparse__array}{sparse\+\_\+array}}$<$ \mbox{\hyperlink{structPosition}{Position}} $>$ \&positions, \mbox{\hyperlink{classsparse__array}{sparse\+\_\+array}}$<$ \mbox{\hyperlink{structVelocity}{Velocity}} $>$ \&velocities, \mbox{\hyperlink{classsparse__array}{sparse\+\_\+array}}$<$ \mbox{\hyperlink{structControllable}{Controllable}} $>$ \&controllables, \mbox{\hyperlink{classsparse__array}{sparse\+\_\+array}}$<$ \mbox{\hyperlink{structGameConfig}{Game\+Config}} $>$ \&game\+Configs) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classISystem}{ISystem$<$ Position, Velocity, Controllable, Game\+Config $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries operator()} (entity\+\_\+t entity, \mbox{\hyperlink{classsparse__array}{sparse\+\_\+array}}$<$ Components $>$ \&... components)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classISystemBase}{ISystem\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Post\+Update} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/System.\+hpp\end{DoxyCompactItemize}

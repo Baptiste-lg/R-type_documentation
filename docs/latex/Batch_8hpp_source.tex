@@ -1,0 +1,167 @@
+\doxysection{Batch.\+hpp}
+\hypertarget{Batch_8hpp_source}{}\label{Batch_8hpp_source}\index{include/Batch.hpp@{include/Batch.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ ECS}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Batch}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ BATCH\_HPP\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ BATCH\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\#include\ "{}Registry.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\#include\ "{}SparseArray.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\#include\ "{}Entity.hpp"{}}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\#include\ "{}TextureManager.hpp"{}}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\#include\ "{}Behaviour.hpp"{}}}
+\DoxyCodeLine{00016\ \textcolor{comment}{}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\#include\ <vector>}}
+\DoxyCodeLine{00019\ \textcolor{comment}{}}
+\DoxyCodeLine{00020\ \textcolor{comment}{class\ Batch\ \{}}
+\DoxyCodeLine{00021\ \textcolor{comment}{public:}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ Batch(const\ sf::Texture\&\ texture)\ :\ texture(texture)\ \{}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ \ \ \ \ vertexArray.setPrimitiveType(sf::Quads);}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ void\ AddEntity(entity\_t\ entity,\ const\ sf::Sprite\&\ sprite)\ \{}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ \ \ \ \ //\ Store\ the\ entity\ ID\ for\ reference}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ \ \ \ \ entities.push\_back(entity);}}
+\DoxyCodeLine{00028\ \textcolor{comment}{}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ \ \ \ \ //\ Get\ the\ position\ and\ texture\ coordinates\ of\ the\ sprite}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ \ \ \ \ sf::Vector2f\ position\ =\ sprite.getPosition();}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ \ \ \ \ sf::IntRect\ textureRect\ =\ sprite.getTextureRect();}}
+\DoxyCodeLine{00032\ \textcolor{comment}{}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ \ \ \ \ //\ Create\ 4\ vertices\ for\ the\ sprite\ (quad)}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ \ \ \ \ sf::Vertex\ topLeft,\ topRight,\ bottomLeft,\ bottomRight;}}
+\DoxyCodeLine{00035\ \textcolor{comment}{}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ \ \ \ \ //\ Set\ positions}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ \ \ \ \ topLeft.position\ =\ position;}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ \ \ \ \ topRight.position\ =\ \{position.x\ +\ textureRect.width,\ position.y\};}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ \ \ \ \ bottomLeft.position\ =\ \{position.x,\ position.y\ +\ textureRect.height\};}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ \ \ \ \ bottomRight.position\ =\ \{position.x\ +\ textureRect.width,\ position.y\ +\ textureRect.height\};}}
+\DoxyCodeLine{00041\ \textcolor{comment}{}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ \ \ \ \ //\ Set\ texture\ coordinates}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ \ \ \ \ \ topLeft.texCoords\ =\ \{static\_cast<float>(textureRect.left),\ static\_cast<float>(textureRect.top)\};}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ \ \ \ \ topRight.texCoords\ =\ \{static\_cast<float>(textureRect.left\ +\ textureRect.width),\ static\_cast<float>(textureRect.top)\};}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ \ \ \ \ \ \ \ bottomLeft.texCoords\ =\ \{static\_cast<float>(textureRect.left),\ static\_cast<float>(textureRect.top\ +\ textureRect.height)\};}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ \ \ \ \ \ \ \ bottomRight.texCoords\ =\ \{static\_cast<float>(textureRect.left\ +\ textureRect.width),\ static\_cast<float>(textureRect.top\ +\ textureRect.height)\};}}
+\DoxyCodeLine{00047\ \textcolor{comment}{}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ \ \ \ \ //\ Add\ the\ vertices\ to\ the\ vertex\ array}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ \ \ \ \ vertexArray.append(topLeft);}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ \ \ \ \ \ \ \ vertexArray.append(topRight);}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ \ \ \ \ \ vertexArray.append(bottomLeft);}}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ \ \ \ \ \ \ \ vertexArray.append(bottomRight);}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ \ \ \ \ \ \ \ std::cout\ <<\ "{}Added\ entity\ "{}\ <<\ entity\ <<\ "{}\ to\ batch."{}\ <<\ std::endl;}}
+\DoxyCodeLine{00054\ \textcolor{comment}{}}
+\DoxyCodeLine{00055\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00056\ \textcolor{comment}{}}
+\DoxyCodeLine{00057\ \textcolor{comment}{}}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ \ \ \ void\ RemoveEntity(entity\_t\ entity)\ \{}}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ \ \ \ \ \ \ \ //\ Find\ the\ entity\ in\ the\ entities\ list}}
+\DoxyCodeLine{00060\ \textcolor{comment}{\ \ \ \ \ \ \ \ auto\ it\ =\ std::find(entities.begin(),\ entities.end(),\ entity);}}
+\DoxyCodeLine{00061\ \textcolor{comment}{}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ if\ (it\ !=\ entities.end())\ \{}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Calculate\ the\ index\ in\ the\ vertex\ array}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ std::size\_t\ index\ =\ std::distance(entities.begin(),\ it)\ *\ 4;\ \ //\ Each\ entity\ contributes\ 4\ vertices}}
+\DoxyCodeLine{00065\ \textcolor{comment}{}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Create\ a\ new\ vertex\ array\ and\ copy\ over\ all\ vertices\ except\ the\ ones\ to\ remove}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ sf::VertexArray\ newVertexArray;}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ for\ (std::size\_t\ i\ =\ 0;\ i\ <\ vertexArray.getVertexCount();\ ++i)\ \{}}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if\ (i\ <\ index\ ||\ i\ >=\ index\ +\ 4)\ \{}}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newVertexArray.append(vertexArray[i]);}}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00073\ \textcolor{comment}{}}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Replace\ the\ old\ vertex\ array\ with\ the\ new\ one}}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ vertexArray\ =\ newVertexArray;}}
+\DoxyCodeLine{00076\ \textcolor{comment}{}}
+\DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Remove\ the\ entity\ from\ the\ list}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ entities.erase(it);}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}\ else\ \{}}
+\DoxyCodeLine{00080\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Entity\ not\ found\ in\ the\ batch}}
+\DoxyCodeLine{00081\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ "{}Warning:\ Entity\ not\ found\ in\ batch.\ Cannot\ remove."{}\ <<\ std::endl;}}
+\DoxyCodeLine{00082\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00083\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00084\ \textcolor{comment}{}}
+\DoxyCodeLine{00085\ \textcolor{comment}{}}
+\DoxyCodeLine{00086\ \textcolor{comment}{}}
+\DoxyCodeLine{00087\ \textcolor{comment}{\ \ \ \ void\ UpdateEntity(entity\_t\ entity,\ const\ sf::Sprite\&\ newSprite)\ \{}}
+\DoxyCodeLine{00088\ \textcolor{comment}{\ \ \ \ \ \ \ \ //\ Find\ the\ entity\ in\ the\ entities\ list}}
+\DoxyCodeLine{00089\ \textcolor{comment}{\ \ \ \ \ \ \ \ auto\ it\ =\ std::find(entities.begin(),\ entities.end(),\ entity);}}
+\DoxyCodeLine{00090\ \textcolor{comment}{}}
+\DoxyCodeLine{00091\ \textcolor{comment}{\ \ \ \ \ \ \ \ if\ (it\ !=\ entities.end())\ \{}}
+\DoxyCodeLine{00092\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Calculate\ the\ index\ in\ the\ vertex\ array}}
+\DoxyCodeLine{00093\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ std::size\_t\ index\ =\ std::distance(entities.begin(),\ it)\ *\ 4;\ \ //\ Each\ entity\ contributes\ 4\ vertices}}
+\DoxyCodeLine{00094\ \textcolor{comment}{}}
+\DoxyCodeLine{00095\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Get\ the\ position\ and\ texture\ coordinates\ of\ the\ new\ sprite}}
+\DoxyCodeLine{00096\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f\ position\ =\ newSprite.getPosition();}}
+\DoxyCodeLine{00097\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ sf::IntRect\ textureRect\ =\ newSprite.getTextureRect();}}
+\DoxyCodeLine{00098\ \textcolor{comment}{}}
+\DoxyCodeLine{00099\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Update\ positions}}
+\DoxyCodeLine{00100\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ vertexArray[index].position\ =\ position;}}
+\DoxyCodeLine{00101\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ vertexArray[index\ +\ 1].position\ =\ \{position.x\ +\ textureRect.width,\ position.y\};}}
+\DoxyCodeLine{00102\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ vertexArray[index\ +\ 2].position\ =\ \{position.x,\ position.y\ +\ textureRect.height\};}}
+\DoxyCodeLine{00103\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ vertexArray[index\ +\ 3].position\ =\ \{position.x\ +\ textureRect.width,\ position.y\ +\ textureRect.height\};}}
+\DoxyCodeLine{00104\ \textcolor{comment}{}}
+\DoxyCodeLine{00105\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Update\ texture\ coordinates}}
+\DoxyCodeLine{00106\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ vertexArray[index].texCoords\ =\ \{static\_cast<float>(textureRect.left),\ static\_cast<float>(textureRect.top)\};}}
+\DoxyCodeLine{00107\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ vertexArray[index\ +\ 1].texCoords\ =\ \{static\_cast<float>(textureRect.left\ +\ textureRect.width),\ static\_cast<float>(textureRect.top)\};}}
+\DoxyCodeLine{00108\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ vertexArray[index\ +\ 2].texCoords\ =\ \{static\_cast<float>(textureRect.left),\ static\_cast<float>(textureRect.top\ +\ textureRect.height)\};}}
+\DoxyCodeLine{00109\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ vertexArray[index\ +\ 3].texCoords\ =\ \{static\_cast<float>(textureRect.left\ +\ textureRect.width),\ static\_cast<float>(textureRect.top\ +\ textureRect.height)\};}}
+\DoxyCodeLine{00110\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}\ else\ \{}}
+\DoxyCodeLine{00111\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Entity\ not\ found\ in\ the\ batch}}
+\DoxyCodeLine{00112\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ "{}Warning:\ Entity\ not\ found\ in\ batch.\ Cannot\ update."{}\ <<\ std::endl;}}
+\DoxyCodeLine{00113\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00114\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00115\ \textcolor{comment}{}}
+\DoxyCodeLine{00116\ \textcolor{comment}{}}
+\DoxyCodeLine{00117\ \textcolor{comment}{\ \ \ \ void\ Draw(sf::RenderWindow\&\ window)\ \{}}
+\DoxyCodeLine{00118\ \textcolor{comment}{\ \ \ \ \ \ \ \ window.draw(vertexArray);}}
+\DoxyCodeLine{00119\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00120\ \textcolor{comment}{\ \ \ \ void\ Clear()\ \{}}
+\DoxyCodeLine{00121\ \textcolor{comment}{\ \ \ \ \ \ \ \ entities.clear();}}
+\DoxyCodeLine{00122\ \textcolor{comment}{\ \ \ \ \ \ \ \ vertexArray.clear();}}
+\DoxyCodeLine{00123\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00124\ \textcolor{comment}{}}
+\DoxyCodeLine{00125\ \textcolor{comment}{}}
+\DoxyCodeLine{00126\ \textcolor{comment}{private:}}
+\DoxyCodeLine{00127\ \textcolor{comment}{\ \ \ \ const\ sf::Texture\&\ texture;}}
+\DoxyCodeLine{00128\ \textcolor{comment}{\ \ \ \ sf::VertexArray\ vertexArray;}}
+\DoxyCodeLine{00129\ \textcolor{comment}{\ \ \ \ std::vector<entity\_t>\ entities;\ \ //\ Store\ entity\ IDs\ for\ reference}}
+\DoxyCodeLine{00130\ \textcolor{comment}{\};}}
+\DoxyCodeLine{00131\ \textcolor{comment}{}}
+\DoxyCodeLine{00132\ \textcolor{comment}{}}
+\DoxyCodeLine{00133\ \textcolor{comment}{class\ BatchManager\ \{}}
+\DoxyCodeLine{00134\ \textcolor{comment}{public:}}
+\DoxyCodeLine{00135\ \textcolor{comment}{\ \ \ \ BatchManager()\ =\ default;}}
+\DoxyCodeLine{00136\ \textcolor{comment}{}}
+\DoxyCodeLine{00137\ \textcolor{comment}{\ \ \ \ void\ AddBatch(const\ std::string\&\ textureName,\ const\ sf::Texture\&\ texture)\ \{}}
+\DoxyCodeLine{00138\ \textcolor{comment}{\ \ \ \ \ \ \ \ batches[textureName]\ =\ std::make\_unique<Batch>(texture);}}
+\DoxyCodeLine{00139\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00140\ \textcolor{comment}{}}
+\DoxyCodeLine{00141\ \textcolor{comment}{\ \ \ \ Batch*\ GetBatch(const\ std::string\&\ textureName)\ \{}}
+\DoxyCodeLine{00142\ \textcolor{comment}{\ \ \ \ \ \ \ \ return\ batches[textureName].get();}}
+\DoxyCodeLine{00143\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00144\ \textcolor{comment}{}}
+\DoxyCodeLine{00145\ \textcolor{comment}{\ \ \ \ void\ DrawAll(sf::RenderWindow\&\ window)\ \{}}
+\DoxyCodeLine{00146\ \textcolor{comment}{\ \ \ \ \ \ \ \ for\ (auto\&\ [textureName,\ batch]\ :\ batches)\ \{}}
+\DoxyCodeLine{00147\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ batch-\/>Draw(window);}}
+\DoxyCodeLine{00148\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00149\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00150\ \textcolor{comment}{}}
+\DoxyCodeLine{00151\ \textcolor{comment}{\ \ \ \ void\ ClearAll()\ \{}}
+\DoxyCodeLine{00152\ \textcolor{comment}{\ \ \ \ \ \ \ \ for\ (auto\&\ [textureName,\ batch]\ :\ batches)\ \{}}
+\DoxyCodeLine{00153\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ batch-\/>Clear();}}
+\DoxyCodeLine{00154\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00155\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00156\ \textcolor{comment}{}}
+\DoxyCodeLine{00157\ \textcolor{comment}{private:}}
+\DoxyCodeLine{00158\ \textcolor{comment}{\ \ \ \ std::unordered\_map<std::string,\ std::unique\_ptr<Batch>>\ batches;}}
+\DoxyCodeLine{00159\ \textcolor{comment}{\};}}
+\DoxyCodeLine{00160\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !BATCH\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

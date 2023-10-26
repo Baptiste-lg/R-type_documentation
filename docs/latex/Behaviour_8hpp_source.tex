@@ -1,0 +1,31 @@
+\doxysection{Behaviour.\+hpp}
+\hypertarget{Behaviour_8hpp_source}{}\label{Behaviour_8hpp_source}\index{include/Behaviour.hpp@{include/Behaviour.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ ECS}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ REGISTRY}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ BEHAVIOUR\_HPP\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ BEHAVIOUR\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Component.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//need\ to\ move\ to\ behavior.cpp}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ }BehaviorFunc\ =\ std::function<void(\mbox{\hyperlink{structPosition}{Position}}\&,\ \textcolor{keywordtype}{float})>;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{void}\ moveLeft(\mbox{\hyperlink{structPosition}{Position}}\&\ pos,\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{void}\ zigzagMovement(\mbox{\hyperlink{structPosition}{Position}}\&\ pos,\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ sliderLoopFixMovement(\mbox{\hyperlink{structPosition}{Position}}\&\ pos,\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ circularMovement(\mbox{\hyperlink{structPosition}{Position}}\&\ pos,\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ diagonalMovement(\mbox{\hyperlink{structPosition}{Position}}\&\ pos,\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ sineWaveMovement(\mbox{\hyperlink{structPosition}{Position}}\&\ pos,\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ backAndForthMovement(\mbox{\hyperlink{structPosition}{Position}}\&\ pos,\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ lShapeMovement(\mbox{\hyperlink{structPosition}{Position}}\&\ pos,\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ randomMovement(\mbox{\hyperlink{structPosition}{Position}}\&\ pos,\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ fixedMovement(\mbox{\hyperlink{structPosition}{Position}}\&\ pos,\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ loopDiagonalMovementRight(\mbox{\hyperlink{structPosition}{Position}}\&\ pos,\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !BEHAVIOUR\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

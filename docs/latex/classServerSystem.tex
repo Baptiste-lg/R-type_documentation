@@ -1,0 +1,38 @@
+\doxysection{Server\+System Class Reference}
+\hypertarget{classServerSystem}{}\label{classServerSystem}\index{ServerSystem@{ServerSystem}}
+Inheritance diagram for Server\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classServerSystem}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classServerSystem_a17ac41ccc9710593520f280fe7a8ca1d}\label{classServerSystem_a17ac41ccc9710593520f280fe7a8ca1d} 
+{\bfseries Server\+System} (\mbox{\hyperlink{classRegistry}{Registry}} \&registry, float \&delta\+Time)
+\item 
+\Hypertarget{classServerSystem_ac96532214823ef19033d0cf157554ddf}\label{classServerSystem_ac96532214823ef19033d0cf157554ddf} 
+void {\bfseries add\+\_\+client} (struct sockaddr\+\_\+in new\+\_\+client)
+\item 
+\Hypertarget{classServerSystem_a97a615978fcc0f868d3427a80549504c}\label{classServerSystem_a97a615978fcc0f868d3427a80549504c} 
+void {\bfseries broadcast} (const char \texorpdfstring{$\ast$}{*}message, ssize\+\_\+t len, struct sockaddr\+\_\+in \texorpdfstring{$\ast$}{*}exclude\+\_\+addr=nullptr)
+\item 
+\Hypertarget{classServerSystem_a30091f5af5b92065c25ffe2400adf557}\label{classServerSystem_a30091f5af5b92065c25ffe2400adf557} 
+void {\bfseries operator()} (entity\+\_\+t entity, \mbox{\hyperlink{classsparse__array}{sparse\+\_\+array}}$<$ \mbox{\hyperlink{structNetwork}{Network}} $>$ \&networks, \mbox{\hyperlink{classsparse__array}{sparse\+\_\+array}}$<$ \mbox{\hyperlink{structState}{State}} $>$ \&states) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classISystem}{ISystem$<$ Network, State $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries operator()} (entity\+\_\+t entity, \mbox{\hyperlink{classsparse__array}{sparse\+\_\+array}}$<$ Components $>$ \&... components)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classISystemBase}{ISystem\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Post\+Update} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/System.\+hpp\end{DoxyCompactItemize}

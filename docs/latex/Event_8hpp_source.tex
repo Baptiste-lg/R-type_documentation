@@ -1,0 +1,90 @@
+\doxysection{Event.\+hpp}
+\hypertarget{Event_8hpp_source}{}\label{Event_8hpp_source}\index{include/Event.hpp@{include/Event.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ ECS}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Event}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ EVENT\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ EVENT\_HPP\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{enum}\ EventType\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ PlayerDied,}
+\DoxyCodeLine{00017\ \ \ \ \ ItemPicked,}
+\DoxyCodeLine{00018\ \ \ \ \ PlayerJoined,}
+\DoxyCodeLine{00019\ \ \ \ \ PlayerLeft,}
+\DoxyCodeLine{00020\ \ \ \ \ PlayerMoved,}
+\DoxyCodeLine{00021\ \ \ \ \ PlayerFired,}
+\DoxyCodeLine{00022\ \ \ \ \ PlayerHit,}
+\DoxyCodeLine{00023\ \ \ \ \ PlayerRespawned,}
+\DoxyCodeLine{00024\ \ \ \ \ PlayerScored,}
+\DoxyCodeLine{00025\ \ \ \ \ PlayerWon,}
+\DoxyCodeLine{00026\ \ \ \ \ PlayerLost,}
+\DoxyCodeLine{00027\ \ \ \ \ PlayerDisconnected,}
+\DoxyCodeLine{00028\ \ \ \ \ PlayerReconnected,}
+\DoxyCodeLine{00029\ \ \ \ \ PlayerRejoined,}
+\DoxyCodeLine{00030\ \ \ \ \ PlayerKicked,}
+\DoxyCodeLine{00031\ \ \ \ \ PlayerBanned,}
+\DoxyCodeLine{00032\ \ \ \ \ PlayerUnbanned}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ add\ more\ event\ types}}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{const}\ std::unordered\_map<std::string,\ EventType>\ eventIdentifierMap\ =\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PD"{}},\ PlayerDied\},}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}IP"{}},\ ItemPicked\},}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PJ"{}},\ PlayerJoined\},}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PL"{}},\ PlayerLeft\},}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PM"{}},\ PlayerMoved\},}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PF"{}},\ PlayerFired\},}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PH"{}},\ PlayerHit\},}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PR"{}},\ PlayerRespawned\},}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PS"{}},\ PlayerScored\},}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PW"{}},\ PlayerWon\},}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PL"{}},\ PlayerLost\},}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PDC"{}},\ PlayerDisconnected\},}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PRC"{}},\ PlayerReconnected\},}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PRJ"{}},\ PlayerRejoined\},}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PK"{}},\ PlayerKicked\},}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PB"{}},\ PlayerBanned\},}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PU"{}},\ PlayerUnbanned\}}
+\DoxyCodeLine{00054\ \};}
+\DoxyCodeLine{00055\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEvent}{Event}}\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ EventType\ type;}
+\DoxyCodeLine{00057\ \ \ \ \ std::string\ content;\ \textcolor{comment}{//\ event-\/specific\ data}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ clientID;}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ add\ more\ event-\/specific\ data}}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{using\ }Listener\ =\ std::function<void(\textcolor{keyword}{const}\ \mbox{\hyperlink{structEvent}{Event}}\&)>;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEventBus}{EventBus}}\ \{}
+\DoxyCodeLine{00065\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ \ \ \ \ std::unordered\_map<EventType,\ std::vector<Listener>>\ listeners;}
+\DoxyCodeLine{00067\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ addListener(EventType\ type,\ Listener\ listener)\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Listener\ added\ for\ event\ type:\ "{}}\ <<\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(type)\ <<\ std::endl;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ listeners[type].push\_back(listener);}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ fireEvent(\textcolor{keyword}{const}\ \mbox{\hyperlink{structEvent}{Event}}\&\ event)\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Firing\ event\ of\ type:\ "{}}\ <<\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(\textcolor{keyword}{event}.type)\ <<\ std::endl;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ listener\ :\ listeners[\textcolor{keyword}{event}.type])\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ listener(event);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ EventType\ parseEventType(\textcolor{keyword}{const}\ std::string\&\ eventIdentifier);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !EVENT\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

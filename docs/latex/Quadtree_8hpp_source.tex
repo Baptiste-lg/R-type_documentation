@@ -1,0 +1,261 @@
+\doxysection{Quadtree.\+hpp}
+\hypertarget{Quadtree_8hpp_source}{}\label{Quadtree_8hpp_source}\index{include/Quadtree.hpp@{include/Quadtree.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ ECS}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ QUADTREE}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ QUADTREE\_HPP\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ QUADTREE\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}ISystem.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <tuple>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <fftw3.h>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <complex>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <valarray>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <algorithm>}\ \ \textcolor{comment}{//\ for\ std::transform}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <iterator>}\ \ \textcolor{comment}{//\ for\ std::back\_inserter}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <future>}\ \ \textcolor{comment}{//\ for\ std::async}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCollisionRectangle}{CollisionRectangle}}\ \{}
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classCollisionRectangle}{CollisionRectangle}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{float}\ height)}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ :\ x(x),\ y(y),\ width(width),\ height(height)\ \{\}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ contains(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{float}\ height)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !(x\ <\ this-\/>x\ ||\ x\ +\ width\ >\ this-\/>x\ +\ this-\/>width\ ||}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ y\ <\ this-\/>y\ ||\ y\ +\ height\ >\ this-\/>y\ +\ this-\/>height);}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ intersects(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCollisionRectangle}{CollisionRectangle}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !(x\ >\ other.x\ +\ other.width\ ||}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ +\ width\ <\ other.x\ ||}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ y\ >\ other.y\ +\ other.height\ ||}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ y\ +\ height\ <\ other.y);}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{float}\ getX()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ x;}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ y,\ width,\ height;}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQuadtree}{Quadtree}}\ \{}
+\DoxyCodeLine{00064\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//\ Define\ Node\ as\ a\ nested\ class}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{class\ }Node\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCollisionRectangle}{CollisionRectangle}}\ boundary;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ capacity;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ std::vector<entity\_t>\ entities;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ std::unique\_ptr<Node>\ northwest;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ std::unique\_ptr<Node>\ northeast;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ std::unique\_ptr<Node>\ southwest;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ std::unique\_ptr<Node>\ southeast;}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ Node(\mbox{\hyperlink{classCollisionRectangle}{CollisionRectangle}}\ boundary,\ \textcolor{keywordtype}{int}\ capacity)}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ boundary(boundary),\ capacity(capacity)\ \{\}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ insert(entity\_t\ entity,\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{float}\ height);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ subdivide();}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ queryRange(\mbox{\hyperlink{classCollisionRectangle}{CollisionRectangle}}\ range,\ std::vector<entity\_t>\&\ foundEntities,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Position>}}\&\ positions,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Drawable>}}\&\ drawables);}
+\DoxyCodeLine{00082\ \ \ \ \ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ std::unique\_ptr<Node>\ root;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{classQuadtree}{Quadtree}}(\mbox{\hyperlink{classCollisionRectangle}{CollisionRectangle}}\ boundary,\ \textcolor{keywordtype}{int}\ capacity)}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ :\ root(std::make\_unique<Node>(boundary,\ capacity))\ \{\}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ insert(entity\_t\ entity,\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{float}\ height)\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ root-\/>insert(entity,\ x,\ y,\ width,\ height);}
+\DoxyCodeLine{00092\ \ \ \ \ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ std::vector<entity\_t>\ queryRange(\mbox{\hyperlink{classCollisionRectangle}{CollisionRectangle}}\ range,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Position>}}\&\ positions,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Drawable>}}\&\ drawables)\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ std::vector<entity\_t>\ foundEntities;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ root-\/>queryRange(range,\ foundEntities,\ positions,\ drawables);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ foundEntities;}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ clear()\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ root\ =\ std::make\_unique<Node>(root-\/>boundary,\ root-\/>capacity);}
+\DoxyCodeLine{00101\ \ \ \ \ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCollisionSystem}{CollisionSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classISystem}{ISystem}}<Position,\ Drawable,\ Collision>\ \{}
+\DoxyCodeLine{00106\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{classRegistry}{Registry}}\&\ registry;}
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{classQuadtree}{Quadtree}}\ quadtree;}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{bool}\ firstRun\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{classCollisionSystem}{CollisionSystem}}(\mbox{\hyperlink{classRegistry}{Registry}}\&\ registry)}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ :\ registry(registry),\ quadtree(\mbox{\hyperlink{classCollisionRectangle}{CollisionRectangle}}(0,\ 0,\ 1920,\ 1080),\ 4)\ \{\}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ operator()(entity\_t\ entity,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Position>}}\&\ positions,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Drawable>}}\&\ drawables,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Collision>}}\&\ collisions)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialize\ the\ quadtree\ if\ it's\ the\ first\ run}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (firstRun)\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (entity\_t\ e\ =\ 0;\ e\ <\ positions.size();\ ++e)\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (positions[e].has\_value()\ \&\&\ collisions[e].has\_value())\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ pos\ =\ *positions[e];}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ width\ =\ 0,\ height\ =\ 0;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (drawables[e])\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ drawable\ =\ *drawables[e];}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ width\ =\ drawable.textureRect.width;}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ height\ =\ drawable.textureRect.height;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ quadtree.insert(e,\ pos.x,\ pos.y,\ width,\ height);}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ firstRun\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Skip\ entities\ that\ are\ not\ collidable}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(positions[entity]\ \&\&\ collisions[entity]))\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ pos\ =\ *positions[entity];}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ col\ =\ *collisions[entity];}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ width\ =\ 0,\ height\ =\ 0;}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (drawables[entity])\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ drawable\ =\ *drawables[entity];}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ width\ =\ drawable.textureRect.width;\ \ \textcolor{comment}{//\ Apply\ scaling\ factor}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ height\ =\ drawable.textureRect.height;\ \ \textcolor{comment}{//\ Apply\ scaling\ factor}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Query\ the\ quadtree\ for\ entities\ that\ might\ collide\ with\ this\ one}}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ nearbyEntities\ =\ quadtree.queryRange(\mbox{\hyperlink{classCollisionRectangle}{CollisionRectangle}}(pos.x,\ pos.y,\ width,\ height),\ positions,\ drawables);}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Loop\ through\ the\ nearby\ entities\ and\ check\ for\ collisions}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ otherEntity\ :\ nearbyEntities)\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (otherEntity\ ==\ entity)\ \textcolor{keywordflow}{continue};\ \ \textcolor{comment}{//\ Skip\ self-\/collision}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ otherPos\ =\ *positions[otherEntity];}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ otherWidth\ =\ 0,\ otherHeight\ =\ 0;}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ otherCollisionInfo\ =\ *collisions[otherEntity];}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (otherCollisionInfo.isEnemy\ ==\ col.isEnemy)\ \textcolor{keywordflow}{continue};\ \ \textcolor{comment}{//\ Same\ team,\ for\ example}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (drawables[otherEntity])\ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ otherDrawable\ =\ *drawables[otherEntity];}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ otherWidth\ =\ otherDrawable.textureRect.width;\ \ \textcolor{comment}{//\ Apply\ scaling\ factor}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ otherHeight\ =\ otherDrawable.textureRect.height;\ \ \textcolor{comment}{//\ Apply\ scaling\ factor}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Here,\ perform\ your\ precise\ collision\ detection\ between\ 'entity'\ and\ 'otherEntity'}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ collision\ detected,\ handle\ it\ accordingly\ we\ will\ just\ make\ a\ print\ for\ the\ example}}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//if\ (laserPos.x\ >=\ enemyPos.x\ \&\&\ laserPos.x\ <=\ enemyPos.x\ +\ 243\ \&\&\ laserPos.y\ >=\ enemyPos.y\ \&\&\ laserPos.y\ <=\ enemyPos.y\ +\ 140)\ \{}}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pos.x\ <\ otherPos.x\ +\ otherWidth\ \&\&}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pos.x\ +\ width\ >\ otherPos.x\ \&\&}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pos.y\ <\ otherPos.y\ +\ otherHeight\ \&\&}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pos.y\ +\ height\ >\ otherPos.y)\ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registry.queue\_for\_deletion(entity);}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registry.queue\_for\_deletion(otherEntity);}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ std::cout\ <<\ "{}Collision\ detected\ between\ "{}\ <<\ entity\ <<\ "{}\ and\ "{}\ <<\ otherEntity\ <<\ std::endl;}}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ \ \ \ \ \}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{void}\ PostUpdate()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reset\ the\ quadtree\ and\ invalidate\ the\ firstRun\ flag}}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ quadtree.clear();}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ firstRun\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00186\ \ \ \ \ \}}
+\DoxyCodeLine{00187\ \};}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \textcolor{comment}{//\ Node::insert\ method}}
+\DoxyCodeLine{00191\ \textcolor{keywordtype}{void}\ Quadtree::Node::insert(entity\_t\ entity,\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{float}\ height)\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordflow}{if}\ (!boundary.contains(x,\ y,\ width,\ height))\ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00194\ \ \ \ \ \}}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordflow}{if}\ (entities.size()\ <\ capacity)\ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ entities.push\_back(entity);}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00199\ \ \ \ \ \}}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordflow}{if}\ (!northwest)\ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ subdivide();}
+\DoxyCodeLine{00203\ \ \ \ \ \}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ northwest-\/>insert(entity,\ x,\ y,\ width,\ height);}
+\DoxyCodeLine{00206\ \ \ \ \ northeast-\/>insert(entity,\ x,\ y,\ width,\ height);}
+\DoxyCodeLine{00207\ \ \ \ \ southwest-\/>insert(entity,\ x,\ y,\ width,\ height);}
+\DoxyCodeLine{00208\ \ \ \ \ southeast-\/>insert(entity,\ x,\ y,\ width,\ height);}
+\DoxyCodeLine{00209\ \}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \textcolor{comment}{//\ Node::subdivide\ method}}
+\DoxyCodeLine{00212\ \textcolor{keywordtype}{void}\ Quadtree::Node::subdivide()\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{int}\ subWidth\ =\ boundary.width\ /\ 2;}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{int}\ subHeight\ =\ boundary.height\ /\ 2;}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ boundary.x;}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ boundary.y;}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ northwest\ =\ std::make\_unique<Node>(\mbox{\hyperlink{classCollisionRectangle}{CollisionRectangle}}(x,\ y,\ subWidth,\ subHeight),\ capacity);}
+\DoxyCodeLine{00219\ \ \ \ \ northeast\ =\ std::make\_unique<Node>(\mbox{\hyperlink{classCollisionRectangle}{CollisionRectangle}}(x\ +\ subWidth,\ y,\ subWidth,\ subHeight),\ capacity);}
+\DoxyCodeLine{00220\ \ \ \ \ southwest\ =\ std::make\_unique<Node>(\mbox{\hyperlink{classCollisionRectangle}{CollisionRectangle}}(x,\ y\ +\ subHeight,\ subWidth,\ subHeight),\ capacity);}
+\DoxyCodeLine{00221\ \ \ \ \ southeast\ =\ std::make\_unique<Node>(\mbox{\hyperlink{classCollisionRectangle}{CollisionRectangle}}(x\ +\ subWidth,\ y\ +\ subHeight,\ subWidth,\ subHeight),\ capacity);}
+\DoxyCodeLine{00222\ \}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \textcolor{comment}{//\ Node::queryRange\ method}}
+\DoxyCodeLine{00225\ \textcolor{comment}{//\ Node::queryRange\ method}}
+\DoxyCodeLine{00226\ \textcolor{keywordtype}{void}\ Quadtree::Node::queryRange(\mbox{\hyperlink{classCollisionRectangle}{CollisionRectangle}}\ range,\ std::vector<entity\_t>\&\ foundEntities,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Position>}}\&\ positions,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Drawable>}}\&\ drawables)\ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordflow}{if}\ (!boundary.intersects(range))\ \{}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00229\ \ \ \ \ \}}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ entity\ :\ entities)\ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ the\ entity\ has\ a\ Position\ and\ Drawable\ component}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (positions[entity]\ \&\&\ drawables[entity])\ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ pos\ =\ *positions[entity];}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ drawable\ =\ *drawables[entity];}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ pos.x,\ y\ =\ pos.y;}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ width\ =\ drawable.textureRect.width,\ height\ =\ drawable.textureRect.height;}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Now,\ call\ the\ contains\ method\ with\ correct\ arguments}}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (range.contains(x,\ y,\ width,\ height))\ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ foundEntities.push\_back(entity);}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00244\ \ \ \ \ \}}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordflow}{if}\ (!northwest)\ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00248\ \ \ \ \ \}}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \ \ \ \ northwest-\/>queryRange(range,\ foundEntities,\ positions,\ drawables);}
+\DoxyCodeLine{00251\ \ \ \ \ northeast-\/>queryRange(range,\ foundEntities,\ positions,\ drawables);}
+\DoxyCodeLine{00252\ \ \ \ \ southwest-\/>queryRange(range,\ foundEntities,\ positions,\ drawables);}
+\DoxyCodeLine{00253\ \ \ \ \ southeast-\/>queryRange(range,\ foundEntities,\ positions,\ drawables);}
+\DoxyCodeLine{00254\ \}}
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !QUADTREE\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

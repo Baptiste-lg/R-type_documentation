@@ -1,0 +1,1131 @@
+\doxysection{System.\+hpp}
+\hypertarget{System_8hpp_source}{}\label{System_8hpp_source}\index{include/System.hpp@{include/System.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ ECS}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ SYSTEM}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ SYSTEM\_HPP\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ SYSTEM\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}SpritePool.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}ISystem.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Component.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Registry.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}TextureManager.hpp"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}SparseArray.hpp"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}Behaviour.hpp"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}Spawner.hpp"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}ConfigServer.hpp"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}ClientMain.hpp"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <tuple>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <fftw3.h>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <complex>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <valarray>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <algorithm>}\ \ \textcolor{comment}{//\ for\ std::transform}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <iterator>}\ \ \textcolor{comment}{//\ for\ std::back\_inserter}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ <future>}\ \ \textcolor{comment}{//\ for\ std::async}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ <arpa/inet.h>}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#include\ <fcntl.h>}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#include\ <sys/socket.h>}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#include\ <netinet/in.h>}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{00049\ \textcolor{keyword}{enum\ class}\ FFTState\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ IDLE,}
+\DoxyCodeLine{00051\ \ \ \ \ LOADED,}
+\DoxyCodeLine{00052\ \ \ \ \ LOADING,}
+\DoxyCodeLine{00053\ \ \ \ \ NOTLOADED}
+\DoxyCodeLine{00054\ \};}
+\DoxyCodeLine{00055\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ BUFFER\_SIZE\ 8192}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ NB\_BARS\ 7}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ BIG\_BUFFER}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ std::unordered\_map<std::string,\ BehaviorFunc>\ behaviorMap\ =\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}MoveLeft"{}},\ moveLeft\},}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Zigzag"{}},\ zigzagMovement\},}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Circular"{}},\ circularMovement\},}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Diagonal"{}},\ diagonalMovement\},}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}SineWave"{}},\ sineWaveMovement\},}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}BackAndForth"{}},\ backAndForthMovement\},}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}LShape"{}},\ lShapeMovement\},}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Random"{}},\ randomMovement\},}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}SliderLoopFix"{}},\ sliderLoopFixMovement\},}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Fixed"{}},\ fixedMovement\},}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}LoopDiagonalRight"{}},\ loopDiagonalMovementRight\}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Add\ more\ behaviors\ here}}
+\DoxyCodeLine{00076\ \};}
+\DoxyCodeLine{00077\ \textcolor{comment}{//vetctor\ of\ tech\ music\ frequency\ range}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structFFTActive}{FFTActive}}\{}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{float}\ frequencyAverages;}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{float}\ threshold;}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{float}\ lastSpawnTime;}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{bool}\ isOnCooldown;}
+\DoxyCodeLine{00085\ \ \ \ \ sf::RectangleShape\ bars;}
+\DoxyCodeLine{00086\ \ \ \ \ sf::RectangleShape\ thresholdBar;}
+\DoxyCodeLine{00087\ \};}
+\DoxyCodeLine{00088\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structSpawnEvent}{SpawnEvent}}\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{float}\ timestamp;\ \ \textcolor{comment}{//\ Time\ in\ seconds}}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{float}\ posY;\ \ \ \ \ \ \ \textcolor{comment}{//\ Y\ position\ for\ spawn}}
+\DoxyCodeLine{00091\ \ \ \ \ std::string\ behavior\ =\ \textcolor{stringliteral}{"{}MoveLeft"{}};}
+\DoxyCodeLine{00092\ \ \ \ \ std::string\ textureName\ =\ \textcolor{stringliteral}{"{}e\_ship1"{}};}
+\DoxyCodeLine{00093\ \ \ \ \ entity\_t\ entityId;}
+\DoxyCodeLine{00094\ \};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFFTSystem}{FFTSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classISystem}{ISystem}}<FFT>\ \{}
+\DoxyCodeLine{00097\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{float}\ \&deltaTime;}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{classRegistry}{Registry}}\&\ registry;\ \ \textcolor{comment}{//\ Add\ this\ line}}
+\DoxyCodeLine{00100\ \ \ \ \ FFTState\ state\ =\ FFTState::NOTLOADED;}
+\DoxyCodeLine{00101\ \ \ \ \ sf::SoundBuffer\ buffer;}
+\DoxyCodeLine{00102\ \ \ \ \ sf::Sound\ song;}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{float}\ globalAverage\ =\ 0.0f;}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{float}\ globalPeak\ =\ 0.0f;}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{bool}\ averageCalculated\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{bool}\ needsUpdate\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00107\ \ \ \ \ sf::Clock\ fftClock;\ \ \textcolor{comment}{//\ Clock\ to\ manage\ FFT\ timing}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{float}\ sample\_rate\ =\ 0;}
+\DoxyCodeLine{00110\ \ \ \ \ sf::Uint64\ sample\_count\ =\ 0;}
+\DoxyCodeLine{00111\ \ \ \ \ sf::Uint64\ buffer\_size\ =\ 0;}
+\DoxyCodeLine{00112\ \ \ \ \ std::string\ path\ =\ \textcolor{stringliteral}{"{}asset/Song/music.wav"{}};\ \textcolor{comment}{//TODO:\ change\ to\ path\ to\ song}}
+\DoxyCodeLine{00113\ \ \ \ \ std::string\ pathAnalised\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00114\ \ \ \ \ std::vector<Complex>\ samples;}
+\DoxyCodeLine{00115\ \ \ \ \ fftwf\_complex\ *in\ =(fftwf\_complex*)\ fftw\_malloc(\textcolor{keyword}{sizeof}(fftwf\_complex)\ *\ BUFFER\_SIZE);}
+\DoxyCodeLine{00116\ \ \ \ \ fftwf\_complex\ *out\ =\ (fftwf\_complex*)\ fftw\_malloc(\textcolor{keyword}{sizeof}(fftwf\_complex)\ *\ BUFFER\_SIZE);}
+\DoxyCodeLine{00117\ \ \ \ \ fftwf\_plan\ p\ =\ fftwf\_plan\_dft\_1d(BUFFER\_SIZE,\ in,\ out,\ FFTW\_FORWARD,\ FFTW\_ESTIMATE);}
+\DoxyCodeLine{00118\ \ \ \ \ std::vector<std::complex<float>>\ bin\ =\ std::vector<std::complex<float>>(BUFFER\_SIZE\ /\ 2);}
+\DoxyCodeLine{00119\ \ \ \ \ std::vector<float>\ window;}
+\DoxyCodeLine{00120\ \ \ \ \ sf::Time\ duration\ =\ sf::seconds(0);}
+\DoxyCodeLine{00121\ \ \ \ \ sf::Time\ offsetTime\ =\ sf::seconds(0);}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{float}\ spawnCooldown\ =\ 1.0f;\ \textcolor{comment}{//\ Cooldown\ time\ in\ seconds}}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//\ debug\ visual}}
+\DoxyCodeLine{00124\ \ \ \ \ std::vector<FFTActive>\ FFTActiveVector;}
+\DoxyCodeLine{00125\ \ \ \ \ std::vector<SpawnEvent>\ precalculatedSpawns;}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{float}\ thresholdBass\ =\ 0.0f;\ \textcolor{comment}{//\ 20\%\ above\ average}}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{float}\ thresholdSubBass\ =\ 0.0f;\ \textcolor{comment}{//\ 20\%\ above\ average}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ std::vector<std::pair<float,\ float>>\ frequencyRange\ =\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ 60\},}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \{60,\ 250\},}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \{250,\ 500\},}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \{500,\ 2000\},}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \{2000,\ 4000\},}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \{4000,\ 6000\},}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \{6000,\ 20000\}}
+\DoxyCodeLine{00137\ \ \ \ \ \};}
+\DoxyCodeLine{00138\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{float}\ map\_amplitude\_to\_radius(\textcolor{keywordtype}{float}\ amplitude)\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ amplitude\ *\ 1000;}
+\DoxyCodeLine{00143\ \ \ \ \ \}}
+\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{classFFTSystem}{FFTSystem}}(\textcolor{keywordtype}{float}\ \&deltaTime,\ \mbox{\hyperlink{classRegistry}{Registry}}\&\ registry)\ :\ deltaTime(deltaTime),\ registry(registry)\ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ FFTActiveVector.resize(NB\_BARS);\ \ \textcolor{comment}{//\ Resize\ the\ vector\ to\ hold\ NB\_BARS\ elements}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ fftClock.restart();\ \ \textcolor{comment}{//\ Restart\ the\ clock}}
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ operator()(entity\_t\ entity,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<FFT>}}\ \&ffts)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ fftOpt\ =\ ffts[entity];}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!fftOpt)\{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}nop"{}}\ <<\ endl;}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!needsUpdate)\ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \&fft\ =\ *ffts[entity];}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (state\ ==\ FFTState::NOTLOADED)\ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ FFTState::LOADING;}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ load();\ \ \textcolor{comment}{//\ Load\ the\ song}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!averageCalculated)\ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ analyzeSong();}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ precalculateSpawns();}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ FFTState::LOADED;}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ averageCalculated\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (state\ ==\ FFTState::LOADING)\ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (song.getStatus()\ ==\ sf::SoundSource::Status::Playing)\ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ FFTState::LOADED;}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (state\ ==\ FFTState::LOADED)\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (song.getStatus()\ !=\ sf::SoundSource::Status::Playing)\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ song.play();}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ update();\ \ \textcolor{comment}{//\ Update\ the\ FFT\ calculations}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEnemiesBasedOnFFT();}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ You\ could\ also\ call\ update\_by\_sound()\ here\ depending\ on\ your\ requirements.}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ needsUpdate\ =\ \textcolor{keyword}{false};\ \ \textcolor{comment}{//\ Set\ this\ to\ false\ after\ doing\ the\ FFT\ calculation}}
+\DoxyCodeLine{00183\ \ \ \ \ \}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{void}\ spawnEnemiesBasedOnFFT()\ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ currentTimestamp\ =\ fftClock.getElapsedTime().asSeconds();}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ precalculatedSpawns.begin();}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (it\ !=\ precalculatedSpawns.end())\ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ \textcolor{keyword}{event}\ =\ *it;}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (event.timestamp\ <=\ currentTimestamp)\ \{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registry.activate\_entity(event.entityId);\ \ \textcolor{comment}{//\ This\ will\ now\ also\ add\ the\ components}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Spawned\ entity\ "{}}\ <<\ \textcolor{keyword}{event}.entityId\ <<\ \textcolor{stringliteral}{"{}\ at\ time\ "{}}\ <<\ \textcolor{keyword}{event}.timestamp\ <<\ std::endl;}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ it\ =\ precalculatedSpawns.erase(it);\ \ \textcolor{comment}{//\ Remove\ this\ event}}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ \ \textcolor{comment}{//\ Future\ events,\ no\ need\ to\ check\ further}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00198\ \ \ \ \ \}}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordtype}{void}\ PostUpdate()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ needsUpdate\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ path\ =\ registry.getPath()\ +\ \textcolor{stringliteral}{"{}/Song.wav"{}};}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pathAnalised\ !=\ path)\ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ FFTState::NOTLOADED;}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ fftClock.restart();}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00210\ \ \ \ \ \}}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{void}\ load()\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Loading\ song:\ "{}}\ <<\ path\ <<\ std::endl;}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ state\ =\ FFTState::LOADING;}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ std::ifstream\ ifs(path);}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!ifs.good())}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Song\ \(\backslash\)"{}"{}}\ <<\ path\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ is\ not\ in\ the\ database."{}}\ <<\ endl;}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ buffer.loadFromFile(path);}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ song.setBuffer(buffer);}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ sample\_count\ =\ buffer.getSampleCount();}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ sample\_rate\ =\ buffer.getSampleRate()\ *\ buffer.getChannelCount();}
+\DoxyCodeLine{00226\ \textcolor{preprocessor}{\#ifdef\ BIG\_BUFFER}}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (BUFFER\_SIZE\ <\ sample\_count)}
+\DoxyCodeLine{00228\ \ \ \ \ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ buffer\_size\ =\ BUFFER\_SIZE;}
+\DoxyCodeLine{00230\ \ \ \ \ \}}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00232\ \ \ \ \ \{}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ buffer\_size\ =\ sample\_count;}
+\DoxyCodeLine{00234\ \ \ \ \ \}}
+\DoxyCodeLine{00235\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \textcolor{preprocessor}{\#ifndef\ BIG\_BUFFER}}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ buffer\_size\ =\ 1920;\textcolor{comment}{//TODO:\ change\ THIS}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}buffer\_size:\ "{}}\ <<\ buffer\_size\ <<\ std::endl;}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ song.setLoop(\textcolor{keyword}{true});}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ samples.resize(buffer\_size);}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ create\_hamming\_window();}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ duration\ =\ sf::seconds(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(sample\_count)\ /\ sample\_rate);}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Duration:\ "{}}\ <<\ duration.asSeconds()\ <<\ std::endl;}
+\DoxyCodeLine{00247\ \ \ \ \ \}}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordtype}{bool}\ update()\ \{}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00251\ \ \ \ \ \}}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordtype}{void}\ create\_hamming\_window()}
+\DoxyCodeLine{00256\ \ \ \ \ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ buffer\_size;\ i++)\ \{}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ window.push\_back(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(0.54)\ -\/\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(0.46)\ *\ cos((2\ *\ PI\ *\ i)\ /\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(buffer\_size)));}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00260\ \ \ \ \ \}}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordtype}{void}\ analyzeSong()\ \{}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialize\ variables}}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(averageCalculated)\ \textcolor{keywordflow}{return};\ \ \textcolor{comment}{//\ Add\ this\ line}}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sum\ =\ 0.0f;}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ peak\ =\ 0.0f;}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ numBins\ =\ 0;}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sumBass\ =\ 0.0f;}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ countBass\ =\ 0;}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sumSubBass\ =\ 0.0f;}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ countSubBass\ =\ 0;}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialize\ vectors\ to\ hold\ sum\ and\ count\ for\ each\ frequency\ group}}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ std::vector<float>\ sumPerGroup(frequencyRange.size(),\ 0.0f);}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ std::vector<float>\ numBinsPerGroup(frequencyRange.size(),\ 0);}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ binSize\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(sample\_rate)\ /\ buffer\_size;}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ the\ step\ for\ FFT\ analysis}}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ analyzeStep\ =\ 1;}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Analyzing\ song...\(\backslash\)n"{}};}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Loop\ through\ the\ song\ samples}}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (sf::Uint64\ offset\ =\ 0;\ offset\ +\ buffer\_size\ <\ sample\_count;\ offset\ +=\ analyzeStep\ *\ buffer\_size)\ \{}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Prepare\ FFT\ input\ for\ this\ chunk}}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (sf::Uint64\ i\ =\ 0;\ i\ <\ buffer\_size;\ i++)\ \{}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ in[i][0]\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(buffer.getSamples()[offset\ +\ i])\ *\ window[i];}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ in[i][1]\ =\ 0.0;}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Execute\ FFTW3\ plan}}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ fftwf\_execute(p);}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ group\ size}}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ subBassIntensity\ =\ update\_by\_sound(0,\ 60,\ 10000);}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ sumSubBass\ +=\ subBassIntensity;}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ countSubBass++;}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ Bass\ intensity\ (60-\/250\ Hz)}}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ bassIntensity\ =\ update\_by\_sound(60,\ 250,\ 10000);}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ sumBass\ +=\ bassIntensity;}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ countBass++;}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Analyze\ this\ chunk}}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (sf::Uint64\ i\ =\ 0;\ i\ <\ frequencyRange.size();\ ++i)\ \{}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ from\ =\ frequencyRange[i].first;}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ to\ =\ frequencyRange[i].second;}
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Uint64\ fromIndex\ =\ \textcolor{keyword}{static\_cast<}sf::Uint64\textcolor{keyword}{>}(floor(from\ /\ binSize));}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Uint64\ toIndex\ =\ \textcolor{keyword}{static\_cast<}sf::Uint64\textcolor{keyword}{>}(floor(to\ /\ binSize));}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (sf::Uint64\ j\ =\ fromIndex;\ j\ <\ toIndex;\ ++j)\ \{}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ magnitude\ =\ std::abs(std::complex<float>(out[j][0],\ out[j][1]));}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sumPerGroup[i]\ +=\ magnitude;}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ numBinsPerGroup[i]++;}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Finished\ analyzing\ song.\(\backslash\)n"{}};}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ global\ average\ and\ peak}}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (sf::Uint64\ i\ =\ 0;\ i\ <\ NB\_BARS;\ ++i)\ \{}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ sum\ +=\ sumPerGroup[i];}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ numBins\ +=\ numBinsPerGroup[i];}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sumPerGroup[i]\ /\ numBinsPerGroup[i]\ >\ peak)\ \{}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ peak\ =\ sumPerGroup[i]\ /\ numBinsPerGroup[i];}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ globalAverage\ =\ sum\ /\ numBins;}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ globalPeak\ =\ peak;}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ averageCalculated\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Global\ average:\ "{}}\ <<\ globalAverage\ <<\ std::endl;}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Global\ peak:\ "{}}\ <<\ globalPeak\ <<\ std::endl;}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Number\ of\ bins:\ "{}}\ <<\ numBins\ <<\ std::endl;}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ frequency\ averages}}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ NB\_BARS;\ ++i)\ \{}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFFTActive}{FFTActive}}\ \&active\ =\ FFTActiveVector[i];}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ active.frequencyAverages\ =\ sumPerGroup[i]\ /\ numBinsPerGroup[i];}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ active.threshold\ =\ (active.frequencyAverages\ +\ (globalPeak\ -\/\ active.frequencyAverages)\ *\ 0.2f);}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ active.thresholdBar.setPosition(1900\ -\/\ active.threshold\ /\ 35,\ active.thresholdBar.getPosition().y);}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}frequency\ average\ for\ bar\ "{}}\ <<\ i\ <<\ \textcolor{stringliteral}{"{}\ :\ "{}}\ <<\ active.threshold\ \ <<\ std::endl;}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ averageBass\ =\ sumBass\ /\ countBass;}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ averageSubBass\ =\ sumSubBass\ /\ countSubBass;}
+\DoxyCodeLine{00347\ }
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ these\ averages\ to\ set\ the\ threshold\ for\ triggering\ spawns}}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ For\ example:}}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ thresholdBass\ =\ averageBass\ *\ 1.2f;\ \textcolor{comment}{//\ 20\%\ above\ average}}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ thresholdSubBass\ =\ averageSubBass\ *\ 1.2f;\ \textcolor{comment}{//\ 20\%\ above\ average}}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dynamicThreshold\ =\ (globalAverage\ +\ (globalPeak\ -\/\ globalAverage)\ *\ 0.2f)\ /\ 10;}
+\DoxyCodeLine{00353\ \ \ \ \ \}}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00355\ \ \ \ \ \textcolor{keywordtype}{float}\ update\_by\_sound(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ from,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ to,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ scale\_factor)}
+\DoxyCodeLine{00356\ \ \ \ \ \{}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sum\ =\ 0.0f;}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ count\ =\ to\ -\/\ from;}
+\DoxyCodeLine{00359\ }
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (count\ <=\ 0)\ \{}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ frequency\ range."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0.0f;}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ from;\ i\ <\ to;\ ++i)\ \{}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ sum\ +=\ std::abs(std::complex<float>(out[i][0],\ out[i][1]));}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (sum\ /\ count)\ /\ scale\_factor;}
+\DoxyCodeLine{00369\ \ \ \ \ \}}
+\DoxyCodeLine{00370\ }
+\DoxyCodeLine{00371\ \ \ \ \ \textcolor{keywordtype}{void}\ precalculateSpawns()\ \{}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!averageCalculated)\ \{}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Analyzing\ song\ first...\(\backslash\)n"{}};}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ analyzeSong();}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00376\ }
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Precalculating\ spawns...\(\backslash\)n"{}};}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ std::vector<float>\ lastSpawnTime(NB\_BARS,\ 0.0f);\ \textcolor{comment}{//\ Initialize\ a\ vector\ to\ keep\ track\ of\ the\ last\ spawn\ time\ for\ each\ bar}}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ currentTimestamp\ =\ 0.0f;\ \textcolor{comment}{//\ Initialize\ a\ variable\ to\ keep\ track\ of\ the\ current\ time\ in\ the\ song}}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ analyzeStep\ =\ 1;\ \textcolor{comment}{//\ Analyze\ every\ frame}}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ lastSpawnTimeSubBase\ =\ 0.0f;\ \textcolor{comment}{//\ Initialize\ a\ variable\ to\ keep\ track\ of\ the\ last\ spawn\ time\ for\ the\ base\ bar}}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ lastSpawnTimeBase\ =\ 0.0f;\ \textcolor{comment}{//\ Initialize\ a\ variable\ to\ keep\ track\ of\ the\ last\ spawn\ time\ for\ the\ base\ bar}}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ binSize\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(sample\_rate)\ /\ buffer\_size;}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clear\ any\ precalculated\ spawns}}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ precalculatedSpawns.clear();}
+\DoxyCodeLine{00388\ }
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ offset\ =\ 0;\ offset\ +\ buffer\_size\ <\ sample\_count;\ offset\ +=\ analyzeStep\ *\ buffer\_size)\ \{}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Prepare\ FFT\ input\ for\ this\ chunk}}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ buffer\_size;\ i++)\ \{}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ in[i][0]\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(buffer.getSamples()[offset\ +\ i])\ *\ window[i];}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ in[i][1]\ =\ 0.0;}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00395\ }
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Execute\ FFTW3\ plan}}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ fftwf\_execute(p);}
+\DoxyCodeLine{00398\ }
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ group\ size}}
+\DoxyCodeLine{00400\ }
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ subBassIntensity\ =\ 1.f\ +\ update\_by\_sound(0,\ 60,\ 10000);}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::cout\ <<\ "{}subBassIntensity:\ "{}\ <<\ subBassIntensity\ <<\ std::endl;}}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (subBassIntensity\ >\ thresholdSubBass)\ \{}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentTimestamp\ -\/\ lastSpawnTimeSubBase\ >=\ spawnCooldown)\ \{\ \ \textcolor{comment}{//\ Check\ if\ enough\ time\ has\ passed\ for\ this\ bar}}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structSpawnEvent}{SpawnEvent}}\ event;}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.timestamp\ =\ currentTimestamp;}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.posY\ =\ 540;}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.behavior\ =\ \textcolor{stringliteral}{"{}SineWave"{}};}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.textureName\ =\ \textcolor{stringliteral}{"{}e\_ship3"{}};}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ precalculatedSpawns.push\_back(event);}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lastSpawnTimeSubBase\ =\ currentTimestamp;\ \ \textcolor{comment}{//\ Update\ the\ last\ spawn\ time\ for\ this\ bar}}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ bassIntensity\ =\ 1.f\ +\ update\_by\_sound(60,\ 250,\ 10000);}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::cout\ <<\ "{}bassIntensity:\ "{}\ <<\ bassIntensity\ <<\ std::endl;}}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bassIntensity\ >\ thresholdBass\ )\ \{}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentTimestamp\ -\/\ lastSpawnTimeBase\ >=\ spawnCooldown)\ \{\ \ \textcolor{comment}{//\ Check\ if\ enough\ time\ has\ passed\ for\ this\ bar}}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structSpawnEvent}{SpawnEvent}}\ event;}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.timestamp\ =\ currentTimestamp;}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.posY\ =\ 600;}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.behavior\ =\ \textcolor{stringliteral}{"{}SineWave"{}};}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.textureName\ =\ \textcolor{stringliteral}{"{}e\_ship2"{}};}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ precalculatedSpawns.push\_back(event);}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lastSpawnTimeBase\ =\ currentTimestamp;\ \ \textcolor{comment}{//\ Update\ the\ last\ spawn\ time\ for\ this\ bar}}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00427\ }
+\DoxyCodeLine{00428\ }
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Analyze\ this\ chunk}}
+\DoxyCodeLine{00430\ }
+\DoxyCodeLine{00431\ \textcolor{comment}{//\ Then,\ in\ your\ loop:}}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ frequencyRange.size();\ ++i)\ \{}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ from\ =\ frequencyRange[i].first;}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ to\ =\ frequencyRange[i].second;}
+\DoxyCodeLine{00435\ }
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Uint64\ fromIndex\ =\ \textcolor{keyword}{static\_cast<}sf::Uint64\textcolor{keyword}{>}(floor(from\ /\ binSize));}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Uint64\ toIndex\ =\ \textcolor{keyword}{static\_cast<}sf::Uint64\textcolor{keyword}{>}(floor(to\ /\ binSize));}
+\DoxyCodeLine{00438\ }
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sum\ =\ 0.0f;}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (sf::Uint64\ j\ =\ fromIndex;\ j\ <\ toIndex;\ ++j)\ \{}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ magnitude\ =\ std::abs(std::complex<float>(out[j][0],\ out[j][1]));}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sum\ +=\ magnitude;}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00444\ }
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ average\ magnitude\ for\ this\ frequency\ range}}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ avg\ =\ sum\ /\ (toIndex\ -\/\ fromIndex);}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFFTActive}{FFTActive}}\ \&active\ =\ FFTActiveVector[i];}
+\DoxyCodeLine{00448\ }
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ precalculated\ threshold\ to\ decide\ if\ an\ enemy\ should\ spawn}}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (avg\ >=\ active.threshold)\ \{}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentTimestamp\ -\/\ lastSpawnTime[i]\ >=\ spawnCooldown)\ \{\ \ \textcolor{comment}{//\ Check\ if\ enough\ time\ has\ passed\ for\ this\ bar}}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structSpawnEvent}{SpawnEvent}}\ event;}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.timestamp\ =\ currentTimestamp;}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.posY\ =\ 100\ +\ i\ *\ 100;}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ precalculatedSpawns.push\_back(event);}
+\DoxyCodeLine{00456\ }
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lastSpawnTime[i]\ =\ currentTimestamp;\ \ \textcolor{comment}{//\ Update\ the\ last\ spawn\ time\ for\ this\ bar}}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00460\ }
+\DoxyCodeLine{00461\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00462\ }
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \ \ \ \ currentTimestamp\ +=\ (float)buffer\_size\ /\ sample\_rate;\ \textcolor{comment}{//\ Update\ the\ current\ time\ based\ on\ the\ buffer\ size\ and\ sample\ rate}}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \ \ \ \ pathAnalised\ =\ path;}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00466\ }
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sort\ precalculatedSpawns\ by\ timestamp}}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ std::sort(precalculatedSpawns.begin(),\ precalculatedSpawns.end(),}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [](\textcolor{keyword}{const}\ \mbox{\hyperlink{structSpawnEvent}{SpawnEvent}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structSpawnEvent}{SpawnEvent}}\&\ b)\ \{}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ a.timestamp\ <\ b.timestamp;}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00472\ }
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Finished\ precalculating\ spawns.\(\backslash\)n"{}};}
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ totalSpawns\ =\ precalculatedSpawns.size();}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ event\ :\ precalculatedSpawns)\ \{}
+\DoxyCodeLine{00477\ }
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::cout\ <<\ "{}Spawn\ event\ at\ "{}\ <<\ event.timestamp\ <<\ "{}\ seconds,\ y\ =\ "{}\ <<\ event.posY\ <<\ "{}Spawn\ :"{}<<\ i\ <<\ "{}\ /\ "{}\ <<\ totalSpawns\ <<\ std::endl;}}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \textcolor{comment}{//now\ prepare\ pool\ of\ enemies}}
+\DoxyCodeLine{00482\ }
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ event\ :\ precalculatedSpawns)\ \{}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.entityId\ =\ FFTSpawnEnemy(registry,\ event.behavior,\ 1750,\ event.posY,\ event.textureName,\ \{0,\ 0,\ 128,\ 128\},\ \{1.0f,\ 1.0f\});}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}pathAnalised:\ "{}}\ <<\ pathAnalised\ <<\ std::endl;}
+\DoxyCodeLine{00487\ }
+\DoxyCodeLine{00488\ \ \ \ \ \}}
+\DoxyCodeLine{00489\ }
+\DoxyCodeLine{00490\ \ \ \ \ \mbox{\hyperlink{classFFTSystem}{\string~FFTSystem}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00491\ }
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ fftwf\_destroy\_plan(p);}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ fftw\_free(in);}
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ fftw\_free(out);}
+\DoxyCodeLine{00495\ \ \ \ \ \}}
+\DoxyCodeLine{00496\ \};}
+\DoxyCodeLine{00497\ }
+\DoxyCodeLine{00498\ }
+\DoxyCodeLine{00499\ }
+\DoxyCodeLine{00500\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDrawSystem}{DrawSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classISystem}{ISystem}}<Drawable,\ Position,\ Depth>\ \{}
+\DoxyCodeLine{00501\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00502\ \ \ \ \ std::vector<entity\_t>\ sortedEntities;\ \ \textcolor{comment}{//\ Store\ sorted\ entities}}
+\DoxyCodeLine{00503\ \ \ \ \ sf::RenderWindow\&\ window;}
+\DoxyCodeLine{00504\ \ \ \ \ \mbox{\hyperlink{classAssetManager}{AssetManager}}\&\ assetManager;}
+\DoxyCodeLine{00505\ \ \ \ \ \mbox{\hyperlink{classRegistry}{Registry}}\&\ registry;}
+\DoxyCodeLine{00506\ \ \ \ \ \textcolor{keywordtype}{bool}\ firstRun\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00507\ \ \ \ \ \mbox{\hyperlink{classSpritePool}{SpritePool}}\ spritePool;}
+\DoxyCodeLine{00508\ }
+\DoxyCodeLine{00509\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00510\ \ \ \ \ \mbox{\hyperlink{classDrawSystem}{DrawSystem}}(sf::RenderWindow\&\ window,\ \mbox{\hyperlink{classAssetManager}{AssetManager}}\&\ assetManager,\ \mbox{\hyperlink{classRegistry}{Registry}}\&\ registry)}
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \ \ \ \ \ \ :\ window(window),\ assetManager(assetManager),\ registry(registry)\ \{}
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ invalidateSort();}
+\DoxyCodeLine{00513\ \ \ \ \ \}}
+\DoxyCodeLine{00514\ }
+\DoxyCodeLine{00515\ \ \ \ \ \textcolor{keywordtype}{void}\ sortEntities(\mbox{\hyperlink{classsparse__array}{sparse\_array<Drawable>}}\&\ drawables,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Depth>}}\&\ depths)\ \{}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ sortedEntities.clear();}
+\DoxyCodeLine{00517\ }
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (entity\_t\ entity\ =\ 0;\ entity\ <\ drawables.size();\ ++entity)\ \{}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (drawables.is\_active(entity)\ \&\&\ depths[entity]\ \&\&\ drawables[entity])\ \{}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sortedEntities.push\_back(entity);}
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00523\ }
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ std::sort(sortedEntities.begin(),\ sortedEntities.end(),\ [\&depths,\ \&drawables](entity\_t\ a,\ entity\_t\ b)\ \{}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \ \ \ \ if\ (depths[a]-\/>z\ ==\ depths[b]-\/>z)\ \{}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Assuming\ Drawable\ has\ a\ textureName\ member}}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ drawables[a]-\/>textureName\ <\ drawables[b]-\/>textureName;}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ depths[a]-\/>z\ <\ depths[b]-\/>z;}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00531\ \ \ \ \ \}}
+\DoxyCodeLine{00532\ }
+\DoxyCodeLine{00533\ }
+\DoxyCodeLine{00534\ \ \ \ \ \textcolor{keywordtype}{void}\ operator()(entity\_t\ entity,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Drawable>}}\&\ drawables,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Position>}}\&\ positions,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Depth>}}\&\ depths)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00535\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (firstRun)\ \{}
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ \ \ \ \ sortEntities(drawables,\ depths);}
+\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (entity\_t\ sortedEntity\ :\ sortedEntities)\ \{}
+\DoxyCodeLine{00538\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ drawableOpt\ =\ drawables[sortedEntity];}
+\DoxyCodeLine{00539\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ posOpt\ =\ positions[sortedEntity];}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ depthOpt\ =\ depths[sortedEntity];}
+\DoxyCodeLine{00541\ }
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (drawableOpt\ \&\&\ posOpt\ \&\&\ depthOpt)\ \{}
+\DoxyCodeLine{00543\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Extract\ the\ actual\ components}}
+\DoxyCodeLine{00544\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ drawable\ =\ *drawableOpt;}
+\DoxyCodeLine{00545\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ pos\ =\ *posOpt;}
+\DoxyCodeLine{00546\ }
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ a\ sprite\ from\ the\ pool}}
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Sprite*\ sprite\ =\ spritePool.getSprite();}
+\DoxyCodeLine{00549\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sprite-\/>setTexture(assetManager.GetTexture(drawable.textureName));}
+\DoxyCodeLine{00550\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sprite-\/>setPosition(pos.x,\ pos.y);}
+\DoxyCodeLine{00551\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sprite-\/>setScale(drawable.scale.x,\ drawable.scale.y);}
+\DoxyCodeLine{00552\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sprite-\/>setTextureRect(sf::IntRect(drawable.textureRect.left,\ drawable.textureRect.top,\ drawable.textureRect.width,\ drawable.textureRect.height));}
+\DoxyCodeLine{00553\ }
+\DoxyCodeLine{00554\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#ifdef\ RENDER\_HITBOX}}
+\DoxyCodeLine{00555\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Hitbox\ rendering\ code}}
+\DoxyCodeLine{00556\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::RectangleShape\ shape;}
+\DoxyCodeLine{00557\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ shape.setFillColor(sf::Color::Transparent);}
+\DoxyCodeLine{00558\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ shape.setOutlineColor(sf::Color::Red);}
+\DoxyCodeLine{00559\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ shape.setOutlineThickness(1);}
+\DoxyCodeLine{00560\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ shape.setPosition(sf::Vector2f(pos.x,\ pos.y));}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ shape.setSize(sf::Vector2f(drawable.textureRect.width,\ drawable.textureRect.height));}
+\DoxyCodeLine{00562\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ window.draw(shape);}
+\DoxyCodeLine{00563\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{00564\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ window.draw(*sprite);}
+\DoxyCodeLine{00565\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00566\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00567\ \ \ \ \ \ \ \ \ \ \ \ \ firstRun\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00568\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00569\ \ \ \ \ \}}
+\DoxyCodeLine{00570\ }
+\DoxyCodeLine{00571\ }
+\DoxyCodeLine{00572\ \ \ \ \ \textcolor{comment}{//\ Call\ this\ whenever\ you\ modify\ the\ Depth\ component\ of\ any\ entity}}
+\DoxyCodeLine{00573\ \ \ \ \ \textcolor{keywordtype}{void}\ invalidateSort()\ \{}
+\DoxyCodeLine{00574\ \ \ \ \ \ \ \ \ firstRun\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00575\ \ \ \ \ \}}
+\DoxyCodeLine{00576\ \ \ \ \ \textcolor{keywordtype}{void}\ PostUpdate()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \ \ invalidateSort();}
+\DoxyCodeLine{00578\ \ \ \ \ \}}
+\DoxyCodeLine{00579\ \};}
+\DoxyCodeLine{00580\ }
+\DoxyCodeLine{00581\ }
+\DoxyCodeLine{00582\ }
+\DoxyCodeLine{00583\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVelocitySystem}{VelocitySystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classISystem}{ISystem}}<Position,\ Velocity>\ \{}
+\DoxyCodeLine{00584\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00585\ \ \ \ \ \textcolor{keywordtype}{float}\&\ deltaTime;}
+\DoxyCodeLine{00586\ }
+\DoxyCodeLine{00587\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00588\ \ \ \ \ \mbox{\hyperlink{classVelocitySystem}{VelocitySystem}}(\textcolor{keywordtype}{float}\&\ dt)\ :\ deltaTime(dt)\ \{\}}
+\DoxyCodeLine{00589\ }
+\DoxyCodeLine{00590\ \ \ \ \ \textcolor{keywordtype}{void}\ operator()(entity\_t\ entity,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Position>}}\&\ positions,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Velocity>}}\&\ velocities)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00591\ }
+\DoxyCodeLine{00592\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ posOpt\ =\ positions[entity];}
+\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ velOpt\ =\ velocities[entity];}
+\DoxyCodeLine{00594\ }
+\DoxyCodeLine{00595\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (posOpt.has\_value()\ \&\&\ velOpt.has\_value())\ \{}
+\DoxyCodeLine{00596\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ pos\ =\ *positions[entity];}
+\DoxyCodeLine{00597\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ vel\ =\ *velocities[entity];}
+\DoxyCodeLine{00598\ \ \ \ \ \ \ \ \ \ \ \ \ pos.x\ +=\ vel.x\ *\ deltaTime\ *\ 100.0f;}
+\DoxyCodeLine{00599\ \ \ \ \ \ \ \ \ \ \ \ \ pos.y\ +=\ vel.y\ *\ deltaTime\ *\ 100.0f;}
+\DoxyCodeLine{00600\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pos.x\ <\ 0)\ \{}
+\DoxyCodeLine{00601\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pos.x\ =\ 0;}
+\DoxyCodeLine{00602\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00603\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pos.y\ <\ 0)\ \{}
+\DoxyCodeLine{00604\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pos.y\ =\ 0;}
+\DoxyCodeLine{00605\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00606\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00607\ \ \ \ \ \}}
+\DoxyCodeLine{00608\ \};}
+\DoxyCodeLine{00609\ }
+\DoxyCodeLine{00610\ }
+\DoxyCodeLine{00611\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classControlSystem}{ControlSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classISystem}{ISystem}}<Position,\ Velocity,\ Controllable,\ GameConfig>\ \{}
+\DoxyCodeLine{00612\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00613\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\&\ deltaTime;}
+\DoxyCodeLine{00614\ \ \ \ \ \ \mbox{\hyperlink{classRegistry}{Registry}}\&\ registry;\ \ \textcolor{comment}{//\ Add\ this\ line}}
+\DoxyCodeLine{00615\ \ \ \ \ std::unordered\_map<entity\_t,\ std::queue<Event>>\ eventQueue;\ \ \textcolor{comment}{//\ Queue\ to\ hold\ events\ for\ each\ entity}}
+\DoxyCodeLine{00616\ }
+\DoxyCodeLine{00617\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00618\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classControlSystem}{ControlSystem}}(\textcolor{keywordtype}{float}\&\ deltaTime,\ \mbox{\hyperlink{classRegistry}{Registry}}\&\ registry)\ :\ deltaTime(deltaTime),\ registry(registry)\ \{}
+\DoxyCodeLine{00619\ \ \ \ \ \ \ \ \ \ \ \ \ registry.eventBus.addListener(PlayerMoved,\ [\textcolor{keyword}{this},\ \&registry](\textcolor{keyword}{const}\ \mbox{\hyperlink{structEvent}{Event}}\&\ event)\ \{}
+\DoxyCodeLine{00620\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ entity\_t\ entity\ =\ registry.clientToEntityMap[\textcolor{keyword}{event}.clientID];}
+\DoxyCodeLine{00621\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entity\ !=\ 0)\ \{}
+\DoxyCodeLine{00622\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ eventQueue[entity].push(event);}
+\DoxyCodeLine{00623\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00624\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00625\ \ \ \ \ \ \ \ \ \}\ \ \textcolor{comment}{//\ Modify\ this\ line}}
+\DoxyCodeLine{00626\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ operator()(entity\_t\ entity,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Position>}}\&\ positions,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Velocity>}}\&\ velocities,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Controllable>}}\&\ controllables,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<GameConfig>}}\&\ gameConfigs)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00627\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ controllableOpt\ =\ controllables[entity];}
+\DoxyCodeLine{00628\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ velOpt\ =\ velocities[entity];}
+\DoxyCodeLine{00629\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ gameConfigOpt\ =\ gameConfigs[entity];}
+\DoxyCodeLine{00630\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gameConfigs.empty())\ \{}
+\DoxyCodeLine{00631\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}GameConfig\ not\ set.\ Exiting\ addControlSystem."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00632\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00633\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00634\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controllableOpt.has\_value())}
+\DoxyCodeLine{00635\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00636\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ controllable\ =\ *controllables[entity];}
+\DoxyCodeLine{00637\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!controllable.isLocal)\ \{}
+\DoxyCodeLine{00638\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ vel\ =\ *velocities[entity];}
+\DoxyCodeLine{00639\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ config\ =\ *gameConfigs[entity];}
+\DoxyCodeLine{00640\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ tempX\ =\ 0.0f;}
+\DoxyCodeLine{00641\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ tempY\ =\ 0.0f;}
+\DoxyCodeLine{00642\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!eventQueue[entity].empty())\ \{}
+\DoxyCodeLine{00643\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structEvent}{Event}}\&\ \textcolor{keyword}{event}\ =\ eventQueue[entity].front();}
+\DoxyCodeLine{00644\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (registry.clientToEntityMap[event.clientID]\ !=\ entity)\ \{}
+\DoxyCodeLine{00645\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ eventQueue[entity].pop();\textcolor{comment}{//not\ sure\ if\ this\ is\ needed}}
+\DoxyCodeLine{00646\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00647\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00648\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (event.type\ ==\ PlayerMoved)\ \{}
+\DoxyCodeLine{00649\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ config\ =\ *gameConfigs[entity];}
+\DoxyCodeLine{00650\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (event.content\ ==\ \textcolor{stringliteral}{"{}i"{}})}
+\DoxyCodeLine{00651\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00652\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vel.y\ =\ -\/1.0\ *\ config.playerSpeed\ *\ deltaTime;}
+\DoxyCodeLine{00653\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00654\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (event.content\ ==\ \textcolor{stringliteral}{"{}k"{}})}
+\DoxyCodeLine{00655\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00656\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vel.y\ =\ 1.0\ *\ config.playerSpeed\ *\ deltaTime;}
+\DoxyCodeLine{00657\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00658\ }
+\DoxyCodeLine{00659\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (event.content\ ==\ \textcolor{stringliteral}{"{}j"{}})}
+\DoxyCodeLine{00660\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00661\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vel.x\ =\ -\/1.0f\ *\ config.playerSpeed\ \ *\ deltaTime;}
+\DoxyCodeLine{00662\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00663\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (event.content\ ==\ \textcolor{stringliteral}{"{}l"{}})}
+\DoxyCodeLine{00664\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00665\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vel.x\ =\ 1.0f\ *\ config.playerSpeed\ \ *\ deltaTime;}
+\DoxyCodeLine{00666\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00667\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00668\ }
+\DoxyCodeLine{00669\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ eventQueue[entity].pop();}
+\DoxyCodeLine{00670\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00671\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00672\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00673\ }
+\DoxyCodeLine{00674\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00675\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (velOpt.has\_value()\ \&\&\ gameConfigOpt.has\_value())\ \{}
+\DoxyCodeLine{00676\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ vel\ =\ *velocities[entity];}
+\DoxyCodeLine{00677\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ config\ =\ *gameConfigs[entity];}
+\DoxyCodeLine{00678\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ the\ global\ config}}
+\DoxyCodeLine{00679\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sf::Keyboard::isKeyPressed(sf::Keyboard::Z))\ \{}
+\DoxyCodeLine{00680\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vel.y\ =\ -\/1.0\ *\ config.playerSpeed\ *\ deltaTime;}
+\DoxyCodeLine{00681\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (sf::Keyboard::isKeyPressed(sf::Keyboard::S))\ \{}
+\DoxyCodeLine{00682\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vel.y\ =\ 1.0\ *\ config.playerSpeed\ *\ deltaTime;}
+\DoxyCodeLine{00683\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00684\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vel.y\ =\ 0.0f;}
+\DoxyCodeLine{00685\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00686\ }
+\DoxyCodeLine{00687\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sf::Keyboard::isKeyPressed(sf::Keyboard::Q))\ \{}
+\DoxyCodeLine{00688\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vel.x\ =\ -\/1.0f\ *\ config.playerSpeed\ \ *\ deltaTime;}
+\DoxyCodeLine{00689\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (sf::Keyboard::isKeyPressed(sf::Keyboard::D))\ \{}
+\DoxyCodeLine{00690\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vel.x\ =\ 1.0f\ *\ config.playerSpeed\ \ *\ deltaTime;}
+\DoxyCodeLine{00691\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00692\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vel.x\ =\ 0.0f\ *\ config.playerSpeed\ \ *\ deltaTime;}
+\DoxyCodeLine{00693\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00694\ }
+\DoxyCodeLine{00695\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sf::Keyboard::isKeyPressed(sf::Keyboard::P))\ \{}
+\DoxyCodeLine{00696\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ y\ =\ rand()\ \%\ 720\ +\ 100;}
+\DoxyCodeLine{00697\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FFTSpawnEnemy(registry,\ \textcolor{stringliteral}{"{}MoveLeft"{}},\ 900,\ y,\ \textcolor{stringliteral}{"{}e\_ship1"{}},\ \{0,\ 0,\ 128,\ 128\},\ \{1.0f,\ 1.0f\});}
+\DoxyCodeLine{00698\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00699\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00700\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00701\ \};}
+\DoxyCodeLine{00702\ }
+\DoxyCodeLine{00703\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classAnimationSystem}{AnimationSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classISystem}{ISystem}}<Animation,\ Drawable>\ \{}
+\DoxyCodeLine{00704\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00705\ \ \ \ \ \textcolor{keywordtype}{float}\&\ deltaTime;}
+\DoxyCodeLine{00706\ }
+\DoxyCodeLine{00707\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00708\ \ \ \ \ \mbox{\hyperlink{classAnimationSystem}{AnimationSystem}}(\textcolor{keywordtype}{float}\&\ deltaTime)\ :\ deltaTime(deltaTime)\ \{\}}
+\DoxyCodeLine{00709\ }
+\DoxyCodeLine{00710\ \ \ \ \ \textcolor{keywordtype}{void}\ operator()(entity\_t\ e,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Animation>}}\&\ animations,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Drawable>}}\&\ drawables)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00711\ }
+\DoxyCodeLine{00712\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ animOpt\ =\ animations[e];}
+\DoxyCodeLine{00713\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ drawableOpt\ =\ drawables[e];}
+\DoxyCodeLine{00714\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (animOpt.has\_value())\ \{}
+\DoxyCodeLine{00715\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ anim\ =\ *animations[e];}
+\DoxyCodeLine{00716\ \ \ \ \ \ \ \ \ \ \ \ \ anim.elapsedTime\ +=\ deltaTime;}
+\DoxyCodeLine{00717\ }
+\DoxyCodeLine{00718\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (anim.elapsedTime\ >=\ anim.frameDuration)\ \{}
+\DoxyCodeLine{00719\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ anim.elapsedTime\ =\ 0.0f;}
+\DoxyCodeLine{00720\ }
+\DoxyCodeLine{00721\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (anim.loop)\ \{}
+\DoxyCodeLine{00722\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Normal\ looping\ behavior}}
+\DoxyCodeLine{00723\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ anim.currentFrame\ =\ (anim.currentFrame\ +\ 1)\ \%\ anim.numFrames;}
+\DoxyCodeLine{00724\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00725\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ not\ looping,\ stop\ at\ the\ last\ frame}}
+\DoxyCodeLine{00726\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (anim.currentFrame\ <\ anim.numFrames\ -\/\ 1)\ \{}
+\DoxyCodeLine{00727\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ anim.currentFrame++;}
+\DoxyCodeLine{00728\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00729\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00730\ }
+\DoxyCodeLine{00731\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Update\ the\ texture\ rect\ if\ drawable\ component\ exists}}
+\DoxyCodeLine{00732\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (drawableOpt.has\_value())\ \{}
+\DoxyCodeLine{00733\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ drawable\ =\ *drawables[e];}
+\DoxyCodeLine{00734\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ drawable.textureRect.left\ =\ drawable.textureRect.width\ *\ anim.currentFrame;}
+\DoxyCodeLine{00735\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00736\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00737\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00738\ \ \ \ \ \}}
+\DoxyCodeLine{00739\ \};}
+\DoxyCodeLine{00740\ }
+\DoxyCodeLine{00741\ }
+\DoxyCodeLine{00742\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSpawnSystem}{SpawnSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classISystem}{ISystem}}<Spawner,\ Position>\ \{}
+\DoxyCodeLine{00743\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00744\ \ \ \ \ \textcolor{keywordtype}{float}\&\ deltaTime;}
+\DoxyCodeLine{00745\ \ \ \ \ \mbox{\hyperlink{classAssetManager}{AssetManager}}\&\ assetManager;}
+\DoxyCodeLine{00746\ \ \ \ \ \mbox{\hyperlink{classRegistry}{Registry}}\&\ registry;}
+\DoxyCodeLine{00747\ }
+\DoxyCodeLine{00748\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00749\ \ \ \ \ \mbox{\hyperlink{classSpawnSystem}{SpawnSystem}}(\textcolor{keywordtype}{float}\&\ deltaTime,\ \mbox{\hyperlink{classAssetManager}{AssetManager}}\&\ assetManager,\ \mbox{\hyperlink{classRegistry}{Registry}}\&\ registry)\ :\ deltaTime(deltaTime),\ assetManager(assetManager),\ registry(registry)\ \{\}}
+\DoxyCodeLine{00750\ \ \ \ \ \textcolor{keywordtype}{void}\ operator()(entity\_t\ entity,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Spawner>}}\&\ spawners,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Position>}}\&\ positions)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00751\ }
+\DoxyCodeLine{00752\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ spawnOpt\ =\ spawners[entity];}
+\DoxyCodeLine{00753\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ posOpt\ =\ positions[entity];}
+\DoxyCodeLine{00754\ }
+\DoxyCodeLine{00755\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (spawnOpt)\ \{}
+\DoxyCodeLine{00756\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ spawn\ =\ *spawners[entity];}
+\DoxyCodeLine{00757\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ posX\ =\ 0;}
+\DoxyCodeLine{00758\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ posY\ =\ 0;}
+\DoxyCodeLine{00759\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (posOpt)\ \{}
+\DoxyCodeLine{00760\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ pos\ =\ *positions[entity];}
+\DoxyCodeLine{00761\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ posX\ =\ pos.x;}
+\DoxyCodeLine{00762\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ posY\ =\ pos.y;}
+\DoxyCodeLine{00763\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00764\ }
+\DoxyCodeLine{00765\ \ \ \ \ \ \ \ \ \ \ \ \ spawn.timeSinceLastSpawn\ +=\ deltaTime;}
+\DoxyCodeLine{00766\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ timeRequiredForNextSpawn\ =\ 1.0f\ /\ spawn.spawnRate;}
+\DoxyCodeLine{00767\ }
+\DoxyCodeLine{00768\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (spawn.timeSinceLastSpawn\ >=\ timeRequiredForNextSpawn)\ \{}
+\DoxyCodeLine{00769\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ spawn.timeSinceLastSpawn\ =\ 0.0f;\ \ \textcolor{comment}{//\ Reset\ timer}}
+\DoxyCodeLine{00770\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ projectile\ =\ registry.spawn\_entity();}
+\DoxyCodeLine{00771\ }
+\DoxyCodeLine{00772\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registry.add\_component(projectile,\ \mbox{\hyperlink{structPosition}{Position}}\{posX\ +\ spawn.xOffset,\ posY\ +\ spawn.yOffset\});}
+\DoxyCodeLine{00773\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ addComponent\ :\ spawn.componentSpawners)\ \{}
+\DoxyCodeLine{00774\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addComponent(projectile,\ registry);\ \ \textcolor{comment}{//\ Apply\ each\ ComponentSpawner\ to\ the\ new\ entity}}
+\DoxyCodeLine{00775\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00776\ }
+\DoxyCodeLine{00777\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00778\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00779\ \ \ \ \ \}}
+\DoxyCodeLine{00780\ \};}
+\DoxyCodeLine{00781\ }
+\DoxyCodeLine{00782\ }
+\DoxyCodeLine{00783\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBehaviorSystem}{BehaviorSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classISystem}{ISystem}}<Behavior,\ Position>\ \{}
+\DoxyCodeLine{00784\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00785\ \ \ \ \ \textcolor{keywordtype}{float}\&\ deltaTime;}
+\DoxyCodeLine{00786\ }
+\DoxyCodeLine{00787\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00788\ \ \ \ \ \mbox{\hyperlink{classBehaviorSystem}{BehaviorSystem}}(\textcolor{keywordtype}{float}\&\ deltaTime)\ :\ deltaTime(deltaTime)\ \{\}}
+\DoxyCodeLine{00789\ }
+\DoxyCodeLine{00790\ \ \ \ \ \textcolor{keywordtype}{void}\ operator()(entity\_t\ e,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Behavior>}}\&\ behaviors,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Position>}}\&\ positions)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00791\ }
+\DoxyCodeLine{00792\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ behaviorOpt\ =\ behaviors[e];}
+\DoxyCodeLine{00793\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ posOpt\ =\ positions[e];}
+\DoxyCodeLine{00794\ }
+\DoxyCodeLine{00795\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (behaviorOpt\ \&\&\ posOpt)\ \{}
+\DoxyCodeLine{00796\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ behavior\ =\ *behaviors[e];}
+\DoxyCodeLine{00797\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ pos\ =\ *positions[e];}
+\DoxyCodeLine{00798\ }
+\DoxyCodeLine{00799\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Look\ up\ the\ behavior\ function\ from\ the\ map}}
+\DoxyCodeLine{00800\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ behaviorMap.find(behavior.behaviorID);}
+\DoxyCodeLine{00801\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ !=\ behaviorMap.end())\ \{}
+\DoxyCodeLine{00802\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Execute\ the\ behavior\ function}}
+\DoxyCodeLine{00803\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ it-\/>second(pos,\ deltaTime);}
+\DoxyCodeLine{00804\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00805\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00806\ \ \ \ \ \}}
+\DoxyCodeLine{00807\ \};}
+\DoxyCodeLine{00808\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFollowerSystem}{FollowerSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classISystem}{ISystem}}<Follower,\ Position>\ \{}
+\DoxyCodeLine{00809\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00810\ \ \ \ \ \textcolor{keywordtype}{void}\ operator()(entity\_t\ entity,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Follower>}}\&\ followers,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Position>}}\&\ positions)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00811\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ followerOpt\ =\ followers[entity];}
+\DoxyCodeLine{00812\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ posOpt\ =\ positions[entity];}
+\DoxyCodeLine{00813\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (followerOpt\ \&\&\ posOpt)\ \{}
+\DoxyCodeLine{00814\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ posTargetOpt\ =\ positions[followerOpt-\/>target];}
+\DoxyCodeLine{00815\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ follower\ =\ *followers[entity];}
+\DoxyCodeLine{00816\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ pos\ =\ *positions[entity];}
+\DoxyCodeLine{00817\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (posTargetOpt)\ \{}
+\DoxyCodeLine{00818\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ posTarget\ =\ *positions[follower.target];}
+\DoxyCodeLine{00819\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pos.x\ =\ posTarget.x\ +\ follower.xOffset;}
+\DoxyCodeLine{00820\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pos.y\ =\ posTarget.y\ +\ follower.yOffset;}
+\DoxyCodeLine{00821\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00822\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00823\ \ \ \ \ \}}
+\DoxyCodeLine{00824\ \};}
+\DoxyCodeLine{00825\ }
+\DoxyCodeLine{00826\ }
+\DoxyCodeLine{00827\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classServerSystem}{ServerSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classISystem}{ISystem}}<Network,\ State>\ \{}
+\DoxyCodeLine{00828\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00829\ \ \ \ \ \textcolor{keywordtype}{float}\&\ deltaTime;}
+\DoxyCodeLine{00830\ \ \ \ \ std::vector<std::pair<struct\ sockaddr\_in,\ int>>\ clients;}
+\DoxyCodeLine{00831\ \ \ \ \ \textcolor{keywordtype}{int}\ clientIdCounter\ =\ 0;}
+\DoxyCodeLine{00832\ \ \ \ \ \textcolor{keywordtype}{int}\ tcp\_sockfd;}
+\DoxyCodeLine{00833\ \ \ \ \ \textcolor{keywordtype}{int}\ udp\_sockfd;}
+\DoxyCodeLine{00834\ \ \ \ \ \mbox{\hyperlink{classRegistry}{Registry}}\&\ registry;}
+\DoxyCodeLine{00835\ \ \ \ \ std::unordered\_map<EventType,\ std::function<void(\textcolor{keyword}{const}\ \mbox{\hyperlink{structEvent}{Event}}\&)>>\ eventHandlerMap;}
+\DoxyCodeLine{00836\ }
+\DoxyCodeLine{00837\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00838\ \ \ \ \ \mbox{\hyperlink{classServerSystem}{ServerSystem}}(\mbox{\hyperlink{classRegistry}{Registry}}\&\ registry,\ \textcolor{keywordtype}{float}\&\ deltaTime)\ :\ registry(registry),\ deltaTime(deltaTime)\ \{}
+\DoxyCodeLine{00839\ \ \ \ \ \ \ \ \ tcp\_sockfd\ =\ socket(AF\_INET,\ SOCK\_STREAM,\ 0);}
+\DoxyCodeLine{00840\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tcp\_sockfd\ ==\ -\/1)\ \{}
+\DoxyCodeLine{00841\ \ \ \ \ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}socket"{}});}
+\DoxyCodeLine{00842\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ handle\ error}}
+\DoxyCodeLine{00843\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00844\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00845\ }
+\DoxyCodeLine{00846\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }sockaddr\_in\ serverAddr;}
+\DoxyCodeLine{00847\ \ \ \ \ \ \ \ \ memset(\&serverAddr,\ 0,\ \textcolor{keyword}{sizeof}(serverAddr));}
+\DoxyCodeLine{00848\ \ \ \ \ \ \ \ \ serverAddr.sin\_family\ =\ AF\_INET;}
+\DoxyCodeLine{00849\ \ \ \ \ \ \ \ \ serverAddr.sin\_port\ =\ htons(12345);\ \ \textcolor{comment}{//\ Replace\ with\ your\ port\ number}}
+\DoxyCodeLine{00850\ \ \ \ \ \ \ \ \ serverAddr.sin\_addr.s\_addr\ =\ inet\_addr(\textcolor{stringliteral}{"{}127.0.0.1"{}});\ \ \textcolor{comment}{//\ Replace\ with\ your\ IP\ address}}
+\DoxyCodeLine{00851\ }
+\DoxyCodeLine{00852\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bind(tcp\_sockfd,\ (\textcolor{keyword}{struct}\ sockaddr\ *)\&serverAddr,\ \textcolor{keyword}{sizeof}(serverAddr))\ ==\ -\/1)\ \{}
+\DoxyCodeLine{00853\ \ \ \ \ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}bind"{}});}
+\DoxyCodeLine{00854\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ handle\ error}}
+\DoxyCodeLine{00855\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00856\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00857\ }
+\DoxyCodeLine{00858\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (listen(tcp\_sockfd,\ 5)\ ==\ -\/1)\ \{}
+\DoxyCodeLine{00859\ \ \ \ \ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}listen"{}});}
+\DoxyCodeLine{00860\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ handle\ error}}
+\DoxyCodeLine{00861\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00862\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00863\ }
+\DoxyCodeLine{00864\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ flags\ =\ fcntl(tcp\_sockfd,\ F\_GETFL,\ 0);}
+\DoxyCodeLine{00865\ \ \ \ \ \ \ \ \ fcntl(tcp\_sockfd,\ F\_SETFL,\ flags\ |\ O\_NONBLOCK);}
+\DoxyCodeLine{00866\ }
+\DoxyCodeLine{00867\ \ \ \ \ \ \ \ \ udp\_sockfd\ =\ socket(AF\_INET,\ SOCK\_DGRAM,\ 0);}
+\DoxyCodeLine{00868\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (udp\_sockfd\ ==\ -\/1)\ \{}
+\DoxyCodeLine{00869\ \ \ \ \ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}UDP\ socket"{}});}
+\DoxyCodeLine{00870\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ handle\ error}}
+\DoxyCodeLine{00871\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00872\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00873\ }
+\DoxyCodeLine{00874\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }sockaddr\_in\ udp\_serverAddr;}
+\DoxyCodeLine{00875\ \ \ \ \ \ \ \ \ memset(\&udp\_serverAddr,\ 0,\ \textcolor{keyword}{sizeof}(udp\_serverAddr));}
+\DoxyCodeLine{00876\ \ \ \ \ \ \ \ \ udp\_serverAddr.sin\_family\ =\ AF\_INET;}
+\DoxyCodeLine{00877\ \ \ \ \ \ \ \ \ udp\_serverAddr.sin\_port\ =\ htons(12346);\ \ \textcolor{comment}{//\ Replace\ with\ your\ UDP\ port\ number}}
+\DoxyCodeLine{00878\ \ \ \ \ \ \ \ \ udp\_serverAddr.sin\_addr.s\_addr\ =\ inet\_addr(\textcolor{stringliteral}{"{}127.0.0.1"{}});\ \ \textcolor{comment}{//\ Replace\ with\ your\ IP\ address}}
+\DoxyCodeLine{00879\ }
+\DoxyCodeLine{00880\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bind(udp\_sockfd,\ (\textcolor{keyword}{struct}\ sockaddr\ *)\&udp\_serverAddr,\ \textcolor{keyword}{sizeof}(udp\_serverAddr))\ ==\ -\/1)\ \{}
+\DoxyCodeLine{00881\ \ \ \ \ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}UDP\ bind"{}});}
+\DoxyCodeLine{00882\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ handle\ error}}
+\DoxyCodeLine{00883\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00884\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00885\ }
+\DoxyCodeLine{00886\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ udp\_flags\ =\ fcntl(udp\_sockfd,\ F\_GETFL,\ 0);}
+\DoxyCodeLine{00887\ \ \ \ \ \ \ \ \ fcntl(udp\_sockfd,\ F\_SETFL,\ udp\_flags\ |\ O\_NONBLOCK);}
+\DoxyCodeLine{00888\ \ \ \ \ \ \ \ \ eventHandlerMap[PlayerJoined]\ =\ [\textcolor{keyword}{this},\ \&registry](\textcolor{keyword}{const}\ \mbox{\hyperlink{structEvent}{Event}}\&\ event)\ \{}
+\DoxyCodeLine{00889\ }
+\DoxyCodeLine{00890\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}PlayerJoined\ event\ received"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00891\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//we\ will\ add\ a\ new\ entity\ to\ the\ game\ using\ spawnedNonLocalPlayer}}
+\DoxyCodeLine{00892\ \ \ \ \ \ \ \ \ \ \ \ \ entity\_t\ new\_entity\ =\ spawnNoneLocalPlayer(registry,\ \{0,\ 0,\ 176,\ 96\});}
+\DoxyCodeLine{00893\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structClient}{Client}}\ clientComponent;}
+\DoxyCodeLine{00894\ \ \ \ \ \ \ \ \ \ \ \ \ clientComponent.id\ =\ clientIdCounter;}
+\DoxyCodeLine{00895\ \ \ \ \ \ \ \ \ \ \ \ \ clientComponent.entity\_id\ =\ new\_entity;}
+\DoxyCodeLine{00896\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}new\ player\ id\ new\_entity:\ "{}}\ <<\ new\_entity\ <<\ std::endl;}
+\DoxyCodeLine{00897\ \ \ \ \ \ \ \ \ \ \ \ \ registry.add\_component(new\_entity,std::move(clientComponent));}
+\DoxyCodeLine{00898\ \ \ \ \ \ \ \ \ \ \ \ \ registry.clientToEntityMap[clientIdCounter]\ =\ new\_entity;}
+\DoxyCodeLine{00899\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00900\ \ \ \ \ \ \ \ \ eventHandlerMap[PlayerMoved]\ =\ [\textcolor{keyword}{this},\ \&registry](\textcolor{keyword}{const}\ \mbox{\hyperlink{structEvent}{Event}}\&\ event)\ \{}
+\DoxyCodeLine{00901\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Your\ PlayerMoved\ event\ code\ here}}
+\DoxyCodeLine{00902\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}PlayerMoved\ event\ received\ serverSystem\ side"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00903\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00904\ \ \ \ \ \}}
+\DoxyCodeLine{00905\ }
+\DoxyCodeLine{00906\ }
+\DoxyCodeLine{00907\ \ \ \ \ \textcolor{keywordtype}{void}\ add\_client(\textcolor{keyword}{struct}\ sockaddr\_in\ new\_client)\ \{}
+\DoxyCodeLine{00908\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&pair\ :\ clients)\ \{}
+\DoxyCodeLine{00909\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pair.first.sin\_addr.s\_addr\ ==\ new\_client.sin\_addr.s\_addr\ \&\&\ pair.first.sin\_port\ ==\ new\_client.sin\_port)\ \{}
+\DoxyCodeLine{00910\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};\ \textcolor{comment}{//\ Client\ already\ exists}}
+\DoxyCodeLine{00911\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00912\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00913\ \ \ \ \ \ \ \ \ clientIdCounter++;}
+\DoxyCodeLine{00914\ \ \ \ \ \ \ \ \ clients.push\_back(\{new\_client,\ clientIdCounter\});}
+\DoxyCodeLine{00915\ \ \ \ \ \}}
+\DoxyCodeLine{00916\ }
+\DoxyCodeLine{00917\ \ \ \ \ \textcolor{keywordtype}{void}\ broadcast(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *message,\ ssize\_t\ len,\ \textcolor{keyword}{struct}\ sockaddr\_in\ *exclude\_addr\ =\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00918\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&pair\ :\ clients)\ \{}
+\DoxyCodeLine{00919\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }sockaddr\_in\ \&client\ =\ pair.first;}
+\DoxyCodeLine{00920\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (exclude\_addr\ \&\&\ client.sin\_addr.s\_addr\ ==\ exclude\_addr-\/>sin\_addr.s\_addr\ \&\&\ client.sin\_port\ ==\ exclude\_addr-\/>sin\_port)\ \{}
+\DoxyCodeLine{00921\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};\ \textcolor{comment}{//\ Skip\ sending\ back\ to\ the\ source\ client}}
+\DoxyCodeLine{00922\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00923\ \ \ \ \ \ \ \ \ \ \ \ \ sendto(udp\_sockfd,\ message,\ len,\ 0,\ (\textcolor{keyword}{struct}\ sockaddr\ *)\&client,\ \textcolor{keyword}{sizeof}(client));}
+\DoxyCodeLine{00924\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00925\ \ \ \ \ \}}
+\DoxyCodeLine{00926\ }
+\DoxyCodeLine{00927\ \ \ \ \ \textcolor{keywordtype}{void}\ operator()(entity\_t\ entity,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<Network>}}\&\ networks,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<State>}}\&\ states)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00928\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Listen\ for\ new\ TCP\ connections}}
+\DoxyCodeLine{00929\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }sockaddr\_in\ clientAddr;}
+\DoxyCodeLine{00930\ \ \ \ \ \ \ \ \ socklen\_t\ clientAddrLen\ =\ \textcolor{keyword}{sizeof}(clientAddr);}
+\DoxyCodeLine{00931\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ client\_sock\ =\ accept(tcp\_sockfd,\ (\textcolor{keyword}{struct}\ sockaddr\ *)\&clientAddr,\ \&clientAddrLen);}
+\DoxyCodeLine{00932\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (client\_sock\ !=\ -\/1)\ \{}
+\DoxyCodeLine{00933\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Handle\ TCP\ Client\ here\ or\ in\ a\ separate\ function}}
+\DoxyCodeLine{00934\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ For\ example,\ send\ initial\ game\ state,\ etc.}}
+\DoxyCodeLine{00935\ \ \ \ \ \ \ \ \ \ \ \ \ std::thread\ client\_thread([\textcolor{keyword}{this},\ client\_sock]()\{}
+\DoxyCodeLine{00936\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ buffer[1024];}
+\DoxyCodeLine{00937\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssize\_t\ bytes\_received\ =\ recv(client\_sock,\ buffer,\ 1023,\ 0);}
+\DoxyCodeLine{00938\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bytes\_received\ <=\ 0)\ \{}
+\DoxyCodeLine{00939\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}recv"{}});}
+\DoxyCodeLine{00940\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ close(client\_sock);}
+\DoxyCodeLine{00941\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00942\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00943\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ buffer[bytes\_received]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00944\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Received\ (TCP):\ "{}}\ <<\ buffer\ <<\ std::endl;}
+\DoxyCodeLine{00945\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ close(client\_sock);}
+\DoxyCodeLine{00946\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00947\ \ \ \ \ \ \ \ \ \ \ \ \ client\_thread.detach();}
+\DoxyCodeLine{00948\ \ \ \ \ \ \ \ \ \}\ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00949\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (errno\ !=\ EWOULDBLOCK\ \&\&\ errno\ !=\ EAGAIN)\ \{}
+\DoxyCodeLine{00950\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Handle\ error}}
+\DoxyCodeLine{00951\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Error\ accepting\ TCP\ connection:\ "{}}\ <<\ strerror(errno)\ <<\ std::endl;}
+\DoxyCodeLine{00952\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00953\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00954\ }
+\DoxyCodeLine{00955\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ udp\_buffer[1024];}
+\DoxyCodeLine{00956\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }sockaddr\_in\ udp\_clientAddr;}
+\DoxyCodeLine{00957\ \ \ \ \ \ \ \ \ socklen\_t\ udp\_clientAddrLen\ =\ \textcolor{keyword}{sizeof}(udp\_clientAddr);}
+\DoxyCodeLine{00958\ \ \ \ \ \ \ \ \ ssize\_t\ recvLen\ =\ recvfrom(udp\_sockfd,\ udp\_buffer,\ 1024,\ 0,\ (\textcolor{keyword}{struct}\ sockaddr\ *)\&udp\_clientAddr,\ \&udp\_clientAddrLen);}
+\DoxyCodeLine{00959\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (recvLen\ !=\ -\/1)\ \{}
+\DoxyCodeLine{00960\ \ \ \ \ \ \ \ \ \ \ \ \ udp\_buffer[recvLen]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00961\ \ \ \ \ \ \ \ \ \ \ \ \ add\_client(udp\_clientAddr);}
+\DoxyCodeLine{00962\ }
+\DoxyCodeLine{00963\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ client\_id\ =\ -\/1;}
+\DoxyCodeLine{00964\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&pair\ :\ clients)\ \{}
+\DoxyCodeLine{00965\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pair.first.sin\_addr.s\_addr\ ==\ udp\_clientAddr.sin\_addr.s\_addr\ \&\&\ pair.first.sin\_port\ ==\ udp\_clientAddr.sin\_port)\ \{}
+\DoxyCodeLine{00966\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ client\_id\ =\ pair.second;}
+\DoxyCodeLine{00967\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00968\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00969\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00970\ }
+\DoxyCodeLine{00971\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (client\_id\ !=\ -\/1)\ \{}
+\DoxyCodeLine{00972\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ receivedMessage(udp\_buffer);}
+\DoxyCodeLine{00973\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ eventTypeStr\ =\ receivedMessage.substr(0,\ 2);\ \ \textcolor{comment}{//\ Assuming\ 2-\/character\ identifiers}}
+\DoxyCodeLine{00974\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ eventContent\ =\ receivedMessage.substr(3);\ \ \textcolor{comment}{//\ The\ rest\ is\ content}}
+\DoxyCodeLine{00975\ }
+\DoxyCodeLine{00976\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Lookup\ the\ EventType\ based\ on\ the\ identifier}}
+\DoxyCodeLine{00977\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ eventTypeIt\ =\ eventIdentifierMap.find(eventTypeStr);}
+\DoxyCodeLine{00978\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (eventTypeIt\ !=\ eventIdentifierMap.end())\ \{}
+\DoxyCodeLine{00979\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EventType\ eventType\ =\ eventTypeIt-\/>second;}
+\DoxyCodeLine{00980\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEvent}{Event}}\ newEvent;}
+\DoxyCodeLine{00981\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newEvent.type\ =\ eventType;}
+\DoxyCodeLine{00982\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//check\ if\ the\ event\ exist\ in\ the\ map}}
+\DoxyCodeLine{00983\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ eventHandlerIt\ =\ eventHandlerMap.find(eventType);}
+\DoxyCodeLine{00984\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (eventHandlerIt\ !=\ eventHandlerMap.end())\ \{}
+\DoxyCodeLine{00985\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ eventHandlerIt-\/>second(newEvent);}
+\DoxyCodeLine{00986\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newEvent.content\ =\ eventContent;}
+\DoxyCodeLine{00987\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newEvent.clientID\ =\ client\_id;}
+\DoxyCodeLine{00988\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registry.eventBus.fireEvent(newEvent);}
+\DoxyCodeLine{00989\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00990\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Event\ handler\ not\ found\ for\ event\ type\ "{}}\ <<\ eventType\ <<\ std::endl;}
+\DoxyCodeLine{00991\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00992\ }
+\DoxyCodeLine{00993\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00994\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Received\ from\ client\_"{}}\ <<\ client\_id\ <<\ \textcolor{stringliteral}{"{}\ (UDP):\ "{}}\ <<\ udp\_buffer\ <<\ std::endl;}
+\DoxyCodeLine{00995\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00996\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Received\ from\ unknown\ client\ (UDP):\ "{}}\ <<\ udp\_buffer\ <<\ std::endl;}
+\DoxyCodeLine{00997\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00998\ }
+\DoxyCodeLine{00999\ \ \ \ \ \ \ \ \ \ \ \ \ broadcast(udp\_buffer,\ recvLen,\ \&udp\_clientAddr);}
+\DoxyCodeLine{01000\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01001\ }
+\DoxyCodeLine{01002\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Your\ game\ logic\ here}}
+\DoxyCodeLine{01003\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ For\ example,\ update\ game\ state\ and\ broadcast\ it}}
+\DoxyCodeLine{01004\ \ \ \ \ \}}
+\DoxyCodeLine{01005\ \};}
+\DoxyCodeLine{01006\ }
+\DoxyCodeLine{01007\ }
+\DoxyCodeLine{01008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classClientSystem}{ClientSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classISystem}{ISystem}}<State>\ \{}
+\DoxyCodeLine{01009\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{01010\ \ \ \ \ \textcolor{keywordtype}{int}\ tcp\_sockfd;}
+\DoxyCodeLine{01011\ \ \ \ \ \textcolor{keywordtype}{int}\ udp\_sockfd;}
+\DoxyCodeLine{01012\ \ \ \ \ std::thread\ listener\_thread;}
+\DoxyCodeLine{01013\ \ \ \ \ \mbox{\hyperlink{classRegistry}{Registry}}\&\ registry;}
+\DoxyCodeLine{01014\ \ \ \ \ \textcolor{keywordtype}{float}\&\ deltaTime;}
+\DoxyCodeLine{01015\ \ \ \ \ \textcolor{keyword}{struct\ }sockaddr\_in\ serverAddr;}
+\DoxyCodeLine{01016\ }
+\DoxyCodeLine{01017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{01018\ \ \ \ \ \mbox{\hyperlink{classClientSystem}{ClientSystem}}(\mbox{\hyperlink{classRegistry}{Registry}}\&\ registry,\ \textcolor{keywordtype}{float}\&\ deltaTime)\ :\ registry(registry),\ deltaTime(deltaTime)\ \{}
+\DoxyCodeLine{01019\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}ClientSystem\ constructor"{}}\ <<\ std::endl;}
+\DoxyCodeLine{01020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialize\ TCP}}
+\DoxyCodeLine{01021\ \ \ \ \ \ \ \ \ std::string\ serverIP\ =\ readFromConfig(\textcolor{stringliteral}{"{}server\_ip"{}});}
+\DoxyCodeLine{01022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ tcpPort\ =\ std::stoi(readFromConfig(\textcolor{stringliteral}{"{}tcp\_port"{}}));}
+\DoxyCodeLine{01023\ }
+\DoxyCodeLine{01024\ \ \ \ \ \ \ \ \ tcp\_sockfd\ =\ socket(AF\_INET,\ SOCK\_STREAM,\ 0);}
+\DoxyCodeLine{01025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tcp\_sockfd\ ==\ -\/1)\ \{}
+\DoxyCodeLine{01026\ \ \ \ \ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}TCP\ socket"{}});}
+\DoxyCodeLine{01027\ \ \ \ \ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{01028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Error\ handling}}
+\DoxyCodeLine{01030\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}serverIP:\ "{}}\ <<\ serverIP\ <<\ std::endl;}
+\DoxyCodeLine{01031\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}tcpPort:\ "{}}\ <<\ tcpPort\ <<\ std::endl;}
+\DoxyCodeLine{01032\ }
+\DoxyCodeLine{01033\ \ \ \ \ \ \ \ \ memset(\&serverAddr,\ 0,\ \textcolor{keyword}{sizeof}(serverAddr));}
+\DoxyCodeLine{01034\ \ \ \ \ \ \ \ \ serverAddr.sin\_family\ =\ AF\_INET;}
+\DoxyCodeLine{01035\ \ \ \ \ \ \ \ \ serverAddr.sin\_port\ =\ htons(tcpPort);}
+\DoxyCodeLine{01036\ \ \ \ \ \ \ \ \ serverAddr.sin\_addr.s\_addr\ =\ inet\_addr(serverIP.c\_str());}
+\DoxyCodeLine{01037\ }
+\DoxyCodeLine{01038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (connect(tcp\_sockfd,\ (\textcolor{keyword}{struct}\ sockaddr*)\&serverAddr,\ \textcolor{keyword}{sizeof}(serverAddr))\ ==\ -\/1)\ \{}
+\DoxyCodeLine{01039\ \ \ \ \ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}TCP\ connect"{}});}
+\DoxyCodeLine{01040\ \ \ \ \ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{01041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Error\ handling}}
+\DoxyCodeLine{01043\ }
+\DoxyCodeLine{01044\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialize\ UDP}}
+\DoxyCodeLine{01045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ udpPort\ =\ std::stoi(readFromConfig(\textcolor{stringliteral}{"{}udp\_port"{}}));}
+\DoxyCodeLine{01046\ \ \ \ \ \ \ \ \ udp\_sockfd\ =\ socket(AF\_INET,\ SOCK\_DGRAM,\ 0);}
+\DoxyCodeLine{01047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (udp\_sockfd\ ==\ -\/1)\ \{}
+\DoxyCodeLine{01048\ \ \ \ \ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}UDP\ socket"{}});}
+\DoxyCodeLine{01049\ \ \ \ \ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{01050\ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Error\ handling}}
+\DoxyCodeLine{01051\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}udpPort:\ "{}}\ <<\ udpPort\ <<\ std::endl;}
+\DoxyCodeLine{01052\ }
+\DoxyCodeLine{01053\ \ \ \ \ \ \ \ \ listener\_thread\ =\ std::thread(\&ClientSystem::listen\_to\_server,\ \textcolor{keyword}{this});}
+\DoxyCodeLine{01054\ }
+\DoxyCodeLine{01055\ \ \ \ \ \ \ \ \ registry.eventBus.addListener(PlayerMoved,\ [\textcolor{keyword}{this}](\textcolor{keyword}{const}\ \mbox{\hyperlink{structEvent}{Event}}\&\ event)\ \{}
+\DoxyCodeLine{01056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Your\ code\ to\ handle\ PlayerMoved\ event}}
+\DoxyCodeLine{01057\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}PlayerMoved\ event\ received"{}}\ <<\ std::endl;}
+\DoxyCodeLine{01058\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{01059\ }
+\DoxyCodeLine{01060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Fire\ an\ initial\ event\ to\ inform\ the\ server\ that\ a\ new\ player\ has\ joined.}}
+\DoxyCodeLine{01061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEvent}{Event}}\ newEvent;}
+\DoxyCodeLine{01062\ \ \ \ \ \ \ \ \ newEvent.type\ =\ PlayerJoined;\ \ \textcolor{comment}{//\ Assuming\ you\ have\ an\ EventType\ for\ this}}
+\DoxyCodeLine{01063\ \ \ \ \ \ \ \ \ registry.eventBus.fireEvent(newEvent);}
+\DoxyCodeLine{01064\ }
+\DoxyCodeLine{01065\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Send\ "{}PJ:"{}\ message\ to\ server}}
+\DoxyCodeLine{01066\ \ \ \ \ \ \ \ \ send\_message(\textcolor{stringliteral}{"{}PJ:"{}});}
+\DoxyCodeLine{01067\ \ \ \ \ \}}
+\DoxyCodeLine{01068\ }
+\DoxyCodeLine{01069\ \ \ \ \ \mbox{\hyperlink{classClientSystem}{\string~ClientSystem}}()\ \{}
+\DoxyCodeLine{01070\ \ \ \ \ \ \ \ \ listener\_thread.join();}
+\DoxyCodeLine{01071\ \ \ \ \ \ \ \ \ close(udp\_sockfd);}
+\DoxyCodeLine{01072\ \ \ \ \ \ \ \ \ close(tcp\_sockfd);}
+\DoxyCodeLine{01073\ \ \ \ \ \}}
+\DoxyCodeLine{01074\ }
+\DoxyCodeLine{01075\ \ \ \ \ \textcolor{keywordtype}{void}\ listen\_to\_server()\ \{}
+\DoxyCodeLine{01076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ buffer[1024];}
+\DoxyCodeLine{01077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{01078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }sockaddr\_in\ serverAddr;}
+\DoxyCodeLine{01079\ \ \ \ \ \ \ \ \ \ \ \ \ socklen\_t\ serverAddrLen\ =\ \textcolor{keyword}{sizeof}(serverAddr);}
+\DoxyCodeLine{01080\ \ \ \ \ \ \ \ \ \ \ \ \ ssize\_t\ recvLen\ =\ recvfrom(udp\_sockfd,\ buffer,\ 1024,\ 0,\ (\textcolor{keyword}{struct}\ sockaddr*)\&serverAddr,\ \&serverAddrLen);}
+\DoxyCodeLine{01081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Error\ handling}}
+\DoxyCodeLine{01082\ }
+\DoxyCodeLine{01083\ \ \ \ \ \ \ \ \ \ \ \ \ buffer[recvLen]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{01084\ }
+\DoxyCodeLine{01085\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEvent}{Event}}\ newEvent;}
+\DoxyCodeLine{01086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//might\ need\ to\ add\ a\ spliter\ to\ the\ buffer\ to\ get\ the\ event\ type}}
+\DoxyCodeLine{01087\ \ \ \ \ \ \ \ \ \ \ \ \ newEvent.type\ =\ parseEventType(buffer);\ \textcolor{comment}{//\ Function\ to\ parse\ buffer\ into\ EventType}}
+\DoxyCodeLine{01088\ \ \ \ \ \ \ \ \ \ \ \ \ registry.eventBus.fireEvent(newEvent);}
+\DoxyCodeLine{01089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01090\ \ \ \ \ \}}
+\DoxyCodeLine{01091\ }
+\DoxyCodeLine{01092\ \ \ \ \ \textcolor{keywordtype}{void}\ send\_message(\textcolor{keyword}{const}\ std::string\&\ message)\ \{}
+\DoxyCodeLine{01093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }sockaddr\_in\ serverAddr;}
+\DoxyCodeLine{01094\ \ \ \ \ \ \ \ \ memset(\&serverAddr,\ 0,\ \textcolor{keyword}{sizeof}(serverAddr));}
+\DoxyCodeLine{01095\ \ \ \ \ \ \ \ \ serverAddr.sin\_family\ =\ AF\_INET;}
+\DoxyCodeLine{01096\ \ \ \ \ \ \ \ \ serverAddr.sin\_port\ =\ htons(std::stoi(readFromConfig(\textcolor{stringliteral}{"{}udp\_port"{}})));}
+\DoxyCodeLine{01097\ \ \ \ \ \ \ \ \ serverAddr.sin\_addr.s\_addr\ =\ inet\_addr(readFromConfig(\textcolor{stringliteral}{"{}server\_ip"{}}).c\_str());}
+\DoxyCodeLine{01098\ }
+\DoxyCodeLine{01099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sendto(udp\_sockfd,\ message.c\_str(),\ message.length(),\ 0,\ (\textcolor{keyword}{struct}\ sockaddr*)\&serverAddr,\ \textcolor{keyword}{sizeof}(serverAddr))\ ==\ -\/1)\ \{}
+\DoxyCodeLine{01100\ \ \ \ \ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}UDP\ sendto"{}});}
+\DoxyCodeLine{01101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01102\ \ \ \ \ \}}
+\DoxyCodeLine{01103\ }
+\DoxyCodeLine{01104\ \ \ \ \ \textcolor{keywordtype}{void}\ operator()(entity\_t\ entity,\ \mbox{\hyperlink{classsparse__array}{sparse\_array<State>}}\&\ states)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{01105\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Game\ logic\ and\ event\ triggering}}
+\DoxyCodeLine{01106\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}ClientSystem\ operator()"{}}\ <<\ std::endl;}
+\DoxyCodeLine{01107\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ input\ =\ getch();}
+\DoxyCodeLine{01108\ \ \ \ \ \ \ \ \ \textcolor{comment}{//check\ if\ content\ is\ either\ i,j,k,l}}
+\DoxyCodeLine{01109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (input\ !=\ \textcolor{charliteral}{'i'}\ \&\&\ input\ !=\ \textcolor{charliteral}{'j'}\ \&\&\ input\ !=\ \textcolor{charliteral}{'k'}\ \&\&\ input\ !=\ \textcolor{charliteral}{'l'})\ \{}
+\DoxyCodeLine{01110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{01111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01112\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEvent}{Event}}\ newEvent;}
+\DoxyCodeLine{01113\ \ \ \ \ \ \ \ \ newEvent.type\ =\ PlayerMoved;\ \textcolor{comment}{//\ Function\ to\ map\ input\ to\ EventType}}
+\DoxyCodeLine{01114\ \ \ \ \ \ \ \ \ registry.eventBus.fireEvent(newEvent);}
+\DoxyCodeLine{01115\ }
+\DoxyCodeLine{01116\ \ \ \ \ \ \ \ \ std::string\ message\ =\ \textcolor{stringliteral}{"{}PM:"{}};\ \ \textcolor{comment}{//\ For\ example,\ PM\ for\ PlayerMoved}}
+\DoxyCodeLine{01117\ \ \ \ \ \ \ \ \ message\ +=\ input;}
+\DoxyCodeLine{01118\ \ \ \ \ \ \ \ \ send\_message(message);}
+\DoxyCodeLine{01119\ \ \ \ \ \}}
+\DoxyCodeLine{01120\ }
+\DoxyCodeLine{01121\ \ \ \ \ \textcolor{comment}{//\ The\ rest\ of\ your\ code,\ including\ utility\ functions\ like\ getch,\ mapInputToEventType,\ parseEventType}}
+\DoxyCodeLine{01122\ \};}
+\DoxyCodeLine{01123\ }
+\DoxyCodeLine{01124\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !SYSTEM\_HPP\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{01125\ }
+
+\end{DoxyCode}
