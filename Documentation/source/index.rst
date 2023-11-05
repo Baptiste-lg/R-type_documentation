@@ -11,8 +11,6 @@ Welcome to R-type's documentation!
 ==================================
 
 .. doxygenindex::
-   :project: R-type
-   :path: ./xml
 
 Indices and tables
 ==================
