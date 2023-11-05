@@ -10,9 +10,9 @@ R-type Documentation
 Welcome to R-type's documentation!
 ==================================
 
-   .. doxygenindex::
-      :project: R-type
-      :path: ./xml/
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
 
 Indices and tables
 ==================
