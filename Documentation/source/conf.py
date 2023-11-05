@@ -14,7 +14,6 @@ release = '1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-master_doc = 'index'
 extensions = ['breathe']
 breathe_projects = {'R-type': './xml'}
 breathe_default_project = 'R-type'
