@@ -1,4 +1,4 @@
-Doxygen Documentation
+Full Documentation
 =====================
 
 .. doxygenindex::

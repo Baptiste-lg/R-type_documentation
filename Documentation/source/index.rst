@@ -14,6 +14,8 @@ Welcome to R-type's documentation!
     :maxdepth: 2
     :caption: Contents:
 
+    home <self>
+    usage
     instal
 
 
