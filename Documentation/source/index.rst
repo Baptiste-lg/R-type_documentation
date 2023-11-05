@@ -10,11 +10,9 @@ R-type Documentation
 Welcome to R-type's documentation!
 ==================================
 
-.. breathe::
-
    .. doxygenindex::
       :project: R-type
-      :path: ./xml/index.xml
+      :path: ./xml/
 
 Indices and tables
 ==================
