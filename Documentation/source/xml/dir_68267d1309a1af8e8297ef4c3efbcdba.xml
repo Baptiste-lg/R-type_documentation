@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerdir refid="dir_21d9a5906f44ab8256aeb134dca54a1a">src/Beatmap</innerdir>
+    <innerdir refid="dir_55be27304aee4fac13a1eb8fc08f58b6">src/Config</innerdir>
+    <innerdir refid="dir_e95107e76c1ba4922be3f343acf5dcf1">src/Database</innerdir>
+    <innerdir refid="dir_a75f57fd1f32d349cf8a5d34440def3e">src/GraphicElement</innerdir>
+    <innerdir refid="dir_4e4e2e75df7fa6971448b424c011c8b5">src/GUI</innerdir>
+    <innerdir refid="dir_48c7164168dca01d479414587f75dc62">src/Menu</innerdir>
+    <innerdir refid="dir_075bb3ff235063c77951cd176d15a741">src/server</innerdir>
+    <innerfile refid="Batch_8cpp">Batch.cpp</innerfile>
+    <innerfile refid="Behaviour_8cpp">Behaviour.cpp</innerfile>
+    <innerfile refid="ClientMain_8cpp">ClientMain.cpp</innerfile>
+    <innerfile refid="Component_8cpp">Component.cpp</innerfile>
+    <innerfile refid="ConfigServer_8cpp">ConfigServer.cpp</innerfile>
+    <innerfile refid="EffectsFunctions_8cpp">EffectsFunctions.cpp</innerfile>
+    <innerfile refid="Encode_8cpp">Encode.cpp</innerfile>
+    <innerfile refid="Entity_8cpp">Entity.cpp</innerfile>
+    <innerfile refid="Event_8cpp">Event.cpp</innerfile>
+    <innerfile refid="global_8cpp">global.cpp</innerfile>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <innerfile refid="MenuSystem_8cpp">MenuSystem.cpp</innerfile>
+    <innerfile refid="QuadTree_8cpp">QuadTree.cpp</innerfile>
+    <innerfile refid="Registry_8cpp">Registry.cpp</innerfile>
+    <innerfile refid="SceneParsing_8cpp">SceneParsing.cpp</innerfile>
+    <innerfile refid="ServerMain_8cpp">ServerMain.cpp</innerfile>
+    <innerfile refid="Spawner_8cpp">Spawner.cpp</innerfile>
+    <innerfile refid="SpritePool_8cpp">SpritePool.cpp</innerfile>
+    <innerfile refid="taskLoader_8cpp">taskLoader.cpp</innerfile>
+    <innerfile refid="TextureManager_8cpp">TextureManager.cpp</innerfile>
+    <innerfile refid="ThreadPool_8cpp">ThreadPool.cpp</innerfile>
+    <innerfile refid="Zipper_8cpp">Zipper.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

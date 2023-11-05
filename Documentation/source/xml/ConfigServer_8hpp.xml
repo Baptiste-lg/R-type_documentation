@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="ConfigServer_8hpp" kind="file" language="C++">
+    <compoundname>ConfigServer.hpp</compoundname>
+    <includes local="no">fstream</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="ServerSystem_8hpp" local="yes">include/System/ServerSystem.hpp</includedby>
+    <includedby refid="ConfigServer_8cpp" local="yes">src/ConfigServer.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>fstream</label>
+      </node>
+      <node id="3">
+        <label>sstream</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>unordered_map</label>
+      </node>
+      <node id="1">
+        <label>include/ConfigServer.hpp</label>
+        <link refid="ConfigServer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/ConfigServer.hpp</label>
+        <link refid="ConfigServer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/System/ServerSystem.hpp</label>
+        <link refid="ServerSystem_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ConfigServer_8hpp_1adea5462f910cccdd19fb39e9b5280d83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string readFromConfig</definition>
+        <argsstring>(const std::string &amp;key)</argsstring>
+        <name>readFromConfig</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ConfigServer</para>
+<para>This file provides functions to load and read server configuration.</para>
+<para>Functions:</para>
+<para><itemizedlist>
+<listitem><para>readFromConfig() Reads a config value for the given key. Takes key string. Returns value string.</para>
+</listitem><listitem><para>loadConfig() Loads the server config from a file. Takes config file path string. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ConfigServer.hpp" line="35" column="13" bodyfile="src/ConfigServer.cpp" bodystart="65" bodyend="71" declfile="include/ConfigServer.hpp" declline="35" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="ConfigServer_8hpp_1af0b11f3364a24e1824fe3064b2b46f09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loadConfig</definition>
+        <argsstring>(const std::string &amp;filePath)</argsstring>
+        <name>loadConfig</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ConfigServer.cpp</para>
+<para>Implements functionality for loading and reading from a configuration file for the server.</para>
+<para>Functions:</para>
+<para><itemizedlist>
+<listitem><para>loadConfig(const std::string&amp; filePath) Opens and reads the specified configuration file, parsing key-value pairs and storing them in a global map. Skips lines that begin with &apos;#&apos; as they are considered comments.</para>
+</listitem><listitem><para>readFromConfig(const std::string&amp; key) Searches the global configuration map for the specified key and returns its associated value. Returns an empty string if the key is not found.</para>
+</listitem></itemizedlist>
+</para>
+<para>Global Variables:</para>
+<para><itemizedlist>
+<listitem><para>configMap A map for storing configuration key-value pairs.</para>
+</listitem></itemizedlist>
+</para>
+<para>Dependencies:</para>
+<para><itemizedlist>
+<listitem><para>&lt;fstream&gt; and &lt;iostream&gt; for file input/output and console output respectively.</para>
+</listitem><listitem><para>&quot;ConfigServer.hpp&quot; and &quot;Global.hpp&quot; for related declarations.</para>
+</listitem></itemizedlist>
+</para>
+<para>Notes:</para>
+<para><itemizedlist>
+<listitem><para>The configuration file format is assumed to be simple key-value pairs separated by &apos;=&apos; on each line, with optional comments beginning with &apos;#&apos;.</para>
+</listitem><listitem><para>It may be more encapsulated and object-oriented to have a ConfigServer class that holds the configMap and related functions, rather than using global functions and variables. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ConfigServer.hpp" line="36" column="6" bodyfile="src/ConfigServer.cpp" bodystart="47" bodyend="63" declfile="include/ConfigServer.hpp" declline="36" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Rtype</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>ConfigServer</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIGSERVER_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONFIGSERVER_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">std::string<sp/>readFromConfig(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>key);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadConfig(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>filePath);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!CONFIGSERVER_HPP_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/ConfigServer.hpp"/>
+  </compounddef>
+</doxygen>

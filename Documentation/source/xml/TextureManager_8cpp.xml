@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="TextureManager_8cpp" kind="file" language="C++">
+    <compoundname>TextureManager.cpp</compoundname>
+    <includes refid="TextureManager_8hpp" local="yes">TextureManager.hpp</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="5">
+        <label>filesystem</label>
+      </node>
+      <node id="11">
+        <label>Beatmap/BeatmapConfig.hpp</label>
+        <link refid="BeatmapConfig_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/TextureManager.cpp</label>
+        <link refid="TextureManager_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="12">
+        <label>map</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>unordered_map</label>
+      </node>
+      <node id="10">
+        <label>Database/Database.hpp</label>
+        <link refid="Database_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>TextureManager.hpp</label>
+        <link refid="TextureManager_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>libconfig.h++</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="TextureManager_8cpp_1aa649d9d8bdae77bbf0d5c85b9bd6d640" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loadAllTexture</definition>
+        <argsstring>(AssetManager &amp;assetManager)</argsstring>
+        <name>loadAllTexture</name>
+        <param>
+          <type><ref refid="classAssetManager" kindref="compound">AssetManager</ref> &amp;</type>
+          <declname>assetManager</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TextureManager.cpp</para>
+<para>This file is part of the Rtype project, created in 2024. It implements the functions responsible for loading and managing textures and fonts used in the game. The primary function defined is loadAllTexture which is suggested to be renamed to loadAllAssets to better reflect its purpose. Additional functions include loadMenuAsset, loadSkins, and preloadGameTexture which handle loading of specific assets for different game scenes.</para>
+<para>Functions:</para>
+<para><itemizedlist>
+<listitem><para>void loadAllTexture(AssetManager&amp; assetManager): Clears existing textures and loads all necessary textures and a font for the game scene.</para>
+</listitem><listitem><para>void loadMenuAsset(AssetManager&amp; assetManager, Database&amp; database): Clears existing textures and loads textures and a font for the menu scene. It also loads beatmap covers from a database.</para>
+</listitem><listitem><para>void loadSkins(AssetManager&amp; assetManager): Loads player skins from the Skins directory into the asset manager.</para>
+</listitem><listitem><para>void preloadGameTexture(AssetManager&amp; assetManager): Preloads textures for the game scene, similar to loadAllTexture but without clearing existing textures.</para>
+</listitem></itemizedlist>
+</para>
+<para>Dependencies:</para>
+<para><itemizedlist>
+<listitem><para>&quot;TextureManager.hpp&quot; for the declaration of functions.</para>
+</listitem><listitem><para>&lt;filesystem&gt; for directory iteration in loadSkins.</para>
+</listitem><listitem><para>&quot;AssetManager.hpp&quot; for managing game assets.</para>
+</listitem><listitem><para>&quot;Database.hpp&quot; for accessing beatmap information.</para>
+</listitem></itemizedlist>
+</para>
+<para>Usage:</para>
+<para><itemizedlist>
+<listitem><para>Each of these functions is designed to be called at different points in the game lifecycle to ensure that the necessary assets are loaded and ready for use.</para>
+</listitem><listitem><para>They leverage the <ref refid="classAssetManager" kindref="compound">AssetManager</ref> class to load and manage textures and fonts.</para>
+</listitem><listitem><para>loadSkins specifically iterates through files in a directory to load player skins, ensuring that all available skins are loaded. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/TextureManager.cpp" line="47" column="6" bodyfile="src/TextureManager.cpp" bodystart="47" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="TextureManager_8cpp_1a0e0fef6862e5095309ba58490783e7ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loadMenuAsset</definition>
+        <argsstring>(AssetManager &amp;assetManager, Database &amp;database)</argsstring>
+        <name>loadMenuAsset</name>
+        <param>
+          <type><ref refid="classAssetManager" kindref="compound">AssetManager</ref> &amp;</type>
+          <declname>assetManager</declname>
+        </param>
+        <param>
+          <type><ref refid="classDatabase" kindref="compound">Database</ref> &amp;</type>
+          <declname>database</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/TextureManager.cpp" line="75" column="6" bodyfile="src/TextureManager.cpp" bodystart="75" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="TextureManager_8cpp_1a0a5106fc99618ff707b71d66388b8138" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loadSkins</definition>
+        <argsstring>(AssetManager &amp;assetManager)</argsstring>
+        <name>loadSkins</name>
+        <param>
+          <type><ref refid="classAssetManager" kindref="compound">AssetManager</ref> &amp;</type>
+          <declname>assetManager</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/TextureManager.cpp" line="115" column="6" bodyfile="src/TextureManager.cpp" bodystart="115" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="TextureManager_8cpp_1a0e4551c3d41398fee36b61ed5e493c8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void preloadGameTexture</definition>
+        <argsstring>(AssetManager &amp;assetManager)</argsstring>
+        <name>preloadGameTexture</name>
+        <param>
+          <type><ref refid="classAssetManager" kindref="compound">AssetManager</ref> &amp;</type>
+          <declname>assetManager</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/TextureManager.cpp" line="136" column="6" bodyfile="src/TextureManager.cpp" bodystart="136" bodyend="159"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Rtype</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>TextureManager.cpp</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TextureManager.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadAllTexture(<ref refid="classAssetManager" kindref="compound">AssetManager</ref>&amp;<sp/>assetManager</highlight><highlight class="comment">//TODO<sp/>rename<sp/>to<sp/>loadAllAssets<sp/>for<sp/>game</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//clear<sp/>before<sp/>loading</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.UnloadAllTextures();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>loadSkins(assetManager);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;green_planet&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/GreenPlanet.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;background&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/layers/parallax-space-backgound.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;big_planet&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/layers/parallax-space-big-planet.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;far_planets&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/layers/parallax-space-far-planets.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;ring_planet&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/layers/parallax-space-ring-planet.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;stars&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/layers/parallax-space-stars.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;laser&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Spaceship/laser.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;laserAnimated&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Spaceship/shootingSheet.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;p_spaceship&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Spaceship/vehicle-1.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;p_thruster&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Spaceship/thrust/thrust.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;e_ship1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/ennemy_ship/Ship2/Ship2.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;e_ship2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/ennemy_ship/Ship3/Ship3.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;e_ship3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/ennemy_ship/Ship4/Ship4.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;button&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Button11.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;spaceship_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/ennemy_ship/Ship2/Ship2.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;spaceship_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/ennemy_ship/Ship3/Ship3.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;spaceship_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/ennemy_ship/Ship4/Ship4.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//fonts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadFont(</highlight><highlight class="stringliteral">&quot;font&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Fonts/sansation.ttf&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadMenuAsset(<ref refid="classAssetManager" kindref="compound">AssetManager</ref>&amp;<sp/>assetManager,<sp/><ref refid="classDatabase" kindref="compound">Database</ref>&amp;<sp/>database)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//clear<sp/>before<sp/>loading</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.UnloadAllTextures();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;=<sp/>6;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>texturePath<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;asset/UI/Btn0&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(i)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.png&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;Btn0&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(i),<sp/>texturePath);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(<sp/></highlight><highlight class="stringliteral">&quot;background&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;asset/UI/Background.jpg&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;MainPanel01&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/UI/MainPanel01.png&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;ArrowsRight&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;asset/UI/ArrowsRight.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;ArrowsLeft&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;asset/UI/ArrowsLeft.png&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>database.getNbBeatmaps();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classBeatmapConfig" kindref="compound">BeatmapConfig</ref><sp/>beatmap<sp/>=<sp/>database.getBeatmap(i);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(beatmap.getFolderPath()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>coverPath<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;asset/Beatmaps/&quot;</highlight><highlight class="normal"><sp/>+<sp/>beatmap.getFolderPath()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/Cover.jpg&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assetManager.LoadTexture(beatmap.getFolderPath(),<sp/>coverPath);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//fonts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadFont(</highlight><highlight class="stringliteral">&quot;font&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Fonts/sansation.ttf&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//load<sp/>the<sp/>lobby<sp/>texture</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;LobbyBackground&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/UI/lobby_background.jpg&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;LobbyButtonLeft&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/UI/lobby_button_left.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;LobbyButtonRight&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/UI/lobby_button_right.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;SkinButton&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/UI/Btn02.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;LobbyHolderBig&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/UI/lobby_holder_big.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;LobbyHolderSmall&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/UI/lobby_holder_small.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;LobbyGridHolder&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/UI/lobby_grid_holder.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;lobbyPlayerIcon&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/UI/lobby_player_icon.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;black.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/black.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;empty&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/UI/transparent.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;e_ship1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/ennemy_ship/Ship2/Ship2.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadSkins(<ref refid="classAssetManager" kindref="compound">AssetManager</ref>&amp;<sp/>assetManager)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;skin_default&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Spaceship/vehicle-1.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>skinDirectoryPath<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;asset/Skins&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!std::filesystem::exists(skinDirectoryPath))<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Skins<sp/>directory<sp/>does<sp/>not<sp/>exist:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>skinDirectoryPath<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Exit<sp/>the<sp/>function<sp/>if<sp/>the<sp/>directory<sp/>does<sp/>not<sp/>exist</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>entry<sp/>:<sp/>std::filesystem::directory_iterator(skinDirectoryPath))</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(entry.is_regular_file())<sp/>{<sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>it&apos;s<sp/>a<sp/>file,<sp/>not<sp/>a<sp/>directory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>filePath<sp/>=<sp/>entry.path().string();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>fileName<sp/>=<sp/>entry.path().filename().string();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>the<sp/>file<sp/>extension,<sp/>assuming<sp/>it&apos;s<sp/>&apos;.png&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>skinName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;skin_&quot;</highlight><highlight class="normal"><sp/>+<sp/>fileName.substr(0,<sp/>fileName.size()<sp/>-<sp/>4);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assetManager.LoadTexture(skinName,<sp/>filePath);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>preloadGameTexture(<ref refid="classAssetManager" kindref="compound">AssetManager</ref>&amp;<sp/>assetManager</highlight><highlight class="comment">//TODO<sp/>rename<sp/>to<sp/>loadAllAssets<sp/>for<sp/>game</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal">)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//clear<sp/>before<sp/>loading</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;green_planet&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/GreenPlanet.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;bddackground&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/layers/parallax-space-backgound.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;big_planet&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/layers/parallax-space-big-planet.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;far_planets&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/layers/parallax-space-far-planets.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;ring_planet&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/layers/parallax-space-ring-planet.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;stars&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/layers/parallax-space-stars.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;laser&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Spaceship/laser.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;laserAnimated&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Spaceship/shootingSheet.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;p_spaceship&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Spaceship/vehicle-1.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;p_thruster&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Spaceship/thrust/thrust.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;e_ship1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/ennemy_ship/Ship2/Ship2.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;e_ship2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/ennemy_ship/Ship3/Ship3.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;e_ship3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/ennemy_ship/Ship4/Ship4.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;button&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Button11.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;spaceship_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/ennemy_ship/Ship2/Ship2.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;spaceship_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/ennemy_ship/Ship3/Ship3.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadTexture(</highlight><highlight class="stringliteral">&quot;spaceship_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/ennemy_ship/Ship4/Ship4.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//fonts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>assetManager.LoadFont(</highlight><highlight class="stringliteral">&quot;font&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;asset/Fonts/sansation.ttf&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/TextureManager.cpp"/>
+  </compounddef>
+</doxygen>

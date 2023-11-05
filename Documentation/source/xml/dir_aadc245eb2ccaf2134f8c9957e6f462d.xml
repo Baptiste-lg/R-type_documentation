@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_aadc245eb2ccaf2134f8c9957e6f462d" kind="dir">
+    <compoundname>include/GraphicElement</compoundname>
+    <innerfile refid="BeatmapPanel_8hpp">BeatmapPanel.hpp</innerfile>
+    <innerfile refid="Button_8hpp">Button.hpp</innerfile>
+    <innerfile refid="LoadingScreen_8hpp">LoadingScreen.hpp</innerfile>
+    <innerfile refid="RectangleButton_8hpp">RectangleButton.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/GraphicElement/"/>
+  </compounddef>
+</doxygen>

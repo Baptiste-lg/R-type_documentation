@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_4c66d8320edae8ac4eb532c864452e83" kind="dir">
+    <compoundname>include/Config</compoundname>
+    <innerfile refid="Config_8hpp">Config.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Config/"/>
+  </compounddef>
+</doxygen>

@@ -1,9 +1,45 @@
 /*
 ** EPITECH PROJECT, 2024
-** ECS
+** Rtype
 ** File description:
 ** THREADPOOL
 */
+
+/**
+** ThreadPool
+**
+** This class implements a thread pool to run tasks asynchronously.
+**
+** Methods:
+**
+** - ThreadPool()
+**   Constructor that launches worker threads.
+**
+** - enqueue()
+**   Enqueues a task and returns a future to its result.
+**
+** - ~ThreadPool()
+**   Destructor that joins worker threads.
+**
+** Members:
+**
+** - workers
+**   Vector of worker threads.
+**
+** - tasks
+**   Queue of tasks to be executed.
+**
+** - queue_mutex
+**   Mutex to synchronize access to the task queue.
+**
+** - condition
+**   Condition variable to notify workers.
+**
+** - stop
+**   Flag to stop the worker threads.
+**
+*/
+
 #ifndef THREADPOOL_HPP_
 #define THREADPOOL_HPP_
 #include <vector>

@@ -1,9 +1,61 @@
 /*
 ** EPITECH PROJECT, 2023
-** Yiang
+** Rtype
 ** File description:
 ** GUI.cpp
 */
+
+/**
+* GUI.cpp
+*
+* Implements the graphical user interface for the game.
+*
+* Methods:
+*
+* - load()
+*   Loads GUI configuration. Initializes events and mouse positions.
+*
+* - loadingScreenCreate()
+*   Creates the loading screen based on window resolution.
+*
+* - reloadLoadingScreen()
+*   Destroys and recreates the loading screen.
+*
+* - updateLoadingScreen()
+*   Updates loading screen percentage text.
+*
+* - resetLoadingScreen()
+*   Destroys the loading screen.
+*
+* - displayLoadingScreen()
+*   Draws the loading screen.
+*
+* - executeLoadingScreenTasks()
+*   Runs async tasks while displaying loading screen.
+*   Updates percentage and waits for tasks to finish.
+*
+* - updateGame()
+*   Placeholder to update game state.
+*
+* Members:
+*
+* - window
+*   The render window.
+*
+* - event
+*   SFML event object.
+*
+* - mousePos
+*   Mouse position as SFML Vector2i.
+*
+* - mousePosF
+*   Mouse position as SFML Vector2f.
+*
+* - loadingScreen
+*   The loading screen object.
+*
+*/
+
 
 #include <future>
 #include "GUI/GUI.hpp"

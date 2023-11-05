@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="BehaviourSystem_8hpp" kind="file" language="C++">
+    <compoundname>BehaviourSystem.hpp</compoundname>
+    <includes local="yes">../include/System/ISystem.hpp</includes>
+    <includes local="yes">../include/System/System.hpp</includes>
+    <includes local="yes">../include/TextureManager.hpp</includes>
+    <includes local="yes">../include/Behaviour.hpp</includes>
+    <includes local="yes">../include/Registry.hpp</includes>
+    <includes local="yes">../include/Event.hpp</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">fcntl.h</includes>
+    <includedby refid="Component_8cpp" local="yes">src/Component.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>../include/System/ISystem.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/System/BehaviourSystem.hpp</label>
+        <link refid="BehaviourSystem_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>fcntl.h</label>
+      </node>
+      <node id="9">
+        <label>string.h</label>
+      </node>
+      <node id="8">
+        <label>unistd.h</label>
+      </node>
+      <node id="3">
+        <label>../include/System/System.hpp</label>
+      </node>
+      <node id="7">
+        <label>../include/Event.hpp</label>
+      </node>
+      <node id="10">
+        <label>unordered_map</label>
+      </node>
+      <node id="6">
+        <label>../include/Registry.hpp</label>
+      </node>
+      <node id="5">
+        <label>../include/Behaviour.hpp</label>
+      </node>
+      <node id="4">
+        <label>../include/TextureManager.hpp</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classBehaviorSystem" prot="public">BehaviorSystem</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="BehaviourSystem_8hpp_1a7c969ede2917aea2a04366a932e563a4" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, BehaviorFunc &gt;</type>
+        <definition>std::unordered_map&lt;std::string, BehaviorFunc&gt; behaviorMap</definition>
+        <argsstring></argsstring>
+        <name>behaviorMap</name>
+        <initializer>= {
+        {&quot;MoveLeft&quot;, moveLeft},
+        {&quot;Zigzag&quot;, zigzagMovement},
+        {&quot;Circular&quot;, circularMovement},
+        {&quot;Diagonal&quot;, diagonalMovement},
+        {&quot;SineWave&quot;, sineWaveMovement},
+        {&quot;BackAndForth&quot;, backAndForthMovement},
+        {&quot;LShape&quot;, lShapeMovement},
+        {&quot;Random&quot;, randomMovement},
+        {&quot;SliderLoopFix&quot;, sliderLoopFixMovement},
+        {&quot;Fixed&quot;, fixedMovement},
+        {&quot;LoopDiagonalRight&quot;, loopDiagonalMovementRight}
+        
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classBehaviorSystem" kindref="compound">BehaviorSystem</ref> processes entities with <ref refid="structBehavior" kindref="compound">Behavior</ref> and <ref refid="structPosition" kindref="compound">Position</ref> components.</para>
+<para>It looks up the behavior function based on the Behavior.behaviorID and executes it, passing in the <ref refid="structPosition" kindref="compound">Position</ref> component and deltaTime.</para>
+<para>This allows easily swapping out movement behaviors for entities.</para>
+<para>Usage:<itemizedlist>
+<listitem><para>Give entities a <ref refid="structBehavior" kindref="compound">Behavior</ref> and <ref refid="structPosition" kindref="compound">Position</ref> component.</para>
+</listitem><listitem><para>Implement movement functions like moveLeft(), zigzagMovement() etc.</para>
+</listitem><listitem><para>Add function pointer to behaviorMap.</para>
+</listitem><listitem><para>System will call correct function each tick to update <ref refid="structPosition" kindref="compound">Position</ref>.</para>
+</listitem></itemizedlist>
+</para>
+<para>Parameters:<itemizedlist>
+<listitem><para>deltaTime: Time elapsed since last tick.</para>
+</listitem></itemizedlist>
+</para>
+<para>Components used:<itemizedlist>
+<listitem><para><ref refid="structBehavior" kindref="compound">Behavior</ref>: Contains behaviorID to identify movement function.</para>
+</listitem><listitem><para><ref refid="structPosition" kindref="compound">Position</ref>: Passed to behavior function to update. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/BehaviourSystem.hpp" line="42" column="20" bodyfile="include/System/BehaviourSystem.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Rtype</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>SYSTEM</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BEHAVIOURSYSTEM_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BEHAVIOURSYSTEM_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/System/ISystem.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/System/System.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/TextureManager.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/Behaviour.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/Registry.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/Event.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fcntl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">std::unordered_map&lt;std::string,<sp/>BehaviorFunc&gt;<sp/>behaviorMap<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;MoveLeft&quot;</highlight><highlight class="normal">,<sp/>moveLeft},</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;Zigzag&quot;</highlight><highlight class="normal">,<sp/>zigzagMovement},</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;Circular&quot;</highlight><highlight class="normal">,<sp/>circularMovement},</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;Diagonal&quot;</highlight><highlight class="normal">,<sp/>diagonalMovement},</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;SineWave&quot;</highlight><highlight class="normal">,<sp/>sineWaveMovement},</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;BackAndForth&quot;</highlight><highlight class="normal">,<sp/>backAndForthMovement},</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;LShape&quot;</highlight><highlight class="normal">,<sp/>lShapeMovement},</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;Random&quot;</highlight><highlight class="normal">,<sp/>randomMovement},</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;SliderLoopFix&quot;</highlight><highlight class="normal">,<sp/>sliderLoopFixMovement},</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;Fixed&quot;</highlight><highlight class="normal">,<sp/>fixedMovement},</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;LoopDiagonalRight&quot;</highlight><highlight class="normal">,<sp/>loopDiagonalMovementRight}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>more<sp/>behaviors<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="56" refid="classBehaviorSystem" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classBehaviorSystem" kindref="compound">BehaviorSystem</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classISystem" kindref="compound">ISystem</ref>&lt;Behavior,<sp/>Position&gt;<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>deltaTime;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classBehaviorSystem" kindref="compound">BehaviorSystem</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>deltaTime)<sp/>:<sp/>deltaTime(deltaTime)<sp/>{}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>getSystemName()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;BehaviorSystem&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator()(entity_t<sp/>e,<sp/><ref refid="classsparse__array" kindref="compound">sparse_array&lt;Behavior&gt;</ref>&amp;<sp/>behaviors,<sp/><ref refid="classsparse__array" kindref="compound">sparse_array&lt;Position&gt;</ref>&amp;<sp/>positions)</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>behaviorOpt<sp/>=<sp/>behaviors[e];</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>posOpt<sp/>=<sp/>positions[e];</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(behaviorOpt<sp/>&amp;&amp;<sp/>posOpt)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>behavior<sp/>=<sp/>*behaviors[e];</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>pos<sp/>=<sp/>*positions[e];</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Look<sp/>up<sp/>the<sp/>behavior<sp/>function<sp/>from<sp/>the<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>behaviorMap.find(behavior.behaviorID);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>!=<sp/>behaviorMap.end())<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Execute<sp/>the<sp/>behavior<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it-&gt;second(pos,<sp/>deltaTime);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!BEHAVIOURSYSTEM_HPP_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/System/BehaviourSystem.hpp"/>
+  </compounddef>
+</doxygen>

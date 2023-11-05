@@ -1,11 +1,97 @@
 /*
 ** EPITECH PROJECT, 2023
-** Yiang
+** Rtype
 ** File description:
 ** GUI.hpp
 */
+
+/**
+** GUI
+**
+** This class represents the graphical user interface.
+**
+** Public Methods:
+**
+** - GUI()
+**   - Constructor that takes a reference to the render window
+**
+** - ~GUI()
+**   - Destructor
+**
+** - load()
+**   - Loads the GUI based on a GUIConfig
+**
+** - loadBeatmapPanel()
+**   - Loads the beatmap selection panel
+**
+** - loadingScreenCreate()
+**   - Creates the loading screen
+**
+** - updateLoadingScreen()
+**   - Updates the loading screen progress
+**
+** - resetLoadingScreen()
+**   - Resets the loading screen
+**
+** - reloadLoadingScreen()
+**   - Reloads the loading screen resources
+**
+** - displayLoadingScreen()
+**   - Displays the loading screen
+**
+** - createMenu()
+**   - Creates the main menu
+**
+** - updateMenu()
+**   - Updates the main menu
+**
+** - loop()
+**   - Main GUI loop
+**
+** - createGame()
+**   - Creates the game GUI
+**
+** - updateGame()
+**   - Updates the game GUI
+**
+** - drawGame()
+**   - Draws the game GUI
+**
+** - executeLoadingScreenTasks()
+**   - Executes loading screen tasks
+**
+** - setActive()
+**   - Sets the window active state
+**
+** - getWindow()
+**   - Gets the render window
+**
+** - getEvent()
+**   - Gets the SFML event
+**
+** Private Attributes:
+**
+** - window
+**   - Reference to the render window
+**
+** - event
+**   - SFML event
+**
+** - mousePos
+**   - Mouse position
+**
+** - mousePosF
+**   - Mouse position as float
+**
+** - loadingScreen
+**   - Loading screen object
+**
+** - menu
+**   - Main menu object
+*/
+
 #ifndef GUI_HPP_
-	#define GUI_HPP_
+#define GUI_HPP_
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/System.hpp>

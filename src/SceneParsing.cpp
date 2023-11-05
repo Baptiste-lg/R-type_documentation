@@ -1,3 +1,94 @@
+/*
+** EPITECH PROJECT, 2024
+** Rtype
+** File description:
+** SceneParsing.cpp
+*/
+
+/**
+** SceneParsing.cpp
+**
+** This file includes functionality to parse and translate configurations from a
+** file into usable in-game components. It utilizes the libconfig library to read
+** configurations and a set of defined component adding functions to populate
+** the game's Registry with corresponding entities and components.
+**
+** Variables:
+**
+** - componentAdderMap
+**   A global unordered map associating strings representing component types
+**   to functions that know how to add these components to entities.
+**
+** Functions:
+**
+** - getComponentAdderByName(const std::string& name)
+**   This function returns a pointer to a ComponentAdder function associated
+**   with a given component name, or null if no such function is found.
+**
+** - makeAdder(entity_t parent, const std::string& name, const libconfig::Setting& params)
+**   A factory function to create ComponentSpawner functions for a specified component
+**   type and parameters, for a specified parent entity.
+**
+** - addPosition(entity_t entity, Registry& registry, const libconfig::Setting& componentData)
+**   Adds a Position component to a specified entity in the registry using provided data.
+**
+** - addVelocity(entity_t entity, Registry& registry, const libconfig::Setting& componentData)
+**   Adds a Velocity component to a specified entity in the registry using provided data.
+**
+** - addCollision(entity_t entity, Registry& registry, const libconfig::Setting& componentData)
+**   Adds a Collision component to a specified entity in the registry using provided data.
+**
+** - addDrawable(entity_t entity, Registry& registry, const libconfig::Setting& componentData)
+**   Adds a Drawable component to a specified entity in the registry using provided data.
+**
+** - addAcceleration(entity_t entity, Registry& registry, const libconfig::Setting& componentData)
+**   Adds an Acceleration component to a specified entity in the registry using provided data.
+**
+** - addAnimation(entity_t entity, Registry& registry, const libconfig::Setting& componentData)
+**   Adds an Animation component to a specified entity in the registry using provided data.
+**
+** - addGameConfig(entity_t entity, Registry& registry, const libconfig::Setting& componentData)
+**   Adds a GameConfig component to a specified entity in the registry using provided data.
+**
+** - addControllable(entity_t entity, Registry& registry, const libconfig::Setting& componentData)
+**   Adds a Controllable component to a specified entity in the registry using provided data.
+**
+** - addLaser(entity_t entity, Registry& registry, const libconfig::Setting& componentData)
+**   Adds a Laser component to a specified entity in the registry using provided data.
+**
+** - addDepth(entity_t entity, Registry& registry, const libconfig::Setting& componentData)
+**   Adds a Depth component to a specified entity in the registry using provided data.
+**
+** - addBehavior(entity_t entity, Registry& registry, const libconfig::Setting& componentData)
+**   Adds a Behavior component to a specified entity in the registry using provided data.
+**
+** - addFFT(entity_t entity, Registry& registry, const libconfig::Setting& componentData)
+**   Adds a FFT component to a specified entity in the registry using provided data.
+**
+** - addSpawner(entity_t entity, Registry& registry, const libconfig::Setting& componentData)
+**   Adds a Spawner component to a specified entity in the registry using provided data.
+**
+** - addFollower(entity_t parentEntity, Registry& registry, const libconfig::Setting& componentData)
+**   Adds a Follower component to a specified entity in the registry using provided data.
+**
+** - addDeathEffect(entity_t entity, Registry& registry, const libconfig::Setting& componentData)
+**   Adds a DeathEffect component to a specified entity in the registry using provided data.
+**
+** - initializeGameEntitiesFromConfig(Registry &registry, const std::string &configFilePath)
+**   Reads a configuration file to populate the Registry with entities and components
+**   as specified in the configuration.
+**
+** Dependencies:
+**
+** - "SceneParsing.hpp" for the declarations of parsing functions and component adders.
+** - "Global.hpp" for global game settings and typedefs.
+** - <unordered_map> for std::unordered_map.
+** - <iostream> for standard I/O operations.
+** - <libconfig.h++> for reading configuration files.
+** - <vector> for std::vector.
+** - <string> for std::string.
+**
+*/
 
 #include "SceneParsing.hpp"
 #include "Global.hpp"
@@ -15,7 +106,8 @@ std::unordered_map<std::string, ComponentAdder> componentAdderMap = {
         {"Behavior", addBehavior},
         {"FFT", addFFT},
         {"Spawner", addSpawner},
-        {"Follower", addFollower}
+        {"Follower", addFollower},
+        {"DeathEffect", addDeathEffect},
 };
 
 ComponentAdder* getComponentAdderByName(const std::string& name) {
@@ -25,49 +117,60 @@ ComponentAdder* getComponentAdderByName(const std::string& name) {
     return nullptr;
 }
 
-ComponentSpawner makeAdder(const std::string& name, const libconfig::Setting& params) {
-    std::cout << "Creating adder for " << name << std::endl;
+ComponentSpawner makeAdder(entity_t parent, const std::string& name, const libconfig::Setting& params) {
     if (name == "addPosition") {
         float x = params["x"];
         float y = params["y"];
-        return [x, y](entity_t entity, Registry& registry) {
-            registry.add_component(entity, Position{x, y});
+        return [x, y](entity_t entity, Registry &registry) {
+            registry.add_component(entity, Position{x, y, x, y});
         };
     }
     // Similar functions for other component types
     if (name == "addVelocity") {
         float x = params["x"];
         float y = params["y"];
-        return [x, y](entity_t entity, Registry& registry) {
+        return [x, y](entity_t entity, Registry &registry) {
             registry.add_component(entity, Velocity{x, y});
         };
     }
     if (name == "addAcceleration") {
         float x = params["x"];
         float y = params["y"];
-        return [x, y](entity_t entity, Registry& registry) {
+        return [x, y](entity_t entity, Registry &registry) {
             registry.add_component(entity, Acceleration{x, y});
         };
     }
     if (name == "addDrawable") {
         std::string textureName = params["textureName"];
         MyRect textureRect;
-        std::cout << "going into textureRect" << std::endl;
         textureRect.left = params["textureRect"][0];
         textureRect.top = params["textureRect"][1];
         textureRect.width = params["textureRect"][2];
         textureRect.height = params["textureRect"][3];
-        std::cout << "textureName: " << textureName << std::endl;
-        std::cout << "textureRect: " << textureRect.left << ", " << textureRect.top << ", " << textureRect.width << ", " << textureRect.height << std::endl;
-        return [textureName, textureRect](entity_t entity, Registry& registry) {
+        return [textureName, textureRect](entity_t entity, Registry &registry) {
             registry.add_component(entity, Drawable{textureName, textureRect});
         };
     }
     if (name == "addCollision") {
-        bool isEnemy = params["isEnemy"];
-        return [isEnemy](entity_t entity, Registry& registry) {
-            registry.add_component(entity, Collision{isEnemy});
-        };
+        std::string entityType = params["entityType"];
+        std::string colliderType = params["colliderType"];
+        auto it = colliderTypeMap.find(colliderType);
+        if (it != colliderTypeMap.end()) {
+            auto collider = it->second;
+            auto it2 = entityTypeMap.find(entityType);
+            if (it2 != entityTypeMap.end()) {
+                auto type = it2->second;
+                return [type, collider](entity_t entity, Registry &registry) {
+                    registry.add_component(entity, Collision{type, collider});
+                };
+            } else {
+                std::cerr << "No entity type found for name: " << entityType << std::endl;
+                return nullptr;  // Keep the return statement here to exit early in case of an error
+            }
+        } else {
+            std::cerr << "No collider type found for name: " << colliderType << std::endl;
+            return nullptr;  // Keep the return statement here to exit early in case of an error
+        }
     }
     if (name == "addAnimation") {
         int currentFrame = params["currentFrame"];
@@ -75,55 +178,80 @@ ComponentSpawner makeAdder(const std::string& name, const libconfig::Setting& pa
         float frameDuration = params["frameDuration"];
         float elapsedTime = params["elapsedTime"];
         bool loop = params["loop"];
-        return [currentFrame, numFrames, frameDuration, elapsedTime, loop](entity_t entity, Registry& registry) {
-            registry.add_component(entity, Animation{currentFrame, numFrames, frameDuration/FRAMERATE, elapsedTime, loop});
+        return [currentFrame, numFrames, frameDuration, elapsedTime, loop](entity_t entity, Registry &registry) {
+            registry.add_component(entity, Animation{currentFrame, numFrames, frameDuration / FRAMERATE, elapsedTime, loop});
         };
     }
     if (name == "addGameConfig") {
         float screenWidth = params["screenWidth"];
         float screenHeight = params["screenHeight"];
         float playerSpeed = params["playerSpeed"];
-        return [screenWidth, screenHeight, playerSpeed](entity_t entity, Registry& registry) {
+        return [screenWidth, screenHeight, playerSpeed](entity_t entity, Registry &registry) {
             registry.add_component(entity, GameConfig{screenWidth, screenHeight, playerSpeed});
         };
     }
     if (name == "addControllable") {
         bool isLocal = params["isLocal"];
         int client_id = params["client_id"];
-        return [isLocal, client_id](entity_t entity, Registry& registry) {
+        return [isLocal, client_id](entity_t entity, Registry &registry) {
             registry.add_component(entity, Controllable{isLocal, client_id});
         };
     }
     if (name == "addLaser") {
-        return [](entity_t entity, Registry& registry) {
+        return [](entity_t entity, Registry &registry) {
             registry.add_component(entity, Laser{});
         };
     }
     if (name == "addDepth") {
         float z = params["z"];
-        return [z](entity_t entity, Registry& registry) {
+        return [z](entity_t entity, Registry &registry) {
             registry.add_component(entity, Depth{z});
         };
     }
     if (name == "addBehavior") {
         std::string behaviorID = params["type"];
-        return [behaviorID](entity_t entity, Registry& registry) {
+        return [behaviorID](entity_t entity, Registry &registry) {
             registry.add_component(entity, Behavior{behaviorID});
         };
     }
     if (name == "addFFT") {
-        return [](entity_t entity, Registry& registry) {
+        return [](entity_t entity, Registry &registry) {
             registry.add_component(entity, FFT{});
         };
     }
-    std::cout << "Component adder not found: " << name << std::endl;
+if (name == "addDeathEffect") {
+    std::string effectName = params["type"];
+    std::string applyTo = params["applyTo"];
+    auto it = EffectFunctionMap.find(effectName);
+    if (it != EffectFunctionMap.end()) {
+        auto effect = it->second;  // Capture the effect function
+        auto it2 = deathApplyTypeMap.find(applyTo);
+        if (it2 != deathApplyTypeMap.end()) {
+            auto type = it2->second;  // Capture the entity type
+            return [effectName, effect, type](entity_t entity, Registry &registry) {
+                registry.add_component(entity, DeathEffect{effectName, effect, type});
+            };
+        } else {
+            std::cerr << "No entity type found for name: " << applyTo << std::endl;
+        }
+    } else {
+        std::cerr << "No death effect found for name: " << effectName << std::endl;
+    }
+}
+
+    if (name == "addParent") {
+        return [parent](entity_t entity, Registry &registry) {
+            registry.add_component(entity, IsChild{parent});
+        };
+    }
     return nullptr;
 }
+
 void addPosition(entity_t entity, Registry& registry, const libconfig::Setting& componentData) {
     float x, y;
     componentData.lookupValue("x", x);
     componentData.lookupValue("y", y);
-    registry.add_component(entity, Position{x, y});
+    registry.add_component(entity, Position{x, y, x, y});
 }
 
 // Similar functions for other component types
@@ -136,9 +264,25 @@ void addVelocity(entity_t entity, Registry& registry, const libconfig::Setting& 
 }
 
 void addCollision(entity_t entity, Registry& registry, const libconfig::Setting& componentData) {
-    bool isEnemy = false;
-    componentData.lookupValue("isEnemy", isEnemy);
-    registry.add_component(entity, Collision{isEnemy});
+    std::string entityType;
+    std::string colliderType ;
+    componentData.lookupValue("entityType", entityType);
+    componentData.lookupValue("colliderType", colliderType);
+    auto it = colliderTypeMap.find(colliderType);
+    if (it != colliderTypeMap.end()) {
+        auto collider = it->second;
+        auto it2 = entityTypeMap.find(entityType);
+        if (it2 != entityTypeMap.end()) {
+            auto type = it2->second;
+            registry.add_component(entity, Collision{type, collider});
+        } else {
+            std::cerr << "No entity type found for name: " << entityType << std::endl;
+            return;  // Keep the return statement here to exit early in case of an error
+        }
+    } else {
+        std::cerr << "No collider type found for name: " << colliderType << std::endl;
+        return;  // Keep the return statement here to exit early in case of an error
+    }
 }
 
 
@@ -181,9 +325,6 @@ void addGameConfig(entity_t entity, Registry& registry, const libconfig::Setting
     componentData.lookupValue("screenWidth", screenWidth);
     componentData.lookupValue("screenHeight", screenHeight);
     componentData.lookupValue("playerSpeed", playerSpeed);
-    std::cout << "screenWidth: " << screenWidth << std::endl;
-    std::cout << "screenHeight: " << screenHeight << std::endl;
-    std::cout << "playerSpeed: " << playerSpeed << std::endl;
     registry.add_component(entity, GameConfig{screenWidth, screenHeight, playerSpeed});
 }
 
@@ -209,12 +350,7 @@ void addDepth(entity_t entity, Registry& registry, const libconfig::Setting& com
 void addBehavior(entity_t entity, Registry& registry, const libconfig::Setting& componentData) {
     std::string behaviorID;
     Behavior behavior;
-  //  float originX = 0.0f;
-    //float originY = 0.0f;
     componentData.lookupValue("type", behaviorID);
-    std::cout << "behaviorID: " << behaviorID << std::endl;
-  //  componentData.lookupValue("originX", originX);
-   // componentData.lookupValue("originY", originY);
     registry.add_component(entity, Behavior{behaviorID});
 }
 
@@ -239,8 +375,6 @@ void addSpawner(entity_t entity, Registry& registry, const libconfig::Setting& c
     componentData.lookupValue("yOffset", yOffset);
     componentData.lookupValue("xVelocity", xVelocity);
     componentData.lookupValue("yVelocity", yVelocity);
-
-    std::cout << "starting to look for component adders" << std::endl;
     // Check if componentAdders is present
 // Inside your function that populates the Spawner component
     if (componentData.exists("componentAdders")) {
@@ -251,14 +385,12 @@ void addSpawner(entity_t entity, Registry& registry, const libconfig::Setting& c
             componentAdderData.lookupValue("name", name);
             const libconfig::Setting& params = componentAdderData["params"];
 
-            ComponentSpawner adder = makeAdder(name, params);
+            ComponentSpawner adder = makeAdder(entity, name, params);
             if (adder) {
                 componentAdders.push_back(adder);
             }
-            std::cout << "componentAdder: " << name << std::endl;
         }
     }
-
     registry.add_component(entity, Spawner{spawnRate, timeSinceLastSpawn, entityToSpawn, xOffset, yOffset, xVelocity, yVelocity, componentAdders});
 }
 
@@ -287,13 +419,89 @@ void addFollower(entity_t parentEntity, Registry& registry, const libconfig::Set
             componentAdderData.lookupValue("name", name);
 
             const libconfig::Setting& params = componentAdderData["params"];
-            ComponentSpawner adder = makeAdder(name, params); // Assuming makeAdder returns a ComponentSpawner
-
-            if (adder) {
-                std::cout << "Adding component " << name << " to follower" << std::endl;
+            ComponentSpawner adder = makeAdder(parentEntity, name, params); // Assuming makeAdder returns a ComponentSpawner
+            if (adder)
                 adder(followerEntity, registry);
-            }
         }
         //add the position in a kinda hacky way
     }
+}
+
+void addDeathEffect(entity_t entity, Registry& registry, const libconfig::Setting& componentData) {
+    std::string effectName;
+    std::string applyTo;
+    componentData.lookupValue("type", effectName);
+    componentData.lookupValue("applyTo", applyTo);
+    auto it = EffectFunctionMap.find(effectName);
+    if (it != EffectFunctionMap.end()) {
+        auto effect = it->second;
+        auto it2 = deathApplyTypeMap.find(applyTo);
+        if (it2 != deathApplyTypeMap.end()) {
+            auto type = it2->second;
+            registry.add_component(entity, DeathEffect{effectName, effect, type});
+        } else {
+            std::cerr << "No entity type found for name: " << applyTo << std::endl;
+            return;  // Keep the return statement here to exit early in case of an error
+        }
+    } else {
+        std::cerr << "No death effect found for name: " << effectName << std::endl;
+        return;  // Keep the return statement here to exit early in case of an error
+    }
+}
+
+void initializeGameEntitiesFromConfig(Registry &registry, const std::string &configFilePath) {
+    libconfig::Config cfg;
+    try {
+        cfg.readFile(configFilePath.c_str());
+    } catch (const libconfig::FileIOException &fioex) {
+        std::cerr << "I/O error while reading config file." << std::endl;
+        return;
+    } catch (const libconfig::ParseException &pex) {
+        std::cerr << "Parse error at " << pex.getFile() << ":" << pex.getLine()
+                  << " - " << pex.getError() << std::endl;
+        return;
+    }
+    registry.clientToEntityMap.clear();
+    const libconfig::Setting &root = cfg.getRoot();
+    const libconfig::Setting &entities = root["entities"];
+    bool foundPlayer = false;
+    for (int i = 0; i < entities.getLength(); ++i) {
+        const libconfig::Setting &entityData = entities[i];
+        auto entity = registry.spawn_entity();
+
+        // Iterate over all fields in the entity's configuration
+        for (int j = 0; j < entityData.getLength(); ++j) {
+            const libconfig::Setting &componentData = entityData[j];
+            const std::string &componentName = componentData.getName();
+            // we will make a little cheat here to get the entity id if a player is created:
+            // there is a useless field name type="Player" in the config file associated with the player creation
+            // so we will use it to get the id of the player and add it to registry
+            if (componentName == "type") {
+                if (foundPlayer) {
+                    std::cerr << "Error: multiple players found in config file" << std::endl;
+                    continue;
+                }
+                bool isLocal = false;
+                //print the line
+                componentData.lookupValue("isPlayer", isLocal);
+                if (isLocal)
+                    registry.clientToEntityMap[-42] = entity; // this is ugly but it works
+                foundPlayer = true;
+                continue;
+            }
+            // Find the component adder for this component
+            auto it = componentAdderMap.find(componentName);
+            if (it != componentAdderMap.end()) {
+                // Use the component adder to add the component to the entity
+                it->second(entity, registry, componentData);
+            }
+        }
+    }
+    //for debug can you add a entity that have a textDrawable component thats all
+    auto entity = registry.spawn_entity();
+    registry.add_component(entity, Position{0, 0});
+    registry.add_component(entity, TextDrawable{"Hello World", "font", 50});
+    registry.add_component(entity, Depth{0.0f});
+    registry.add_component(entity, Drawable{"background", MyRect{0, 0, 1920, 1080}});
+
 }

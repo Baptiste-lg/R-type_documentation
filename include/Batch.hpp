@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2024
-** ECS
+** Rtype
 ** File description:
 ** Batch
 */
@@ -50,8 +50,6 @@ public:
         vertexArray.append(topRight);
         vertexArray.append(bottomLeft);
         vertexArray.append(bottomRight);
-        std::cout << "Added entity " << entity << " to batch." << std::endl;
-
     }
 
 

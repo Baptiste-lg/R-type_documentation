@@ -1,15 +1,92 @@
 /*
 ** EPITECH PROJECT, 2023
-** Yiang
+** Rtype
 ** File description:
 ** Menu.hpp
 */
+
+/**
+** Menu
+**
+** This class represents the main menu.
+**
+** Public Methods:
+**
+** - Menu()
+**   - Default constructor
+**
+** - ~Menu()
+**   - Destructor
+**
+** - load()
+**   - Loads the menu resources
+**
+** - loadTextures()
+**   - Loads the menu textures
+**
+** - update()
+**   - Updates the menu and handles events
+**
+** - draw()
+**   - Draws the menu
+**
+** - loadBeatmaps()
+**   - Loads the beatmap panels
+**
+** - slideLeft()
+**   - Slides the beatmap panels left
+**
+** - slideRight()
+**   - Slides the beatmap panels right
+**
+** - onAnalyzeButtonClicked()
+**   - Handles analyze button click
+**
+** - getDifficulty()
+**   - Gets selected difficulty
+**
+** - getActualSongName()
+**   - Gets selected song name
+**
+** - setDifficulty()
+**   - Sets selected difficulty
+**
+** - setState()
+**   - Sets the menu state
+**
+** Protected Attributes:
+**
+** - buttons
+**   - Menu buttons
+**
+** - buttonConfigs
+**   - Button configurations
+**
+** - textures
+**   - Button textures
+**
+** - sprites
+**   - Menu sprites
+**
+** - beatmapPanel
+**   - Beatmap panels
+**
+** - fonts
+**   - Loaded fonts
+**
+** - state
+**   - Current menu state
+**
+** Private Attributes:
+**
+** - None
+*/
+
 #ifndef MENU_HPP_
 	#define MENU_HPP_
 
 #include <SFML/Graphics.hpp>
 #include <string>
-//create a global map to associate a int with a note with is a string
 #include <vector>
 #include <tuple>
 #include <vector>

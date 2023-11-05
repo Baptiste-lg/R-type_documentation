@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structEvent" kind="struct" language="C++" prot="public">
+    <compoundname>Event</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structEvent_1ac721e4f34b3b9a1ae302165412221724" prot="public" static="no" mutable="no">
+        <type>EventType</type>
+        <definition>EventType Event::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Event.hpp" line="180" column="15" bodyfile="include/Event.hpp" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structEvent_1a9f977e774bd8a90b3e211e553b5bccae" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Event::content</definition>
+        <argsstring></argsstring>
+        <name>content</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Event.hpp" line="181" column="17" bodyfile="include/Event.hpp" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structEvent_1a1d6b54a8fa9469c3e994c08f7aff57a6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Event::clientID</definition>
+        <argsstring></argsstring>
+        <name>clientID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Event.hpp" line="182" column="9" bodyfile="include/Event.hpp" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structEvent_1a14484ee19ad194ee8dad3bfbfdd0b8e1" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; uint8_t &gt;</type>
+        <definition>std::vector&lt;uint8_t&gt; Event::wavData</definition>
+        <argsstring></argsstring>
+        <name>wavData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Event.hpp" line="183" column="17" bodyfile="include/Event.hpp" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structEvent_1a27184826d0100bcda86479bae6704492" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Event::TCPDataSize</definition>
+        <argsstring></argsstring>
+        <name>TCPDataSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Event.hpp" line="184" column="12" bodyfile="include/Event.hpp" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structEvent_1add6761450ffb5126503df8e124387ab5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Event::TCPSocket</definition>
+        <argsstring></argsstring>
+        <name>TCPSocket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Event.hpp" line="185" column="9" bodyfile="include/Event.hpp" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structEvent_1a86e9d7c171d8da231fd8fdf5ae7df6e9" prot="public" static="no" mutable="no">
+        <type>struct sockaddr_in</type>
+        <definition>struct sockaddr_in Event::UDPAddr</definition>
+        <argsstring></argsstring>
+        <name>UDPAddr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Event.hpp" line="185" column="9" bodyfile="include/Event.hpp" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Event.hpp" line="179" column="1" bodyfile="include/Event.hpp" bodystart="179" bodyend="188"/>
+    <listofallmembers>
+      <member refid="structEvent_1a1d6b54a8fa9469c3e994c08f7aff57a6" prot="public" virt="non-virtual"><scope>Event</scope><name>clientID</name></member>
+      <member refid="structEvent_1a9f977e774bd8a90b3e211e553b5bccae" prot="public" virt="non-virtual"><scope>Event</scope><name>content</name></member>
+      <member refid="structEvent_1a27184826d0100bcda86479bae6704492" prot="public" virt="non-virtual"><scope>Event</scope><name>TCPDataSize</name></member>
+      <member refid="structEvent_1add6761450ffb5126503df8e124387ab5" prot="public" virt="non-virtual"><scope>Event</scope><name>TCPSocket</name></member>
+      <member refid="structEvent_1ac721e4f34b3b9a1ae302165412221724" prot="public" virt="non-virtual"><scope>Event</scope><name>type</name></member>
+      <member refid="structEvent_1a86e9d7c171d8da231fd8fdf5ae7df6e9" prot="public" virt="non-virtual"><scope>Event</scope><name>UDPAddr</name></member>
+      <member refid="structEvent_1a14484ee19ad194ee8dad3bfbfdd0b8e1" prot="public" virt="non-virtual"><scope>Event</scope><name>wavData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

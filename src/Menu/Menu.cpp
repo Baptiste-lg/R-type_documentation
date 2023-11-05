@@ -1,8 +1,85 @@
 /*
 ** EPITECH PROJECT, 2023
-** Yiang
+** Rtype
 ** File description:
 ** Menu.cpp
+*/
+
+/**
+* Menu.cpp
+*
+* Implements the main menu UI.
+*
+* Methods:
+*
+* - Menu()
+*   Constructor.
+*
+* - ~Menu()
+*   Destructor.
+*
+* - loadTextures()
+*   Loads menu textures from files.
+*
+* - load()
+*   Loads menu buttons, fonts, backgrounds.
+*   Calls loadBeatmaps().
+*
+* - loadBeatmaps()
+*   Loads BeatmapPanel objects for each beatmap.
+*
+* - update()
+*   Handles events and updates selected panel.
+*   Returns current menu state.
+*
+* - draw()
+*   Draws menu elements on render window.
+*
+* - slideLeft()
+*   Slides selection left by one panel.
+*
+* - slideRight()
+*   Slides selection right by one panel.
+*
+* - onAnalyzeButtonClicked()
+*   Called when Analyze button clicked.
+*   Prints message and loads music.
+*
+* - getActualSongName()
+*   Gets folder path of selected beatmap.
+*
+* - setDifficulty()
+*   Sets difficulty on selected panel.
+*
+* - getDifficulty()
+*   Gets difficulty from selected panel.
+*
+* Members:
+*
+* - textures
+*   Loaded texture map.
+*
+* - fonts
+*   Loaded font map.
+*
+* - buttons
+*   Menu buttons.
+*
+* - sprites
+*   Menu sprites.
+*
+* - beatmapPanel
+*   Vector of BeatmapPanel objects.
+*
+* - selectedPanelIndex
+*   Index of currently selected panel.
+*
+* - state
+*   Current menu state.
+*
+* - _res
+*   Window resolution.
+*
 */
 
 #include "Menu/Menu.hpp"
@@ -43,7 +120,6 @@ void Menu::loadTextures(Database& database)
         std::cout << "Error loading texture : " << "asset/UI/ArrowsRight.png" << std::endl;
         // Handle error...
     }
-    std::cout << "Loading arrow textures" << std::endl;
     if (!textures["ArrowsLeft"].loadFromFile("asset/UI/ArrowsLeft.png")) {
         std::cout << "Error loading texture : " << "asset/UI/ArrowsLeft.png" << std::endl;
         // Handle error...
@@ -103,9 +179,7 @@ void Menu::load(const std::pair<int, int>& res, Database& database)
 }
 
 void Menu::loadBeatmaps(Database& database) {
-    //std::cout << "Loading beatmaps in MENU" << std::endl;
     for (int i = 0; i < database.getNbBeatmaps(); ++i) {
-        std::cout << "Loading beatmap " << i << std::endl;
         BeatmapConfig beatmap = database.getBeatmap(i);
         if (beatmap.getFolderPath() == "") {
             continue;
@@ -157,7 +231,6 @@ void Menu::draw(sf::RenderWindow& window)
     }
 
     // Draw the panels in reverse order
-   // std::cout << "there is x beatpmap : " + beatmapPanel.size() << std::endl;
     for (int i = beatmapPanel.size() - 1; i >= 0; --i) {
         beatmapPanel[i]->draw(window);
     }
@@ -180,9 +253,7 @@ void Menu::slideRight() {
 
 void Menu::onAnalyzeButtonClicked(const std::string& beatmapPath)
 {
-    std::cout << "Analyzing beatmap " << beatmapPath << std::endl;
     //fft.loadMusic(beatmapPath); // Assuming fftMenu is an instance of FFT_Menu in the Menu class
-    std::cout << "load music finished" << std::endl;
 }
 
 std::string Menu::getActualSongName() {

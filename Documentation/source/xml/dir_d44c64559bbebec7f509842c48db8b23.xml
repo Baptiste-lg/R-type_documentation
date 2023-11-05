@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>include</compoundname>
+    <innerdir refid="dir_31c160917b48239b4ea40ad36fdc45da">include/Beatmap</innerdir>
+    <innerdir refid="dir_4c66d8320edae8ac4eb532c864452e83">include/Config</innerdir>
+    <innerdir refid="dir_37df1cb154487d0b8fa64856285c6c86">include/Database</innerdir>
+    <innerdir refid="dir_aadc245eb2ccaf2134f8c9957e6f462d">include/GraphicElement</innerdir>
+    <innerdir refid="dir_f938830485ea5fc932d9051b851477f4">include/GUI</innerdir>
+    <innerdir refid="dir_a9699e7e501eb62ffbf6dc109a6c4dfe">include/Menu</innerdir>
+    <innerdir refid="dir_4aa16e1a173fac8fa6067ffc98972212">include/System</innerdir>
+    <innerfile refid="Batch_8hpp">Batch.hpp</innerfile>
+    <innerfile refid="Behaviour_8hpp">Behaviour.hpp</innerfile>
+    <innerfile refid="ClientMain_8hpp">ClientMain.hpp</innerfile>
+    <innerfile refid="Component_8hpp">Component.hpp</innerfile>
+    <innerfile refid="ConfigServer_8hpp">ConfigServer.hpp</innerfile>
+    <innerfile refid="Encode_8hpp">Encode.hpp</innerfile>
+    <innerfile refid="Entity_8hpp">Entity.hpp</innerfile>
+    <innerfile refid="Event_8hpp">Event.hpp</innerfile>
+    <innerfile refid="GameState_8hpp">GameState.hpp</innerfile>
+    <innerfile refid="Global_8hpp">Global.hpp</innerfile>
+    <innerfile refid="Registry_8hpp">Registry.hpp</innerfile>
+    <innerfile refid="SceneParsing_8hpp">SceneParsing.hpp</innerfile>
+    <innerfile refid="ServerMain_8hpp">ServerMain.hpp</innerfile>
+    <innerfile refid="SparseArray_8hpp">SparseArray.hpp</innerfile>
+    <innerfile refid="Spawner_8hpp">Spawner.hpp</innerfile>
+    <innerfile refid="SpritePool_8hpp">SpritePool.hpp</innerfile>
+    <innerfile refid="taskLoader_8hpp">taskLoader.hpp</innerfile>
+    <innerfile refid="TextureManager_8hpp">TextureManager.hpp</innerfile>
+    <innerfile refid="ThreadPool_8hpp">ThreadPool.hpp</innerfile>
+    <innerfile refid="Zipper_8hpp">Zipper.hpp</innerfile>
+    <innerfile refid="ZipperIterator_8hpp">ZipperIterator.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/"/>
+  </compounddef>
+</doxygen>

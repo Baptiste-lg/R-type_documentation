@@ -1,0 +1,490 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="GUI_8cpp" kind="file" language="C++">
+    <compoundname>GUI.cpp</compoundname>
+    <includes local="no">future</includes>
+    <includes refid="GUI_8hpp" local="yes">GUI/GUI.hpp</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="13">
+        <label>GUI/GUIConfig.hpp</label>
+        <link refid="GUIConfig_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>functional</label>
+      </node>
+      <node id="19">
+        <label>filesystem</label>
+      </node>
+      <node id="28">
+        <label>Beatmap/Beatmap.hpp</label>
+        <link refid="Beatmap_8hpp_source"/>
+      </node>
+      <node id="17">
+        <label>Beatmap/BeatmapConfig.hpp</label>
+        <link refid="BeatmapConfig_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Menu/Menu.hpp</label>
+        <link refid="Menu_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>cmath</label>
+      </node>
+      <node id="9">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="18">
+        <label>map</label>
+      </node>
+      <node id="15">
+        <label>GraphicElement/LoadingScreen.hpp</label>
+        <link refid="LoadingScreen_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/GUI/GUI.cpp</label>
+        <link refid="GUI_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>fstream</label>
+      </node>
+      <node id="5">
+        <label>SFML/Window.hpp</label>
+      </node>
+      <node id="21">
+        <label>tuple</label>
+      </node>
+      <node id="2">
+        <label>future</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+      <node id="26">
+        <label>utility</label>
+      </node>
+      <node id="23">
+        <label>sstream</label>
+      </node>
+      <node id="3">
+        <label>GUI/GUI.hpp</label>
+        <link refid="GUI_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>GraphicElement/Button.hpp</label>
+        <link refid="Button_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="16">
+        <label>Database/Database.hpp</label>
+        <link refid="Database_8hpp_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>GraphicElement/BeatmapPanel.hpp</label>
+        <link refid="BeatmapPanel_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>thread</label>
+      </node>
+      <node id="14">
+        <label>libconfig.h++</label>
+      </node>
+      <node id="6">
+        <label>SFML/System.hpp</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="GUI_8cpp_1a7899b65f1ea0f655e4bbf8d2a5714285" prot="public" static="no" strong="no">
+        <type></type>
+        <name>GameState</name>
+        <enumvalue id="GUI_8cpp_1a7899b65f1ea0f655e4bbf8d2a5714285a4c40e60bc71a32b924ce1f08d57f9721" prot="public">
+          <name>MENU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GUI_8cpp_1a7899b65f1ea0f655e4bbf8d2a5714285a4cf584894c716156ecc6392622d4ef17" prot="public">
+          <name>MENUPRELOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GUI_8cpp_1a7899b65f1ea0f655e4bbf8d2a5714285a23ccaad3713f1a4d4491d36cafbfea56" prot="public">
+          <name>LOBBY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GUI_8cpp_1a7899b65f1ea0f655e4bbf8d2a5714285adcf6ef52e47db62728bde6a5c292928a" prot="public">
+          <name>LOBBYLIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GUI_8cpp_1a7899b65f1ea0f655e4bbf8d2a5714285a3287c8d749c58c5b4b94bdcdac47d08b" prot="public">
+          <name>LOBBYLISTPRELOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GUI_8cpp_1a7899b65f1ea0f655e4bbf8d2a5714285a5c63ae46605aea9dc2ed0d84514637ff" prot="public">
+          <name>LOBBYSCORE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GUI_8cpp_1a7899b65f1ea0f655e4bbf8d2a5714285a5d280672d94e9532b7fe365da4654e23" prot="public">
+          <name>LOBBYSCOREPRELOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GUI_8cpp_1a7899b65f1ea0f655e4bbf8d2a5714285ad50cf309d7568040619ed26ee6835a84" prot="public">
+          <name>GAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GUI_8cpp_1a7899b65f1ea0f655e4bbf8d2a5714285a5363faa4e9221cd202202ba82215eb54" prot="public">
+          <name>WELCOMEMENU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GUI_8cpp_1a7899b65f1ea0f655e4bbf8d2a5714285a7a10b5d68d31711288e1fe0fa17dbf4f" prot="public">
+          <name>EXIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GUI_8cpp_1a7899b65f1ea0f655e4bbf8d2a5714285aa8b995cd51b19b06141c8202b9556ada" prot="public">
+          <name>SKINCHOICE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GUI_8cpp_1a7899b65f1ea0f655e4bbf8d2a5714285acd4a65ca296e9a98d30ec6453453a0f1" prot="public">
+          <name>ENDT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GUI_8cpp_1a7899b65f1ea0f655e4bbf8d2a5714285a4c40e60bc71a32b924ce1f08d57f9721" prot="public">
+          <name>MENU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GUI_8cpp_1a7899b65f1ea0f655e4bbf8d2a5714285ad50cf309d7568040619ed26ee6835a84" prot="public">
+          <name>GAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GUI_8cpp_1a7899b65f1ea0f655e4bbf8d2a5714285a5363faa4e9221cd202202ba82215eb54" prot="public">
+          <name>WELCOMEMENU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GUI_8cpp_1a7899b65f1ea0f655e4bbf8d2a5714285a7a10b5d68d31711288e1fe0fa17dbf4f" prot="public">
+          <name>EXIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>GUI.cpp</para>
+<para>Implements the graphical user interface for the game.</para>
+<para>Methods:</para>
+<para><itemizedlist>
+<listitem><para>load() Loads <ref refid="classGUI" kindref="compound">GUI</ref> configuration. Initializes events and mouse positions.</para>
+</listitem><listitem><para>loadingScreenCreate() Creates the loading screen based on window resolution.</para>
+</listitem><listitem><para>reloadLoadingScreen() Destroys and recreates the loading screen.</para>
+</listitem><listitem><para>updateLoadingScreen() Updates loading screen percentage text.</para>
+</listitem><listitem><para>resetLoadingScreen() Destroys the loading screen.</para>
+</listitem><listitem><para>displayLoadingScreen() Draws the loading screen.</para>
+</listitem><listitem><para>executeLoadingScreenTasks() Runs async tasks while displaying loading screen. Updates percentage and waits for tasks to finish.</para>
+</listitem><listitem><para>updateGame() Placeholder to update game state.</para>
+</listitem></itemizedlist>
+</para>
+<para>Members:</para>
+<para><itemizedlist>
+<listitem><para>window The render window.</para>
+</listitem><listitem><para>event SFML event object.</para>
+</listitem><listitem><para>mousePos Mouse position as SFML Vector2i.</para>
+</listitem><listitem><para>mousePosF Mouse position as SFML Vector2f.</para>
+</listitem><listitem><para>loadingScreen The loading screen object. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/GUI/GUI.cpp" line="63" column="1" bodyfile="src/GUI/GUI.cpp" bodystart="63" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2023</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Rtype</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>GUI.cpp</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;future&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GUI/GUI.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>GameState<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>MENU,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>GAME,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>WELCOMEMENU,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>EXIT</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">GUI::~GUI()<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>GUI::load(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGUIConfig" kindref="compound">GUIConfig</ref>&amp;<sp/>config)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>=<sp/>sf::Event();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//mouse</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>mousePos<sp/>=<sp/>sf::Vector2i(0,<sp/>0);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>mousePosF<sp/>=<sp/>sf::Vector2f(0,<sp/>0);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>GUI::loadingScreenCreate()<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//this<sp/>function<sp/>will<sp/>create<sp/>the<sp/>loading<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//create<sp/>a<sp/>pair<sp/>of<sp/>int<sp/>for<sp/>the<sp/>resolution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>pair&lt;int,<sp/>int&gt;<sp/>res;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>res.first<sp/>=<sp/>window.getSize().x;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>res.second<sp/>=<sp/>window.getSize().y;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>loadingScreen.load(res);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>GUI::reloadLoadingScreen()<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>loadingScreen.~LoadingScreen();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>loadingScreenCreate();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>GUI::updateLoadingScreen(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>percent)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>loadingScreen.update(percent);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>window.clear();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>loadingScreen.draw(window);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>window.display();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>GUI::resetLoadingScreen()<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>loadingScreen.~LoadingScreen();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>GUI::displayLoadingScreen()<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>window.clear();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>loadingScreen.draw(window);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>window.display();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>GUI::executeLoadingScreenTasks(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;)&gt;&gt;&amp;<sp/>tasks)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Activate<sp/>loading<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>setActive(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>totalTasks<sp/>=<sp/>tasks.size();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currentTask<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>future<sp/>=<sp/>std::async(std::launch::async,<sp/>[&amp;]()<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setActive(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>task<sp/>:<sp/>tasks)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>progressPercentage<sp/>=<sp/>(currentTask<sp/>*<sp/>100)<sp/>/<sp/>totalTasks;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>updateLoadingScreen(progressPercentage);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>task(progressPercentage);<sp/><sp/></highlight><highlight class="comment">//<sp/>Execute<sp/>the<sp/>task</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentTask++;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>updateLoadingScreen(100);<sp/><sp/></highlight><highlight class="comment">//<sp/>Loading<sp/>complete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Wait<sp/>for<sp/>the<sp/>loading<sp/>to<sp/>finish</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>future.wait();</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Deactivate<sp/>loading<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>setActive(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="143"><highlight class="comment">void<sp/>GUI::createMenu(Database&amp;<sp/>database)</highlight></codeline>
+<codeline lineno="144"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/><sp/><sp/><sp/>//this<sp/>function<sp/>will<sp/>create<sp/>the<sp/>menu</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/><sp/><sp/>//create<sp/>a<sp/>pair<sp/>of<sp/>int<sp/>for<sp/>the<sp/>resolution</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/><sp/><sp/>pair&lt;int,<sp/>int&gt;<sp/>res;</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/><sp/><sp/><sp/>res.first<sp/>=<sp/>window.getSize().x;</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/><sp/><sp/><sp/>res.second<sp/>=<sp/>window.getSize().y;</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/><sp/><sp/><sp/>menu.load(res,<sp/>database);</highlight></codeline>
+<codeline lineno="151"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="152"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>GUI::updateGame(){</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="160"><highlight class="comment">void<sp/>GUI::loop(int<sp/>state)</highlight></codeline>
+<codeline lineno="161"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/><sp/><sp/><sp/>//for<sp/>the<sp/>moment<sp/>only<sp/>call<sp/>the<sp/>menu<sp/>update</highlight></codeline>
+<codeline lineno="163"><highlight class="comment"><sp/><sp/><sp/><sp/>while<sp/>(window.isOpen())<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sf::Event<sp/>event;</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>while<sp/>(window.pollEvent(event))<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(event.type<sp/>==<sp/>sf::Event::Closed<sp/>||<sp/>state<sp/>==<sp/>EXIT)</highlight></codeline>
+<codeline lineno="167"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.close();</highlight></codeline>
+<codeline lineno="168"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>updateState(state,<sp/>event);</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.clear();</highlight></codeline>
+<codeline lineno="172"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>drawState(state);</highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.display();</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="comment"></highlight></codeline>
+<codeline lineno="176"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="177"><highlight class="comment">*/</highlight></codeline>
+    </programlisting>
+    <location file="src/GUI/GUI.cpp"/>
+  </compounddef>
+</doxygen>

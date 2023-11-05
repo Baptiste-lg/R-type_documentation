@@ -1,4 +1,71 @@
-// beatmappannel.hpp
+/*
+** EPITECH PROJECT, 2023
+** Rtype
+** File description:
+** BeatmapPanel.hpp
+*/
+
+/**
+** BeatmapPanel
+**
+** This class represents a panel to display a beatmap's information.
+**
+** Public Methods:
+**
+** - BeatmapPanel()
+**   - Default constructor
+**
+** - BeatmapPanel(texturePanel, textureArrowLeft, textureArrowRight, textureCover, position, res, beatmapConfig, fonts)
+**   - Constructor with textures, position, resolution, beatmap config and font
+**
+** - ~BeatmapPanel()
+**   - Destructor
+**
+** - draw()
+**   - Draws the panel
+**
+** - setText()
+**   - Sets the text
+**
+** - adjust()
+**   - Adjusts the panel
+**
+** - adjustPanel()
+**   - Adjusts the panel sprite
+**
+** - adjustCover()
+**   - Adjusts the cover sprite
+**
+** - adjustGrade()
+**   - Adjusts the grade sprite
+**
+** - adjustDifficulty()
+**   - Adjusts the difficulty
+**
+** - getBeatmapName()
+**   - Gets the beatmap name
+**
+** - getFolderPath()
+**   - Gets the beatmap folder path
+**
+** - handleEvent()
+**   - Handles events
+**
+** Private Attributes:
+**
+** - textures
+** - sprites
+** - buttons
+** - buttonConfigs
+** - texts
+** - difficultyUser
+** - position
+** - size
+** - textSize
+** - folderPath
+** - font
+*/
+
 #ifndef BEATMAPPANNEL_HPP_
 #define BEATMAPPANNEL_HPP_
 
@@ -7,9 +74,11 @@
 #include <string>
 #include <iostream>
 #include <utility>
+#include <cmath>
 #include "Beatmap/Beatmap.hpp"
 #include "Database/Database.hpp"
 #include "GraphicElement/Button.hpp"
+
 class BeatmapPanel {
 public:
     BeatmapPanel();

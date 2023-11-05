@@ -1,0 +1,503 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="EffectsFunctions_8cpp" kind="file" language="C++">
+    <compoundname>EffectsFunctions.cpp</compoundname>
+    <includes refid="EffectsFunctions_8hpp" local="yes">../include/System/EffectsFunctions.hpp</includes>
+    <incdepgraph>
+      <node id="43">
+        <label>valarray</label>
+      </node>
+      <node id="18">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="6">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="3">
+        <label>functional</label>
+      </node>
+      <node id="28">
+        <label>queue</label>
+      </node>
+      <node id="38">
+        <label>filesystem</label>
+      </node>
+      <node id="1">
+        <label>src/EffectsFunctions.cpp</label>
+        <link refid="EffectsFunctions_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>Beatmap/BeatmapConfig.hpp</label>
+        <link refid="BeatmapConfig_8hpp_source"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>GameState.hpp</label>
+        <link refid="GameState_8hpp_source"/>
+      </node>
+      <node id="9">
+        <label>Registry.hpp</label>
+        <link refid="Registry_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>cmath</label>
+      </node>
+      <node id="45">
+        <label>numeric</label>
+      </node>
+      <node id="21">
+        <label>string</label>
+      </node>
+      <node id="24">
+        <label>Entity.hpp</label>
+        <link refid="Entity_8hpp_source"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="2">
+        <label>../include/System/EffectsFunctions.hpp</label>
+        <link refid="EffectsFunctions_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>map</label>
+      </node>
+      <node id="32">
+        <label>unordered_set</label>
+      </node>
+      <node id="26">
+        <label>fftw3.h</label>
+      </node>
+      <node id="8">
+        <label>any</label>
+      </node>
+      <node id="27">
+        <label>ThreadPool.hpp</label>
+        <link refid="ThreadPool_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>condition_variable</label>
+      </node>
+      <node id="16">
+        <label>Event.hpp</label>
+        <link refid="Event_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>tuple</label>
+      </node>
+      <node id="31">
+        <label>future</label>
+      </node>
+      <node id="14">
+        <label>optional</label>
+      </node>
+      <node id="13">
+        <label>vector</label>
+      </node>
+      <node id="23">
+        <label>utility</label>
+      </node>
+      <node id="46">
+        <label>array</label>
+      </node>
+      <node id="17">
+        <label>iostream</label>
+      </node>
+      <node id="25">
+        <label>cstddef</label>
+      </node>
+      <node id="4">
+        <label>unordered_map</label>
+      </node>
+      <node id="39">
+        <label>Database/Database.hpp</label>
+        <link refid="Database_8hpp_source"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>shared_mutex</label>
+      </node>
+      <node id="15">
+        <label>mutex</label>
+      </node>
+      <node id="12">
+        <label>SparseArray.hpp</label>
+        <link refid="SparseArray_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>chrono</label>
+      </node>
+      <node id="29">
+        <label>thread</label>
+      </node>
+      <node id="5">
+        <label>../Component.hpp</label>
+        <link refid="Component_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>../include/System/ISystem.hpp</label>
+        <link refid="ISystem_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>set</label>
+      </node>
+      <node id="36">
+        <label>TextureManager.hpp</label>
+        <link refid="TextureManager_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>complex</label>
+      </node>
+      <node id="34">
+        <label>algorithm</label>
+      </node>
+      <node id="7">
+        <label>libconfig.h++</label>
+      </node>
+      <node id="22">
+        <label>memory</label>
+      </node>
+      <node id="10">
+        <label>typeindex</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="EffectsFunctions_8cpp_1a1e2807957b12e6fbcb627af57054592d" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void(<ref refid="classRegistry" kindref="compound">Registry</ref> &amp;)&gt;</type>
+        <definition>std::function&lt;void(Registry&amp;)&gt; SpeedUp</definition>
+        <argsstring></argsstring>
+        <name>SpeedUp</name>
+        <initializer>= [](<ref refid="classRegistry" kindref="compound">Registry</ref>&amp; registry) {
+    
+    auto &amp;gameConfigOpt = registry.get_components&lt;<ref refid="structGameConfig" kindref="compound">GameConfig</ref>&gt;()[registry.stateEntity];
+    if (!gameConfigOpt.has_value()) {
+        std::cerr &lt;&lt; &quot;GameConfig not set. Exiting SpeedUp.&quot; &lt;&lt; std::endl;
+            
+
+
+    } else {
+        auto &amp;config = *gameConfigOpt;
+        
+        
+        config.playerSpeed *= 4;
+    }
+
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EffectsFunctions.cpp</para>
+<para>This file contains definitions of various effect functions which are meant to be triggered during the game. It utilizes C++ functional library to create a map between string identifiers and corresponding functional objects. These functions primarily interact with the game&apos;s registry to access or modify game configuration and state.</para>
+<para>Functions:</para>
+<para><itemizedlist>
+<listitem><para>SpeedUp This function is designed to speed up the player&apos;s movement by modifying the playerSpeed attribute of the <ref refid="structGameConfig" kindref="compound">GameConfig</ref> component. If the <ref refid="structGameConfig" kindref="compound">GameConfig</ref> component is not set, it outputs an error message to the standard error stream.</para>
+</listitem><listitem><para>addScore This function adds a fixed amount of score to the player&apos;s current score by modifying the playerScore attribute of the <ref refid="structGameConfig" kindref="compound">GameConfig</ref> component. Similar to SpeedUp, it checks whether the <ref refid="structGameConfig" kindref="compound">GameConfig</ref> component is set and outputs an error message to the standard error stream if it&apos;s not set.</para>
+</listitem><listitem><para>spawnShip This function is a placeholder for logic related to spawning a new ship in the game.</para>
+</listitem></itemizedlist>
+</para>
+<para>Global Variables:</para>
+<para><itemizedlist>
+<listitem><para>EffectFunctionMap This is an unordered map which maps string identifiers to the corresponding effect functions. This map allows for the effect functions to be looked up and invoked dynamically based on string identifiers.</para>
+</listitem></itemizedlist>
+</para>
+<para>Dependencies:</para>
+<para><itemizedlist>
+<listitem><para>&quot;../include/System/EffectsFunctions.hpp&quot; for related declarations.</para>
+</listitem><listitem><para>&lt;functional&gt; for std::function.</para>
+</listitem><listitem><para>&lt;unordered_map&gt; for std::unordered_map. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/EffectsFunctions.cpp" line="50" column="15" bodyfile="src/EffectsFunctions.cpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="EffectsFunctions_8cpp_1af52668b7599820e474f6580ab85e9ecb" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void(<ref refid="classRegistry" kindref="compound">Registry</ref> &amp;)&gt;</type>
+        <definition>std::function&lt;void(Registry&amp;)&gt; addScore</definition>
+        <argsstring></argsstring>
+        <name>addScore</name>
+        <initializer>= [](<ref refid="classRegistry" kindref="compound">Registry</ref>&amp; registry) {
+    
+    auto &amp;gameConfigOpt = registry.get_components&lt;<ref refid="structGameConfig" kindref="compound">GameConfig</ref>&gt;()[registry.stateEntity];
+    if (gameConfigOpt.has_value()) {
+        auto &amp;config = *gameConfigOpt;
+        config.playerScore += 15;
+    } else {
+        std::cerr &lt;&lt; &quot;GameConfig not set. Exiting addScore.&quot; &lt;&lt; std::endl;
+    }
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/EffectsFunctions.cpp" line="67" column="15" bodyfile="src/EffectsFunctions.cpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="EffectsFunctions_8cpp_1a8ab958e32f12a6c694174817eb624c3b" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void(<ref refid="classRegistry" kindref="compound">Registry</ref> &amp;)&gt;</type>
+        <definition>std::function&lt;void(Registry&amp;)&gt; spawnShip</definition>
+        <argsstring></argsstring>
+        <name>spawnShip</name>
+        <initializer>= [](<ref refid="classRegistry" kindref="compound">Registry</ref>&amp; registry) {
+    
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/EffectsFunctions.cpp" line="78" column="15" bodyfile="src/EffectsFunctions.cpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="EffectsFunctions_8cpp_1af71ed5cab18126c621d91e0ca1a29051" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::function&lt; void(<ref refid="classRegistry" kindref="compound">Registry</ref> &amp;)&gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::function&lt;void(Registry&amp;)&gt; &gt; EffectFunctionMap</definition>
+        <argsstring></argsstring>
+        <name>EffectFunctionMap</name>
+        <initializer>= {
+    {&quot;SpeedUp&quot;, SpeedUp},
+    {&quot;SpawnShip&quot;, spawnShip},
+    {&quot;addScore&quot;, addScore}
+
+        
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/EffectsFunctions.cpp" line="82" column="20" bodyfile="src/EffectsFunctions.cpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Rtype</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>EffectsFunctions.cpp</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/System/EffectsFunctions.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">std::function&lt;void(<ref refid="classRegistry" kindref="compound">Registry</ref>&amp;)&gt;<sp/>SpeedUp<sp/>=<sp/>[](<ref refid="classRegistry" kindref="compound">Registry</ref>&amp;<sp/>registry)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Access<sp/>the<sp/>GameConfig<sp/>component<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;gameConfigOpt<sp/>=<sp/>registry.get_components&lt;<ref refid="structGameConfig" kindref="compound">GameConfig</ref>&gt;()[registry.stateEntity];</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(!gameConfigOpt.has_value())<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;GameConfig<sp/>not<sp/>set.<sp/>Exiting<sp/>SpeedUp.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Access<sp/>the<sp/>optional<sp/>GameConfig<sp/>component</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;config<sp/>=<sp/>*gameConfigOpt;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>the<sp/>optional<sp/>has<sp/>a<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Access<sp/>the<sp/>GameConfig<sp/>component<sp/>and<sp/>modify<sp/>playerSpeed,<sp/>e.g.,<sp/>double<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config.playerSpeed<sp/>*=<sp/>4;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">std::function&lt;void(<ref refid="classRegistry" kindref="compound">Registry</ref>&amp;)&gt;<sp/>addScore<sp/>=<sp/>[](<ref refid="classRegistry" kindref="compound">Registry</ref>&amp;<sp/>registry)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Access<sp/>the<sp/>GameConfig<sp/>component<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;gameConfigOpt<sp/>=<sp/>registry.get_components&lt;<ref refid="structGameConfig" kindref="compound">GameConfig</ref>&gt;()[registry.stateEntity];</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(gameConfigOpt.has_value())<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;config<sp/>=<sp/>*gameConfigOpt;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config.playerScore<sp/>+=<sp/>15;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;GameConfig<sp/>not<sp/>set.<sp/>Exiting<sp/>addScore.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">std::function&lt;void(<ref refid="classRegistry" kindref="compound">Registry</ref>&amp;)&gt;<sp/>spawnShip<sp/>=<sp/>[](<ref refid="classRegistry" kindref="compound">Registry</ref>&amp;<sp/>registry)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Your<sp/>logic<sp/>here...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">std::unordered_map&lt;std::string,<sp/>std::function&lt;void(<ref refid="classRegistry" kindref="compound">Registry</ref>&amp;)&gt;&gt;<sp/>EffectFunctionMap<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;SpeedUp&quot;</highlight><highlight class="normal">,<sp/>SpeedUp},</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;SpawnShip&quot;</highlight><highlight class="normal">,<sp/>spawnShip},</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;addScore&quot;</highlight><highlight class="normal">,<sp/>addScore}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...<sp/>add<sp/>other<sp/>death<sp/>effects<sp/>here<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="src/EffectsFunctions.cpp"/>
+  </compounddef>
+</doxygen>

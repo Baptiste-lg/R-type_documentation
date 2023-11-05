@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_31c160917b48239b4ea40ad36fdc45da" kind="dir">
+    <compoundname>include/Beatmap</compoundname>
+    <innerfile refid="Beatmap_8hpp">Beatmap.hpp</innerfile>
+    <innerfile refid="BeatmapConfig_8hpp">BeatmapConfig.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Beatmap/"/>
+  </compounddef>
+</doxygen>

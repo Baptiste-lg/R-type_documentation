@@ -1,0 +1,965 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classRegistry" kind="class" language="C++" prot="public">
+    <compoundname>Registry</compoundname>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classRegistry_1a99251f8a9d29a77cec2a59cd27109e92" prot="private" static="no">
+        <type>std::function&lt; void(entity_t)&gt;</type>
+        <definition>using Registry::SystemFunction =  std::function&lt;void(entity_t)&gt;</definition>
+        <argsstring></argsstring>
+        <name>SystemFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="431" column="5" bodyfile="include/Registry.hpp" bodystart="431" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classRegistry_1a6de44ffca6e12a0f879932ca541ba95b" prot="public" static="no" mutable="no">
+        <type>std::tuple&lt; bool, GameState, GameState, GameState &gt;</type>
+        <definition>std::tuple&lt;bool, GameState, GameState, GameState&gt; Registry::gameStates</definition>
+        <argsstring></argsstring>
+        <name>gameStates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="340" column="16" bodyfile="include/Registry.hpp" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1a89ee170c729e3541fcbe68cb48a90a6c" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; entity_t, std::function&lt; void(<ref refid="classRegistry" kindref="compound">Registry</ref> &amp;, entity_t)&gt; &gt;</type>
+        <definition>std::unordered_map&lt;entity_t, std::function&lt;void(Registry&amp;, entity_t)&gt; &gt; Registry::_entity_constructors</definition>
+        <argsstring></argsstring>
+        <name>_entity_constructors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="419" column="24" bodyfile="include/Registry.hpp" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1a64d16d19a51d39bf91d5cf11473d63d0" prot="public" static="no" mutable="no">
+        <type>std::unordered_set&lt; entity_t &gt;</type>
+        <definition>std::unordered_set&lt;entity_t&gt; Registry::_inactive_entities</definition>
+        <argsstring></argsstring>
+        <name>_inactive_entities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="420" column="24" bodyfile="include/Registry.hpp" bodystart="420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1ae30ac722dbeae902c384462237155f7d" prot="public" static="no" mutable="no">
+        <type>std::unordered_set&lt; entity_t &gt;</type>
+        <definition>std::unordered_set&lt;entity_t&gt; Registry::_active_entities</definition>
+        <argsstring></argsstring>
+        <name>_active_entities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="421" column="24" bodyfile="include/Registry.hpp" bodystart="421" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1a306834e38afd365230bb47f3a58ca683" prot="public" static="no" mutable="no">
+        <type><ref refid="classEventBus" kindref="compound">EventBus</ref></type>
+        <definition>EventBus Registry::eventBus</definition>
+        <argsstring></argsstring>
+        <name>eventBus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="422" column="14" bodyfile="include/Registry.hpp" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1abe77d2467689c326ee208e6296f4522b" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; int, entity_t &gt;</type>
+        <definition>std::unordered_map&lt;int, entity_t&gt; Registry::clientToEntityMap</definition>
+        <argsstring></argsstring>
+        <name>clientToEntityMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="423" column="24" bodyfile="include/Registry.hpp" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1a5fa014f278ed7f76076be5a9833cf809" prot="public" static="no" mutable="no">
+        <type>entity_t</type>
+        <definition>entity_t Registry::stateEntity</definition>
+        <argsstring></argsstring>
+        <name>stateEntity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="425" column="14" bodyfile="include/Registry.hpp" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1ad96c8d0601e01bbf98d45873baa7551c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Registry::stateChanged</definition>
+        <argsstring></argsstring>
+        <name>stateChanged</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="426" column="10" bodyfile="include/Registry.hpp" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1abc4572e7be873c6a2f614df0da9ae1f4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Registry::postUpdateBreaker</definition>
+        <argsstring></argsstring>
+        <name>postUpdateBreaker</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="427" column="10" bodyfile="include/Registry.hpp" bodystart="427" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classRegistry_1a3125d6a89a2474702c4d6b4ae9c6cd69" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::type_index, std::any &gt;</type>
+        <definition>std::unordered_map&lt;std::type_index, std::any&gt; Registry::_components_arrays</definition>
+        <argsstring></argsstring>
+        <name>_components_arrays</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="429" column="24" bodyfile="include/Registry.hpp" bodystart="429" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1a33786f17ea0a22f87301edbcf2595695" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::type_index, std::function&lt; void(entity_t)&gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::type_index, std::function&lt;void(entity_t)&gt; &gt; Registry::_eraser_functions</definition>
+        <argsstring></argsstring>
+        <name>_eraser_functions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="430" column="24" bodyfile="include/Registry.hpp" bodystart="430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1a23730d886cb2d6bc04947b932785cd7a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classISystemBase" kindref="compound">ISystemBase</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;ISystemBase&gt; &gt; Registry::_system_instances</definition>
+        <argsstring></argsstring>
+        <name>_system_instances</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="432" column="17" bodyfile="include/Registry.hpp" bodystart="432" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1aab7c17d02faecab847dadd8d0186566d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; SystemFunction &gt;</type>
+        <definition>std::vector&lt;SystemFunction&gt; Registry::_systems</definition>
+        <argsstring></argsstring>
+        <name>_systems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="433" column="17" bodyfile="include/Registry.hpp" bodystart="433" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1a854f2d937408abcd472a0212d5b6edac" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; entity_t &gt;</type>
+        <definition>std::vector&lt;entity_t&gt; Registry::_free_ids</definition>
+        <argsstring></argsstring>
+        <name>_free_ids</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="434" column="17" bodyfile="include/Registry.hpp" bodystart="434" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1ae42b534f08225c6ed097d0dbdff42b6e" prot="private" static="no" mutable="no">
+        <type>entity_t</type>
+        <definition>entity_t Registry::_next_id</definition>
+        <argsstring></argsstring>
+        <name>_next_id</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="435" column="14" bodyfile="include/Registry.hpp" bodystart="435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1af56668d56e82d5ac6354a8b07e52f781" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; entity_t &gt;</type>
+        <definition>std::vector&lt;entity_t&gt; Registry::_entities_to_delete</definition>
+        <argsstring></argsstring>
+        <name>_entities_to_delete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="436" column="17" bodyfile="include/Registry.hpp" bodystart="436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1ab1bf016feb4218144bb4ebb7fe551e1e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; entity_t &gt;</type>
+        <definition>std::vector&lt;entity_t&gt; Registry::_entities_to_create</definition>
+        <argsstring></argsstring>
+        <name>_entities_to_create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="437" column="17" bodyfile="include/Registry.hpp" bodystart="437" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1a4619a91603d2907a662587c92bc414fa" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::function&lt; void(entity_t, <ref refid="classRegistry" kindref="compound">Registry</ref> &amp;)&gt; &gt;</type>
+        <definition>std::vector&lt;std::function&lt;void(entity_t, Registry&amp;)&gt; &gt; Registry::component_adders</definition>
+        <argsstring></argsstring>
+        <name>component_adders</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="438" column="17" bodyfile="include/Registry.hpp" bodystart="438" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1ac1f3104c48ca115788fbc66d866485b6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; entity_t &gt;</type>
+        <definition>std::vector&lt;entity_t&gt; Registry::_newly_created_entities</definition>
+        <argsstring></argsstring>
+        <name>_newly_created_entities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="439" column="17" bodyfile="include/Registry.hpp" bodystart="439" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1a525fda0dbd380314240f491b42f136b9" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Registry::path_to_music</definition>
+        <argsstring></argsstring>
+        <name>path_to_music</name>
+        <initializer>= &quot;asset/Beatmaps&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="440" column="17" bodyfile="include/Registry.hpp" bodystart="440" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRegistry_1a93859f64c904168fbde77aa7815b2814" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::shared_ptr&lt; <ref refid="classISystemBase" kindref="compound">ISystemBase</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::shared_ptr&lt;ISystemBase&gt; &gt; Registry::_system_instance_ids</definition>
+        <argsstring></argsstring>
+        <name>_system_instance_ids</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="448" column="24" bodyfile="include/Registry.hpp" bodystart="448" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRegistry_1acb15d8aa051bf36ea92a86ee6c00bc3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Registry::Registry</definition>
+        <argsstring>()</argsstring>
+        <name>Registry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="107" column="5" bodyfile="include/Registry.hpp" bodystart="107" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1ad81bdeebc99ce487b6a2b667d4e49674" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t Registry::spawn_entity</definition>
+        <argsstring>()</argsstring>
+        <name>spawn_entity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="111" column="14" bodyfile="include/Registry.hpp" bodystart="111" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a5da35cc9245855170c25f75637b61fe0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t Registry::spawnInactivedEntity</definition>
+        <argsstring>()</argsstring>
+        <name>spawnInactivedEntity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="123" column="14" bodyfile="include/Registry.hpp" bodystart="123" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1ae1bc4e1ff64aac0d4657386dade88dca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::kill_entity</definition>
+        <argsstring>(entity_t const &amp;e)</argsstring>
+        <name>kill_entity</name>
+        <param>
+          <type>entity_t const &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="135" column="10" bodyfile="include/Registry.hpp" bodystart="135" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a90d1e87724c7a1b8fec3629a843e902f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::activate_entity</definition>
+        <argsstring>(entity_t const &amp;e)</argsstring>
+        <name>activate_entity</name>
+        <param>
+          <type>entity_t const &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="146" column="10" bodyfile="include/Registry.hpp" bodystart="146" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1aa429b8c11530102655561013ea5cd815" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::deactivate_entity</definition>
+        <argsstring>(entity_t const &amp;e)</argsstring>
+        <name>deactivate_entity</name>
+        <param>
+          <type>entity_t const &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="159" column="10" bodyfile="include/Registry.hpp" bodystart="159" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1ac7886237a4856f5bd74110cdd7acdef9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t Registry::entity_from_index</definition>
+        <argsstring>(std::size_t idx)</argsstring>
+        <name>entity_from_index</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="167" column="14" bodyfile="include/Registry.hpp" bodystart="167" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a633e39a61243ca966e6db23c7d714275" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Component</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; Component &gt;::reference_type</type>
+        <definition>sparse_array&lt;Component&gt;::reference_type Registry::add_component</definition>
+        <argsstring>(entity_t const &amp;to, Component &amp;&amp;c)</argsstring>
+        <name>add_component</name>
+        <param>
+          <type>entity_t const &amp;</type>
+          <declname>to</declname>
+        </param>
+        <param>
+          <type>Component &amp;&amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="172" column="44" bodyfile="include/Registry.hpp" bodystart="172" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a70a8c410ac49cb8683fdecfff378e47b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Component</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Params</declname>
+            <defname>Params</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; Component &gt;::reference_type</type>
+        <definition>sparse_array&lt;Component&gt;::reference_type Registry::emplace_component</definition>
+        <argsstring>(entity_t const &amp;to, Params &amp;&amp;... p)</argsstring>
+        <name>emplace_component</name>
+        <param>
+          <type>entity_t const &amp;</type>
+          <declname>to</declname>
+        </param>
+        <param>
+          <type>Params &amp;&amp;...</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="178" column="44" bodyfile="include/Registry.hpp" bodystart="178" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a8af690a38f4982d9479401e7c69c33d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Component</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void Registry::remove_component</definition>
+        <argsstring>(entity_t const &amp;from)</argsstring>
+        <name>remove_component</name>
+        <param>
+          <type>entity_t const &amp;</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="184" column="10" bodyfile="include/Registry.hpp" bodystart="184" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1aaf5c3864b95904af2ec83bf745276e6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Component</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; Component &gt; &amp;</type>
+        <definition>sparse_array&lt;Component&gt;&amp; Registry::register_component</definition>
+        <argsstring>()</argsstring>
+        <name>register_component</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="190" column="18" bodyfile="include/Registry.hpp" bodystart="190" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a558b73aeff8c90648204d277b45aa9a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Component</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; Component &gt; &amp;</type>
+        <definition>sparse_array&lt;Component&gt;&amp; Registry::get_components</definition>
+        <argsstring>()</argsstring>
+        <name>get_components</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="201" column="18" bodyfile="include/Registry.hpp" bodystart="201" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1af3e4ed2b99f30afa98402b0e0aa4bf0a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Component</type>
+          </param>
+        </templateparamlist>
+        <type>const <ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; Component &gt; &amp;</type>
+        <definition>const sparse_array&lt;Component&gt;&amp; Registry::get_components</definition>
+        <argsstring>() const</argsstring>
+        <name>get_components</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="210" column="24" bodyfile="include/Registry.hpp" bodystart="210" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a2b65cee6b96660f6c492cf577ccbb310" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class SystemType</type>
+          </param>
+          <param>
+            <type>class...</type>
+            <declname>Components</declname>
+            <defname>Components</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void Registry::add_system</definition>
+        <argsstring>(std::unique_ptr&lt; SystemType &gt; sys)</argsstring>
+        <name>add_system</name>
+        <param>
+          <type>std::unique_ptr&lt; SystemType &gt;</type>
+          <declname>sys</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="216" column="10" bodyfile="include/Registry.hpp" bodystart="216" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1af8574bb054327d57f323d6c14753e601" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::call_post_update_for_system</definition>
+        <argsstring>(const std::string &amp;systemID)</argsstring>
+        <name>call_post_update_for_system</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>systemID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="227" column="10" bodyfile="include/Registry.hpp" bodystart="227" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a15a6de78dc2259220850e60b540148aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::run_systems</definition>
+        <argsstring>()</argsstring>
+        <name>run_systems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="236" column="10" bodyfile="include/Registry.hpp" bodystart="236" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1ae81e0e64ea97ad040fe418cf041f14a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::run_draw_system</definition>
+        <argsstring>()</argsstring>
+        <name>run_draw_system</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="267" column="10" bodyfile="include/Registry.hpp" bodystart="267" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a9802fa44d67c082a2605b4dc0f488355" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::queue_for_deletion</definition>
+        <argsstring>(entity_t const &amp;e)</argsstring>
+        <name>queue_for_deletion</name>
+        <param>
+          <type>entity_t const &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="284" column="10" bodyfile="include/Registry.hpp" bodystart="284" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a5526a14dea0c0a8927d8468548896158" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::delete_queued_entities</definition>
+        <argsstring>()</argsstring>
+        <name>delete_queued_entities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="288" column="6" bodyfile="include/Registry.hpp" bodystart="288" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a4f7d1c8d95cf6aca7a89b8a57554fde7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t Registry::queue_for_creation</definition>
+        <argsstring>()</argsstring>
+        <name>queue_for_creation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="296" column="14" bodyfile="include/Registry.hpp" bodystart="296" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a32ee090d426abf81188dcf616befbd31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t Registry::queue_for_creation</definition>
+        <argsstring>(std::function&lt; void(Registry &amp;, entity_t)&gt; constructor)</argsstring>
+        <name>queue_for_creation</name>
+        <param>
+          <type>std::function&lt; void(<ref refid="classRegistry" kindref="compound">Registry</ref> &amp;, entity_t)&gt;</type>
+          <declname>constructor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="307" column="14" bodyfile="include/Registry.hpp" bodystart="307" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a04831eff336faa213791bdb14a190862" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::create_queued_entities</definition>
+        <argsstring>()</argsstring>
+        <name>create_queued_entities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="313" column="10" bodyfile="include/Registry.hpp" bodystart="313" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1ad1cdd664f1ec99f9b47253e05a15fda2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; entity_t &gt;</type>
+        <definition>std::vector&lt;entity_t&gt; Registry::get_newly_created_entities</definition>
+        <argsstring>() const</argsstring>
+        <name>get_newly_created_entities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="321" column="17" bodyfile="include/Registry.hpp" bodystart="321" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a862b19ed0e5821885888c11705fe74a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::AddComponentsToNewEntities</definition>
+        <argsstring>()</argsstring>
+        <name>AddComponentsToNewEntities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="325" column="10" bodyfile="include/Registry.hpp" bodystart="325" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a85c5f70b27e656840483bc7cfd4f62ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::printFreeIds</definition>
+        <argsstring>()</argsstring>
+        <name>printFreeIds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="335" column="10" bodyfile="include/Registry.hpp" bodystart="335" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a38ad1525d112b05972abacad48a1505c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::addComponentAdder</definition>
+        <argsstring>(std::function&lt; void(entity_t, Registry &amp;)&gt; adder)</argsstring>
+        <name>addComponentAdder</name>
+        <param>
+          <type>std::function&lt; void(entity_t, <ref refid="classRegistry" kindref="compound">Registry</ref> &amp;)&gt;</type>
+          <declname>adder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="337" column="10" bodyfile="include/Registry.hpp" bodystart="337" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a4baf198a05a9487c9c340b7b924725db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::setPath</definition>
+        <argsstring>(const std::string &amp;path)</argsstring>
+        <name>setPath</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="341" column="10" bodyfile="include/Registry.hpp" bodystart="341" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a187ada3c4ac645f134066c69e0ff2805" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Registry::getPath</definition>
+        <argsstring>()</argsstring>
+        <name>getPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="344" column="17" bodyfile="include/Registry.hpp" bodystart="344" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a17bfb8145d9edc1fa96e6898a0e72443" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::clearInactiveEntities</definition>
+        <argsstring>()</argsstring>
+        <name>clearInactiveEntities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="348" column="10" bodyfile="include/Registry.hpp" bodystart="348" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1aa32444f364339ad0e846dcdf9d93213a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::clearActiveEntities</definition>
+        <argsstring>()</argsstring>
+        <name>clearActiveEntities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="359" column="10" bodyfile="include/Registry.hpp" bodystart="359" bodyend="361"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a8bbcbd8e934d8e426c3b909148c4cbfb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::clearFreeIds</definition>
+        <argsstring>()</argsstring>
+        <name>clearFreeIds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="362" column="10" bodyfile="include/Registry.hpp" bodystart="362" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a6a3fbc54a3b269d96f9be2d44ec84e2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::clearEntityConstructors</definition>
+        <argsstring>()</argsstring>
+        <name>clearEntityConstructors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="365" column="10" bodyfile="include/Registry.hpp" bodystart="365" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a1453593ce65dc193ea032f30bfacea0c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::clearEntityToCreate</definition>
+        <argsstring>()</argsstring>
+        <name>clearEntityToCreate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="368" column="10" bodyfile="include/Registry.hpp" bodystart="368" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1a3e3c40aac10ca3bf1c2ade27e5a01050" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::clearForNewSong</definition>
+        <argsstring>()</argsstring>
+        <name>clearForNewSong</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="372" column="10" bodyfile="include/Registry.hpp" bodystart="372" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegistry_1ae1100ae788b9e52f04aef861b7bbe759" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::clearGameState</definition>
+        <argsstring>()</argsstring>
+        <name>clearGameState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="383" column="10" bodyfile="include/Registry.hpp" bodystart="383" bodyend="418"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classRegistry_1a16d7911b4b45f078427ca075657fbc70" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Registry::run_systems_range</definition>
+        <argsstring>(std::vector&lt; SystemFunction &gt;::iterator start, std::vector&lt; SystemFunction &gt;::iterator end)</argsstring>
+        <name>run_systems_range</name>
+        <param>
+          <type>std::vector&lt; SystemFunction &gt;::iterator</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; SystemFunction &gt;::iterator</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Registry.hpp" line="441" column="10" bodyfile="include/Registry.hpp" bodystart="441" bodyend="447"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>EventBus</label>
+        <link refid="classEventBus"/>
+      </node>
+      <node id="1">
+        <label>Registry</label>
+        <link refid="classRegistry"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>eventBus</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/Registry.hpp" line="105" column="1" bodyfile="include/Registry.hpp" bodystart="105" bodyend="450"/>
+    <listofallmembers>
+      <member refid="classRegistry_1ae30ac722dbeae902c384462237155f7d" prot="public" virt="non-virtual"><scope>Registry</scope><name>_active_entities</name></member>
+      <member refid="classRegistry_1a3125d6a89a2474702c4d6b4ae9c6cd69" prot="private" virt="non-virtual"><scope>Registry</scope><name>_components_arrays</name></member>
+      <member refid="classRegistry_1ab1bf016feb4218144bb4ebb7fe551e1e" prot="private" virt="non-virtual"><scope>Registry</scope><name>_entities_to_create</name></member>
+      <member refid="classRegistry_1af56668d56e82d5ac6354a8b07e52f781" prot="private" virt="non-virtual"><scope>Registry</scope><name>_entities_to_delete</name></member>
+      <member refid="classRegistry_1a89ee170c729e3541fcbe68cb48a90a6c" prot="public" virt="non-virtual"><scope>Registry</scope><name>_entity_constructors</name></member>
+      <member refid="classRegistry_1a33786f17ea0a22f87301edbcf2595695" prot="private" virt="non-virtual"><scope>Registry</scope><name>_eraser_functions</name></member>
+      <member refid="classRegistry_1a854f2d937408abcd472a0212d5b6edac" prot="private" virt="non-virtual"><scope>Registry</scope><name>_free_ids</name></member>
+      <member refid="classRegistry_1a64d16d19a51d39bf91d5cf11473d63d0" prot="public" virt="non-virtual"><scope>Registry</scope><name>_inactive_entities</name></member>
+      <member refid="classRegistry_1ac1f3104c48ca115788fbc66d866485b6" prot="private" virt="non-virtual"><scope>Registry</scope><name>_newly_created_entities</name></member>
+      <member refid="classRegistry_1ae42b534f08225c6ed097d0dbdff42b6e" prot="private" virt="non-virtual"><scope>Registry</scope><name>_next_id</name></member>
+      <member refid="classRegistry_1a93859f64c904168fbde77aa7815b2814" prot="private" virt="non-virtual"><scope>Registry</scope><name>_system_instance_ids</name></member>
+      <member refid="classRegistry_1a23730d886cb2d6bc04947b932785cd7a" prot="private" virt="non-virtual"><scope>Registry</scope><name>_system_instances</name></member>
+      <member refid="classRegistry_1aab7c17d02faecab847dadd8d0186566d" prot="private" virt="non-virtual"><scope>Registry</scope><name>_systems</name></member>
+      <member refid="classRegistry_1a90d1e87724c7a1b8fec3629a843e902f" prot="public" virt="non-virtual"><scope>Registry</scope><name>activate_entity</name></member>
+      <member refid="classRegistry_1a633e39a61243ca966e6db23c7d714275" prot="public" virt="non-virtual"><scope>Registry</scope><name>add_component</name></member>
+      <member refid="classRegistry_1a2b65cee6b96660f6c492cf577ccbb310" prot="public" virt="non-virtual"><scope>Registry</scope><name>add_system</name></member>
+      <member refid="classRegistry_1a38ad1525d112b05972abacad48a1505c" prot="public" virt="non-virtual"><scope>Registry</scope><name>addComponentAdder</name></member>
+      <member refid="classRegistry_1a862b19ed0e5821885888c11705fe74a2" prot="public" virt="non-virtual"><scope>Registry</scope><name>AddComponentsToNewEntities</name></member>
+      <member refid="classRegistry_1af8574bb054327d57f323d6c14753e601" prot="public" virt="non-virtual"><scope>Registry</scope><name>call_post_update_for_system</name></member>
+      <member refid="classRegistry_1aa32444f364339ad0e846dcdf9d93213a" prot="public" virt="non-virtual"><scope>Registry</scope><name>clearActiveEntities</name></member>
+      <member refid="classRegistry_1a6a3fbc54a3b269d96f9be2d44ec84e2b" prot="public" virt="non-virtual"><scope>Registry</scope><name>clearEntityConstructors</name></member>
+      <member refid="classRegistry_1a1453593ce65dc193ea032f30bfacea0c" prot="public" virt="non-virtual"><scope>Registry</scope><name>clearEntityToCreate</name></member>
+      <member refid="classRegistry_1a3e3c40aac10ca3bf1c2ade27e5a01050" prot="public" virt="non-virtual"><scope>Registry</scope><name>clearForNewSong</name></member>
+      <member refid="classRegistry_1a8bbcbd8e934d8e426c3b909148c4cbfb" prot="public" virt="non-virtual"><scope>Registry</scope><name>clearFreeIds</name></member>
+      <member refid="classRegistry_1ae1100ae788b9e52f04aef861b7bbe759" prot="public" virt="non-virtual"><scope>Registry</scope><name>clearGameState</name></member>
+      <member refid="classRegistry_1a17bfb8145d9edc1fa96e6898a0e72443" prot="public" virt="non-virtual"><scope>Registry</scope><name>clearInactiveEntities</name></member>
+      <member refid="classRegistry_1abe77d2467689c326ee208e6296f4522b" prot="public" virt="non-virtual"><scope>Registry</scope><name>clientToEntityMap</name></member>
+      <member refid="classRegistry_1a4619a91603d2907a662587c92bc414fa" prot="private" virt="non-virtual"><scope>Registry</scope><name>component_adders</name></member>
+      <member refid="classRegistry_1a04831eff336faa213791bdb14a190862" prot="public" virt="non-virtual"><scope>Registry</scope><name>create_queued_entities</name></member>
+      <member refid="classRegistry_1aa429b8c11530102655561013ea5cd815" prot="public" virt="non-virtual"><scope>Registry</scope><name>deactivate_entity</name></member>
+      <member refid="classRegistry_1a5526a14dea0c0a8927d8468548896158" prot="public" virt="non-virtual"><scope>Registry</scope><name>delete_queued_entities</name></member>
+      <member refid="classRegistry_1a70a8c410ac49cb8683fdecfff378e47b" prot="public" virt="non-virtual"><scope>Registry</scope><name>emplace_component</name></member>
+      <member refid="classRegistry_1ac7886237a4856f5bd74110cdd7acdef9" prot="public" virt="non-virtual"><scope>Registry</scope><name>entity_from_index</name></member>
+      <member refid="classRegistry_1a306834e38afd365230bb47f3a58ca683" prot="public" virt="non-virtual"><scope>Registry</scope><name>eventBus</name></member>
+      <member refid="classRegistry_1a6de44ffca6e12a0f879932ca541ba95b" prot="public" virt="non-virtual"><scope>Registry</scope><name>gameStates</name></member>
+      <member refid="classRegistry_1a558b73aeff8c90648204d277b45aa9a4" prot="public" virt="non-virtual"><scope>Registry</scope><name>get_components</name></member>
+      <member refid="classRegistry_1af3e4ed2b99f30afa98402b0e0aa4bf0a" prot="public" virt="non-virtual"><scope>Registry</scope><name>get_components</name></member>
+      <member refid="classRegistry_1ad1cdd664f1ec99f9b47253e05a15fda2" prot="public" virt="non-virtual"><scope>Registry</scope><name>get_newly_created_entities</name></member>
+      <member refid="classRegistry_1a187ada3c4ac645f134066c69e0ff2805" prot="public" virt="non-virtual"><scope>Registry</scope><name>getPath</name></member>
+      <member refid="classRegistry_1ae1bc4e1ff64aac0d4657386dade88dca" prot="public" virt="non-virtual"><scope>Registry</scope><name>kill_entity</name></member>
+      <member refid="classRegistry_1a525fda0dbd380314240f491b42f136b9" prot="private" virt="non-virtual"><scope>Registry</scope><name>path_to_music</name></member>
+      <member refid="classRegistry_1abc4572e7be873c6a2f614df0da9ae1f4" prot="public" virt="non-virtual"><scope>Registry</scope><name>postUpdateBreaker</name></member>
+      <member refid="classRegistry_1a85c5f70b27e656840483bc7cfd4f62ba" prot="public" virt="non-virtual"><scope>Registry</scope><name>printFreeIds</name></member>
+      <member refid="classRegistry_1a4f7d1c8d95cf6aca7a89b8a57554fde7" prot="public" virt="non-virtual"><scope>Registry</scope><name>queue_for_creation</name></member>
+      <member refid="classRegistry_1a32ee090d426abf81188dcf616befbd31" prot="public" virt="non-virtual"><scope>Registry</scope><name>queue_for_creation</name></member>
+      <member refid="classRegistry_1a9802fa44d67c082a2605b4dc0f488355" prot="public" virt="non-virtual"><scope>Registry</scope><name>queue_for_deletion</name></member>
+      <member refid="classRegistry_1aaf5c3864b95904af2ec83bf745276e6e" prot="public" virt="non-virtual"><scope>Registry</scope><name>register_component</name></member>
+      <member refid="classRegistry_1acb15d8aa051bf36ea92a86ee6c00bc3c" prot="public" virt="non-virtual"><scope>Registry</scope><name>Registry</name></member>
+      <member refid="classRegistry_1a8af690a38f4982d9479401e7c69c33d2" prot="public" virt="non-virtual"><scope>Registry</scope><name>remove_component</name></member>
+      <member refid="classRegistry_1ae81e0e64ea97ad040fe418cf041f14a7" prot="public" virt="non-virtual"><scope>Registry</scope><name>run_draw_system</name></member>
+      <member refid="classRegistry_1a15a6de78dc2259220850e60b540148aa" prot="public" virt="non-virtual"><scope>Registry</scope><name>run_systems</name></member>
+      <member refid="classRegistry_1a16d7911b4b45f078427ca075657fbc70" prot="private" virt="non-virtual"><scope>Registry</scope><name>run_systems_range</name></member>
+      <member refid="classRegistry_1a4baf198a05a9487c9c340b7b924725db" prot="public" virt="non-virtual"><scope>Registry</scope><name>setPath</name></member>
+      <member refid="classRegistry_1ad81bdeebc99ce487b6a2b667d4e49674" prot="public" virt="non-virtual"><scope>Registry</scope><name>spawn_entity</name></member>
+      <member refid="classRegistry_1a5da35cc9245855170c25f75637b61fe0" prot="public" virt="non-virtual"><scope>Registry</scope><name>spawnInactivedEntity</name></member>
+      <member refid="classRegistry_1ad96c8d0601e01bbf98d45873baa7551c" prot="public" virt="non-virtual"><scope>Registry</scope><name>stateChanged</name></member>
+      <member refid="classRegistry_1a5fa014f278ed7f76076be5a9833cf809" prot="public" virt="non-virtual"><scope>Registry</scope><name>stateEntity</name></member>
+      <member refid="classRegistry_1a99251f8a9d29a77cec2a59cd27109e92" prot="private" virt="non-virtual"><scope>Registry</scope><name>SystemFunction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

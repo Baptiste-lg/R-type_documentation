@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classConfig" kind="class" language="C++" prot="public">
+    <compoundname>Config</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classConfig_1a168c7bba6946506e79a6874ad49a2540" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Config::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Config/Config.hpp" line="66" column="12" bodyfile="include/Config/Config.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1a68af04e7e52228c83129548a31d7cff6" prot="private" static="no" mutable="no">
+        <type><ref refid="classGUIConfig" kindref="compound">GUIConfig</ref></type>
+        <definition>GUIConfig Config::guiConfig</definition>
+        <argsstring></argsstring>
+        <name>guiConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Config/Config.hpp" line="67" column="15" bodyfile="include/Config/Config.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classConfig_1abd0c571c116924871e30444b192b792a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Config::Config</definition>
+        <argsstring>()</argsstring>
+        <name>Config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Config.cpp</para>
+<para>This file implements the <ref refid="classConfig" kindref="compound">Config</ref> class which loads configuration data from a file.</para>
+<para>Methods:</para>
+<para><itemizedlist>
+<listitem><para><ref refid="classConfig_1abd0c571c116924871e30444b192b792a" kindref="member">Config()</ref> Default constructor.</para>
+</listitem><listitem><para>~Config() Destructor.</para>
+</listitem><listitem><para>load() Loads configuration from a file. Parses the file with libconfig and handles errors. Loads <ref refid="classGUI" kindref="compound">GUI</ref> and player configurations.</para>
+</listitem><listitem><para>print() Prints the loaded configuration.</para>
+</listitem><listitem><para>getGUIConfig() Getter for the <ref refid="classGUIConfig" kindref="compound">GUIConfig</ref> member.</para>
+</listitem></itemizedlist>
+</para>
+<para>Members:</para>
+<para><itemizedlist>
+<listitem><para>guiConfig Stores the loaded <ref refid="classGUI" kindref="compound">GUI</ref> configuration. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Config/Config.hpp" line="58" column="5" bodyfile="src/Config/Config.cpp" bodystart="42" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a543dce59b66475c5108088ee4ce1cdfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Config::~Config</definition>
+        <argsstring>()</argsstring>
+        <name>~Config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Config/Config.hpp" line="59" column="5" bodyfile="src/Config/Config.cpp" bodystart="45" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a8198223ee3542b0754720c28f1ca8e42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Config::load</definition>
+        <argsstring>(const std::string &amp;file)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Config/Config.hpp" line="60" column="10" bodyfile="src/Config/Config.cpp" bodystart="49" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a095b729166d151267aea1e969e02a5e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Config::save</definition>
+        <argsstring>(const std::string &amp;file)</argsstring>
+        <name>save</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Config/Config.hpp" line="61" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a145fb48e8056b0f8f5ce92d6184e73f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Config::print</definition>
+        <argsstring>()</argsstring>
+        <name>print</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Config/Config.hpp" line="62" column="10" bodyfile="src/Config/Config.cpp" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1ac814e33d6ab41abde69e98cbeb1de382" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGUIConfig" kindref="compound">GUIConfig</ref></type>
+        <definition>GUIConfig Config::getGUIConfig</definition>
+        <argsstring>() const</argsstring>
+        <name>getGUIConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Config/Config.hpp" line="63" column="15" bodyfile="src/Config/Config.cpp" bodystart="77" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Config/Config.hpp" line="56" column="1" bodyfile="include/Config/Config.hpp" bodystart="56" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classConfig_1abd0c571c116924871e30444b192b792a" prot="public" virt="non-virtual"><scope>Config</scope><name>Config</name></member>
+      <member refid="classConfig_1ac814e33d6ab41abde69e98cbeb1de382" prot="public" virt="non-virtual"><scope>Config</scope><name>getGUIConfig</name></member>
+      <member refid="classConfig_1a68af04e7e52228c83129548a31d7cff6" prot="private" virt="non-virtual"><scope>Config</scope><name>guiConfig</name></member>
+      <member refid="classConfig_1a8198223ee3542b0754720c28f1ca8e42" prot="public" virt="non-virtual"><scope>Config</scope><name>load</name></member>
+      <member refid="classConfig_1a168c7bba6946506e79a6874ad49a2540" prot="private" virt="non-virtual"><scope>Config</scope><name>path</name></member>
+      <member refid="classConfig_1a145fb48e8056b0f8f5ce92d6184e73f9" prot="public" virt="non-virtual"><scope>Config</scope><name>print</name></member>
+      <member refid="classConfig_1a095b729166d151267aea1e969e02a5e0" prot="public" virt="non-virtual"><scope>Config</scope><name>save</name></member>
+      <member refid="classConfig_1a543dce59b66475c5108088ee4ce1cdfc" prot="public" virt="non-virtual"><scope>Config</scope><name>~Config</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

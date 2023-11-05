@@ -1,0 +1,283 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classISystemBase" kind="class" language="C++" prot="public">
+    <compoundname>ISystemBase</compoundname>
+    <derivedcompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Position, Velocity, Controllable &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Drawable, Position, Depth, TextDrawable &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Behavior, Position &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Animation, Drawable &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Spawner, Position &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Position, Drawable, Collision &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; DeathEffect, Position &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Follower, Position &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; FFT &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Position, Velocity &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; isClickable, Position &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Network &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; State &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Components &gt;</derivedcompoundref>
+    <includes refid="ISystem_8hpp" local="no">ISystem.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classISystemBase_1a15450364e9f21ebae6e2633eef35d7d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ISystemBase::PostUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>PostUpdate</name>
+        <reimplementedby refid="classClientSystem_1aedb36ec69f43168add4259672c529b7b">PostUpdate</reimplementedby>
+        <reimplementedby refid="classControlSystem_1a37305c982f8f403838748638b00a2c62">PostUpdate</reimplementedby>
+        <reimplementedby refid="classDrawSystem_1ae4d1a9ff9776fc33a2b092ca352b4c5d">PostUpdate</reimplementedby>
+        <reimplementedby refid="classFFTSystem_1a551f281b5c8412893989cb49f9c6393a">PostUpdate</reimplementedby>
+        <reimplementedby refid="classMenuSystem_1af041881cfaea069088dd06d9f0520d35">PostUpdate</reimplementedby>
+        <reimplementedby refid="classCollisionSystem_1aabcd9ff651eace4465b4cdaeda6dc76e">PostUpdate</reimplementedby>
+        <reimplementedby refid="classServerSystem_1a6fda3ed8c42011260603b705b87ff0d2">PostUpdate</reimplementedby>
+        <reimplementedby refid="classVelocitySystem_1a4f08bf85752866928195e888acd65a20">PostUpdate</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ISystem.hpp" line="45" column="18" bodyfile="include/System/ISystem.hpp" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classISystemBase_1a68bd336682af94d8e0fc5a191b83e616" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::string const</type>
+        <definition>virtual std::string const ISystemBase::getSystemName</definition>
+        <argsstring>()</argsstring>
+        <name>getSystemName</name>
+        <reimplementedby refid="classAnimationSystem_1aa2940ee4b2698f68a2afc7fa7004225e">getSystemName</reimplementedby>
+        <reimplementedby refid="classBehaviorSystem_1a13bc5ca984942d47493fe76ca15f5d58">getSystemName</reimplementedby>
+        <reimplementedby refid="classClickSystem_1aaf595cbc03b92acbaded7c7812b9a531">getSystemName</reimplementedby>
+        <reimplementedby refid="classClientSystem_1aa6c96a9a9bc4e4835d0131de9d75c812">getSystemName</reimplementedby>
+        <reimplementedby refid="classControlSystem_1a7810859d3eb60dc02349f53fd01549f7">getSystemName</reimplementedby>
+        <reimplementedby refid="classDeathEffectSystem_1a73f1ef3e6544b02595fba085094475ea">getSystemName</reimplementedby>
+        <reimplementedby refid="classDrawSystem_1a7721fe392bed29ed56dc173f67506f85">getSystemName</reimplementedby>
+        <reimplementedby refid="classFFTSystem_1abbc0674569a35e6624fb6450d734a903">getSystemName</reimplementedby>
+        <reimplementedby refid="classFollowerSystem_1aed11bd3bdf1477dd131fe623f1a6d0ef">getSystemName</reimplementedby>
+        <reimplementedby refid="classMenuSystem_1ab059e707fb87929dd696be434267868a">getSystemName</reimplementedby>
+        <reimplementedby refid="classCollisionSystem_1acca0ca9f99a79e59c136f65afcb408f8">getSystemName</reimplementedby>
+        <reimplementedby refid="classSpawnSystem_1ab8a3ffc7ff1564c1ac7722d96449babe">getSystemName</reimplementedby>
+        <reimplementedby refid="classVelocitySystem_1af18544cbfbee5e23a66f557aae93aea6">getSystemName</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ISystem.hpp" line="46" column="31" bodyfile="include/System/ISystem.hpp" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classISystemBase_1ae71b84b72f1d4eab3f8acdf50d5ee540" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ISystemBase::~ISystemBase</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ISystemBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ISystem.hpp" line="47" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classISystem" kindref="compound">ISystem</ref> is an interface that systems inherit from. It defines the operator() method that systems must implement to process entities.</para>
+<para>Template parameters:<itemizedlist>
+<listitem><para>Components: The component types that this system needs to operate on.</para>
+</listitem></itemizedlist>
+</para>
+<para>Parameters:<itemizedlist>
+<listitem><para>entity: The entity being processed.</para>
+</listitem><listitem><para>components: Sparse arrays containing components of the types specified in the template.</para>
+</listitem></itemizedlist>
+</para>
+<para>Usage:<itemizedlist>
+<listitem><para>Systems implement operator() to access components and perform processing.</para>
+</listitem><listitem><para>The ECS framework calls operator() and passes the entity and its components.</para>
+</listitem><listitem><para>The system can then read/write the components to do its job. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="6">
+        <label>ISystem&lt; Behavior, Position &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>ISystem&lt; Components &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>SpawnSystem</label>
+        <link refid="classSpawnSystem"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ISystem&lt; Position, Velocity, Controllable &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>DeathEffectSystem</label>
+        <link refid="classDeathEffectSystem"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>VelocitySystem</label>
+        <link refid="classVelocitySystem"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>MenuSystem</label>
+        <link refid="classMenuSystem"/>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>ServerSystem</label>
+        <link refid="classServerSystem"/>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>FollowerSystem</label>
+        <link refid="classFollowerSystem"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ISystem&lt; Animation, Drawable &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ISystem&lt; Spawner, Position &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>ISystem&lt; Position, Velocity &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>FFTSystem</label>
+        <link refid="classFFTSystem"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>AnimationSystem</label>
+        <link refid="classAnimationSystem"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>ISystem&lt; FFT &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>ISystem&lt; Follower, Position &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>BehaviorSystem</label>
+        <link refid="classBehaviorSystem"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>ClientSystem</label>
+        <link refid="classClientSystem"/>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>ISystem&lt; Network &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>ClickSystem</label>
+        <link refid="classClickSystem"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>ISystem&lt; State &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ISystem&lt; Position, Drawable, Collision &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DrawSystem</label>
+        <link refid="classDrawSystem"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ISystemBase</label>
+        <link refid="classISystemBase"/>
+      </node>
+      <node id="4">
+        <label>ISystem&lt; Drawable, Position, Depth, TextDrawable &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ControlSystem</label>
+        <link refid="classControlSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>ISystem&lt; isClickable, Position &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>CollisionSystem</label>
+        <link refid="classCollisionSystem"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ISystem&lt; DeathEffect, Position &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="include/System/ISystem.hpp" line="43" column="1" bodyfile="include/System/ISystem.hpp" bodystart="43" bodyend="48"/>
+    <listofallmembers>
+      <member refid="classISystemBase_1a68bd336682af94d8e0fc5a191b83e616" prot="public" virt="virtual"><scope>ISystemBase</scope><name>getSystemName</name></member>
+      <member refid="classISystemBase_1a15450364e9f21ebae6e2633eef35d7d5" prot="public" virt="virtual"><scope>ISystemBase</scope><name>PostUpdate</name></member>
+      <member refid="classISystemBase_1ae71b84b72f1d4eab3f8acdf50d5ee540" prot="public" virt="virtual"><scope>ISystemBase</scope><name>~ISystemBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

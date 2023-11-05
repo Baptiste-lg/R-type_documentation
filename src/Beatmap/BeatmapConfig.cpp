@@ -1,8 +1,53 @@
 /*
 ** EPITECH PROJECT, 2023
-** Yiang
+** Rtype
 ** File description:
 ** BeatmapConfig.cpp
+*/
+
+/**
+** BeatmapConfig.cpp
+**
+** This file implements the BeatmapConfig class which holds configuration
+** data for a beatmap.
+**
+** Methods:
+**
+** - BeatmapConfig()
+**   Default constructor.
+**
+** - ~BeatmapConfig()
+**   Destructor.
+**
+** - load()
+**   Loads configuration data from a libconfig Setting.
+**
+** - print()
+**   Prints the configuration data to stdout.
+**
+** Members:
+**
+** - Name
+**   Name of the beatmap.
+**
+** - Artist
+**   Artist of the song.
+**
+** - FolderPath
+**   Path to audio files.
+**
+** - Difficulty
+**   Difficulty level.
+**
+** - BPM
+**   Beats per minute of the song.
+**
+** - id
+**   Beatmap ID.
+**
+** - offset
+**   Audio offset.
+**
 */
 
 #include "Beatmap/BeatmapConfig.hpp"
@@ -27,11 +72,4 @@ void BeatmapConfig::load(const libconfig::Setting& beatmapSetting) {
 
 void BeatmapConfig::print()
 {
-    std::cout << "Name: " << Name << std::endl;
-    std::cout << "Artist: " << Artist << std::endl;
-    std::cout << "FolderPath: " << FolderPath << std::endl;
-    std::cout << "Difficulty: " << Difficulty << std::endl;
-    std::cout << "BPM: " << BPM << std::endl;
-    std::cout << "id: " << id << std::endl;
-    std::cout << "offset: " << offset << std::endl;
 }

@@ -1,7 +1,38 @@
+/*
+** EPITECH PROJECT, 2023
+** Rtype
+** File description:
+** server_tcp
+*/
+
+/**
+ * Behaviour.cpp defines movement behavior functions.
+ *
+ * These functions update an entity's Position each frame.
+ * They provide different movement patterns.
+ *
+ * Functions:
+ * - moveLeft: Move left at constant speed.
+ * - zigzagMovement: Zig-zag vertically while moving left.
+ * - circularMovement: Move in a circle around a center point.
+ * - diagonalMovement: Move diagonally down and left.
+ * - sineWaveMovement: Move left while oscillating up/down.
+ * - backAndForthMovement: Move left/right within a range.
+ * - lShapeMovement: Move in an L shape pattern.
+ * - randomMovement: Move randomly in all directions.
+ * - fixedMovement: Stay in place.
+ * - loopDiagonalMovementRight: Diagonal movement looping screen edges.
+ *
+ * Parameters:
+ * - pos: Position component to be updated.
+ * - deltaTime: Time since last frame.
+ *
+ * Usage:
+ * - Pass in Position component and deltaTime.
+ * - Updates pos x/y each frame to achieve movement pattern.
+*/
 
 #include "Behaviour.hpp"
-#include <cmath>
-
 
 void moveLeft(Position& pos, float deltaTime) {
     pos.x += -1.0f * (100.0f * deltaTime);
@@ -10,14 +41,15 @@ void moveLeft(Position& pos, float deltaTime) {
 void zigzagMovement(Position& pos, float deltaTime) {
     static bool goingUp = true;
     float speed = 100.0f * deltaTime;
-
+    static float basePositionY = pos.y;
+    static float basePositionX = pos.x;
     if (goingUp) {
         pos.y += 1;
     } else {
         pos.y -= 1;
     }
 
-    if (pos.y > 400 || pos.y < 200) {
+    if (pos.y > basePositionY + 100 || pos.y < basePositionY - 100) {
         goingUp = !goingUp;
     }
     pos.x -= speed;

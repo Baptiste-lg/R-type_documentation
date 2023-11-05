@@ -1,9 +1,49 @@
 /*
 ** EPITECH PROJECT, 2023
-** Yiang
+** Rtype
 ** File description:
 ** LoadingScreen.cpp
 */
+
+/**
+** LoadingScreen.cpp
+**
+** Implements a simple loading screen with a logo and percentage text.
+**
+** Methods:
+**
+** - LoadingScreen()
+**   Default constructor.
+**
+** - ~LoadingScreen()
+**   Destructor.
+**
+** - load()
+**   Loads the logo texture and font.
+**   Positions them based on the resolution.
+**
+** - update()
+**   Updates the percentage text.
+**
+** - draw()
+**   Draws the logo sprite and percentage text.
+**
+** Members:
+**
+** - texture
+**   The logo texture.
+**
+** - sprite
+**   The logo sprite.
+**
+** - font
+**   The font used for percentage text.
+**
+** - text
+**   The percentage text.
+**
+*/
+
 
 #include "GraphicElement/LoadingScreen.hpp"
 

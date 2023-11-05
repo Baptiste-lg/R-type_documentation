@@ -1,9 +1,45 @@
 /*
 ** EPITECH PROJECT, 2023
-** Yiang
+** Rtype
 ** File description:
 ** RectangleButton.hpp
 */
+
+/**
+** RectangleButton
+**
+** This class represents a rectangular button.
+** It inherits from the Button base class.
+**
+** Public Methods:
+**
+** - RectangleButton()
+**   - Constructor with position, size, text, font, color and text size
+**
+** - setSize()
+**   - Sets the size of the button
+**
+** Inherited from Button:
+**
+** - handleEvent()
+** - draw()
+** - setText()
+**
+** Private Attributes:
+**
+** Inherited from Button:
+**
+** - texture
+** - sprite
+** - text
+** - onClick
+** - state
+** - position
+** - size
+** - type
+** - lastClickClock
+*/
+
 #ifndef RECTANGLEBUTTON_HPP_
 	#define RECTANGLEBUTTON_HPP_
 

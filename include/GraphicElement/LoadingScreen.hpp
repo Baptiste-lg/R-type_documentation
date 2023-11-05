@@ -1,9 +1,47 @@
 /*
 ** EPITECH PROJECT, 2023
-** Yiang
+** Rtype
 ** File description:
 ** LoadingScreen.hpp
 */
+
+/**
+** LoadingScreen
+**
+** This class represents a loading screen.
+**
+** Public Methods:
+**
+** - LoadingScreen()
+**   - Default constructor
+**
+** - ~LoadingScreen()
+**   - Destructor
+**
+** - load()
+**   - Loads the loading screen resources
+**
+** - update()
+**   - Updates the loading progress percentage
+**
+** - draw()
+**   - Draws the loading screen
+**
+** Private Attributes:
+**
+** - texture
+**   - Background texture
+**
+** - sprite
+**   - Background sprite
+**
+** - font
+**   - Text font
+**
+** - text
+**   - Loading progress text
+*/
+
 #ifndef LOADINGSCREEN_HPP_
 	#define LOADINGSCREEN_HPP_
 

@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classDatabase" kind="class" language="C++" prot="public">
+    <compoundname>Database</compoundname>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classDatabase_1ae8fb255cd7ce3f26e9a4639f7b61ddf0" prot="protected" static="no" mutable="no">
+        <type>map&lt; int, <ref refid="classBeatmapConfig" kindref="compound">BeatmapConfig</ref> &gt;</type>
+        <definition>map&lt;int, BeatmapConfig&gt; Database::beatmaps</definition>
+        <argsstring></argsstring>
+        <name>beatmaps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Database/Database.hpp" line="74" column="13" bodyfile="include/Database/Database.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDatabase_1a4703c80e6969d33565ea340f768fdadf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Database::Database</definition>
+        <argsstring>()</argsstring>
+        <name>Database</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Database.cpp</para>
+<para>This file implements the <ref refid="classDatabase" kindref="compound">Database</ref> class which loads and stores beatmap configuration data.</para>
+<para>Methods:</para>
+<para><itemizedlist>
+<listitem><para><ref refid="classDatabase_1a4703c80e6969d33565ea340f768fdadf" kindref="member">Database()</ref> Default constructor.</para>
+</listitem><listitem><para>~Database() Destructor.</para>
+</listitem><listitem><para>load() Loads beatmap data from a config file. Parses the file and handles errors. Stores <ref refid="classBeatmapConfig" kindref="compound">BeatmapConfig</ref> objects in a map.</para>
+</listitem><listitem><para>updateDatabase() Clears and reloads the database. Returns the ID of the last loaded beatmap.</para>
+</listitem><listitem><para>print() Prints all stored BeatmapConfigs.</para>
+</listitem><listitem><para>isBeatmapExist() Checks if a beatmap ID or path exists in the database.</para>
+</listitem><listitem><para>getBeatmapByName() Gets the ID of a beatmap by name.</para>
+</listitem></itemizedlist>
+</para>
+<para>Members:</para>
+<para><itemizedlist>
+<listitem><para>beatmaps Map storing BeatmapConfigs by ID. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Database/Database.hpp" line="63" column="9" bodyfile="src/Database/Database.cpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classDatabase_1a84d399a2ad58d69daab9b05330e1316d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Database::~Database</definition>
+        <argsstring>()</argsstring>
+        <name>~Database</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Database/Database.hpp" line="64" column="9" bodyfile="src/Database/Database.cpp" bodystart="53" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classDatabase_1a275117e04deaf37ff489b5816fe5451b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Database::load</definition>
+        <argsstring>(const std::string &amp;file)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Database/Database.hpp" line="65" column="14" bodyfile="src/Database/Database.cpp" bodystart="57" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classDatabase_1ad5cf71e9f410a7db8a17d12638e6953c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Database::print</definition>
+        <argsstring>()</argsstring>
+        <name>print</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Database/Database.hpp" line="66" column="14" bodyfile="src/Database/Database.cpp" bodystart="93" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classDatabase_1a3a0f9d09df34b26b5605e488819eeb17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Database::isBeatmapExist</definition>
+        <argsstring>(int id)</argsstring>
+        <name>isBeatmapExist</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Database/Database.hpp" line="67" column="14" bodyfile="src/Database/Database.cpp" bodystart="100" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classDatabase_1a1315517fad50fead9bf177f5d59c95e2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Database::getNbBeatmaps</definition>
+        <argsstring>() const</argsstring>
+        <name>getNbBeatmaps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Database/Database.hpp" line="68" column="13" bodyfile="include/Database/Database.hpp" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classDatabase_1a8fa0f9d0fd18bd36abc0fbca04769d20" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classBeatmapConfig" kindref="compound">BeatmapConfig</ref></type>
+        <definition>BeatmapConfig Database::getBeatmap</definition>
+        <argsstring>(int id)</argsstring>
+        <name>getBeatmap</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Database/Database.hpp" line="69" column="23" bodyfile="include/Database/Database.hpp" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classDatabase_1a0839a003cd580e4ebacad613c0004e40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Database::isBeatmapExist</definition>
+        <argsstring>(const std::string &amp;folderPath)</argsstring>
+        <name>isBeatmapExist</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>folderPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Database/Database.hpp" line="70" column="14" bodyfile="src/Database/Database.cpp" bodystart="119" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classDatabase_1a82c1a39799059ecc22724c69ade36ac4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Database::getBeatmapByName</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>getBeatmapByName</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Database/Database.hpp" line="71" column="13" bodyfile="src/Database/Database.cpp" bodystart="128" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classDatabase_1a52b44a12035f009d908374123c13bd13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Database::updateDatabase</definition>
+        <argsstring>(const std::string &amp;folderPath)</argsstring>
+        <name>updateDatabase</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>folderPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Database/Database.hpp" line="72" column="13" bodyfile="src/Database/Database.cpp" bodystart="82" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Database/Database.hpp" line="61" column="1" bodyfile="include/Database/Database.hpp" bodystart="61" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classDatabase_1ae8fb255cd7ce3f26e9a4639f7b61ddf0" prot="protected" virt="non-virtual"><scope>Database</scope><name>beatmaps</name></member>
+      <member refid="classDatabase_1a4703c80e6969d33565ea340f768fdadf" prot="public" virt="non-virtual"><scope>Database</scope><name>Database</name></member>
+      <member refid="classDatabase_1a8fa0f9d0fd18bd36abc0fbca04769d20" prot="public" virt="non-virtual"><scope>Database</scope><name>getBeatmap</name></member>
+      <member refid="classDatabase_1a82c1a39799059ecc22724c69ade36ac4" prot="public" virt="non-virtual"><scope>Database</scope><name>getBeatmapByName</name></member>
+      <member refid="classDatabase_1a1315517fad50fead9bf177f5d59c95e2" prot="public" virt="non-virtual"><scope>Database</scope><name>getNbBeatmaps</name></member>
+      <member refid="classDatabase_1a3a0f9d09df34b26b5605e488819eeb17" prot="public" virt="non-virtual"><scope>Database</scope><name>isBeatmapExist</name></member>
+      <member refid="classDatabase_1a0839a003cd580e4ebacad613c0004e40" prot="public" virt="non-virtual"><scope>Database</scope><name>isBeatmapExist</name></member>
+      <member refid="classDatabase_1a275117e04deaf37ff489b5816fe5451b" prot="public" virt="non-virtual"><scope>Database</scope><name>load</name></member>
+      <member refid="classDatabase_1ad5cf71e9f410a7db8a17d12638e6953c" prot="public" virt="non-virtual"><scope>Database</scope><name>print</name></member>
+      <member refid="classDatabase_1a52b44a12035f009d908374123c13bd13" prot="public" virt="non-virtual"><scope>Database</scope><name>updateDatabase</name></member>
+      <member refid="classDatabase_1a84d399a2ad58d69daab9b05330e1316d" prot="public" virt="non-virtual"><scope>Database</scope><name>~Database</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

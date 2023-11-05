@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="global_8cpp" kind="file" language="C++">
+    <compoundname>global.cpp</compoundname>
+    <includes refid="Global_8hpp" local="yes">Global.hpp</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/global.cpp</label>
+        <link refid="global_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="2">
+        <label>Global.hpp</label>
+        <link refid="Global_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>unordered_map</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="global_8cpp_1a2e49c4cbfe9154a91188d813707eb47a" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::string &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::string&gt; configMap</definition>
+        <argsstring></argsstring>
+        <name>configMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Global.cpp</para>
+<para>This file contains the global variables and utility functions used throughout the project. It defines a global configuration map <computeroutput>configMap</computeroutput> and a utility function <computeroutput>tokenize</computeroutput> for splitting a string into tokens based on a specified delimiter.</para>
+<para>Variables:</para>
+<para><itemizedlist>
+<listitem><para>configMap An unordered map to store key-value pairs representing configuration settings.</para>
+</listitem></itemizedlist>
+</para>
+<para>Functions:</para>
+<para><itemizedlist>
+<listitem><para>tokenize(std::string message, std::string delimiter) This function takes a message string and a delimiter string as arguments, and returns a vector of strings where each string is a token obtained by splitting the message string at each occurrence of the delimiter string.</para>
+</listitem></itemizedlist>
+</para>
+<para>Dependencies:</para>
+<para><itemizedlist>
+<listitem><para>&quot;Global.hpp&quot; for declarations of global variables and utility functions.</para>
+</listitem><listitem><para>&lt;unordered_map&gt; for std::unordered_map.</para>
+</listitem><listitem><para>&lt;vector&gt; for std::vector.</para>
+</listitem><listitem><para>&lt;string&gt; for std::string. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/global.cpp" line="38" column="20" bodyfile="src/global.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="global_8cpp_1aa06c86901886f7263efb113d87605801" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; tokenize</definition>
+        <argsstring>(std::string message, std::string delimiter)</argsstring>
+        <name>tokenize</name>
+        <param>
+          <type>std::string</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>delimiter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/global.cpp" line="39" column="13" bodyfile="src/global.cpp" bodystart="39" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Rtype</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>Global.cpp</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Global.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">std::unordered_map&lt;std::string,<sp/>std::string&gt;<sp/>configMap;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">std::vector&lt;std::string&gt;<sp/>tokenize(std::string<sp/>message,<sp/>std::string<sp/>delimiter)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>tokens;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>token;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((pos<sp/>=<sp/>message.find(delimiter))<sp/>!=<sp/>std::string::npos)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>token<sp/>=<sp/>message.substr(0,<sp/>pos);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tokens.push_back(token);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>message.erase(0,<sp/>pos<sp/>+<sp/>delimiter.length());</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>tokens.push_back(message);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tokens;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/global.cpp"/>
+  </compounddef>
+</doxygen>

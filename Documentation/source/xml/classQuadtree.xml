@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classQuadtree" kind="class" language="C++" prot="public">
+    <compoundname>Quadtree</compoundname>
+    <innerclass refid="classQuadtree_1_1Node" prot="private">Quadtree::Node</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classQuadtree_1acbd737a2f3ad3104bdb28b1dde64f7ed" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; Node &gt;</type>
+        <definition>std::unique_ptr&lt;Node&gt; Quadtree::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/Quadtree.hpp" line="122" column="21" bodyfile="include/System/Quadtree.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classQuadtree_1a671cbbcfbf7f855e85b903140798d816" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Quadtree::Quadtree</definition>
+        <argsstring>(CollisionRectangle boundary, int capacity)</argsstring>
+        <name>Quadtree</name>
+        <param>
+          <type><ref refid="classCollisionRectangle" kindref="compound">CollisionRectangle</ref></type>
+          <declname>boundary</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>capacity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/Quadtree.hpp" line="125" column="5" bodyfile="include/System/Quadtree.hpp" bodystart="125" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classQuadtree_1a9a4f93e037710efe838ac54f4a30ca17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Quadtree::insert</definition>
+        <argsstring>(entity_t entity, float x, float y, float width, float height)</argsstring>
+        <name>insert</name>
+        <param>
+          <type>entity_t</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/Quadtree.hpp" line="128" column="10" bodyfile="include/System/Quadtree.hpp" bodystart="128" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classQuadtree_1a412cbdb24ed592c6378a8de4e337c09e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; entity_t &gt;</type>
+        <definition>std::vector&lt;entity_t&gt; Quadtree::queryRange</definition>
+        <argsstring>(CollisionRectangle range, sparse_array&lt; Position &gt; &amp;positions, sparse_array&lt; Drawable &gt; &amp;drawables)</argsstring>
+        <name>queryRange</name>
+        <param>
+          <type><ref refid="classCollisionRectangle" kindref="compound">CollisionRectangle</ref></type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structPosition" kindref="compound">Position</ref> &gt; &amp;</type>
+          <declname>positions</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structDrawable" kindref="compound">Drawable</ref> &gt; &amp;</type>
+          <declname>drawables</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/Quadtree.hpp" line="133" column="5" bodyfile="include/System/Quadtree.hpp" bodystart="133" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classQuadtree_1ab2b40ef82fa81688886c8f38bf7846d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Quadtree::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/Quadtree.hpp" line="139" column="10" bodyfile="include/System/Quadtree.hpp" bodystart="139" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/System/Quadtree.hpp" line="97" column="1" bodyfile="include/System/Quadtree.hpp" bodystart="97" bodyend="143"/>
+    <listofallmembers>
+      <member refid="classQuadtree_1ab2b40ef82fa81688886c8f38bf7846d3" prot="public" virt="non-virtual"><scope>Quadtree</scope><name>clear</name></member>
+      <member refid="classQuadtree_1a9a4f93e037710efe838ac54f4a30ca17" prot="public" virt="non-virtual"><scope>Quadtree</scope><name>insert</name></member>
+      <member refid="classQuadtree_1a671cbbcfbf7f855e85b903140798d816" prot="public" virt="non-virtual"><scope>Quadtree</scope><name>Quadtree</name></member>
+      <member refid="classQuadtree_1a412cbdb24ed592c6378a8de4e337c09e" prot="public" virt="non-virtual"><scope>Quadtree</scope><name>queryRange</name></member>
+      <member refid="classQuadtree_1acbd737a2f3ad3104bdb28b1dde64f7ed" prot="private" virt="non-virtual"><scope>Quadtree</scope><name>root</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

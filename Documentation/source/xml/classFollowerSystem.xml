@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classFollowerSystem" kind="class" language="C++" prot="public">
+    <compoundname>FollowerSystem</compoundname>
+    <basecompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Follower, Position &gt;</basecompoundref>
+    <includes refid="FollowerSystem_8hpp" local="no">FollowerSystem.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFollowerSystem_1aee0538d9d9f5c9fb468e742c37f52666" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FollowerSystem::FollowerSystem</definition>
+        <argsstring>()=default</argsstring>
+        <name>FollowerSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/FollowerSystem.hpp" line="38" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classFollowerSystem_1aed11bd3bdf1477dd131fe623f1a6d0ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::string const</type>
+        <definition>std::string const FollowerSystem::getSystemName</definition>
+        <argsstring>() override</argsstring>
+        <name>getSystemName</name>
+        <reimplements refid="classISystemBase_1a68bd336682af94d8e0fc5a191b83e616">getSystemName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/FollowerSystem.hpp" line="39" column="23" bodyfile="include/System/FollowerSystem.hpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classFollowerSystem_1af99a940f9cb71a8f0c5452fda223eaf0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FollowerSystem::operator()</definition>
+        <argsstring>(entity_t entity, sparse_array&lt; Follower &gt; &amp;followers, sparse_array&lt; Position &gt; &amp;positions) override</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>entity_t</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structFollower" kindref="compound">Follower</ref> &gt; &amp;</type>
+          <declname>followers</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structPosition" kindref="compound">Position</ref> &gt; &amp;</type>
+          <declname>positions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/FollowerSystem.hpp" line="42" column="10" bodyfile="include/System/FollowerSystem.hpp" bodystart="42" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classFollowerSystem" kindref="compound">FollowerSystem</ref> processes entities with <ref refid="structFollower" kindref="compound">Follower</ref> and <ref refid="structPosition" kindref="compound">Position</ref> components.</para>
+<para>It updates the <ref refid="structPosition" kindref="compound">Position</ref> of followers to match their targets with an offset.</para>
+<para>This allows easily making entities follow other entities.</para>
+<para>Usage:<itemizedlist>
+<listitem><para>Give follower entities <ref refid="structFollower" kindref="compound">Follower</ref> and <ref refid="structPosition" kindref="compound">Position</ref> components.</para>
+</listitem><listitem><para>Set Follower.target to the entity to follow.</para>
+</listitem><listitem><para>Set Follower.xOffset and Follower.yOffset for the offset.</para>
+</listitem><listitem><para>System will update <ref refid="structPosition" kindref="compound">Position</ref> each frame based on target&apos;s <ref refid="structPosition" kindref="compound">Position</ref>.</para>
+</listitem></itemizedlist>
+</para>
+<para>Parameters:<itemizedlist>
+<listitem><para>None</para>
+</listitem></itemizedlist>
+</para>
+<para>Components used:<itemizedlist>
+<listitem><para><ref refid="structFollower" kindref="compound">Follower</ref>: Contains target and offset.</para>
+</listitem><listitem><para><ref refid="structPosition" kindref="compound">Position</ref>: Updated to match target&apos;s <ref refid="structPosition" kindref="compound">Position</ref> + offset. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>FollowerSystem</label>
+        <link refid="classFollowerSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ISystem&lt; Follower, Position &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ISystemBase</label>
+        <link refid="classISystemBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>FollowerSystem</label>
+        <link refid="classFollowerSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ISystem&lt; Follower, Position &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ISystemBase</label>
+        <link refid="classISystemBase"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/System/FollowerSystem.hpp" line="36" column="1" bodyfile="include/System/FollowerSystem.hpp" bodystart="36" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classFollowerSystem_1aee0538d9d9f5c9fb468e742c37f52666" prot="public" virt="non-virtual"><scope>FollowerSystem</scope><name>FollowerSystem</name></member>
+      <member refid="classFollowerSystem_1aed11bd3bdf1477dd131fe623f1a6d0ef" prot="public" virt="virtual"><scope>FollowerSystem</scope><name>getSystemName</name></member>
+      <member refid="classFollowerSystem_1af99a940f9cb71a8f0c5452fda223eaf0" prot="public" virt="non-virtual"><scope>FollowerSystem</scope><name>operator()</name></member>
+      <member refid="classISystem_1a31573ab1dbe256ad82453452bc1a76b8" prot="public" virt="pure-virtual" ambiguityscope="ISystem&lt; Follower, Position &gt;::"><scope>FollowerSystem</scope><name>operator()</name></member>
+      <member refid="classISystemBase_1a15450364e9f21ebae6e2633eef35d7d5" prot="public" virt="virtual"><scope>FollowerSystem</scope><name>PostUpdate</name></member>
+      <member refid="classISystem_1a8b403989cf1780ab99f91272b3098648" prot="public" virt="virtual"><scope>FollowerSystem</scope><name>~ISystem</name></member>
+      <member refid="classISystemBase_1ae71b84b72f1d4eab3f8acdf50d5ee540" prot="public" virt="virtual"><scope>FollowerSystem</scope><name>~ISystemBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

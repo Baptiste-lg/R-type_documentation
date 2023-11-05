@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classGUI" kind="class" language="C++" prot="public">
+    <compoundname>GUI</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classGUI_1af8ade4eccf897f5ee4e087974fff3574" prot="public" static="no" mutable="no">
+        <type><ref refid="classMenu" kindref="compound">Menu</ref></type>
+        <definition>Menu GUI::menu</definition>
+        <argsstring></argsstring>
+        <name>menu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="140" column="10" bodyfile="include/GUI/GUI.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classGUI_1abf2a79e4b2f20e6c56a7e1f9d5f8300b" prot="protected" static="no" mutable="no">
+        <type>sf::RenderWindow &amp;</type>
+        <definition>sf::RenderWindow&amp; GUI::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="143" column="26" bodyfile="include/GUI/GUI.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGUI_1ad29d9c9b785145999dffc7942d02770e" prot="protected" static="no" mutable="no">
+        <type>sf::Event</type>
+        <definition>sf::Event GUI::event</definition>
+        <argsstring></argsstring>
+        <name>event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="144" column="19" bodyfile="include/GUI/GUI.hpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGUI_1a7610f0343d04beb952312fda3ebe8526" prot="protected" static="no" mutable="no">
+        <type>sf::Vector2i</type>
+        <definition>sf::Vector2i GUI::mousePos</definition>
+        <argsstring></argsstring>
+        <name>mousePos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="145" column="22" bodyfile="include/GUI/GUI.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGUI_1a21b34db901e940d84cb2c87cf5f540fa" prot="protected" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f GUI::mousePosF</definition>
+        <argsstring></argsstring>
+        <name>mousePosF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="146" column="22" bodyfile="include/GUI/GUI.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGUI_1a4d62049a99c3101875e1173871948a90" prot="protected" static="no" mutable="no">
+        <type><ref refid="classLoadingScreen" kindref="compound">LoadingScreen</ref></type>
+        <definition>LoadingScreen GUI::loadingScreen</definition>
+        <argsstring></argsstring>
+        <name>loadingScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="147" column="23" bodyfile="include/GUI/GUI.hpp" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGUI_1a0f522ea4cbb5da304515ce3be4a8f63c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GUI::GUI</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>GUI</name>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="115" column="1" bodyfile="include/GUI/GUI.hpp" bodystart="115" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1ac9cae2328dcb5d83bdfaeca49a2eb695" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GUI::~GUI</definition>
+        <argsstring>()</argsstring>
+        <name>~GUI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="116" column="1" bodyfile="src/GUI/GUI.cpp" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1a3bb82c9e3ce9301c23aa2c3605dfe22d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::load</definition>
+        <argsstring>(const GUIConfig &amp;config)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const <ref refid="classGUIConfig" kindref="compound">GUIConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="117" column="14" bodyfile="src/GUI/GUI.cpp" bodystart="75" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1ad00b731985819e6dc333349354d1122c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::loadBeatmapPanel</definition>
+        <argsstring>(Database &amp;database)</argsstring>
+        <name>loadBeatmapPanel</name>
+        <param>
+          <type><ref refid="classDatabase" kindref="compound">Database</ref> &amp;</type>
+          <declname>database</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="118" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1a3edde467f30dd0be895f648f619b0144" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::loadingScreenCreate</definition>
+        <argsstring>()</argsstring>
+        <name>loadingScreenCreate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="119" column="14" bodyfile="src/GUI/GUI.cpp" bodystart="84" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1aa7c24e739dc32aebdcf18bfd5e83ae0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::updateLoadingScreen</definition>
+        <argsstring>(int pourcent)</argsstring>
+        <name>updateLoadingScreen</name>
+        <param>
+          <type>int</type>
+          <declname>pourcent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="120" column="14" bodyfile="src/GUI/GUI.cpp" bodystart="99" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1a23e7bec5a8514d593b73fcbf4d609cd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::resetLoadingScreen</definition>
+        <argsstring>()</argsstring>
+        <name>resetLoadingScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="121" column="14" bodyfile="src/GUI/GUI.cpp" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1ac03f652095b0c16fcbb166ad2b191d9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::reloadLoadingScreen</definition>
+        <argsstring>()</argsstring>
+        <name>reloadLoadingScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="122" column="14" bodyfile="src/GUI/GUI.cpp" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1aaf12b0bfb2046fcfbdeb8dea12a2ff08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::displayLoadingScreen</definition>
+        <argsstring>()</argsstring>
+        <name>displayLoadingScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="123" column="14" bodyfile="src/GUI/GUI.cpp" bodystart="110" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1af08eb793fa7f0dfab92174d93e3d9ed5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::createMenu</definition>
+        <argsstring>(Database &amp;database)</argsstring>
+        <name>createMenu</name>
+        <param>
+          <type><ref refid="classDatabase" kindref="compound">Database</ref> &amp;</type>
+          <declname>database</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="124" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1af9b952d12e33de5f31ed3b7ceeaf7fd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::updateMenu</definition>
+        <argsstring>()</argsstring>
+        <name>updateMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="125" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1ae84e7c7881299b04388bb8304859022b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::loop</definition>
+        <argsstring>(int state)</argsstring>
+        <name>loop</name>
+        <param>
+          <type>int</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="126" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1a771d5b22428fc55e5089c7bd9bf1f54b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::createGame</definition>
+        <argsstring>()</argsstring>
+        <name>createGame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="127" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1a187eede1c955d100f5becb56502ed6be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::updateGame</definition>
+        <argsstring>()</argsstring>
+        <name>updateGame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="128" column="14" bodyfile="src/GUI/GUI.cpp" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1a0f6dc656610f36a76a74852dcb4031bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::drawGame</definition>
+        <argsstring>()</argsstring>
+        <name>drawGame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="129" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1a7ff7f92e0e9e0008dac9bd20f1339bda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::executeLoadingScreenTasks</definition>
+        <argsstring>(const std::vector&lt; std::function&lt; void(int &amp;)&gt;&gt; &amp;tasks)</argsstring>
+        <name>executeLoadingScreenTasks</name>
+        <param>
+          <type>const std::vector&lt; std::function&lt; void(int &amp;)&gt;&gt; &amp;</type>
+          <declname>tasks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="130" column="14" bodyfile="src/GUI/GUI.cpp" bodystart="117" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1a29511f99a1859c7cc3594190b29ca75e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::setActive</definition>
+        <argsstring>(bool active)</argsstring>
+        <name>setActive</name>
+        <param>
+          <type>bool</type>
+          <declname>active</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="131" column="14" bodyfile="include/GUI/GUI.hpp" bodystart="131" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1a1ea784c418bc4f975180cb1858d69813" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>sf::RenderWindow &amp;</type>
+        <definition>sf::RenderWindow&amp; GUI::getWindow</definition>
+        <argsstring>()</argsstring>
+        <name>getWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="134" column="26" bodyfile="include/GUI/GUI.hpp" bodystart="134" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUI_1aedaaa350ce1fc6f0b60035e52e4990d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>sf::Event &amp;</type>
+        <definition>sf::Event&amp; GUI::getEvent</definition>
+        <argsstring>()</argsstring>
+        <name>getEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUI.hpp" line="137" column="19" bodyfile="include/GUI/GUI.hpp" bodystart="137" bodyend="139"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>Menu</label>
+        <link refid="classMenu"/>
+      </node>
+      <node id="1">
+        <label>GUI</label>
+        <link refid="classGUI"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>loadingScreen</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>menu</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>LoadingScreen</label>
+        <link refid="classLoadingScreen"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/GUI/GUI.hpp" line="113" column="1" bodyfile="include/GUI/GUI.hpp" bodystart="113" bodyend="149"/>
+    <listofallmembers>
+      <member refid="classGUI_1a771d5b22428fc55e5089c7bd9bf1f54b" prot="public" virt="non-virtual"><scope>GUI</scope><name>createGame</name></member>
+      <member refid="classGUI_1af08eb793fa7f0dfab92174d93e3d9ed5" prot="public" virt="non-virtual"><scope>GUI</scope><name>createMenu</name></member>
+      <member refid="classGUI_1aaf12b0bfb2046fcfbdeb8dea12a2ff08" prot="public" virt="non-virtual"><scope>GUI</scope><name>displayLoadingScreen</name></member>
+      <member refid="classGUI_1a0f6dc656610f36a76a74852dcb4031bc" prot="public" virt="non-virtual"><scope>GUI</scope><name>drawGame</name></member>
+      <member refid="classGUI_1ad29d9c9b785145999dffc7942d02770e" prot="protected" virt="non-virtual"><scope>GUI</scope><name>event</name></member>
+      <member refid="classGUI_1a7ff7f92e0e9e0008dac9bd20f1339bda" prot="public" virt="non-virtual"><scope>GUI</scope><name>executeLoadingScreenTasks</name></member>
+      <member refid="classGUI_1aedaaa350ce1fc6f0b60035e52e4990d9" prot="public" virt="non-virtual"><scope>GUI</scope><name>getEvent</name></member>
+      <member refid="classGUI_1a1ea784c418bc4f975180cb1858d69813" prot="public" virt="non-virtual"><scope>GUI</scope><name>getWindow</name></member>
+      <member refid="classGUI_1a0f522ea4cbb5da304515ce3be4a8f63c" prot="public" virt="non-virtual"><scope>GUI</scope><name>GUI</name></member>
+      <member refid="classGUI_1a3bb82c9e3ce9301c23aa2c3605dfe22d" prot="public" virt="non-virtual"><scope>GUI</scope><name>load</name></member>
+      <member refid="classGUI_1ad00b731985819e6dc333349354d1122c" prot="public" virt="non-virtual"><scope>GUI</scope><name>loadBeatmapPanel</name></member>
+      <member refid="classGUI_1a4d62049a99c3101875e1173871948a90" prot="protected" virt="non-virtual"><scope>GUI</scope><name>loadingScreen</name></member>
+      <member refid="classGUI_1a3edde467f30dd0be895f648f619b0144" prot="public" virt="non-virtual"><scope>GUI</scope><name>loadingScreenCreate</name></member>
+      <member refid="classGUI_1ae84e7c7881299b04388bb8304859022b" prot="public" virt="non-virtual"><scope>GUI</scope><name>loop</name></member>
+      <member refid="classGUI_1af8ade4eccf897f5ee4e087974fff3574" prot="public" virt="non-virtual"><scope>GUI</scope><name>menu</name></member>
+      <member refid="classGUI_1a7610f0343d04beb952312fda3ebe8526" prot="protected" virt="non-virtual"><scope>GUI</scope><name>mousePos</name></member>
+      <member refid="classGUI_1a21b34db901e940d84cb2c87cf5f540fa" prot="protected" virt="non-virtual"><scope>GUI</scope><name>mousePosF</name></member>
+      <member refid="classGUI_1ac03f652095b0c16fcbb166ad2b191d9f" prot="public" virt="non-virtual"><scope>GUI</scope><name>reloadLoadingScreen</name></member>
+      <member refid="classGUI_1a23e7bec5a8514d593b73fcbf4d609cd7" prot="public" virt="non-virtual"><scope>GUI</scope><name>resetLoadingScreen</name></member>
+      <member refid="classGUI_1a29511f99a1859c7cc3594190b29ca75e" prot="public" virt="non-virtual"><scope>GUI</scope><name>setActive</name></member>
+      <member refid="classGUI_1a187eede1c955d100f5becb56502ed6be" prot="public" virt="non-virtual"><scope>GUI</scope><name>updateGame</name></member>
+      <member refid="classGUI_1aa7c24e739dc32aebdcf18bfd5e83ae0e" prot="public" virt="non-virtual"><scope>GUI</scope><name>updateLoadingScreen</name></member>
+      <member refid="classGUI_1af9b952d12e33de5f31ed3b7ceeaf7fd4" prot="public" virt="non-virtual"><scope>GUI</scope><name>updateMenu</name></member>
+      <member refid="classGUI_1abf2a79e4b2f20e6c56a7e1f9d5f8300b" prot="protected" virt="non-virtual"><scope>GUI</scope><name>window</name></member>
+      <member refid="classGUI_1ac9cae2328dcb5d83bdfaeca49a2eb695" prot="public" virt="non-virtual"><scope>GUI</scope><name>~GUI</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

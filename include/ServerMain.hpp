@@ -1,9 +1,37 @@
 /*
 ** EPITECH PROJECT, 2024
-** ECS
+** Rtype
 ** File description:
 ** serverMain
 */
+
+/**
+** serverMain
+**
+** This file contains functions related to initializing and running the server.
+**
+** Functions:
+**
+** - initializeGameEntitiesServer()
+**   Initializes game entities on the server.
+**
+** - initializeGameServerSystems()
+**   Initializes server systems like physics.
+**
+** - initializeDatabaseAndConfig()
+**   Initializes database and config.
+**
+** - firstLoadingScreen()
+**   Displays initial loading screen.
+**
+** - serverLoop()
+**   Main server loop.
+**
+** - componentAdderMap
+**   Map to add components to entities.
+**
+*/
+
 
 #ifndef SERVERMAIN_HPP_
 #define SERVERMAIN_HPP_

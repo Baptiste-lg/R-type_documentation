@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structButtonConfig__s" kind="struct" language="C++" prot="public">
+    <compoundname>ButtonConfig_s</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structButtonConfig__s_1a88843998e5c61cf119ccdd62228c5b37" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ButtonConfig_s::text</definition>
+        <argsstring></argsstring>
+        <name>text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="84" column="17" bodyfile="include/GraphicElement/Button.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structButtonConfig__s_1a4097c56401b12a080663c5e5e02ed2d1" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; ButtonConfig_s::onClick</definition>
+        <argsstring></argsstring>
+        <name>onClick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="85" column="19" bodyfile="include/GraphicElement/Button.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/GraphicElement/Button.hpp" line="83" column="1" bodyfile="include/GraphicElement/Button.hpp" bodystart="83" bodyend="86"/>
+    <listofallmembers>
+      <member refid="structButtonConfig__s_1a4097c56401b12a080663c5e5e02ed2d1" prot="public" virt="non-virtual"><scope>ButtonConfig_s</scope><name>onClick</name></member>
+      <member refid="structButtonConfig__s_1a88843998e5c61cf119ccdd62228c5b37" prot="public" virt="non-virtual"><scope>ButtonConfig_s</scope><name>text</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

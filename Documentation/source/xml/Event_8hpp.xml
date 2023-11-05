@@ -1,0 +1,921 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="Event_8hpp" kind="file" language="C++">
+    <compoundname>Event.hpp</compoundname>
+    <includes local="no">functional</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">netinet/in.h</includes>
+    <includedby refid="Registry_8hpp" local="yes">include/Registry.hpp</includedby>
+    <includedby refid="Event_8cpp" local="yes">src/Event.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="2">
+        <label>functional</label>
+      </node>
+      <node id="1">
+        <label>include/Event.hpp</label>
+        <link refid="Event_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>include/Behaviour.hpp</label>
+        <link refid="Behaviour_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>include/System/VelocitySystem.hpp</label>
+        <link refid="VelocitySystem_8hpp_source"/>
+      </node>
+      <node id="11">
+        <label>include/System/DeathEffectSystem.hpp</label>
+        <link refid="DeathEffectSystem_8hpp_source"/>
+      </node>
+      <node id="17">
+        <label>include/Zipper.hpp</label>
+        <link refid="Zipper_8hpp_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/Registry.hpp</label>
+        <link refid="Registry_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>include/ServerMain.hpp</label>
+        <link refid="ServerMain_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>include/Spawner.hpp</label>
+        <link refid="Spawner_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>include/System/EffectsFunctions.hpp</label>
+        <link refid="EffectsFunctions_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>include/SceneParsing.hpp</label>
+        <link refid="SceneParsing_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>include/ZipperIterator.hpp</label>
+        <link refid="ZipperIterator_8hpp_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>include/ClientMain.hpp</label>
+        <link refid="ClientMain_8hpp_source"/>
+      </node>
+      <node id="8">
+        <label>include/System/MenuSystem.hpp</label>
+        <link refid="MenuSystem_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>include/Event.hpp</label>
+        <link refid="Event_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>include/taskLoader.hpp</label>
+        <link refid="taskLoader_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/Component.hpp</label>
+        <link refid="Component_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>include/System/ISystem.hpp</label>
+        <link refid="ISystem_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>include/System/Quadtree.hpp</label>
+        <link refid="Quadtree_8hpp_source"/>
+      </node>
+      <node id="7">
+        <label>include/System/FFTSystem.hpp</label>
+        <link refid="FFTSystem_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structEvent" prot="public">Event</innerclass>
+    <innerclass refid="classEventBus" prot="public">EventBus</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6fa" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EventType</name>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa3cce2ed5e756cc3be61cce925d593c3a" prot="public">
+          <name>LocalPlayerMoved</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faafb43d2746fd9e4a4f724e509c49f3ef3" prot="public">
+          <name>PlayerAdded</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa36152d1419a93ac6662f5212ee011c63" prot="public">
+          <name>PlayerDied</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faae9a2a9f2cc3931cbe6b1f30bc2455cde" prot="public">
+          <name>ItemPicked</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faabc8aa93705ed47ba48409ae63e7a0ec7" prot="public">
+          <name>PlayerJoined</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faaad55f505c29b848da8a5cd2dd1ba1c55" prot="public">
+          <name>PlayerLeft</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa92c8d02a142edf3d6908880f19f0d6c3" prot="public">
+          <name>PlayerMoved</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faac548d490124467aa0fb5ff156e57f427" prot="public">
+          <name>PlayerFired</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faad1710b72e24fb35d67171a196c03675d" prot="public">
+          <name>PlayerHit</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faac48c4fec82d674effc77e1d07957d796" prot="public">
+          <name>PlayerRespawned</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa88efaaa0d2ff799f170b741ba77fe339" prot="public">
+          <name>PlayerScored</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa7c964e487fa2891c6bf2727fef865e25" prot="public">
+          <name>PlayerWon</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa29ea1bafa8487d55b028ecea7206d095" prot="public">
+          <name>PlayerLost</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa7c7eac73fbe323cd797c876a24027350" prot="public">
+          <name>PlayerDisconnected</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa1496016da96ca3d5dee867fc94078c62" prot="public">
+          <name>PlayerReconnected</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faafb9975f3a314bcd1e71871c92c36660c" prot="public">
+          <name>PlayerRejoined</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa6b3aef550b836718a45d9254c276a57d" prot="public">
+          <name>PlayerLeftLobby</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa97ea969baf37dede214b2b2d1c08b96a" prot="public">
+          <name>PlayerKicked</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faab0693751163a5ab5c9fcfcb322aba6a5" prot="public">
+          <name>PlayerBanned</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa9bf96404a257c6c601a12e4573d3805b" prot="public">
+          <name>PlayerUnbanned</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa42df02b0aa1f288ab5041b5861ff3d43" prot="public">
+          <name>EndOfSong</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa4def1af8ac4d983a471a0bdc944c5985" prot="public">
+          <name>playerEndOfSong</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa715cc0afe040ca8b1f23d8f6c06ea70c" prot="public">
+          <name>playerEndScore</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa2b5a250919cc1db851d5f2d432d2e32a" prot="public">
+          <name>IndexMoved</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faae8ee842c987382dbdd0fd7ebb1fd357d" prot="public">
+          <name>GameStarted</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faaee6a49459d7c34b4aebe6c31ffd2a2a5" prot="public">
+          <name>GameEnded</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa558efabb3766fea8d5908b5622b0e450" prot="public">
+          <name>GamePaused</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa243bb235f76fa123f2027933422e4024" prot="public">
+          <name>GameResumed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faab347d59b8dca558011710aa24a686a0d" prot="public">
+          <name>GameRestarted</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa3708828d435f887e074bb7ac7d4834d1" prot="public">
+          <name>GameExited</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faaf87b7a91a8fe365eafa9d93814c490fd" prot="public">
+          <name>LobbyCreated</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faaa8d593818156b48e2dd3b4a6cc01cf6f" prot="public">
+          <name>LobbyJoined</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa815468f30a76a13ea77173b9bbe7c6bb" prot="public">
+          <name>LobbyLeft</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa1b94e91f19161df14b52121ff068c518" prot="public">
+          <name>AskLobbyLeft</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa911d1e79f6c2cdcc71d25c956a0654b6" prot="public">
+          <name>LobbyKicked</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa305cf73d6c51243cd74355f0ee5ca0e1" prot="public">
+          <name>LobbyBanned</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faad6efec4c6e8f2656424ae58847a73d1c" prot="public">
+          <name>LobbyUnbanned</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa360b2695a5937693d63fb393b108aef8" prot="public">
+          <name>AskLobbyDestroyed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa07b4663c53f8b62400b5192a4f55bd34" prot="public">
+          <name>LobbyDestroyed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faac5e94a8591325a7d00422dbb1ae973c2" prot="public">
+          <name>LobbyUpdated</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faad4e0ad45fc3c4ebab3b2f392f18e0f2d" prot="public">
+          <name>LobbyMessageSent</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faaa831d7dde10ece46769e6d334c480def" prot="public">
+          <name>LobbySelectionCreated</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faac797e088e2d458ebe321246b3caa825e" prot="public">
+          <name>skinButtonClicled</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa0b624141200c1af2799ebaf364bed82e" prot="public">
+          <name>SkinSelected</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa6654c78a810f1f0ca84b9d853657dbf9" prot="public">
+          <name>getLobbyList</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa8a8abb9579a7d020ae20c559430535c5" prot="public">
+          <name>getLobbyInfo</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa5cb9e6b9044f97013acfdd4dda85f3d2" prot="public">
+          <name>ClientTryConnect</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa0d27e55619314719d0a4790ecfb052c4" prot="public">
+          <name>AskDataCreationLobby</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa0ccc9c29f1098730a0aa896a5e4f57c5" prot="public">
+          <name>AskDataListLobby</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faac0f13ad3401b8f9e1cf65d4561e6564e" prot="public">
+          <name>LobbyJoinRequested</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa3febe25fe188e20a16a80212c3c90c5e" prot="public">
+          <name>PlayerJoinedLobby</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa97d438763d88a428fb2e27b75387cfb1" prot="public">
+          <name>BackToMenu</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa319e0eae679d99ca58028f1fc0b643ad" prot="public">
+          <name>SaveSkin</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa16a6cc00425f98c7f758c2fa93f3e886" prot="public">
+          <name>PlayerReady</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa0b9cb28042fc15148e77ed629823c0de" prot="public">
+          <name>LobbyPlayerReady</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa7c844e372781f824b31b19f122db6537" prot="public">
+          <name>HeartBeat</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faaf491c79936f564e7f3a68f0029a92de3" prot="public">
+          <name>FFTStart</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faac15f438af153fdc53967c64d36131457" prot="public">
+          <name>WavDataSent</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faadc7678dba79fc1d1634b8fa11b08f8a2" prot="public">
+          <name>WavDataRequested</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa61a8f2c02eb6f3b8fd7ec8e56090f764" prot="public">
+          <name>WavDataAsked</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa0f0868ed6b0b1b885b203d3c27fa54e8" prot="public">
+          <name>TCPInit</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa2871ef39c3056ad7895ae278e92e037b" prot="public">
+          <name>UDPInit</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa61e837e5041f460268503b5549f3e8f2" prot="public">
+          <name>FFTEnd</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faa43b6021b7f66933a7fc429a9e92c2fde" prot="public">
+          <name>FFTPlay</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Event_8hpp_1a2628ea8d12e8b2563c32f05dc7fff6faaa8dc6ce9436252aac1511b62995f0cb9" prot="public">
+          <name>AskGameSceneLoad</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="Event_8hpp_source" kindref="compound">Event.hpp</ref> defines the event system used for communication between systems.</para>
+<para>Events represent things happening in the game, like player actions or state changes. Systems can subscribe to event types to be notified when they occur.</para>
+<para>Usage:<itemizedlist>
+<listitem><para>Define events as an enum of event types.</para>
+</listitem><listitem><para>Create <ref refid="structEvent" kindref="compound">Event</ref> struct with type and data.</para>
+</listitem><listitem><para>Fire events on the <ref refid="classEventBus" kindref="compound">EventBus</ref>.</para>
+</listitem><listitem><para>Systems subscribe to event types.</para>
+</listitem><listitem><para><ref refid="classEventBus" kindref="compound">EventBus</ref> invokes all listeners for an event type.</para>
+</listitem></itemizedlist>
+</para>
+<para><ref refid="classEventBus" kindref="compound">EventBus</ref>:<itemizedlist>
+<listitem><para>Holds listeners in a map of vectors by event type.</para>
+</listitem><listitem><para>addListener() subscribes a listener function.</para>
+</listitem><listitem><para>fireEvent() invokes all listeners for that event type.</para>
+</listitem></itemizedlist>
+</para>
+<para>Events:<itemizedlist>
+<listitem><para>type: The event type enum.</para>
+</listitem><listitem><para>content: Additional text data.</para>
+</listitem><listitem><para>clientID: ID of the client that triggered the event.</para>
+</listitem></itemizedlist>
+</para>
+<para>Listeners:<itemizedlist>
+<listitem><para>std::function callback invoked when an event fires.</para>
+</listitem></itemizedlist>
+</para>
+<para>This allows decoupled communication between systems. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Event.hpp" line="45" column="1" bodyfile="include/Event.hpp" bodystart="45" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="Event_8hpp_1a7969d9b5dff32221b86d4d29124e5318" prot="public" static="no">
+        <type>std::function&lt; void(const <ref refid="structEvent" kindref="compound">Event</ref> &amp;)&gt;</type>
+        <definition>using Listener =  std::function&lt;void(const Event &amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>Listener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Event.hpp" line="190" column="1" bodyfile="include/Event.hpp" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="Event_8hpp_1ae7dcd9f79a0c5e61f06236c238911ad3" prot="public" static="no" mutable="no">
+        <type>const std::unordered_map&lt; std::string, EventType &gt;</type>
+        <definition>const std::unordered_map&lt;std::string, EventType&gt; eventIdentifierMap</definition>
+        <argsstring></argsstring>
+        <name>eventIdentifierMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Event.hpp" line="116" column="26" bodyfile="include/Event.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="Event_8hpp_1adcb92cd1192a3e7276ccbf1d68152975" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>EventType</type>
+        <definition>EventType parseEventType</definition>
+        <argsstring>(const std::string &amp;eventIdentifier)</argsstring>
+        <name>parseEventType</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>eventIdentifier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Event.cpp</para>
+<para>This file contains the implementation for parsing event types from string identifiers. It defines a function <computeroutput>parseEventType</computeroutput> which maps string identifiers to their corresponding event types as defined in the EventType enumeration.</para>
+<para>Functions:</para>
+<para><itemizedlist>
+<listitem><para>parseEventType(const std::string&amp; eventIdentifier) This function takes a string identifier as an argument and returns the corresponding EventType enumeration value. It makes use of the <computeroutput>eventIdentifierMap</computeroutput> to look up the corresponding event type. If the identifier is not found in the map, it will throw an exception.</para>
+</listitem></itemizedlist>
+</para>
+<para>Dependencies:</para>
+<para><itemizedlist>
+<listitem><para>&quot;Event.hpp&quot; for EventType enumeration and eventIdentifierMap declaration.</para>
+</listitem><listitem><para>&lt;string&gt; for std::string. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Event.hpp" line="208" column="11" bodyfile="src/Event.cpp" bodystart="32" bodyend="34" declfile="include/Event.hpp" declline="208" declcolumn="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Rtype</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>Event</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EVENT_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EVENT_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;netinet/in.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>EventType<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>LocalPlayerMoved,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerAdded,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerDied,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>ItemPicked,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerJoined,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerLeft,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerMoved,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerFired,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerHit,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerRespawned,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerScored,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerWon,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerLost,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerDisconnected,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerReconnected,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerRejoined,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerLeftLobby,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerKicked,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerBanned,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerUnbanned,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>EndOfSong,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>playerEndOfSong,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>playerEndScore,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//MENU_EVENT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>IndexMoved,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>GameStarted,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>GameEnded,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>GamePaused,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>GameResumed,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>GameRestarted,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>GameExited,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>LobbyCreated,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>LobbyJoined,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>LobbyLeft,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>AskLobbyLeft,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>LobbyKicked,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>LobbyBanned,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>LobbyUnbanned,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>AskLobbyDestroyed,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>LobbyDestroyed,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>LobbyUpdated,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>LobbyMessageSent,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>LobbySelectionCreated,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>skinButtonClicled,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>SkinSelected,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>getLobbyList,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>getLobbyInfo,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>ClientTryConnect,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>AskDataCreationLobby,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>AskDataListLobby,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>LobbyJoinRequested,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerJoinedLobby,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>BackToMenu,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>SaveSkin,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>PlayerReady,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>LobbyPlayerReady,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>HeartBeat,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>FFTStart,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//music<sp/>transfer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>WavDataSent,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>WavDataRequested,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>WavDataAsked,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>TCPInit,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>UDPInit,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>FFTEnd,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>FFTPlay,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>AskGameSceneLoad</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>more<sp/>event<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::unordered_map&lt;std::string,<sp/>EventType&gt;<sp/>eventIdentifierMap<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PD&quot;</highlight><highlight class="normal">,<sp/>PlayerDied},</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PA&quot;</highlight><highlight class="normal">,<sp/>PlayerAdded},</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;IP&quot;</highlight><highlight class="normal">,<sp/>ItemPicked},</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PJ&quot;</highlight><highlight class="normal">,<sp/>PlayerJoined},</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PL&quot;</highlight><highlight class="normal">,<sp/>PlayerLeft},</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PM&quot;</highlight><highlight class="normal">,<sp/>PlayerMoved},</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PF&quot;</highlight><highlight class="normal">,<sp/>PlayerFired},</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PH&quot;</highlight><highlight class="normal">,<sp/>PlayerHit},</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PR&quot;</highlight><highlight class="normal">,<sp/>PlayerRespawned},</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PS&quot;</highlight><highlight class="normal">,<sp/>PlayerScored},</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PW&quot;</highlight><highlight class="normal">,<sp/>PlayerWon},</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PL&quot;</highlight><highlight class="normal">,<sp/>PlayerLost},</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PDC&quot;</highlight><highlight class="normal">,<sp/>PlayerDisconnected},</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PRC&quot;</highlight><highlight class="normal">,<sp/>PlayerReconnected},</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PRJ&quot;</highlight><highlight class="normal">,<sp/>PlayerRejoined},</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PK&quot;</highlight><highlight class="normal">,<sp/>PlayerKicked},</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PB&quot;</highlight><highlight class="normal">,<sp/>PlayerBanned},</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PU&quot;</highlight><highlight class="normal">,<sp/>PlayerUnbanned},</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;EOS&quot;</highlight><highlight class="normal">,<sp/>EndOfSong},</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PEOS&quot;</highlight><highlight class="normal">,<sp/>playerEndOfSong},</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PES&quot;</highlight><highlight class="normal">,<sp/>playerEndScore},</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//MENU_EVENT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;IM&quot;</highlight><highlight class="normal">,<sp/>IndexMoved},</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;GS&quot;</highlight><highlight class="normal">,<sp/>GameStarted},</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;FFT&quot;</highlight><highlight class="normal">,<sp/>FFTStart},</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;GE&quot;</highlight><highlight class="normal">,<sp/>GameEnded},</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;GP&quot;</highlight><highlight class="normal">,<sp/>GamePaused},</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;GR&quot;</highlight><highlight class="normal">,<sp/>GameResumed},</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;GRS&quot;</highlight><highlight class="normal">,<sp/>GameRestarted},</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;GX&quot;</highlight><highlight class="normal">,<sp/>GameExited},</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;ADCL&quot;</highlight><highlight class="normal">,<sp/>AskDataCreationLobby},</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;ADLL&quot;</highlight><highlight class="normal">,<sp/>AskDataListLobby},</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;LC&quot;</highlight><highlight class="normal">,<sp/>LobbyCreated},</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;LJ&quot;</highlight><highlight class="normal">,<sp/>LobbyJoined},</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;LL&quot;</highlight><highlight class="normal">,<sp/>LobbyLeft},</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PLL&quot;</highlight><highlight class="normal">,<sp/>PlayerLeftLobby},</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;ALL&quot;</highlight><highlight class="normal">,<sp/>AskLobbyLeft},</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;ALD&quot;</highlight><highlight class="normal">,<sp/>AskLobbyDestroyed},</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;LK&quot;</highlight><highlight class="normal">,<sp/>LobbyKicked},</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;LB&quot;</highlight><highlight class="normal">,<sp/>LobbyBanned},</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;LU&quot;</highlight><highlight class="normal">,<sp/>LobbyUnbanned},</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;LD&quot;</highlight><highlight class="normal">,<sp/>LobbyDestroyed},</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;LU&quot;</highlight><highlight class="normal">,<sp/>LobbyUpdated},</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;LMS&quot;</highlight><highlight class="normal">,<sp/>LobbyMessageSent},</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;LSC&quot;</highlight><highlight class="normal">,<sp/>LobbySelectionCreated},</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;GLL&quot;</highlight><highlight class="normal">,<sp/>getLobbyList},</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;GLI&quot;</highlight><highlight class="normal">,<sp/>getLobbyInfo},</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;CTC&quot;</highlight><highlight class="normal">,<sp/>ClientTryConnect},</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;LJR&quot;</highlight><highlight class="normal">,<sp/>LobbyJoinRequested},</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;BTM&quot;</highlight><highlight class="normal">,<sp/>BackToMenu},</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PLR&quot;</highlight><highlight class="normal">,<sp/>PlayerReady},</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;PJL&quot;</highlight><highlight class="normal">,<sp/>PlayerJoinedLobby},</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;LPR&quot;</highlight><highlight class="normal">,<sp/>LobbyPlayerReady},</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;HB&quot;</highlight><highlight class="normal">,<sp/>HeartBeat},</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//music<sp/>transfer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;WDS&quot;</highlight><highlight class="normal">,<sp/>WavDataSent},</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;WDR&quot;</highlight><highlight class="normal">,<sp/>WavDataRequested},</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;WDA&quot;</highlight><highlight class="normal">,<sp/>WavDataAsked},</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;TCP&quot;</highlight><highlight class="normal">,<sp/>TCPInit},</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;UDP&quot;</highlight><highlight class="normal">,<sp/>UDPInit}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="179" refid="structEvent" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structEvent" kindref="compound">Event</ref><sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>EventType<sp/>type;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>content;<sp/></highlight><highlight class="comment">//<sp/>event-specific<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>clientID;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;uint8_t&gt;<sp/>wavData;<sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>this<sp/>line</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>TCPDataSize;<sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>this<sp/>line</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>TCPSocket;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sockaddr_in<sp/>UDPAddr;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>more<sp/>event-specific<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Listener<sp/>=<sp/>std::function&lt;void(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structEvent" kindref="compound">Event</ref><sp/>&amp;)&gt;;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="classEventBus" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classEventBus" kindref="compound">EventBus</ref><sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unordered_map&lt;EventType,<sp/>std::vector&lt;Listener&gt;&gt;<sp/>listeners;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>addListener(EventType<sp/>type,<sp/>Listener<sp/>listener)<sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>listeners[type].push_back(listener);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fireEvent(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structEvent" kindref="compound">Event</ref><sp/>&amp;event)<sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;listener:<sp/>listeners[event.type])<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>listener(event);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal">EventType<sp/>parseEventType(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;eventIdentifier);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!EVENT_HPP_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/Event.hpp"/>
+  </compounddef>
+</doxygen>

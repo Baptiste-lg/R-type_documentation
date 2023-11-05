@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structlobbyInfo" kind="struct" language="C++" prot="public">
+    <compoundname>lobbyInfo</compoundname>
+    <includes refid="MenuSystem_8hpp" local="no">MenuSystem.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlobbyInfo_1ac5434b12669bc3df3832ac0a24d3282d" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string lobbyInfo::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/MenuSystem.hpp" line="45" column="17" bodyfile="include/System/MenuSystem.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlobbyInfo_1a6d6776a6fdfc9d988483ed7adc1f61dd" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string lobbyInfo::songName</definition>
+        <argsstring></argsstring>
+        <name>songName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/MenuSystem.hpp" line="46" column="17" bodyfile="include/System/MenuSystem.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlobbyInfo_1aaa608bdd393a8c676a9ba83300c552eb" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string lobbyInfo::artistName</definition>
+        <argsstring></argsstring>
+        <name>artistName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/MenuSystem.hpp" line="47" column="17" bodyfile="include/System/MenuSystem.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlobbyInfo_1a64fc8eb4048eb6da49f9142509f3f5b1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int lobbyInfo::nbPlayer</definition>
+        <argsstring></argsstring>
+        <name>nbPlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/MenuSystem.hpp" line="48" column="9" bodyfile="include/System/MenuSystem.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlobbyInfo_1acbc6c9cd60a2de9c5326b5c0eb4593c5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int lobbyInfo::nbPlayerReady</definition>
+        <argsstring></argsstring>
+        <name>nbPlayerReady</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/MenuSystem.hpp" line="49" column="9" bodyfile="include/System/MenuSystem.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlobbyInfo_1ad3f9788682de25a49b649642bc89ec9c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int lobbyInfo::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/MenuSystem.hpp" line="50" column="9" bodyfile="include/System/MenuSystem.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classMenuSystem" kindref="compound">MenuSystem</ref> handles the game menu logic and UI.</para>
+<para>It loads menu assets and database. Spawns UI entities like buttons, panels, and backgrounds. Handles menu navigation and button callbacks. Triggers events on button clicks and menu actions. Transitions between menu screens.</para>
+<para>Usage:<itemizedlist>
+<listitem><para>Call InitializeMainMenu() and InitializeLobby() to set up menus.</para>
+</listitem><listitem><para>Implement button click handlers.</para>
+</listitem><listitem><para>Transition menus by setting <ref refid="structState" kindref="compound">State</ref> component&apos;s state enum.</para>
+</listitem></itemizedlist>
+</para>
+<para>Parameters:<itemizedlist>
+<listitem><para>registry: Reference to ECS registry.</para>
+</listitem><listitem><para>assetManager: Reference to asset manager.</para>
+</listitem></itemizedlist>
+</para>
+<para>Components used:<itemizedlist>
+<listitem><para><ref refid="structState" kindref="compound">State</ref>: Tracks current menu state.</para>
+</listitem><listitem><para><ref refid="structPosition" kindref="compound">Position</ref>: Used to position menu entities.</para>
+</listitem></itemizedlist>
+</para>
+<para>Events:<itemizedlist>
+<listitem><para>IndexMoved: Navigates between menu items.</para>
+</listitem><listitem><para><ref refid="classButton" kindref="compound">Button</ref> click events: Triggered by buttons.</para>
+</listitem><listitem><para><ref refid="structState" kindref="compound">State</ref> change events: Change menu screens. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="include/System/MenuSystem.hpp" line="44" column="1" bodyfile="include/System/MenuSystem.hpp" bodystart="44" bodyend="51"/>
+    <listofallmembers>
+      <member refid="structlobbyInfo_1aaa608bdd393a8c676a9ba83300c552eb" prot="public" virt="non-virtual"><scope>lobbyInfo</scope><name>artistName</name></member>
+      <member refid="structlobbyInfo_1ad3f9788682de25a49b649642bc89ec9c" prot="public" virt="non-virtual"><scope>lobbyInfo</scope><name>id</name></member>
+      <member refid="structlobbyInfo_1ac5434b12669bc3df3832ac0a24d3282d" prot="public" virt="non-virtual"><scope>lobbyInfo</scope><name>name</name></member>
+      <member refid="structlobbyInfo_1a64fc8eb4048eb6da49f9142509f3f5b1" prot="public" virt="non-virtual"><scope>lobbyInfo</scope><name>nbPlayer</name></member>
+      <member refid="structlobbyInfo_1acbc6c9cd60a2de9c5326b5c0eb4593c5" prot="public" virt="non-virtual"><scope>lobbyInfo</scope><name>nbPlayerReady</name></member>
+      <member refid="structlobbyInfo_1a6d6776a6fdfc9d988483ed7adc1f61dd" prot="public" virt="non-virtual"><scope>lobbyInfo</scope><name>songName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

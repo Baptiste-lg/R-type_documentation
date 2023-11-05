@@ -1,3 +1,49 @@
+/*
+** EPITECH PROJECT, 2023
+** Rtype
+** File description:
+** client.cpp
+*/
+
+/**
+* client_tcp_udp.cpp
+*
+* Implements a TCP and UDP client to connect to a server.
+*
+* Methods:
+*
+* - main()
+*   - Starts TCP and UDP clients.
+*
+* - getch()
+*   - Gets character input without echo.
+*
+* - listen_to_server()
+*   - Listens for UDP messages from server.
+*
+* - start_tcp_client()
+*   - Connects to server via TCP.
+*
+* - start_udp_client()
+*   - Connects to server via UDP.
+*   - Sends player movement messages.
+*   - Spawns listen thread.
+*
+* Constants:
+*
+* - SERVER_IP
+*   - IP address of server.
+*
+* - TCP_PORT
+*   - TCP port of server.
+*
+* - UDP_PORT
+*   - UDP port of server.
+*
+* - BUFFER_SIZE
+*   - Network buffer size.
+*/
+
 #include <iostream>
 #include <cstring>
 #include <arpa/inet.h>
@@ -21,9 +67,7 @@ void listen_to_server(int sockfd) {
             perror("recvfrom");
             continue; // You might decide to handle this differently.
         }
-
         buffer[recvLen] = '\0';
-        std::cout << "Received: " << buffer << std::endl;
     }
 }
 

@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classAssetManager" kind="class" language="C++" prot="public">
+    <compoundname>AssetManager</compoundname>
+    <includes refid="TextureManager_8hpp" local="no">TextureManager.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classAssetManager_1a4602f08ea26e30dd391bad0560edce7d" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, sf::Texture &gt;</type>
+        <definition>std::unordered_map&lt;std::string, sf::Texture&gt; AssetManager::textures</definition>
+        <argsstring></argsstring>
+        <name>textures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="155" column="24" bodyfile="include/TextureManager.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAssetManager_1aae30bd0d80b436d69e1cf8456cc92d8f" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, int &gt;</type>
+        <definition>std::unordered_map&lt;std::string, int&gt; AssetManager::textureRefCount</definition>
+        <argsstring></argsstring>
+        <name>textureRefCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="156" column="24" bodyfile="include/TextureManager.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAssetManager_1af6a454e6da3ec9d480002db8ba7b0661" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, sf::SoundBuffer &gt;</type>
+        <definition>std::unordered_map&lt;std::string, sf::SoundBuffer&gt; AssetManager::sounds</definition>
+        <argsstring></argsstring>
+        <name>sounds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="158" column="24" bodyfile="include/TextureManager.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAssetManager_1aa3fdbd68e47458d0eda75292dbda3cb3" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, int &gt;</type>
+        <definition>std::unordered_map&lt;std::string, int&gt; AssetManager::soundRefCount</definition>
+        <argsstring></argsstring>
+        <name>soundRefCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="159" column="24" bodyfile="include/TextureManager.hpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAssetManager_1a5ee8489fa98722f1356c4a9a385ec4f9" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, sf::Font &gt;</type>
+        <definition>std::unordered_map&lt;std::string, sf::Font&gt; AssetManager::fonts</definition>
+        <argsstring></argsstring>
+        <name>fonts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="161" column="24" bodyfile="include/TextureManager.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAssetManager_1a2cddb24b70971ad9fe27aab321d654dd" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, int &gt;</type>
+        <definition>std::unordered_map&lt;std::string, int&gt; AssetManager::fontRefCount</definition>
+        <argsstring></argsstring>
+        <name>fontRefCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="162" column="24" bodyfile="include/TextureManager.hpp" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classAssetManager_1a6101768466fa7a6fd7d63e6d84fd139f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classAssetManager" kindref="compound">AssetManager</ref> &amp;</type>
+        <definition>static AssetManager&amp; AssetManager::Instance</definition>
+        <argsstring>()</argsstring>
+        <name>Instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="51" column="25" bodyfile="include/TextureManager.hpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAssetManager_1a0f18587694d5c9c42e4132f5e9cf2c3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>sf::Texture &amp;</type>
+        <definition>sf::Texture&amp; AssetManager::GetTexture</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>GetTexture</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="56" column="17" bodyfile="include/TextureManager.hpp" bodystart="56" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssetManager_1a7d21ac53a4187a7dcc7de54efbd08f4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssetManager::LoadTexture</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;filename)</argsstring>
+        <name>LoadTexture</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="66" column="10" bodyfile="include/TextureManager.hpp" bodystart="66" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssetManager_1ab915d185257218171bb2960942477ad1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssetManager::UnloadTexture</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>UnloadTexture</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="76" column="10" bodyfile="include/TextureManager.hpp" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssetManager_1a666f8641bfa2ef97746ba59daafaadac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssetManager::UnloadAllTextures</definition>
+        <argsstring>()</argsstring>
+        <name>UnloadAllTextures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="81" column="10" bodyfile="include/TextureManager.hpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssetManager_1a650a14e5e25fcf0062e742948121daf9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>sf::SoundBuffer &amp;</type>
+        <definition>sf::SoundBuffer&amp; AssetManager::GetSound</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>GetSound</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="86" column="21" bodyfile="include/TextureManager.hpp" bodystart="86" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssetManager_1a6096a299d1a3d5f2075f2eed95dcb726" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssetManager::LoadSound</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;filename)</argsstring>
+        <name>LoadSound</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="96" column="10" bodyfile="include/TextureManager.hpp" bodystart="96" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssetManager_1ae357c1ef41ea94507f9a569e41f66b22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssetManager::UnloadSound</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>UnloadSound</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="108" column="10" bodyfile="include/TextureManager.hpp" bodystart="108" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssetManager_1ae8bc39571a03fde82cd6effcbd58112d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssetManager::UnloadAllSounds</definition>
+        <argsstring>()</argsstring>
+        <name>UnloadAllSounds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="114" column="10" bodyfile="include/TextureManager.hpp" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssetManager_1a3b4366a1dbaa9bbe4e9b62cc3772c3bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssetManager::PreloadTextures</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;textureNames)</argsstring>
+        <name>PreloadTextures</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>textureNames</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="119" column="10" bodyfile="include/TextureManager.hpp" bodystart="119" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssetManager_1a65c29fcd5643571f388a07fde32fc1c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssetManager::PreloadSounds</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;soundNames)</argsstring>
+        <name>PreloadSounds</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>soundNames</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="125" column="10" bodyfile="include/TextureManager.hpp" bodystart="125" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssetManager_1ae1bf23b1f38eda9fe9319fad7ce184cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>sf::Font &amp;</type>
+        <definition>sf::Font&amp; AssetManager::GetFont</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>GetFont</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="129" column="14" bodyfile="include/TextureManager.hpp" bodystart="129" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssetManager_1af1bce7dfa00f081793065e7b3fa24f7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssetManager::LoadFont</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;filename)</argsstring>
+        <name>LoadFont</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="139" column="10" bodyfile="include/TextureManager.hpp" bodystart="139" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssetManager_1a2b5ee99fd1baf0fe48ad6de8a4cbbed7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unordered_map&lt; std::string, sf::Texture &gt; &amp;</type>
+        <definition>std::unordered_map&lt;std::string, sf::Texture&gt;&amp; AssetManager::getTextures</definition>
+        <argsstring>()</argsstring>
+        <name>getTextures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="149" column="24" bodyfile="include/TextureManager.hpp" bodystart="149" bodyend="151"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classAssetManager_1a48938b146fa7ad19270a11be5363472a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AssetManager::AssetManager</definition>
+        <argsstring>()=default</argsstring>
+        <name>AssetManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TextureManager.hpp" line="154" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="TextureManager_8hpp_source" kindref="compound">TextureManager.hpp</ref> handles loading and managing game assets.</para>
+<para>Loads textures, sounds, fonts to be used by other game systems. Textures and sounds are reference counted and unloaded when no longer used.</para>
+<para>Usage:<itemizedlist>
+<listitem><para>GetTexture(), GetSound(), GetFont() to retrieve assets.</para>
+</listitem><listitem><para>LoadTexture(), LoadSound(), LoadFont() to load from files.</para>
+</listitem><listitem><para>UnloadTexture(), UnloadSound() to decrement ref count.</para>
+</listitem><listitem><para>PreloadTextures(), PreloadSounds() to load ahead of time.</para>
+</listitem></itemizedlist>
+</para>
+<para>Methods:<itemizedlist>
+<listitem><para>Load/Get methods to add and retrieve assets.</para>
+</listitem><listitem><para>Unload methods decrement ref count and remove.</para>
+</listitem><listitem><para>Preload methods load assets ahead of first use.</para>
+</listitem></itemizedlist>
+</para>
+<para>Members:<itemizedlist>
+<listitem><para>textures: Map of texture name to SFML texture.</para>
+</listitem><listitem><para>sounds: Map of sound name to SFML sound buffer.</para>
+</listitem><listitem><para>fonts: Map of font name to SFML font.</para>
+</listitem><listitem><para>refCount maps: Reference count for each asset.</para>
+</listitem></itemizedlist>
+</para>
+<para>Singleton pattern:<itemizedlist>
+<listitem><para>Private constructor, public static Instance() method.</para>
+</listitem><listitem><para>Ensures only one TextureManager instance. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="include/TextureManager.hpp" line="49" column="1" bodyfile="include/TextureManager.hpp" bodystart="49" bodyend="163"/>
+    <listofallmembers>
+      <member refid="classAssetManager_1a48938b146fa7ad19270a11be5363472a" prot="private" virt="non-virtual"><scope>AssetManager</scope><name>AssetManager</name></member>
+      <member refid="classAssetManager_1a2cddb24b70971ad9fe27aab321d654dd" prot="private" virt="non-virtual"><scope>AssetManager</scope><name>fontRefCount</name></member>
+      <member refid="classAssetManager_1a5ee8489fa98722f1356c4a9a385ec4f9" prot="private" virt="non-virtual"><scope>AssetManager</scope><name>fonts</name></member>
+      <member refid="classAssetManager_1ae1bf23b1f38eda9fe9319fad7ce184cd" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>GetFont</name></member>
+      <member refid="classAssetManager_1a650a14e5e25fcf0062e742948121daf9" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>GetSound</name></member>
+      <member refid="classAssetManager_1a0f18587694d5c9c42e4132f5e9cf2c3a" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>GetTexture</name></member>
+      <member refid="classAssetManager_1a2b5ee99fd1baf0fe48ad6de8a4cbbed7" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>getTextures</name></member>
+      <member refid="classAssetManager_1a6101768466fa7a6fd7d63e6d84fd139f" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>Instance</name></member>
+      <member refid="classAssetManager_1af1bce7dfa00f081793065e7b3fa24f7d" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>LoadFont</name></member>
+      <member refid="classAssetManager_1a6096a299d1a3d5f2075f2eed95dcb726" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>LoadSound</name></member>
+      <member refid="classAssetManager_1a7d21ac53a4187a7dcc7de54efbd08f4c" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>LoadTexture</name></member>
+      <member refid="classAssetManager_1a65c29fcd5643571f388a07fde32fc1c0" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>PreloadSounds</name></member>
+      <member refid="classAssetManager_1a3b4366a1dbaa9bbe4e9b62cc3772c3bc" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>PreloadTextures</name></member>
+      <member refid="classAssetManager_1aa3fdbd68e47458d0eda75292dbda3cb3" prot="private" virt="non-virtual"><scope>AssetManager</scope><name>soundRefCount</name></member>
+      <member refid="classAssetManager_1af6a454e6da3ec9d480002db8ba7b0661" prot="private" virt="non-virtual"><scope>AssetManager</scope><name>sounds</name></member>
+      <member refid="classAssetManager_1aae30bd0d80b436d69e1cf8456cc92d8f" prot="private" virt="non-virtual"><scope>AssetManager</scope><name>textureRefCount</name></member>
+      <member refid="classAssetManager_1a4602f08ea26e30dd391bad0560edce7d" prot="private" virt="non-virtual"><scope>AssetManager</scope><name>textures</name></member>
+      <member refid="classAssetManager_1ae8bc39571a03fde82cd6effcbd58112d" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>UnloadAllSounds</name></member>
+      <member refid="classAssetManager_1a666f8641bfa2ef97746ba59daafaadac" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>UnloadAllTextures</name></member>
+      <member refid="classAssetManager_1ae357c1ef41ea94507f9a569e41f66b22" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>UnloadSound</name></member>
+      <member refid="classAssetManager_1ab915d185257218171bb2960942477ad1" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>UnloadTexture</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structthemeData" kind="struct" language="C++" prot="public">
+    <compoundname>themeData</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structthemeData_1a1f01f05307142c1109574efed5c7c719" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int themeData::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="78" column="9" bodyfile="include/GUI/GUIConfig.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structthemeData_1ada012ea828b375f0178f0c30d880d26a" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string themeData::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="79" column="12" bodyfile="include/GUI/GUIConfig.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/GUI/GUIConfig.hpp" line="77" column="1" bodyfile="include/GUI/GUIConfig.hpp" bodystart="77" bodyend="80"/>
+    <listofallmembers>
+      <member refid="structthemeData_1a1f01f05307142c1109574efed5c7c719" prot="public" virt="non-virtual"><scope>themeData</scope><name>id</name></member>
+      <member refid="structthemeData_1ada012ea828b375f0178f0c30d880d26a" prot="public" virt="non-virtual"><scope>themeData</scope><name>name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

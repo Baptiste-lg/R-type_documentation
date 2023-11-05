@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structMyVector2" kind="struct" language="C++" prot="public">
+    <compoundname>MyVector2</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structMyVector2_1a385cb00476af145f85031ea60c2a48b4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MyVector2::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="126" column="11" bodyfile="include/Component.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMyVector2_1a39d67d834fb07df62f67b964658ebb98" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MyVector2::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="126" column="13" bodyfile="include/Component.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Component.hpp" line="125" column="1" bodyfile="include/Component.hpp" bodystart="125" bodyend="127"/>
+    <listofallmembers>
+      <member refid="structMyVector2_1a385cb00476af145f85031ea60c2a48b4" prot="public" virt="non-virtual"><scope>MyVector2</scope><name>x</name></member>
+      <member refid="structMyVector2_1a39d67d834fb07df62f67b964658ebb98" prot="public" virt="non-virtual"><scope>MyVector2</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

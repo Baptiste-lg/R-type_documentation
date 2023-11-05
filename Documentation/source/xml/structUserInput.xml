@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structUserInput" kind="struct" language="C++" prot="public">
+    <compoundname>UserInput</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structUserInput_1a0b3e93417c76bb3c8a124594f3994cd7" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char UserInput::input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="302" column="10" bodyfile="include/Component.hpp" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Component.hpp" line="301" column="1" bodyfile="include/Component.hpp" bodystart="301" bodyend="303"/>
+    <listofallmembers>
+      <member refid="structUserInput_1a0b3e93417c76bb3c8a124594f3994cd7" prot="public" virt="non-virtual"><scope>UserInput</scope><name>input</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

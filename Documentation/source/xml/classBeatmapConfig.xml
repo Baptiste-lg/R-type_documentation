@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classBeatmapConfig" kind="class" language="C++" prot="public">
+    <compoundname>BeatmapConfig</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classBeatmapConfig_1ae385c998803f6af630ec45fe5b21b31d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BeatmapConfig::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Beatmap/BeatmapConfig.hpp" line="84" column="13" bodyfile="include/Beatmap/BeatmapConfig.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classBeatmapConfig_1a20aa8aa2f65cf2cb02eeb07d5055a97e" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string BeatmapConfig::Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Beatmap/BeatmapConfig.hpp" line="90" column="16" bodyfile="include/Beatmap/BeatmapConfig.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBeatmapConfig_1a185a09bf9898a04bee5f787b4367a4ce" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string BeatmapConfig::Artist</definition>
+        <argsstring></argsstring>
+        <name>Artist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Beatmap/BeatmapConfig.hpp" line="91" column="16" bodyfile="include/Beatmap/BeatmapConfig.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBeatmapConfig_1ad11c820533869c52812c24c4f6e0f8b3" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string BeatmapConfig::FolderPath</definition>
+        <argsstring></argsstring>
+        <name>FolderPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Beatmap/BeatmapConfig.hpp" line="92" column="16" bodyfile="include/Beatmap/BeatmapConfig.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBeatmapConfig_1a3cc73e66fc4954ebbcbf858695c08199" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BeatmapConfig::Difficulty</definition>
+        <argsstring></argsstring>
+        <name>Difficulty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Beatmap/BeatmapConfig.hpp" line="93" column="13" bodyfile="include/Beatmap/BeatmapConfig.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBeatmapConfig_1afcc15cf3ac12e50bfb371bbbb005b8c4" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BeatmapConfig::BPM</definition>
+        <argsstring></argsstring>
+        <name>BPM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Beatmap/BeatmapConfig.hpp" line="94" column="13" bodyfile="include/Beatmap/BeatmapConfig.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBeatmapConfig_1a0ee1dfedb913519935ddd309ffc7b491" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BeatmapConfig::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Beatmap/BeatmapConfig.hpp" line="95" column="13" bodyfile="include/Beatmap/BeatmapConfig.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classBeatmapConfig_1aa6d9585b250f4c54583c1aea961abf71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BeatmapConfig::BeatmapConfig</definition>
+        <argsstring>()</argsstring>
+        <name>BeatmapConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BeatmapConfig.cpp</para>
+<para>This file implements the <ref refid="classBeatmapConfig" kindref="compound">BeatmapConfig</ref> class which holds configuration data for a beatmap.</para>
+<para>Methods:</para>
+<para><itemizedlist>
+<listitem><para><ref refid="classBeatmapConfig_1aa6d9585b250f4c54583c1aea961abf71" kindref="member">BeatmapConfig()</ref> Default constructor.</para>
+</listitem><listitem><para>~BeatmapConfig() Destructor.</para>
+</listitem><listitem><para>load() Loads configuration data from a libconfig Setting.</para>
+</listitem><listitem><para>print() Prints the configuration data to stdout.</para>
+</listitem></itemizedlist>
+</para>
+<para>Members:</para>
+<para><itemizedlist>
+<listitem><para>Name Name of the beatmap.</para>
+</listitem><listitem><para>Artist Artist of the song.</para>
+</listitem><listitem><para>FolderPath Path to audio files.</para>
+</listitem><listitem><para>Difficulty Difficulty level.</para>
+</listitem><listitem><para>BPM Beats per minute of the song.</para>
+</listitem><listitem><para>id <ref refid="classBeatmap" kindref="compound">Beatmap</ref> ID.</para>
+</listitem><listitem><para>offset Audio offset. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Beatmap/BeatmapConfig.hpp" line="80" column="9" bodyfile="src/Beatmap/BeatmapConfig.cpp" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapConfig_1a6c14595b3a57a9a7d2777c2a681a8ee4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BeatmapConfig::~BeatmapConfig</definition>
+        <argsstring>()</argsstring>
+        <name>~BeatmapConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Beatmap/BeatmapConfig.hpp" line="81" column="9" bodyfile="src/Beatmap/BeatmapConfig.cpp" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapConfig_1a8432936918e5cc57d6ca65fdbda038e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BeatmapConfig::load</definition>
+        <argsstring>(const libconfig::Setting &amp;beatmapSetting)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const libconfig::Setting &amp;</type>
+          <declname>beatmapSetting</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Beatmap/BeatmapConfig.hpp" line="82" column="14" bodyfile="src/Beatmap/BeatmapConfig.cpp" bodystart="63" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapConfig_1ada3af6790ffe4997ed2b19133080ab06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BeatmapConfig::print</definition>
+        <argsstring>()</argsstring>
+        <name>print</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Beatmap/BeatmapConfig.hpp" line="83" column="14" bodyfile="src/Beatmap/BeatmapConfig.cpp" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapConfig_1a539119d0587ef5bb6d10da477e1a6abb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string BeatmapConfig::getFolderPath</definition>
+        <argsstring>() const</argsstring>
+        <name>getFolderPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Beatmap/BeatmapConfig.hpp" line="85" column="16" bodyfile="include/Beatmap/BeatmapConfig.hpp" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapConfig_1a16a8dd6e234e13bac69eb4660837cc37" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string BeatmapConfig::getName</definition>
+        <argsstring>() const</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Beatmap/BeatmapConfig.hpp" line="86" column="16" bodyfile="include/Beatmap/BeatmapConfig.hpp" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapConfig_1ab0ad82e8e1e54734c6b389a23d613b49" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string BeatmapConfig::getArtist</definition>
+        <argsstring>() const</argsstring>
+        <name>getArtist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Beatmap/BeatmapConfig.hpp" line="87" column="16" bodyfile="include/Beatmap/BeatmapConfig.hpp" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapConfig_1a465511be4a901b8e0fa0a5970e5c6f65" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int BeatmapConfig::getDifficulty</definition>
+        <argsstring>() const</argsstring>
+        <name>getDifficulty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Beatmap/BeatmapConfig.hpp" line="88" column="13" bodyfile="include/Beatmap/BeatmapConfig.hpp" bodystart="88" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Beatmap/BeatmapConfig.hpp" line="78" column="1" bodyfile="include/Beatmap/BeatmapConfig.hpp" bodystart="78" bodyend="98"/>
+    <listofallmembers>
+      <member refid="classBeatmapConfig_1a185a09bf9898a04bee5f787b4367a4ce" prot="protected" virt="non-virtual"><scope>BeatmapConfig</scope><name>Artist</name></member>
+      <member refid="classBeatmapConfig_1aa6d9585b250f4c54583c1aea961abf71" prot="public" virt="non-virtual"><scope>BeatmapConfig</scope><name>BeatmapConfig</name></member>
+      <member refid="classBeatmapConfig_1afcc15cf3ac12e50bfb371bbbb005b8c4" prot="protected" virt="non-virtual"><scope>BeatmapConfig</scope><name>BPM</name></member>
+      <member refid="classBeatmapConfig_1a3cc73e66fc4954ebbcbf858695c08199" prot="protected" virt="non-virtual"><scope>BeatmapConfig</scope><name>Difficulty</name></member>
+      <member refid="classBeatmapConfig_1ad11c820533869c52812c24c4f6e0f8b3" prot="protected" virt="non-virtual"><scope>BeatmapConfig</scope><name>FolderPath</name></member>
+      <member refid="classBeatmapConfig_1ab0ad82e8e1e54734c6b389a23d613b49" prot="public" virt="non-virtual"><scope>BeatmapConfig</scope><name>getArtist</name></member>
+      <member refid="classBeatmapConfig_1a465511be4a901b8e0fa0a5970e5c6f65" prot="public" virt="non-virtual"><scope>BeatmapConfig</scope><name>getDifficulty</name></member>
+      <member refid="classBeatmapConfig_1a539119d0587ef5bb6d10da477e1a6abb" prot="public" virt="non-virtual"><scope>BeatmapConfig</scope><name>getFolderPath</name></member>
+      <member refid="classBeatmapConfig_1a16a8dd6e234e13bac69eb4660837cc37" prot="public" virt="non-virtual"><scope>BeatmapConfig</scope><name>getName</name></member>
+      <member refid="classBeatmapConfig_1ae385c998803f6af630ec45fe5b21b31d" prot="public" virt="non-virtual"><scope>BeatmapConfig</scope><name>id</name></member>
+      <member refid="classBeatmapConfig_1a8432936918e5cc57d6ca65fdbda038e6" prot="public" virt="non-virtual"><scope>BeatmapConfig</scope><name>load</name></member>
+      <member refid="classBeatmapConfig_1a20aa8aa2f65cf2cb02eeb07d5055a97e" prot="protected" virt="non-virtual"><scope>BeatmapConfig</scope><name>Name</name></member>
+      <member refid="classBeatmapConfig_1a0ee1dfedb913519935ddd309ffc7b491" prot="protected" virt="non-virtual"><scope>BeatmapConfig</scope><name>offset</name></member>
+      <member refid="classBeatmapConfig_1ada3af6790ffe4997ed2b19133080ab06" prot="public" virt="non-virtual"><scope>BeatmapConfig</scope><name>print</name></member>
+      <member refid="classBeatmapConfig_1a6c14595b3a57a9a7d2777c2a681a8ee4" prot="public" virt="non-virtual"><scope>BeatmapConfig</scope><name>~BeatmapConfig</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

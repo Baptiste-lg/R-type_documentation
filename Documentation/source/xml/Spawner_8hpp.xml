@@ -1,0 +1,1049 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="Spawner_8hpp" kind="file" language="C++">
+    <compoundname>Spawner.hpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes refid="Registry_8hpp" local="yes">Registry.hpp</includes>
+    <includes refid="Component_8hpp" local="yes">Component.hpp</includes>
+    <includes refid="SparseArray_8hpp" local="yes">SparseArray.hpp</includes>
+    <includes refid="Entity_8hpp" local="yes">Entity.hpp</includes>
+    <includes refid="TextureManager_8hpp" local="yes">TextureManager.hpp</includes>
+    <includes refid="Behaviour_8hpp" local="yes">Behaviour.hpp</includes>
+    <includedby refid="ServerMain_8hpp" local="yes">include/ServerMain.hpp</includedby>
+    <includedby refid="FFTSystem_8hpp" local="yes">include/System/FFTSystem.hpp</includedby>
+    <includedby refid="MenuSystem_8hpp" local="yes">include/System/MenuSystem.hpp</includedby>
+    <includedby refid="ClientMain_8cpp" local="yes">src/ClientMain.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
+    <includedby refid="Spawner_8cpp" local="yes">src/Spawner.cpp</includedby>
+    <incdepgraph>
+      <node id="32">
+        <label>valarray</label>
+      </node>
+      <node id="14">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="16">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="47">
+        <label>Behaviour.hpp</label>
+        <link refid="Behaviour_8hpp_source"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>functional</label>
+      </node>
+      <node id="40">
+        <label>queue</label>
+      </node>
+      <node id="27">
+        <label>filesystem</label>
+      </node>
+      <node id="29">
+        <label>Beatmap/BeatmapConfig.hpp</label>
+        <link refid="BeatmapConfig_8hpp_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>GameState.hpp</label>
+        <link refid="GameState_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>Registry.hpp</label>
+        <link refid="Registry_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>cmath</label>
+      </node>
+      <node id="35">
+        <label>numeric</label>
+      </node>
+      <node id="18">
+        <label>string</label>
+      </node>
+      <node id="21">
+        <label>Entity.hpp</label>
+        <link refid="Entity_8hpp_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/Spawner.hpp</label>
+        <link refid="Spawner_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>map</label>
+      </node>
+      <node id="44">
+        <label>unordered_set</label>
+      </node>
+      <node id="38">
+        <label>fftw3.h</label>
+      </node>
+      <node id="6">
+        <label>any</label>
+      </node>
+      <node id="39">
+        <label>ThreadPool.hpp</label>
+        <link refid="ThreadPool_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>condition_variable</label>
+      </node>
+      <node id="13">
+        <label>Event.hpp</label>
+        <link refid="Event_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>tuple</label>
+      </node>
+      <node id="43">
+        <label>future</label>
+      </node>
+      <node id="11">
+        <label>optional</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+      <node id="20">
+        <label>utility</label>
+      </node>
+      <node id="36">
+        <label>array</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="22">
+        <label>cstddef</label>
+      </node>
+      <node id="4">
+        <label>unordered_map</label>
+      </node>
+      <node id="28">
+        <label>Database/Database.hpp</label>
+        <link refid="Database_8hpp_source"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>shared_mutex</label>
+      </node>
+      <node id="12">
+        <label>mutex</label>
+      </node>
+      <node id="9">
+        <label>SparseArray.hpp</label>
+        <link refid="SparseArray_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>chrono</label>
+      </node>
+      <node id="41">
+        <label>thread</label>
+      </node>
+      <node id="23">
+        <label>Component.hpp</label>
+        <link refid="Component_8hpp_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../include/System/ISystem.hpp</label>
+        <link refid="ISystem_8hpp_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>set</label>
+      </node>
+      <node id="25">
+        <label>TextureManager.hpp</label>
+        <link refid="TextureManager_8hpp_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>complex</label>
+      </node>
+      <node id="34">
+        <label>algorithm</label>
+      </node>
+      <node id="24">
+        <label>libconfig.h++</label>
+      </node>
+      <node id="19">
+        <label>memory</label>
+      </node>
+      <node id="5">
+        <label>typeindex</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/ServerMain.hpp</label>
+        <link refid="ServerMain_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>include/Spawner.hpp</label>
+        <link refid="Spawner_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/System/MenuSystem.hpp</label>
+        <link refid="MenuSystem_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>include/System/FFTSystem.hpp</label>
+        <link refid="FFTSystem_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="Spawner_8hpp_1a2334c4bdb23a036d0ca63fcff7ef9a00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void spawnEnemy</definition>
+        <argsstring>(Registry &amp;registry, Behavior behavior, float x, float y, const std::string &amp;textureName, const MyRect &amp;textureRect, const MyVector2 &amp;scale)</argsstring>
+        <name>spawnEnemy</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type><ref refid="structBehavior" kindref="compound">Behavior</ref></type>
+          <declname>behavior</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>textureName</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyRect" kindref="compound">MyRect</ref> &amp;</type>
+          <declname>textureRect</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="structSpawner" kindref="compound">Spawner</ref></para>
+<para>This file contains functions to spawn entities into the registry.</para>
+<para>Functions:</para>
+<para><itemizedlist>
+<listitem><para>spawnEnemy() Spawns an enemy entity.</para>
+</listitem><listitem><para>spawnBackgroundLayer() Spawns a background layer entity.</para>
+</listitem><listitem><para>spawnPlayer() Spawns the player entity.</para>
+</listitem><listitem><para>spawnAnimatedEntity() Spawns an animated entity.</para>
+</listitem><listitem><para>spawnGameConfig() Spawns the game config entity.</para>
+</listitem><listitem><para>spawnThruster() Spawns a thruster entity as a child of the given parent.</para>
+</listitem><listitem><para>spawnNoneLocalPlayer() Spawns a non-local player entity.</para>
+</listitem><listitem><para>spawnServerEntity() Spawns a server entity.</para>
+</listitem><listitem><para>spawnClientEntity() Spawns a client entity.</para>
+</listitem><listitem><para>spawnBeatmapPanel() Spawns a beatmap panel entity.</para>
+</listitem><listitem><para>FFTSpawnEnemy() Spawns an enemy synced to audio <ref refid="structFFT" kindref="compound">FFT</ref>.</para>
+</listitem><listitem><para>spawnButton() Spawns a button entity.</para>
+</listitem><listitem><para>spawnState() Spawns the state entity.</para>
+</listitem><listitem><para>spawnFollowerCover() Spawns a follower cover entity as a child.</para>
+</listitem><listitem><para>spawnFollowerSkin() Spawns a follower skin entity as a child.</para>
+</listitem><listitem><para>spawnFollowerText() Spawns follower text entities as children.</para>
+</listitem><listitem><para>spawnDrawable() Spawns a drawable entity. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="79" column="6" declfile="include/Spawner.hpp" declline="79" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Spawner_8hpp_1afe2aa4002b6736ea7a678bd12b21645b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t spawnBackgroundLayer</definition>
+        <argsstring>(Registry &amp;registry, Behavior behavior, const std::string &amp;textureName, float velocityX, float velocityY, const MyRect &amp;textureRect, const MyVector2 &amp;scale)</argsstring>
+        <name>spawnBackgroundLayer</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type><ref refid="structBehavior" kindref="compound">Behavior</ref></type>
+          <declname>behavior</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>textureName</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>velocityX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>velocityY</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyRect" kindref="compound">MyRect</ref> &amp;</type>
+          <declname>textureRect</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="81" column="10" bodyfile="src/Spawner.cpp" bodystart="100" bodyend="112" declfile="include/Spawner.hpp" declline="81" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="Spawner_8hpp_1a9085dd83cda8ce95f48ff46a20bd46e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t spawnPlayer</definition>
+        <argsstring>(Registry &amp;registry, const MyRect &amp;rect)</argsstring>
+        <name>spawnPlayer</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyRect" kindref="compound">MyRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="83" column="10" declfile="include/Spawner.hpp" declline="83" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="Spawner_8hpp_1a003a983499bb55fe73ef92c22b59d855" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t spawnAnimatedEntity</definition>
+        <argsstring>(Registry &amp;registry, const MyRect &amp;rect, const MyVector2 &amp;scale, const std::string &amp;textureName, float posX, float posY)</argsstring>
+        <name>spawnAnimatedEntity</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyRect" kindref="compound">MyRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>textureName</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="85" column="10" bodyfile="src/Spawner.cpp" bodystart="131" bodyend="145" declfile="include/Spawner.hpp" declline="85" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="Spawner_8hpp_1aa55deaadefdb7fb02964820ec661555f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t spawnGameConfig</definition>
+        <argsstring>(Registry &amp;registry)</argsstring>
+        <name>spawnGameConfig</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="87" column="10" declfile="include/Spawner.hpp" declline="87" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="Spawner_8hpp_1ad7376e4492588e32c2035b007df074f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t spawnThruster</definition>
+        <argsstring>(Registry &amp;registry, entity_t parentEntity)</argsstring>
+        <name>spawnThruster</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>entity_t</type>
+          <declname>parentEntity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="89" column="10" declfile="include/Spawner.hpp" declline="89" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="Spawner_8hpp_1a3afff98a5abaa57642b51ead9e998927" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t spawnNoneLocalPlayer</definition>
+        <argsstring>(Registry &amp;registry, const MyRect &amp;rect)</argsstring>
+        <name>spawnNoneLocalPlayer</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyRect" kindref="compound">MyRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="91" column="10" bodyfile="src/Spawner.cpp" bodystart="168" bodyend="217" declfile="include/Spawner.hpp" declline="91" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="Spawner_8hpp_1a002ee4c9b8ad897097e4d0487f03c72a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t spawnServerEntity</definition>
+        <argsstring>(Registry &amp;registry)</argsstring>
+        <name>spawnServerEntity</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="93" column="10" bodyfile="src/Spawner.cpp" bodystart="156" bodyend="160" declfile="include/Spawner.hpp" declline="93" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="Spawner_8hpp_1a5c11df13ccda012872f488f15e6ca63c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t spawnClientEntity</definition>
+        <argsstring>(Registry &amp;registry)</argsstring>
+        <name>spawnClientEntity</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="95" column="10" bodyfile="src/Spawner.cpp" bodystart="162" bodyend="166" declfile="include/Spawner.hpp" declline="95" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="Spawner_8hpp_1af4d4d1fa47d4efb4d0642ecdc76245a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t spawnBeatmapPanel</definition>
+        <argsstring>(Registry &amp;registry, Database &amp;database, const int &amp;index)</argsstring>
+        <name>spawnBeatmapPanel</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type><ref refid="classDatabase" kindref="compound">Database</ref> &amp;</type>
+          <declname>database</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="97" column="10" bodyfile="src/Spawner.cpp" bodystart="275" bodyend="296" declfile="include/Spawner.hpp" declline="97" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="Spawner_8hpp_1a4f7c5c7b8633696d14157e02591bd39b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t FFTSpawnEnemy</definition>
+        <argsstring>(Registry &amp;registry, const std::string &amp;behavior_id, float x, float y, const std::string &amp;textureName, const MyRect &amp;textureRect, const MyVector2 &amp;scale, int &amp;SyncId)</argsstring>
+        <name>FFTSpawnEnemy</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>behavior_id</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>textureName</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyRect" kindref="compound">MyRect</ref> &amp;</type>
+          <declname>textureRect</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>SyncId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Spawner.cpp</para>
+<para>This file defines various functions to spawn different types of entities into the game. Each function encapsulates the creation of a specific type of entity, setting up its components and properties.</para>
+<para>Functions:</para>
+<para><itemizedlist>
+<listitem><para>FFTSpawnEnemy(<ref refid="classRegistry" kindref="compound">Registry</ref> &amp;registry, const std::string &amp;behavior_id, float x, float y, const std::string &amp;textureName, const <ref refid="structMyRect" kindref="compound">MyRect</ref> &amp;textureRect, const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;scale, int&amp; SyncId): This function creates an enemy entity with specified parameters, setting up its behavior, position, and appearance.</para>
+</listitem><listitem><para>spawnBackgroundLayer(<ref refid="classRegistry" kindref="compound">Registry</ref> &amp;registry, <ref refid="structBehavior" kindref="compound">Behavior</ref> behavior, const std::string &amp;textureName, float velocityX, float velocityY, const <ref refid="structMyRect" kindref="compound">MyRect</ref> &amp;textureRect, const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;scale): This function creates a background layer entity with specified parameters, setting up its behavior and appearance.</para>
+</listitem><listitem><para>spawnThruster(Registry &amp;registry, entity_t parentEntity, float xOffset, float yOffset): This function creates a thruster entity attached to a parent entity at a specified offset.</para>
+</listitem><listitem><para>spawnAnimatedEntity(<ref refid="classRegistry" kindref="compound">Registry</ref> &amp;registry, const <ref refid="structMyRect" kindref="compound">MyRect</ref> &amp;rect, const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;scale, const std::string &amp;textureName, float posX, float posY): This function creates an animated entity with specified parameters, setting up its position, appearance, and animation.</para>
+</listitem><listitem><para>spawnState(Registry &amp;registry): This function creates a state entity to hold game configuration and settings.</para>
+</listitem><listitem><para>spawnServerEntity(Registry &amp;registry): This function creates a server entity to manage network communications.</para>
+</listitem><listitem><para>spawnClientEntity(Registry &amp;registry): This function creates a client entity to manage client-side game state.</para>
+</listitem><listitem><para>spawnNoneLocalPlayer(Registry &amp;registry, const MyRect &amp;rect): This function creates a non-local player entity with specified parameters, setting up its position and appearance.</para>
+</listitem><listitem><para>spawnButton(<ref refid="classRegistry" kindref="compound">Registry</ref> &amp;registry, const <ref refid="structMyRect" kindref="compound">MyRect</ref> &amp;rect, const std::string &amp;textureName, const std::string &amp;text, const std::string &amp;fontName, const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;scale, const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;textOffset, const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;textScale, std::function&lt;void()&gt; onClick, const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;position): This function creates a button entity with specified parameters, setting up its appearance and click behavior.</para>
+</listitem><listitem><para>spawnFollowerCover(entity_t parent_entity, <ref refid="classRegistry" kindref="compound">Registry</ref> &amp;registry, const <ref refid="structMyRect" kindref="compound">MyRect</ref> &amp;rect, const string &amp;textureName, const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;offset): This function creates a follower cover entity attached to a parent entity, with specified appearance and offset.</para>
+</listitem><listitem><para>spawnFollowerSkin(entity_t parent_entity, <ref refid="classRegistry" kindref="compound">Registry</ref> &amp;registry, const <ref refid="structMyRect" kindref="compound">MyRect</ref> &amp;rect, const string &amp;textureName, const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;offset): This function creates a follower skin entity attached to a parent entity, with specified appearance and offset.</para>
+</listitem><listitem><para>spawnFollowerText(entity_t parent_entity, <ref refid="classRegistry" kindref="compound">Registry</ref> &amp;registry, const std::string &amp;Title, const float Xoffset, const float Yoffset): This function creates a follower text entity attached to a parent entity, with specified text and offset.</para>
+</listitem><listitem><para>spawnFollowerText(entity_t parent_entity, <ref refid="classRegistry" kindref="compound">Registry</ref> &amp;registry, const std::string &amp;Title, const float Xoffset, const float Yoffset, unsigned int&amp; fontSize): This function creates a follower text entity attached to a parent entity, with specified text, offset and font size.</para>
+</listitem><listitem><para>spawnBeatmapPanel(Registry &amp;registry, Database &amp;database, const int &amp;index): This function creates a beatmap panel entity with specified parameters, setting up its appearance and content.</para>
+</listitem><listitem><para>spawnDrawable(<ref refid="classRegistry" kindref="compound">Registry</ref> &amp;registry, const <ref refid="structMyRect" kindref="compound">MyRect</ref> &amp;rect, const std::string &amp;textureName, const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;scale, float posX, float posY, float depth): This function creates a drawable entity with specified parameters, setting up its position and appearance.</para>
+</listitem></itemizedlist>
+</para>
+<para>Dependencies:</para>
+<para><itemizedlist>
+<listitem><para>&quot;Spawner.hpp&quot; for the declarations of the spawn functions.</para>
+</listitem><listitem><para>&quot;Global.hpp&quot; for global definitions and constants.</para>
+</listitem><listitem><para>&lt;iostream&gt; for standard I/O operations.</para>
+</listitem><listitem><para>&lt;functional&gt; for std::function. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="99" column="10" bodyfile="src/Spawner.cpp" bodystart="83" bodyend="98" declfile="include/Spawner.hpp" declline="99" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="Spawner_8hpp_1a804b8e80e8fc36765dfba72623fc35a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t spawnButton</definition>
+        <argsstring>(Registry &amp;registry, const MyRect &amp;rect, const std::string &amp;textureName, const std::string &amp;text, const std::string &amp;fontName, const MyVector2 &amp;scale, const MyVector2 &amp;textOffset, const MyVector2 &amp;textScale, std::function&lt; void()&gt; onClick, const MyVector2 &amp;position)</argsstring>
+        <name>spawnButton</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyRect" kindref="compound">MyRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>textureName</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fontName</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;</type>
+          <declname>textOffset</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;</type>
+          <declname>textScale</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>onClick</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="101" column="10" bodyfile="src/Spawner.cpp" bodystart="220" bodyend="233" declfile="include/Spawner.hpp" declline="101" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="Spawner_8hpp_1a725a6a54bac46632fd2473c55073ab6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t spawnState</definition>
+        <argsstring>(Registry &amp;registry)</argsstring>
+        <name>spawnState</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="103" column="10" bodyfile="src/Spawner.cpp" bodystart="147" bodyend="153" declfile="include/Spawner.hpp" declline="103" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="Spawner_8hpp_1a207ffedd2526f8c2a9ea4affc260be2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t spawnFollowerCover</definition>
+        <argsstring>(entity_t parent_entity, Registry &amp;registry, const MyRect &amp;rect, const string &amp;textureName, const MyVector2 &amp;scale)</argsstring>
+        <name>spawnFollowerCover</name>
+        <param>
+          <type>entity_t</type>
+          <declname>parent_entity</declname>
+        </param>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyRect" kindref="compound">MyRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>textureName</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="105" column="10" bodyfile="src/Spawner.cpp" bodystart="236" bodyend="244" declfile="include/Spawner.hpp" declline="105" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="Spawner_8hpp_1aa4cb6d5e617f975fcc005b04d555faed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t spawnFollowerSkin</definition>
+        <argsstring>(entity_t parent_entity, Registry &amp;registry, const MyRect &amp;rect, const string &amp;textureName, const MyVector2 &amp;offset)</argsstring>
+        <name>spawnFollowerSkin</name>
+        <param>
+          <type>entity_t</type>
+          <declname>parent_entity</declname>
+        </param>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyRect" kindref="compound">MyRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>textureName</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="107" column="10" bodyfile="src/Spawner.cpp" bodystart="246" bodyend="253" declfile="include/Spawner.hpp" declline="107" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="Spawner_8hpp_1a70a225f7af6f5835421b604797951dfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t spawnFollowerText</definition>
+        <argsstring>(entity_t parent_entity, Registry &amp;registry, const std::string &amp;Title, const float Xoffset, const float Yoffset)</argsstring>
+        <name>spawnFollowerText</name>
+        <param>
+          <type>entity_t</type>
+          <declname>parent_entity</declname>
+        </param>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Title</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>Xoffset</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>Yoffset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="109" column="10" bodyfile="src/Spawner.cpp" bodystart="255" bodyend="263" declfile="include/Spawner.hpp" declline="109" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="Spawner_8hpp_1ab5eeb828f08e61e9dadfafdfce7bb4b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t spawnFollowerText</definition>
+        <argsstring>(entity_t parent_entity, Registry &amp;registry, const std::string &amp;Title, const float Xoffset, const float Yoffset, unsigned int &amp;fontSize)</argsstring>
+        <name>spawnFollowerText</name>
+        <param>
+          <type>entity_t</type>
+          <declname>parent_entity</declname>
+        </param>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Title</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>Xoffset</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>Yoffset</declname>
+        </param>
+        <param>
+          <type>unsigned int &amp;</type>
+          <declname>fontSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="111" column="10" bodyfile="src/Spawner.cpp" bodystart="265" bodyend="273" declfile="include/Spawner.hpp" declline="111" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="Spawner_8hpp_1adc4603ea5f9f81648913c558a563babd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>entity_t</type>
+        <definition>entity_t spawnDrawable</definition>
+        <argsstring>(Registry &amp;registry, const MyRect &amp;rect, const std::string &amp;textureName, const MyVector2 &amp;scale, float posX, float posY, float depth)</argsstring>
+        <name>spawnDrawable</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyRect" kindref="compound">MyRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>textureName</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structMyVector2" kindref="compound">MyVector2</ref> &amp;</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posY</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Spawner.hpp" line="113" column="10" bodyfile="src/Spawner.cpp" bodystart="298" bodyend="308" declfile="include/Spawner.hpp" declline="113" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Rtype</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>Spawner</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SPAWNER_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPAWNER_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Registry.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Component.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SparseArray.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Entity.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TextureManager.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Behaviour.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>spawnEnemy(<ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry,<sp/><ref refid="structBehavior" kindref="compound">Behavior</ref><sp/>behavior,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;textureName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyRect" kindref="compound">MyRect</ref><sp/>&amp;textureRect,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyVector2" kindref="compound">MyVector2</ref><sp/>&amp;scale);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">entity_t<sp/>spawnBackgroundLayer(<ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry,<sp/><ref refid="structBehavior" kindref="compound">Behavior</ref><sp/>behavior,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;textureName,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>velocityX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>velocityY,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyRect" kindref="compound">MyRect</ref><sp/>&amp;textureRect,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyVector2" kindref="compound">MyVector2</ref><sp/>&amp;scale);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">entity_t<sp/>spawnPlayer(<ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyRect" kindref="compound">MyRect</ref><sp/>&amp;rect);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">entity_t<sp/>spawnAnimatedEntity(<ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyRect" kindref="compound">MyRect</ref><sp/>&amp;rect,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyVector2" kindref="compound">MyVector2</ref><sp/>&amp;scale,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;textureName,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posY);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">entity_t<sp/>spawnGameConfig(<ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">entity_t<sp/>spawnThruster(<ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry,<sp/>entity_t<sp/>parentEntity);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">entity_t<sp/>spawnNoneLocalPlayer(<ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyRect" kindref="compound">MyRect</ref><sp/>&amp;rect);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">entity_t<sp/>spawnServerEntity(<ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">entity_t<sp/>spawnClientEntity(<ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">entity_t<sp/>spawnBeatmapPanel(<ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry,<sp/><ref refid="classDatabase" kindref="compound">Database</ref><sp/>&amp;database,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;index);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">entity_t<sp/>FFTSpawnEnemy(<ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;behavior_id,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;textureName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyRect" kindref="compound">MyRect</ref><sp/>&amp;textureRect,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyVector2" kindref="compound">MyVector2</ref><sp/>&amp;scale,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>SyncId);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal">entity_t<sp/>spawnButton(<ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyRect" kindref="compound">MyRect</ref><sp/>&amp;rect,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;textureName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;text,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;fontName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyVector2" kindref="compound">MyVector2</ref><sp/>&amp;scale,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyVector2" kindref="compound">MyVector2</ref><sp/>&amp;textOffset,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyVector2" kindref="compound">MyVector2</ref><sp/>&amp;textScale,<sp/>std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">()&gt;<sp/>onClick,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyVector2" kindref="compound">MyVector2</ref><sp/>&amp;position);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">entity_t<sp/>spawnState(<ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">entity_t<sp/>spawnFollowerCover(entity_t<sp/>parent_entity,<sp/><ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyRect" kindref="compound">MyRect</ref><sp/>&amp;rect,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;textureName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyVector2" kindref="compound">MyVector2</ref><sp/>&amp;scale);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">entity_t<sp/>spawnFollowerSkin(entity_t<sp/>parent_entity,<sp/><ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyRect" kindref="compound">MyRect</ref><sp/>&amp;rect,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;textureName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyVector2" kindref="compound">MyVector2</ref><sp/>&amp;offset);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">entity_t<sp/>spawnFollowerText(entity_t<sp/>parent_entity,<sp/><ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;Title,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Xoffset,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Yoffset);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">entity_t<sp/>spawnFollowerText(entity_t<sp/>parent_entity,<sp/><ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;Title,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Xoffset,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Yoffset,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>fontSize);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">entity_t<sp/>spawnDrawable(<ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;registry,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyRect" kindref="compound">MyRect</ref><sp/>&amp;rect,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;textureName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMyVector2" kindref="compound">MyVector2</ref><sp/>&amp;scale,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posY,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>depth);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!SPAWNER_HPP_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/Spawner.hpp"/>
+  </compounddef>
+</doxygen>
