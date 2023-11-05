@@ -14,9 +14,8 @@ Welcome to R-type's documentation!
     :maxdepth: 2
     :caption: Contents:
 
-.. doxygenindex::
-   :project: R-type
-   :path: ./xml
+    instal
+
 
 Indices and tables
 ==================
