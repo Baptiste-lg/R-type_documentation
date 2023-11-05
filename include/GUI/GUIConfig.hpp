@@ -1,9 +1,71 @@
 /*
 ** EPITECH PROJECT, 2023
-** Yiang
+** Rtype
 ** File description:
 ** GUIConfig.hpp
 */
+
+/**
+** GUIConfig
+**
+** This class represents the graphical user interface configuration.
+**
+** Public Methods:
+**
+** - GUIConfig()
+**   - Default constructor
+**
+** - ~GUIConfig()
+**   - Destructor
+**
+** - setResolution()
+**   - Sets the GUI resolution
+**
+** - setTitle()
+**   - Sets the GUI window title
+**
+** - setFPS()
+**   - Sets the GUI frame rate
+**
+** - setTheme()
+**   - Sets the GUI theme
+**
+** - getResolution()
+**   - Gets the GUI resolution
+**
+** - getTitle()
+**   - Gets the GUI window title
+**
+** - getFPS()
+**   - Gets the GUI frame rate
+**
+** - getTheme()
+**   - Gets the GUI theme
+**
+** - load()
+**   - Loads the GUI config from a libconfig Setting
+**
+** - print()
+**   - Prints the GUI config
+**
+** - getConfig()
+**   - Gets the GUI config Setting from a file
+**
+** Private Attributes:
+**
+** - res
+**   - Resolution
+**
+** - title
+**   - Window title
+**
+** - fps
+**   - Frame rate
+**
+** - theme
+**   - Theme
+*/
+
 #ifndef GUICONFIG_HPP_
 	#define GUICONFIG_HPP_
 
@@ -49,7 +111,6 @@ class GUIConfig {
 
             // Get the GUI configuration
             libconfig::Setting& gui = cfg.lookup("GUI");
-            std::cout << "GUI: " << gui.getLength() << std::endl;
             return gui;
         }
 

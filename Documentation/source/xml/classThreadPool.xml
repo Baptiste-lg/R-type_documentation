@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classThreadPool" kind="class" language="C++" prot="public">
+    <compoundname>ThreadPool</compoundname>
+    <includes refid="ThreadPool_8hpp" local="no">ThreadPool.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classThreadPool_1a9ef531ca4b7d046f3acaf4b5b36cdeff" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::thread &gt;</type>
+        <definition>std::vector&lt;std::thread&gt; ThreadPool::workers</definition>
+        <argsstring></argsstring>
+        <name>workers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ThreadPool.hpp" line="55" column="17" bodyfile="include/ThreadPool.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classThreadPool_1aecd2f98ff952b12bcd21102df80bdfe9" prot="private" static="no" mutable="no">
+        <type>std::queue&lt; std::function&lt; void()&gt; &gt;</type>
+        <definition>std::queue&lt;std::function&lt;void()&gt; &gt; ThreadPool::tasks</definition>
+        <argsstring></argsstring>
+        <name>tasks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ThreadPool.hpp" line="56" column="16" bodyfile="include/ThreadPool.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classThreadPool_1adf76c928f148e8fdcd7e34c2bbaa97e3" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex ThreadPool::queue_mutex</definition>
+        <argsstring></argsstring>
+        <name>queue_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ThreadPool.hpp" line="57" column="16" bodyfile="include/ThreadPool.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classThreadPool_1a6dd0c005d9bc726e976def8d6ac2d2a7" prot="private" static="no" mutable="no">
+        <type>std::condition_variable</type>
+        <definition>std::condition_variable ThreadPool::condition</definition>
+        <argsstring></argsstring>
+        <name>condition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ThreadPool.hpp" line="58" column="29" bodyfile="include/ThreadPool.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classThreadPool_1a04e2cc4b3c979b4e054071436988d23d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ThreadPool::stop</definition>
+        <argsstring></argsstring>
+        <name>stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ThreadPool.hpp" line="59" column="10" bodyfile="include/ThreadPool.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classThreadPool_1ac34e07f77d584967ddbcff7b9cc89ebb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ThreadPool::ThreadPool</definition>
+        <argsstring>(size_t threads)</argsstring>
+        <name>ThreadPool</name>
+        <param>
+          <type>size_t</type>
+          <declname>threads</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ThreadPool.hpp" line="62" column="5" bodyfile="include/ThreadPool.hpp" bodystart="62" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classThreadPool_1a71736ecd8ae904ef554ebdf8229035e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class F</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto ThreadPool::enqueue</definition>
+        <argsstring>(F &amp;&amp;f) -&gt; std::future&lt; typename std::result_of&lt; F()&gt;::type &gt;</argsstring>
+        <name>enqueue</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ThreadPool.hpp" line="81" column="10" bodyfile="include/ThreadPool.hpp" bodystart="81" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classThreadPool_1a44d3d2ab618970605e684efc216655eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ThreadPool::~ThreadPool</definition>
+        <argsstring>()</argsstring>
+        <name>~ThreadPool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ThreadPool.hpp" line="94" column="5" bodyfile="include/ThreadPool.hpp" bodystart="94" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classThreadPool" kindref="compound">ThreadPool</ref></para>
+<para>This class implements a thread pool to run tasks asynchronously.</para>
+<para>Methods:</para>
+<para><itemizedlist>
+<listitem><para><ref refid="classThreadPool" kindref="compound">ThreadPool()</ref> Constructor that launches worker threads.</para>
+</listitem><listitem><para>enqueue() Enqueues a task and returns a future to its result.</para>
+</listitem><listitem><para>~ThreadPool() Destructor that joins worker threads.</para>
+</listitem></itemizedlist>
+</para>
+<para>Members:</para>
+<para><itemizedlist>
+<listitem><para>workers Vector of worker threads.</para>
+</listitem><listitem><para>tasks Queue of tasks to be executed.</para>
+</listitem><listitem><para>queue_mutex Mutex to synchronize access to the task queue.</para>
+</listitem><listitem><para>condition Condition variable to notify workers.</para>
+</listitem><listitem><para>stop Flag to stop the worker threads. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="include/ThreadPool.hpp" line="53" column="1" bodyfile="include/ThreadPool.hpp" bodystart="53" bodyend="104"/>
+    <listofallmembers>
+      <member refid="classThreadPool_1a6dd0c005d9bc726e976def8d6ac2d2a7" prot="private" virt="non-virtual"><scope>ThreadPool</scope><name>condition</name></member>
+      <member refid="classThreadPool_1a71736ecd8ae904ef554ebdf8229035e3" prot="public" virt="non-virtual"><scope>ThreadPool</scope><name>enqueue</name></member>
+      <member refid="classThreadPool_1adf76c928f148e8fdcd7e34c2bbaa97e3" prot="private" virt="non-virtual"><scope>ThreadPool</scope><name>queue_mutex</name></member>
+      <member refid="classThreadPool_1a04e2cc4b3c979b4e054071436988d23d" prot="private" virt="non-virtual"><scope>ThreadPool</scope><name>stop</name></member>
+      <member refid="classThreadPool_1aecd2f98ff952b12bcd21102df80bdfe9" prot="private" virt="non-virtual"><scope>ThreadPool</scope><name>tasks</name></member>
+      <member refid="classThreadPool_1ac34e07f77d584967ddbcff7b9cc89ebb" prot="public" virt="non-virtual"><scope>ThreadPool</scope><name>ThreadPool</name></member>
+      <member refid="classThreadPool_1a9ef531ca4b7d046f3acaf4b5b36cdeff" prot="private" virt="non-virtual"><scope>ThreadPool</scope><name>workers</name></member>
+      <member refid="classThreadPool_1a44d3d2ab618970605e684efc216655eb" prot="public" virt="non-virtual"><scope>ThreadPool</scope><name>~ThreadPool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

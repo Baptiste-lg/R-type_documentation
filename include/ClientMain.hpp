@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2024
-** ECS
+** Rtype
 ** File description:
 ** ClientMain
 */

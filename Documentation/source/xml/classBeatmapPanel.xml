@@ -1,0 +1,565 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classBeatmapPanel" kind="class" language="C++" prot="public">
+    <compoundname>BeatmapPanel</compoundname>
+    <includes refid="BeatmapPanel_8hpp" local="no">BeatmapPanel.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classBeatmapPanel_1a5d0444e2760840740794e2c77297f0aa" prot="private" static="no" mutable="no">
+        <type>sf::Texture</type>
+        <definition>sf::Texture BeatmapPanel::texture</definition>
+        <argsstring></argsstring>
+        <name>texture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="107" column="17" bodyfile="include/GraphicElement/BeatmapPanel.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBeatmapPanel_1aff66f0f76fb43329f62bd305bd7d1fdf" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, sf::Sprite &gt;</type>
+        <definition>std::map&lt;std::string, sf::Sprite&gt; BeatmapPanel::sprites</definition>
+        <argsstring></argsstring>
+        <name>sprites</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="108" column="14" bodyfile="include/GraphicElement/BeatmapPanel.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBeatmapPanel_1a7f23d4264fae3ee14c740e0a3292d20c" prot="private" static="no" mutable="no">
+        <type>std::map&lt; string, <ref refid="classButton" kindref="compound">Button</ref> &gt;</type>
+        <definition>std::map&lt;string, Button&gt; BeatmapPanel::buttons</definition>
+        <argsstring></argsstring>
+        <name>buttons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="109" column="14" bodyfile="include/GraphicElement/BeatmapPanel.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBeatmapPanel_1a7089acdf0238973735c12042d6595e4f" prot="private" static="no" mutable="no">
+        <type>map&lt; string, <ref refid="structButtonConfig__s" kindref="compound">ButtonConfig</ref> &gt;</type>
+        <definition>map&lt;string, ButtonConfig&gt; BeatmapPanel::buttonConfigs</definition>
+        <argsstring></argsstring>
+        <name>buttonConfigs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="110" column="9" bodyfile="include/GraphicElement/BeatmapPanel.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBeatmapPanel_1a687b9c1b745641858a6e212f71c2ec6b" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, sf::Text &gt;</type>
+        <definition>std::map&lt;std::string, sf::Text&gt; BeatmapPanel::texts</definition>
+        <argsstring></argsstring>
+        <name>texts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="112" column="14" bodyfile="include/GraphicElement/BeatmapPanel.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBeatmapPanel_1a29045ff7e005ce91a84f1aa902cf5be7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BeatmapPanel::difficultyUser</definition>
+        <argsstring></argsstring>
+        <name>difficultyUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="113" column="9" bodyfile="include/GraphicElement/BeatmapPanel.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBeatmapPanel_1a6410894642c38be3f244c4a892006482" prot="private" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f BeatmapPanel::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="114" column="18" bodyfile="include/GraphicElement/BeatmapPanel.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBeatmapPanel_1af6f5d8a819d93999fc4445384faf9c98" prot="private" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f BeatmapPanel::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="115" column="18" bodyfile="include/GraphicElement/BeatmapPanel.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBeatmapPanel_1a0f26216bbc69b512493bcca70e30a53d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BeatmapPanel::textSize</definition>
+        <argsstring></argsstring>
+        <name>textSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="116" column="9" bodyfile="include/GraphicElement/BeatmapPanel.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBeatmapPanel_1ad2303cd2c688b62faa9873d69c58d475" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string BeatmapPanel::folderPath</definition>
+        <argsstring></argsstring>
+        <name>folderPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="117" column="17" bodyfile="include/GraphicElement/BeatmapPanel.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBeatmapPanel_1a496ece12996a124b8abc38b474c6df12" prot="private" static="no" mutable="no">
+        <type>sf::Font</type>
+        <definition>sf::Font BeatmapPanel::_font</definition>
+        <argsstring></argsstring>
+        <name>_font</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="118" column="14" bodyfile="include/GraphicElement/BeatmapPanel.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classBeatmapPanel_1a3c9d3e275a3032e6a1150bd9f9ed3973" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BeatmapPanel::BeatmapPanel</definition>
+        <argsstring>()</argsstring>
+        <name>BeatmapPanel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="84" column="5" bodyfile="src/GraphicElement/BeatmapPanel.cpp" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapPanel_1a6d6bf5118b3d926d50a3cc6b55458b38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BeatmapPanel::BeatmapPanel</definition>
+        <argsstring>(const sf::Texture &amp;texturePanel, const sf::Texture &amp;textureArrowLeft, const sf::Texture &amp;textureArrowRight, const sf::Texture &amp;textureCover, const sf::Vector2f &amp;position, std::pair&lt; int, int &gt; res, const BeatmapConfig &amp;beatmapConfig, const sf::Font &amp;fonts)</argsstring>
+        <name>BeatmapPanel</name>
+        <param>
+          <type>const sf::Texture &amp;</type>
+          <declname>texturePanel</declname>
+        </param>
+        <param>
+          <type>const sf::Texture &amp;</type>
+          <declname>textureArrowLeft</declname>
+        </param>
+        <param>
+          <type>const sf::Texture &amp;</type>
+          <declname>textureArrowRight</declname>
+        </param>
+        <param>
+          <type>const sf::Texture &amp;</type>
+          <declname>textureCover</declname>
+        </param>
+        <param>
+          <type>const sf::Vector2f &amp;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>std::pair&lt; int, int &gt;</type>
+          <declname>res</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classBeatmapConfig" kindref="compound">BeatmapConfig</ref> &amp;</type>
+          <declname>beatmapConfig</declname>
+        </param>
+        <param>
+          <type>const sf::Font &amp;</type>
+          <declname>fonts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="85" column="5" bodyfile="src/GraphicElement/BeatmapPanel.cpp" bodystart="72" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapPanel_1a8ded29c1ec739ae90dfd60d9bfa865f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BeatmapPanel::~BeatmapPanel</definition>
+        <argsstring>()</argsstring>
+        <name>~BeatmapPanel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="87" column="5" bodyfile="src/GraphicElement/BeatmapPanel.cpp" bodystart="137" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapPanel_1ad6d6cf5d93b85f739f4a09a31e33bd35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BeatmapPanel::draw</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>draw</name>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="88" column="10" bodyfile="src/GraphicElement/BeatmapPanel.cpp" bodystart="141" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapPanel_1a6203300799b94f2ea3274c2ffdcb12e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BeatmapPanel::setText</definition>
+        <argsstring>(const std::string &amp;text, const sf::Font &amp;font, unsigned int characterSize)</argsstring>
+        <name>setText</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>const sf::Font &amp;</type>
+          <declname>font</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>characterSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="89" column="10" bodyfile="src/GraphicElement/BeatmapPanel.cpp" bodystart="155" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapPanel_1aa6d848b2afd28b370ddf40f86b9a328b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BeatmapPanel::adjust</definition>
+        <argsstring>(float scale, float opacity, const sf::Vector2f &amp;offset, std::pair&lt; int, int &gt; res)</argsstring>
+        <name>adjust</name>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>opacity</declname>
+        </param>
+        <param>
+          <type>const sf::Vector2f &amp;</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>std::pair&lt; int, int &gt;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="90" column="10" bodyfile="src/GraphicElement/BeatmapPanel.cpp" bodystart="169" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapPanel_1ae870d4b66c173efadb57f2705415b2c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BeatmapPanel::adjustPanel</definition>
+        <argsstring>(float scale, float opacity, const sf::Vector2f &amp;offset, std::pair&lt; int, int &gt; res)</argsstring>
+        <name>adjustPanel</name>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>opacity</declname>
+        </param>
+        <param>
+          <type>const sf::Vector2f &amp;</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>std::pair&lt; int, int &gt;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="91" column="10" bodyfile="src/GraphicElement/BeatmapPanel.cpp" bodystart="159" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapPanel_1add5c3ed466c5f62aa7fb96ec35262ee0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BeatmapPanel::adjustCover</definition>
+        <argsstring>(float scale, float opacity, const sf::Vector2f &amp;offset, std::pair&lt; int, int &gt; res)</argsstring>
+        <name>adjustCover</name>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>opacity</declname>
+        </param>
+        <param>
+          <type>const sf::Vector2f &amp;</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>std::pair&lt; int, int &gt;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="92" column="10" bodyfile="src/GraphicElement/BeatmapPanel.cpp" bodystart="163" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapPanel_1a17ad0d0e8af87d00efd224ff81148e4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BeatmapPanel::adjustGrade</definition>
+        <argsstring>(float scale, float opacity, const sf::Vector2f &amp;offset, std::pair&lt; int, int &gt; res)</argsstring>
+        <name>adjustGrade</name>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>opacity</declname>
+        </param>
+        <param>
+          <type>const sf::Vector2f &amp;</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>std::pair&lt; int, int &gt;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="93" column="10" bodyfile="src/GraphicElement/BeatmapPanel.cpp" bodystart="166" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapPanel_1a1dd7e2307faef079532fee82531fb4db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BeatmapPanel::adjustDifficulty</definition>
+        <argsstring>(int difficulty)</argsstring>
+        <name>adjustDifficulty</name>
+        <param>
+          <type>int</type>
+          <declname>difficulty</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="94" column="10" bodyfile="src/GraphicElement/BeatmapPanel.cpp" bodystart="197" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapPanel_1a82ed04a80f6b8396f2598226bcd8510b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BeatmapPanel::getDifficultyUser</definition>
+        <argsstring>()</argsstring>
+        <name>getDifficultyUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="95" column="9" bodyfile="src/GraphicElement/BeatmapPanel.cpp" bodystart="226" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapPanel_1aadd261156ead7e465598d8c21ced413a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string BeatmapPanel::getBeatmapName</definition>
+        <argsstring>()</argsstring>
+        <name>getBeatmapName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="96" column="17" bodyfile="include/GraphicElement/BeatmapPanel.hpp" bodystart="96" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapPanel_1a8eb2acc79c26c662e6ae978af434b4a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string BeatmapPanel::getFolderPath</definition>
+        <argsstring>()</argsstring>
+        <name>getFolderPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="101" column="17" bodyfile="include/GraphicElement/BeatmapPanel.hpp" bodystart="101" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classBeatmapPanel_1abb6d1a7981c105e60b504689e2fcd18f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BeatmapPanel::handleEvent</definition>
+        <argsstring>(const sf::Event &amp;event, const sf::RenderWindow &amp;window)</argsstring>
+        <name>handleEvent</name>
+        <param>
+          <type>const sf::Event &amp;</type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>const sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/BeatmapPanel.hpp" line="104" column="10" bodyfile="src/GraphicElement/BeatmapPanel.cpp" bodystart="220" bodyend="224"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classBeatmapPanel" kindref="compound">BeatmapPanel</ref></para>
+<para>This class represents a panel to display a beatmap&apos;s information.</para>
+<para>Public Methods:</para>
+<para><itemizedlist>
+<listitem><para><ref refid="classBeatmapPanel" kindref="compound">BeatmapPanel()</ref><itemizedlist>
+<listitem><para>Default constructor</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><ref refid="classBeatmapPanel" kindref="compound">BeatmapPanel(texturePanel, textureArrowLeft, textureArrowRight, textureCover, position, res, beatmapConfig, fonts)</ref><itemizedlist>
+<listitem><para>Constructor with textures, position, resolution, beatmap config and font</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>~BeatmapPanel()<itemizedlist>
+<listitem><para>Destructor</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>draw()<itemizedlist>
+<listitem><para>Draws the panel</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>setText()<itemizedlist>
+<listitem><para>Sets the text</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>adjust()<itemizedlist>
+<listitem><para>Adjusts the panel</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>adjustPanel()<itemizedlist>
+<listitem><para>Adjusts the panel sprite</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>adjustCover()<itemizedlist>
+<listitem><para>Adjusts the cover sprite</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>adjustGrade()<itemizedlist>
+<listitem><para>Adjusts the grade sprite</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>adjustDifficulty()<itemizedlist>
+<listitem><para>Adjusts the difficulty</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>getBeatmapName()<itemizedlist>
+<listitem><para>Gets the beatmap name</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>getFolderPath()<itemizedlist>
+<listitem><para>Gets the beatmap folder path</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>handleEvent()<itemizedlist>
+<listitem><para>Handles events</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>Private Attributes:</para>
+<para><itemizedlist>
+<listitem><para>textures</para>
+</listitem><listitem><para>sprites</para>
+</listitem><listitem><para>buttons</para>
+</listitem><listitem><para>buttonConfigs</para>
+</listitem><listitem><para>texts</para>
+</listitem><listitem><para>difficultyUser</para>
+</listitem><listitem><para>position</para>
+</listitem><listitem><para>size</para>
+</listitem><listitem><para>textSize</para>
+</listitem><listitem><para>folderPath</para>
+</listitem><listitem><para>font </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="include/GraphicElement/BeatmapPanel.hpp" line="82" column="1" bodyfile="include/GraphicElement/BeatmapPanel.hpp" bodystart="82" bodyend="119"/>
+    <listofallmembers>
+      <member refid="classBeatmapPanel_1a496ece12996a124b8abc38b474c6df12" prot="private" virt="non-virtual"><scope>BeatmapPanel</scope><name>_font</name></member>
+      <member refid="classBeatmapPanel_1aa6d848b2afd28b370ddf40f86b9a328b" prot="public" virt="non-virtual"><scope>BeatmapPanel</scope><name>adjust</name></member>
+      <member refid="classBeatmapPanel_1add5c3ed466c5f62aa7fb96ec35262ee0" prot="public" virt="non-virtual"><scope>BeatmapPanel</scope><name>adjustCover</name></member>
+      <member refid="classBeatmapPanel_1a1dd7e2307faef079532fee82531fb4db" prot="public" virt="non-virtual"><scope>BeatmapPanel</scope><name>adjustDifficulty</name></member>
+      <member refid="classBeatmapPanel_1a17ad0d0e8af87d00efd224ff81148e4f" prot="public" virt="non-virtual"><scope>BeatmapPanel</scope><name>adjustGrade</name></member>
+      <member refid="classBeatmapPanel_1ae870d4b66c173efadb57f2705415b2c9" prot="public" virt="non-virtual"><scope>BeatmapPanel</scope><name>adjustPanel</name></member>
+      <member refid="classBeatmapPanel_1a3c9d3e275a3032e6a1150bd9f9ed3973" prot="public" virt="non-virtual"><scope>BeatmapPanel</scope><name>BeatmapPanel</name></member>
+      <member refid="classBeatmapPanel_1a6d6bf5118b3d926d50a3cc6b55458b38" prot="public" virt="non-virtual"><scope>BeatmapPanel</scope><name>BeatmapPanel</name></member>
+      <member refid="classBeatmapPanel_1a7089acdf0238973735c12042d6595e4f" prot="private" virt="non-virtual"><scope>BeatmapPanel</scope><name>buttonConfigs</name></member>
+      <member refid="classBeatmapPanel_1a7f23d4264fae3ee14c740e0a3292d20c" prot="private" virt="non-virtual"><scope>BeatmapPanel</scope><name>buttons</name></member>
+      <member refid="classBeatmapPanel_1a29045ff7e005ce91a84f1aa902cf5be7" prot="private" virt="non-virtual"><scope>BeatmapPanel</scope><name>difficultyUser</name></member>
+      <member refid="classBeatmapPanel_1ad6d6cf5d93b85f739f4a09a31e33bd35" prot="public" virt="non-virtual"><scope>BeatmapPanel</scope><name>draw</name></member>
+      <member refid="classBeatmapPanel_1ad2303cd2c688b62faa9873d69c58d475" prot="private" virt="non-virtual"><scope>BeatmapPanel</scope><name>folderPath</name></member>
+      <member refid="classBeatmapPanel_1aadd261156ead7e465598d8c21ced413a" prot="public" virt="non-virtual"><scope>BeatmapPanel</scope><name>getBeatmapName</name></member>
+      <member refid="classBeatmapPanel_1a82ed04a80f6b8396f2598226bcd8510b" prot="public" virt="non-virtual"><scope>BeatmapPanel</scope><name>getDifficultyUser</name></member>
+      <member refid="classBeatmapPanel_1a8eb2acc79c26c662e6ae978af434b4a7" prot="public" virt="non-virtual"><scope>BeatmapPanel</scope><name>getFolderPath</name></member>
+      <member refid="classBeatmapPanel_1abb6d1a7981c105e60b504689e2fcd18f" prot="public" virt="non-virtual"><scope>BeatmapPanel</scope><name>handleEvent</name></member>
+      <member refid="classBeatmapPanel_1a6410894642c38be3f244c4a892006482" prot="private" virt="non-virtual"><scope>BeatmapPanel</scope><name>position</name></member>
+      <member refid="classBeatmapPanel_1a6203300799b94f2ea3274c2ffdcb12e6" prot="public" virt="non-virtual"><scope>BeatmapPanel</scope><name>setText</name></member>
+      <member refid="classBeatmapPanel_1af6f5d8a819d93999fc4445384faf9c98" prot="private" virt="non-virtual"><scope>BeatmapPanel</scope><name>size</name></member>
+      <member refid="classBeatmapPanel_1aff66f0f76fb43329f62bd305bd7d1fdf" prot="private" virt="non-virtual"><scope>BeatmapPanel</scope><name>sprites</name></member>
+      <member refid="classBeatmapPanel_1a687b9c1b745641858a6e212f71c2ec6b" prot="private" virt="non-virtual"><scope>BeatmapPanel</scope><name>texts</name></member>
+      <member refid="classBeatmapPanel_1a0f26216bbc69b512493bcca70e30a53d" prot="private" virt="non-virtual"><scope>BeatmapPanel</scope><name>textSize</name></member>
+      <member refid="classBeatmapPanel_1a5d0444e2760840740794e2c77297f0aa" prot="private" virt="non-virtual"><scope>BeatmapPanel</scope><name>texture</name></member>
+      <member refid="classBeatmapPanel_1a8ded29c1ec739ae90dfd60d9bfa865f1" prot="public" virt="non-virtual"><scope>BeatmapPanel</scope><name>~BeatmapPanel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="GameState_8hpp" kind="file" language="C++">
+    <compoundname>GameState.hpp</compoundname>
+    <includedby refid="Registry_8hpp" local="yes">include/Registry.hpp</includedby>
+    <invincdepgraph>
+      <node id="4">
+        <label>include/Behaviour.hpp</label>
+        <link refid="Behaviour_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>include/System/VelocitySystem.hpp</label>
+        <link refid="VelocitySystem_8hpp_source"/>
+      </node>
+      <node id="11">
+        <label>include/System/DeathEffectSystem.hpp</label>
+        <link refid="DeathEffectSystem_8hpp_source"/>
+      </node>
+      <node id="17">
+        <label>include/Zipper.hpp</label>
+        <link refid="Zipper_8hpp_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/GameState.hpp</label>
+        <link refid="GameState_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/Registry.hpp</label>
+        <link refid="Registry_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>include/ServerMain.hpp</label>
+        <link refid="ServerMain_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>include/Spawner.hpp</label>
+        <link refid="Spawner_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>include/System/EffectsFunctions.hpp</label>
+        <link refid="EffectsFunctions_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>include/SceneParsing.hpp</label>
+        <link refid="SceneParsing_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>include/ZipperIterator.hpp</label>
+        <link refid="ZipperIterator_8hpp_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>include/ClientMain.hpp</label>
+        <link refid="ClientMain_8hpp_source"/>
+      </node>
+      <node id="8">
+        <label>include/System/MenuSystem.hpp</label>
+        <link refid="MenuSystem_8hpp_source"/>
+      </node>
+      <node id="16">
+        <label>include/taskLoader.hpp</label>
+        <link refid="taskLoader_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/Component.hpp</label>
+        <link refid="Component_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>include/System/ISystem.hpp</label>
+        <link refid="ISystem_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>include/System/Quadtree.hpp</label>
+        <link refid="Quadtree_8hpp_source"/>
+      </node>
+      <node id="7">
+        <label>include/System/FFTSystem.hpp</label>
+        <link refid="FFTSystem_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285" prot="public" static="no" strong="no">
+        <type></type>
+        <name>GameState</name>
+        <enumvalue id="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285a4c40e60bc71a32b924ce1f08d57f9721" prot="public">
+          <name>MENU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285a4cf584894c716156ecc6392622d4ef17" prot="public">
+          <name>MENUPRELOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285a23ccaad3713f1a4d4491d36cafbfea56" prot="public">
+          <name>LOBBY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285adcf6ef52e47db62728bde6a5c292928a" prot="public">
+          <name>LOBBYLIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285a3287c8d749c58c5b4b94bdcdac47d08b" prot="public">
+          <name>LOBBYLISTPRELOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285a5c63ae46605aea9dc2ed0d84514637ff" prot="public">
+          <name>LOBBYSCORE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285a5d280672d94e9532b7fe365da4654e23" prot="public">
+          <name>LOBBYSCOREPRELOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285ad50cf309d7568040619ed26ee6835a84" prot="public">
+          <name>GAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285a5363faa4e9221cd202202ba82215eb54" prot="public">
+          <name>WELCOMEMENU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285a7a10b5d68d31711288e1fe0fa17dbf4f" prot="public">
+          <name>EXIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285aa8b995cd51b19b06141c8202b9556ada" prot="public">
+          <name>SKINCHOICE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285acd4a65ca296e9a98d30ec6453453a0f1" prot="public">
+          <name>ENDT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285a4c40e60bc71a32b924ce1f08d57f9721" prot="public">
+          <name>MENU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285ad50cf309d7568040619ed26ee6835a84" prot="public">
+          <name>GAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285a5363faa4e9221cd202202ba82215eb54" prot="public">
+          <name>WELCOMEMENU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285a7a10b5d68d31711288e1fe0fa17dbf4f" prot="public">
+          <name>EXIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>GameState</para>
+<para>This file defines an enum for game states.</para>
+<para>GameState enum values:</para>
+<para><itemizedlist>
+<listitem><para>MENU</para>
+</listitem><listitem><para>MENUPRELOAD</para>
+</listitem><listitem><para>LOBBY</para>
+</listitem><listitem><para>LOBBYLIST</para>
+</listitem><listitem><para>LOBBYLISTPRELOAD</para>
+</listitem><listitem><para>LOBBYSCORE</para>
+</listitem><listitem><para>LOBBYSCOREPRELOAD</para>
+</listitem><listitem><para>GAME</para>
+</listitem><listitem><para>WELCOMEMENU</para>
+</listitem><listitem><para>EXIT</para>
+</listitem><listitem><para>SKINCHOICE</para>
+</listitem><listitem><para>ENDT </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GameState.hpp" line="45" column="1" bodyfile="include/GameState.hpp" bodystart="45" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Rtype</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>global</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GAMESTATE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GAMESTATE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>MENU,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>MENUPRELOAD,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>LOBBY,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>LOBBYLIST,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>LOBBYLISTPRELOAD,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>LOBBYSCORE,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>LOBBYSCOREPRELOAD,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>GAME,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>WELCOMEMENU,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>EXIT,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>SKINCHOICE,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>ENDT</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}GameState;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!GAMESTATE_HPP<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/GameState.hpp"/>
+  </compounddef>
+</doxygen>

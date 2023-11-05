@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structFollower" kind="struct" language="C++" prot="public">
+    <compoundname>Follower</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structFollower_1adbc6e1af1a348bc1252586055e06c9e4" prot="public" static="no" mutable="no">
+        <type>entity_t</type>
+        <definition>entity_t Follower::target</definition>
+        <argsstring></argsstring>
+        <name>target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="200" column="14" bodyfile="include/Component.hpp" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFollower_1a714d1cb1011feeeec91699774e04fe73" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Follower::xOffset</definition>
+        <argsstring></argsstring>
+        <name>xOffset</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="201" column="11" bodyfile="include/Component.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFollower_1a524429c6f80517b90f23f6ac7588010a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Follower::yOffset</definition>
+        <argsstring></argsstring>
+        <name>yOffset</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="202" column="11" bodyfile="include/Component.hpp" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Component.hpp" line="199" column="1" bodyfile="include/Component.hpp" bodystart="199" bodyend="203"/>
+    <listofallmembers>
+      <member refid="structFollower_1adbc6e1af1a348bc1252586055e06c9e4" prot="public" virt="non-virtual"><scope>Follower</scope><name>target</name></member>
+      <member refid="structFollower_1a714d1cb1011feeeec91699774e04fe73" prot="public" virt="non-virtual"><scope>Follower</scope><name>xOffset</name></member>
+      <member refid="structFollower_1a524429c6f80517b90f23f6ac7588010a" prot="public" virt="non-virtual"><scope>Follower</scope><name>yOffset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classGUIConfig" kind="class" language="C++" prot="public">
+    <compoundname>GUIConfig</compoundname>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classGUIConfig_1a8f8469d341951c6d3756a126dda42bbc" prot="protected" static="no" mutable="no">
+        <type>pair&lt; int, int &gt;</type>
+        <definition>pair&lt;int, int&gt; GUIConfig::res</definition>
+        <argsstring></argsstring>
+        <name>res</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="118" column="10" bodyfile="include/GUI/GUIConfig.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGUIConfig_1ad3411fa73cf075742b1369e08880ed81" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string GUIConfig::title</definition>
+        <argsstring></argsstring>
+        <name>title</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="119" column="12" bodyfile="include/GUI/GUIConfig.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGUIConfig_1a43bbc704c974aa41fee76dcdc1af9cfd" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GUIConfig::fps</definition>
+        <argsstring></argsstring>
+        <name>fps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="120" column="9" bodyfile="include/GUI/GUIConfig.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGUIConfig_1a85fb57dae6e21450e202ccbdb506999c" prot="protected" static="no" mutable="no">
+        <type><ref refid="structthemeData" kindref="compound">themeData</ref></type>
+        <definition>themeData GUIConfig::theme</definition>
+        <argsstring></argsstring>
+        <name>theme</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="121" column="15" bodyfile="include/GUI/GUIConfig.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGUIConfig_1a93f88bb27469bea17602f655a5e512e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GUIConfig::GUIConfig</definition>
+        <argsstring>()</argsstring>
+        <name>GUIConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>GUIConfig.cpp</para>
+<para>Handles loading and storing configuration data for the <ref refid="classGUI" kindref="compound">GUI</ref>.</para>
+<para>Methods:</para>
+<para><itemizedlist>
+<listitem><para><ref refid="classGUIConfig_1a93f88bb27469bea17602f655a5e512e8" kindref="member">GUIConfig()</ref> Default constructor.</para>
+</listitem><listitem><para>~GUIConfig() Destructor.</para>
+</listitem><listitem><para>load() Loads <ref refid="classGUI" kindref="compound">GUI</ref> configuration from libconfig Setting.</para>
+</listitem><listitem><para>print() Prints <ref refid="classGUI" kindref="compound">GUI</ref> configuration to console.</para>
+</listitem><listitem><para>getResolution() Returns resolution pair.</para>
+</listitem><listitem><para>getTitle() Returns window title string.</para>
+</listitem><listitem><para>getFPS() Returns target FPS.</para>
+</listitem><listitem><para>getTheme() Returns theme data struct.</para>
+</listitem><listitem><para>setResolution() Sets resolution pair.</para>
+</listitem><listitem><para>setFPS() Sets target FPS.</para>
+</listitem><listitem><para>setTheme() Sets theme data struct.</para>
+</listitem></itemizedlist>
+</para>
+<para>Members:</para>
+<para><itemizedlist>
+<listitem><para>title Window title string.</para>
+</listitem><listitem><para>fps Target frames per second.</para>
+</listitem><listitem><para>res Resolution pair (width, height).</para>
+</listitem><listitem><para>theme Theme data struct. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="84" column="1" bodyfile="src/GUI/GUIConfig.cpp" bodystart="66" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUIConfig_1a983665ddb85e89cbeacc2ed5008e59c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GUIConfig::~GUIConfig</definition>
+        <argsstring>()</argsstring>
+        <name>~GUIConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="85" column="1" bodyfile="src/GUI/GUIConfig.cpp" bodystart="69" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUIConfig_1a4933f49fc71e9df36769e2b144661c8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUIConfig::setResolution</definition>
+        <argsstring>(pair&lt; int, int &gt; res)</argsstring>
+        <name>setResolution</name>
+        <param>
+          <type>pair&lt; int, int &gt;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="86" column="14" bodyfile="src/GUI/GUIConfig.cpp" bodystart="103" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUIConfig_1a2b717cc3d8d23b99f6912748d0f27fdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUIConfig::setTitle</definition>
+        <argsstring>(string title)</argsstring>
+        <name>setTitle</name>
+        <param>
+          <type>string</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="87" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUIConfig_1a7b1c46052bb88925bf4325a629dfd0e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUIConfig::setFPS</definition>
+        <argsstring>(int fps)</argsstring>
+        <name>setFPS</name>
+        <param>
+          <type>int</type>
+          <declname>fps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="88" column="14" bodyfile="src/GUI/GUIConfig.cpp" bodystart="107" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUIConfig_1ab14f24f46f99d45e88511a8dd941e83d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUIConfig::setTheme</definition>
+        <argsstring>(themeData theme)</argsstring>
+        <name>setTheme</name>
+        <param>
+          <type><ref refid="structthemeData" kindref="compound">themeData</ref></type>
+          <declname>theme</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="89" column="14" bodyfile="src/GUI/GUIConfig.cpp" bodystart="111" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUIConfig_1a6630ee8aa167e238af606ac7e3a2c712" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>pair&lt; int, int &gt;</type>
+        <definition>pair&lt; int, int &gt; GUIConfig::getResolution</definition>
+        <argsstring>() const</argsstring>
+        <name>getResolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="90" column="14" bodyfile="src/GUI/GUIConfig.cpp" bodystart="87" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUIConfig_1ac18d25ac37fb1d10f88645048fd4655a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string GUIConfig::getTitle</definition>
+        <argsstring>() const</argsstring>
+        <name>getTitle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="91" column="16" bodyfile="src/GUI/GUIConfig.cpp" bodystart="91" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUIConfig_1ad3840c4416949004b49909eb00bd5dd1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GUIConfig::getFPS</definition>
+        <argsstring>() const</argsstring>
+        <name>getFPS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="92" column="13" bodyfile="src/GUI/GUIConfig.cpp" bodystart="95" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUIConfig_1aea86aba7d0e7b7f093053e3866e857c2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structthemeData" kindref="compound">themeData</ref></type>
+        <definition>themeData GUIConfig::getTheme</definition>
+        <argsstring>() const</argsstring>
+        <name>getTheme</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="93" column="19" bodyfile="src/GUI/GUIConfig.cpp" bodystart="99" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUIConfig_1a362f8e34b4215cdcfc9548696616cb56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUIConfig::load</definition>
+        <argsstring>(const libconfig::Setting &amp;guiSetting)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const libconfig::Setting &amp;</type>
+          <declname>guiSetting</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="94" column="14" bodyfile="src/GUI/GUIConfig.cpp" bodystart="72" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUIConfig_1ac83318835114ad6889508cfd3c61b1b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUIConfig::print</definition>
+        <argsstring>()</argsstring>
+        <name>print</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="95" column="14" bodyfile="src/GUI/GUIConfig.cpp" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classGUIConfig_1a269a9abc6a347e612a36163aee3da248" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>libconfig::Setting &amp;</type>
+        <definition>libconfig::Setting&amp; GUIConfig::getConfig</definition>
+        <argsstring>(const std::string &amp;file)</argsstring>
+        <name>getConfig</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GUI/GUIConfig.hpp" line="97" column="28" bodyfile="include/GUI/GUIConfig.hpp" bodystart="97" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>themeData</label>
+        <link refid="structthemeData"/>
+      </node>
+      <node id="1">
+        <label>GUIConfig</label>
+        <link refid="classGUIConfig"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>theme</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/GUI/GUIConfig.hpp" line="82" column="1" bodyfile="include/GUI/GUIConfig.hpp" bodystart="82" bodyend="123"/>
+    <listofallmembers>
+      <member refid="classGUIConfig_1a43bbc704c974aa41fee76dcdc1af9cfd" prot="protected" virt="non-virtual"><scope>GUIConfig</scope><name>fps</name></member>
+      <member refid="classGUIConfig_1a269a9abc6a347e612a36163aee3da248" prot="public" virt="non-virtual"><scope>GUIConfig</scope><name>getConfig</name></member>
+      <member refid="classGUIConfig_1ad3840c4416949004b49909eb00bd5dd1" prot="public" virt="non-virtual"><scope>GUIConfig</scope><name>getFPS</name></member>
+      <member refid="classGUIConfig_1a6630ee8aa167e238af606ac7e3a2c712" prot="public" virt="non-virtual"><scope>GUIConfig</scope><name>getResolution</name></member>
+      <member refid="classGUIConfig_1aea86aba7d0e7b7f093053e3866e857c2" prot="public" virt="non-virtual"><scope>GUIConfig</scope><name>getTheme</name></member>
+      <member refid="classGUIConfig_1ac18d25ac37fb1d10f88645048fd4655a" prot="public" virt="non-virtual"><scope>GUIConfig</scope><name>getTitle</name></member>
+      <member refid="classGUIConfig_1a93f88bb27469bea17602f655a5e512e8" prot="public" virt="non-virtual"><scope>GUIConfig</scope><name>GUIConfig</name></member>
+      <member refid="classGUIConfig_1a362f8e34b4215cdcfc9548696616cb56" prot="public" virt="non-virtual"><scope>GUIConfig</scope><name>load</name></member>
+      <member refid="classGUIConfig_1ac83318835114ad6889508cfd3c61b1b3" prot="public" virt="non-virtual"><scope>GUIConfig</scope><name>print</name></member>
+      <member refid="classGUIConfig_1a8f8469d341951c6d3756a126dda42bbc" prot="protected" virt="non-virtual"><scope>GUIConfig</scope><name>res</name></member>
+      <member refid="classGUIConfig_1a7b1c46052bb88925bf4325a629dfd0e5" prot="public" virt="non-virtual"><scope>GUIConfig</scope><name>setFPS</name></member>
+      <member refid="classGUIConfig_1a4933f49fc71e9df36769e2b144661c8f" prot="public" virt="non-virtual"><scope>GUIConfig</scope><name>setResolution</name></member>
+      <member refid="classGUIConfig_1ab14f24f46f99d45e88511a8dd941e83d" prot="public" virt="non-virtual"><scope>GUIConfig</scope><name>setTheme</name></member>
+      <member refid="classGUIConfig_1a2b717cc3d8d23b99f6912748d0f27fdb" prot="public" virt="non-virtual"><scope>GUIConfig</scope><name>setTitle</name></member>
+      <member refid="classGUIConfig_1a85fb57dae6e21450e202ccbdb506999c" prot="protected" virt="non-virtual"><scope>GUIConfig</scope><name>theme</name></member>
+      <member refid="classGUIConfig_1ad3411fa73cf075742b1369e08880ed81" prot="protected" virt="non-virtual"><scope>GUIConfig</scope><name>title</name></member>
+      <member refid="classGUIConfig_1a983665ddb85e89cbeacc2ed5008e59c8" prot="public" virt="non-virtual"><scope>GUIConfig</scope><name>~GUIConfig</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

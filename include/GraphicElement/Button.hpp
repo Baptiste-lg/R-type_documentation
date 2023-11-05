@@ -1,4 +1,65 @@
-// Button.hpp
+/*
+** EPITECH PROJECT, 2023
+** Rtype
+** File description:
+** Button.hpp
+*/
+
+/**
+** Button
+**
+** This class represents a clickable button.
+**
+** Public Methods:
+**
+** - Button()
+**   - Default constructor
+**
+** - Button(texture, position, onClick, res)
+**   - Constructor with texture, position, click handler and resolution
+**
+** - ~Button()
+**   - Destructor
+**
+** - handleEvent()
+**   - Handles mouse events on the button
+**
+** - draw()
+**   - Draws the button
+**
+** - setText()
+**   - Sets the text on the button
+**
+** Private Attributes:
+**
+** - texture
+**   - Button texture
+**
+** - sprite
+**   - Button sprite
+**
+** - text
+**   - Button text
+**
+** - onClick
+**   - Click handler function
+**
+** - state
+**   - Current state of the button
+**
+** - position
+**   - Position of the button
+**
+** - size
+**   - Size of the button
+**
+** - type
+**   - Type of the button (rectangle, circle, etc)
+**
+** - lastClickClock
+**   - Clock to prevent double clicks
+*/
+
 #ifndef BUTTON_HPP_
 #define BUTTON_HPP_
 

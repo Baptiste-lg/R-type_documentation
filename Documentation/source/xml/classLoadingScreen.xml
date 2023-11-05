@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classLoadingScreen" kind="class" language="C++" prot="public">
+    <compoundname>LoadingScreen</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classLoadingScreen_1a6befb61facf525ab056ee44e81c7951e" prot="private" static="no" mutable="no">
+        <type>sf::Texture</type>
+        <definition>sf::Texture LoadingScreen::texture</definition>
+        <argsstring></argsstring>
+        <name>texture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/LoadingScreen.hpp" line="65" column="17" bodyfile="include/GraphicElement/LoadingScreen.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLoadingScreen_1a460482d089ac77245eb815c4535367eb" prot="private" static="no" mutable="no">
+        <type>sf::Sprite</type>
+        <definition>sf::Sprite LoadingScreen::sprite</definition>
+        <argsstring></argsstring>
+        <name>sprite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/LoadingScreen.hpp" line="66" column="16" bodyfile="include/GraphicElement/LoadingScreen.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLoadingScreen_1a175ff0e4c59d524b71a277e49b81a6eb" prot="private" static="no" mutable="no">
+        <type>sf::Font</type>
+        <definition>sf::Font LoadingScreen::font</definition>
+        <argsstring></argsstring>
+        <name>font</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/LoadingScreen.hpp" line="67" column="14" bodyfile="include/GraphicElement/LoadingScreen.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLoadingScreen_1ae5e8b891c292ecf1d278d5930875d709" prot="private" static="no" mutable="no">
+        <type>sf::Text</type>
+        <definition>sf::Text LoadingScreen::text</definition>
+        <argsstring></argsstring>
+        <name>text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/LoadingScreen.hpp" line="68" column="14" bodyfile="include/GraphicElement/LoadingScreen.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLoadingScreen_1ad280e1a8f065e9a1efa9e308479ee12d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LoadingScreen::LoadingScreen</definition>
+        <argsstring>()</argsstring>
+        <name>LoadingScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LoadingScreen.cpp</para>
+<para>Implements a simple loading screen with a logo and percentage text.</para>
+<para>Methods:</para>
+<para><itemizedlist>
+<listitem><para><ref refid="classLoadingScreen_1ad280e1a8f065e9a1efa9e308479ee12d" kindref="member">LoadingScreen()</ref> Default constructor.</para>
+</listitem><listitem><para>~LoadingScreen() Destructor.</para>
+</listitem><listitem><para>load() Loads the logo texture and font. Positions them based on the resolution.</para>
+</listitem><listitem><para>update() Updates the percentage text.</para>
+</listitem><listitem><para>draw() Draws the logo sprite and percentage text.</para>
+</listitem></itemizedlist>
+</para>
+<para>Members:</para>
+<para><itemizedlist>
+<listitem><para>texture The logo texture.</para>
+</listitem><listitem><para>sprite The logo sprite.</para>
+</listitem><listitem><para>font The font used for percentage text.</para>
+</listitem><listitem><para>text The percentage text. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/LoadingScreen.hpp" line="57" column="5" bodyfile="src/GraphicElement/LoadingScreen.cpp" bodystart="50" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classLoadingScreen_1ac4d8e1e47650f66e2260506fa5a1bd7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LoadingScreen::~LoadingScreen</definition>
+        <argsstring>()</argsstring>
+        <name>~LoadingScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/LoadingScreen.hpp" line="58" column="5" bodyfile="src/GraphicElement/LoadingScreen.cpp" bodystart="53" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classLoadingScreen_1a1958497bc8b2e1f65b171cc5addb6645" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoadingScreen::load</definition>
+        <argsstring>(std::pair&lt; int, int &gt; res)</argsstring>
+        <name>load</name>
+        <param>
+          <type>std::pair&lt; int, int &gt;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/LoadingScreen.hpp" line="60" column="10" bodyfile="src/GraphicElement/LoadingScreen.cpp" bodystart="56" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classLoadingScreen_1a0f2d1cd69c6fd132bed8044265bfdf8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoadingScreen::update</definition>
+        <argsstring>(int percent)</argsstring>
+        <name>update</name>
+        <param>
+          <type>int</type>
+          <declname>percent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/LoadingScreen.hpp" line="61" column="10" bodyfile="src/GraphicElement/LoadingScreen.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classLoadingScreen_1aab466bccdd42bbeab9250d766b0efcbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoadingScreen::draw</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>draw</name>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/LoadingScreen.hpp" line="62" column="10" bodyfile="src/GraphicElement/LoadingScreen.cpp" bodystart="82" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/GraphicElement/LoadingScreen.hpp" line="55" column="1" bodyfile="include/GraphicElement/LoadingScreen.hpp" bodystart="55" bodyend="69"/>
+    <listofallmembers>
+      <member refid="classLoadingScreen_1aab466bccdd42bbeab9250d766b0efcbc" prot="public" virt="non-virtual"><scope>LoadingScreen</scope><name>draw</name></member>
+      <member refid="classLoadingScreen_1a175ff0e4c59d524b71a277e49b81a6eb" prot="private" virt="non-virtual"><scope>LoadingScreen</scope><name>font</name></member>
+      <member refid="classLoadingScreen_1a1958497bc8b2e1f65b171cc5addb6645" prot="public" virt="non-virtual"><scope>LoadingScreen</scope><name>load</name></member>
+      <member refid="classLoadingScreen_1ad280e1a8f065e9a1efa9e308479ee12d" prot="public" virt="non-virtual"><scope>LoadingScreen</scope><name>LoadingScreen</name></member>
+      <member refid="classLoadingScreen_1a460482d089ac77245eb815c4535367eb" prot="private" virt="non-virtual"><scope>LoadingScreen</scope><name>sprite</name></member>
+      <member refid="classLoadingScreen_1ae5e8b891c292ecf1d278d5930875d709" prot="private" virt="non-virtual"><scope>LoadingScreen</scope><name>text</name></member>
+      <member refid="classLoadingScreen_1a6befb61facf525ab056ee44e81c7951e" prot="private" virt="non-virtual"><scope>LoadingScreen</scope><name>texture</name></member>
+      <member refid="classLoadingScreen_1a0f2d1cd69c6fd132bed8044265bfdf8d" prot="public" virt="non-virtual"><scope>LoadingScreen</scope><name>update</name></member>
+      <member refid="classLoadingScreen_1ac4d8e1e47650f66e2260506fa5a1bd7e" prot="public" virt="non-virtual"><scope>LoadingScreen</scope><name>~LoadingScreen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

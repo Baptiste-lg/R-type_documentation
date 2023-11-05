@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structState" kind="struct" language="C++" prot="public">
+    <compoundname>State</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structState_1ad60cd5329b4dd200da3935a4c52f3bad" prot="public" static="no" mutable="no">
+        <type>GameState</type>
+        <definition>GameState State::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <initializer>= GameState::MENUPRELOAD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="287" column="15" bodyfile="include/Component.hpp" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Component.hpp" line="285" column="1" bodyfile="include/Component.hpp" bodystart="286" bodyend="288"/>
+    <listofallmembers>
+      <member refid="structState_1ad60cd5329b4dd200da3935a4c52f3bad" prot="public" virt="non-virtual"><scope>State</scope><name>state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

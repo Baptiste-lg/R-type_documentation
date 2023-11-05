@@ -1,3 +1,37 @@
+/*
+** EPITECH PROJECT, 2023
+** Rtype
+** File description:
+** client.cpp
+*/
+
+/**
+* client.cpp
+*
+* Implements a simple UDP client to send messages to a server.
+*
+* Creates a UDP socket and connects to a server IP/port.
+* Sends multiple messages in a loop to the server.
+*
+* Methods:
+*
+* - main()
+*   - Creates UDP socket.
+*   - Connects to server IP/port.
+*   - Loops sending messages to server.
+*
+* Constants:
+*
+* - SERVER_IP
+*   IP address of server.
+*
+* - SERVER_PORT
+*   Port number of server.
+*
+* - BUFFER_SIZE
+*   Size of network buffer.
+*/
+
 #include <iostream>
 #include <cstring>
 #include <arpa/inet.h>
@@ -26,7 +60,6 @@ int main()
     // while (true)
     // {
         std::string message;
-        std::cout << "Enter a prout to send (or 'q' to quit): ";
         // std::getline(std::cin, message);
         int i = 0;
 

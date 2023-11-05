@@ -1,8 +1,27 @@
 /*
 ** EPITECH PROJECT, 2024
-** ECS
+** Rtype
 ** File description:
 ** taskLoader
+*/
+
+/**
+** taskLoader
+**
+** This file contains functions related to loading tasks.
+**
+** Functions:
+**
+** - executeLoadingTasks()
+**   Executes a vector of loading task functions.
+**
+**   Parameters:
+**   - gui: Reference to the GUI
+**   - tasks: Vector of loading task functions
+**
+**   The loading task functions take an int& progress
+**   parameter and perform some incremental loading work.
+**
 */
 
 #ifndef TASKLOADER_HPP_

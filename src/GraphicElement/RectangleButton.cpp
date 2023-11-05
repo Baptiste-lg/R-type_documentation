@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2023
-** Yiang
+** Rtype
 ** File description:
 ** RectangleButton.cpp
 */

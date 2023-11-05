@@ -1,0 +1,360 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="client__tcp__udp_8cpp" kind="file" language="C++">
+    <compoundname>client_tcp_udp.cpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">arpa/inet.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">termios.h</includes>
+    <includes local="no">thread</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>arpa/inet.h</label>
+      </node>
+      <node id="6">
+        <label>termios.h</label>
+      </node>
+      <node id="1">
+        <label>src/server/client/client_tcp_udp.cpp</label>
+        <link refid="client__tcp__udp_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>unistd.h</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="7">
+        <label>thread</label>
+      </node>
+      <node id="3">
+        <label>cstring</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="client__tcp__udp_8cpp_1a2ba7b809d0d4cc7dbdc0e73a4b80d1b5" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* SERVER_IP</definition>
+        <argsstring></argsstring>
+        <name>SERVER_IP</name>
+        <initializer>= &quot;127.0.0.1&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>client_tcp_udp.cpp</para>
+<para>Implements a TCP and UDP client to connect to a server.</para>
+<para>Methods:</para>
+<para><itemizedlist>
+<listitem><para>main()<itemizedlist>
+<listitem><para>Starts TCP and UDP clients.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>getch()<itemizedlist>
+<listitem><para>Gets character input without echo.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>listen_to_server()<itemizedlist>
+<listitem><para>Listens for UDP messages from server.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>start_tcp_client()<itemizedlist>
+<listitem><para>Connects to server via TCP.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>start_udp_client()<itemizedlist>
+<listitem><para>Connects to server via UDP.</para>
+</listitem><listitem><para>Sends player movement messages.</para>
+</listitem><listitem><para>Spawns listen thread.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>Constants:</para>
+<para><itemizedlist>
+<listitem><para>SERVER_IP<itemizedlist>
+<listitem><para>IP address of server.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>TCP_PORT<itemizedlist>
+<listitem><para>TCP port of server.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>UDP_PORT<itemizedlist>
+<listitem><para>UDP port of server.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>BUFFER_SIZE<itemizedlist>
+<listitem><para><ref refid="structNetwork" kindref="compound">Network</ref> buffer size. </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/client/client_tcp_udp.cpp" line="54" column="12" bodyfile="src/server/client/client_tcp_udp.cpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="client__tcp__udp_8cpp_1a333435f28c0c24bb1558feb656c137fd" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int TCP_PORT</definition>
+        <argsstring></argsstring>
+        <name>TCP_PORT</name>
+        <initializer>= 12345</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/client/client_tcp_udp.cpp" line="55" column="11" bodyfile="src/server/client/client_tcp_udp.cpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="client__tcp__udp_8cpp_1a0519ae8c5ae26617afd5ebc5ca4e39d6" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int UDP_PORT</definition>
+        <argsstring></argsstring>
+        <name>UDP_PORT</name>
+        <initializer>= 12346</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/client/client_tcp_udp.cpp" line="56" column="11" bodyfile="src/server/client/client_tcp_udp.cpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="client__tcp__udp_8cpp_1a91f806c1bc7c1f4f402a627773840252" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int BUFFER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>BUFFER_SIZE</name>
+        <initializer>= 1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/client/client_tcp_udp.cpp" line="57" column="11" bodyfile="src/server/client/client_tcp_udp.cpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="client__tcp__udp_8cpp_1a900227ac88c22f76fdca78960ffee793" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void listen_to_server</definition>
+        <argsstring>(int sockfd)</argsstring>
+        <name>listen_to_server</name>
+        <param>
+          <type>int</type>
+          <declname>sockfd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/client/client_tcp_udp.cpp" line="59" column="6" bodyfile="src/server/client/client_tcp_udp.cpp" bodystart="59" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="client__tcp__udp_8cpp_1af3facad10e05defa48d45b46eb9ebe7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char getch</definition>
+        <argsstring>()</argsstring>
+        <name>getch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ClientMain.cpp</para>
+<para>Implements functionality for client-side game entity initialization and terminal input handling for the game.</para>
+<para>Functions:</para>
+<para><itemizedlist>
+<listitem><para>getch() Captures a single character from the terminal input in non-blocking mode, without echoing the input character to the terminal.</para>
+</listitem><listitem><para>initializeGameEntitiesClient(Registry&amp; registry) Initializes the game entities on the client-side by invoking the spawnClientEntity function with the provided registry.</para>
+</listitem></itemizedlist>
+</para>
+<para>Dependencies:</para>
+<para><itemizedlist>
+<listitem><para><ref refid="ClientMain_8hpp_source" kindref="compound">ClientMain.hpp</ref> Header file which may contain declarations relevant to client-side operations.</para>
+</listitem><listitem><para><ref refid="Spawner_8hpp_source" kindref="compound">Spawner.hpp</ref> Header file containing the declaration of spawnClientEntity function and possibly other entity spawning related functionalities. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/client/client_tcp_udp.cpp" line="74" column="6" bodyfile="src/server/client/client_tcp_udp.cpp" bodystart="74" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="client__tcp__udp_8cpp_1a3d57d694817495e6e65ba2bc273fe34c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void start_tcp_client</definition>
+        <argsstring>()</argsstring>
+        <name>start_tcp_client</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/client/client_tcp_udp.cpp" line="91" column="6" bodyfile="src/server/client/client_tcp_udp.cpp" bodystart="91" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="client__tcp__udp_8cpp_1af046e0ea92b7621d6f3ee7628e505ca5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void start_udp_client</definition>
+        <argsstring>()</argsstring>
+        <name>start_udp_client</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/client/client_tcp_udp.cpp" line="115" column="6" bodyfile="src/server/client/client_tcp_udp.cpp" bodystart="115" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="client__tcp__udp_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/client/client_tcp_udp.cpp" line="148" column="5" bodyfile="src/server/client/client_tcp_udp.cpp" bodystart="148" bodyend="153"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2023</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Rtype</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>client.cpp</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arpa/inet.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;termios.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*SERVER_IP<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;127.0.0.1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>TCP_PORT<sp/>=<sp/>12345;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>UDP_PORT<sp/>=<sp/>12346;<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>BUFFER_SIZE<sp/>=<sp/>1024;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>listen_to_server(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sockfd)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buffer[BUFFER_SIZE];</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sockaddr_in<sp/>serverAddr;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>socklen_t<sp/>serverAddrLen<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(serverAddr);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ssize_t<sp/>recvLen<sp/>=<sp/>recvfrom(sockfd,<sp/>buffer,<sp/>BUFFER_SIZE,<sp/>0,<sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sockaddr*)&amp;serverAddr,<sp/>&amp;serverAddrLen);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(recvLen<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>perror(</highlight><highlight class="stringliteral">&quot;recvfrom&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>You<sp/>might<sp/>decide<sp/>to<sp/>handle<sp/>this<sp/>differently.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer[recvLen]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>getch()<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">termios<sp/>old<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>fflush(stdout);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tcgetattr(0,<sp/>&amp;old)<sp/>&lt;<sp/>0)<sp/>perror(</highlight><highlight class="stringliteral">&quot;tcsetattr()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>old.c_lflag<sp/>&amp;=<sp/>~ICANON;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>old.c_lflag<sp/>&amp;=<sp/>~ECHO;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>old.c_cc[VMIN]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>old.c_cc[VTIME]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tcsetattr(0,<sp/>TCSANOW,<sp/>&amp;old)<sp/>&lt;<sp/>0)<sp/>perror(</highlight><highlight class="stringliteral">&quot;tcsetattr<sp/>ICANON&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(read(0,<sp/>&amp;buf,<sp/>1)<sp/>&lt;<sp/>0)<sp/>perror(</highlight><highlight class="stringliteral">&quot;read()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>old.c_lflag<sp/>|=<sp/>ICANON;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>old.c_lflag<sp/>|=<sp/>ECHO;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tcsetattr(0,<sp/>TCSADRAIN,<sp/>&amp;old)<sp/>&lt;<sp/>0)<sp/>perror(</highlight><highlight class="stringliteral">&quot;tcsetattr<sp/>~ICANON&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buf;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>start_tcp_client()<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sockfd<sp/>=<sp/>socket(AF_INET,<sp/>SOCK_STREAM,<sp/>0);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sockfd<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>perror(</highlight><highlight class="stringliteral">&quot;socket&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sockaddr_in<sp/>serverAddr;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(&amp;serverAddr,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(serverAddr));</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>serverAddr.sin_family<sp/>=<sp/>AF_INET;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>serverAddr.sin_port<sp/>=<sp/>htons(TCP_PORT);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>serverAddr.sin_addr.s_addr<sp/>=<sp/>inet_addr(SERVER_IP);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(connect(sockfd,<sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sockaddr<sp/>*)&amp;serverAddr,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(serverAddr))<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>perror(</highlight><highlight class="stringliteral">&quot;connect&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close(sockfd);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TCP<sp/>related<sp/>stuff.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>simplicity,<sp/>we<sp/>will<sp/>assume<sp/>the<sp/>handshake<sp/>is<sp/>done<sp/>without<sp/>any<sp/>actual<sp/>data<sp/>exchange.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>close(sockfd);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>start_udp_client()<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sockfd<sp/>=<sp/>socket(AF_INET,<sp/>SOCK_DGRAM,<sp/>0);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sockfd<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>perror(</highlight><highlight class="stringliteral">&quot;socket&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sockaddr_in<sp/>serverAddr;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(&amp;serverAddr,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(serverAddr));</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>serverAddr.sin_family<sp/>=<sp/>AF_INET;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>serverAddr.sin_port<sp/>=<sp/>htons(UDP_PORT);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>serverAddr.sin_addr.s_addr<sp/>=<sp/>inet_addr(SERVER_IP);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>std::thread<sp/>listener_thread(listen_to_server,<sp/>sockfd);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>input<sp/>=<sp/>getch();</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input<sp/>==<sp/></highlight><highlight class="charliteral">&apos;b&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Let&apos;s<sp/>use<sp/>&apos;q&apos;<sp/>to<sp/>quit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>message<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;PM:&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>PM<sp/>for<sp/>PlayerMoved</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>message<sp/>+=<sp/>input;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ssize_t<sp/>sendLen<sp/>=<sp/>sendto(sockfd,<sp/>message.c_str(),<sp/>message.length(),<sp/>0,<sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sockaddr<sp/>*)&amp;serverAddr,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(serverAddr));</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sendLen<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>perror(</highlight><highlight class="stringliteral">&quot;sendto&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::this_thread::sleep_for(std::chrono::milliseconds(5));</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>listener_thread.join();</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>close(sockfd);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>start_tcp_client();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>start_udp_client();</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/server/client/client_tcp_udp.cpp"/>
+  </compounddef>
+</doxygen>

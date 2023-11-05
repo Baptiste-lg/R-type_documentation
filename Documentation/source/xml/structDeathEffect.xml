@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structDeathEffect" kind="struct" language="C++" prot="public">
+    <compoundname>DeathEffect</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structDeathEffect_1a5380c67c31c273a292044268677cd96f" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string DeathEffect::Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="310" column="17" bodyfile="include/Component.hpp" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structDeathEffect_1a2b00778c222a114c793b96eb7af9bc0b" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void(<ref refid="classRegistry" kindref="compound">Registry</ref> &amp;)&gt;</type>
+        <definition>std::function&lt;void(Registry &amp;)&gt; DeathEffect::Effect</definition>
+        <argsstring></argsstring>
+        <name>Effect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="311" column="19" bodyfile="include/Component.hpp" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structDeathEffect_1a7e3b3f3ba89eb0db56368457e89095b8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DeathEffect::applyTo</definition>
+        <argsstring></argsstring>
+        <name>applyTo</name>
+        <initializer>= DeathApplyType::TO_HOST</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="312" column="9" bodyfile="include/Component.hpp" bodystart="312" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Component.hpp" line="309" column="1" bodyfile="include/Component.hpp" bodystart="309" bodyend="313"/>
+    <listofallmembers>
+      <member refid="structDeathEffect_1a7e3b3f3ba89eb0db56368457e89095b8" prot="public" virt="non-virtual"><scope>DeathEffect</scope><name>applyTo</name></member>
+      <member refid="structDeathEffect_1a2b00778c222a114c793b96eb7af9bc0b" prot="public" virt="non-virtual"><scope>DeathEffect</scope><name>Effect</name></member>
+      <member refid="structDeathEffect_1a5380c67c31c273a292044268677cd96f" prot="public" virt="non-virtual"><scope>DeathEffect</scope><name>Name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

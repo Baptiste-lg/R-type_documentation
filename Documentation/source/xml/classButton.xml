@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classButton" kind="class" language="C++" prot="public">
+    <compoundname>Button</compoundname>
+    <derivedcompoundref refid="classRectangleButton" prot="public" virt="non-virtual">RectangleButton</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classButton_1aa0cf48f8db00201090fbbd702ee81fb9" prot="private" static="no" mutable="no">
+        <type>sf::Texture</type>
+        <definition>sf::Texture Button::texture</definition>
+        <argsstring></argsstring>
+        <name>texture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="98" column="17" bodyfile="include/GraphicElement/Button.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classButton_1a218e6848dba1a9928b25cc5a1ae0f712" prot="private" static="no" mutable="no">
+        <type>sf::Sprite</type>
+        <definition>sf::Sprite Button::sprite</definition>
+        <argsstring></argsstring>
+        <name>sprite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="99" column="16" bodyfile="include/GraphicElement/Button.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classButton_1aadf908b0777f2ae5c28d949fda3384c1" prot="private" static="no" mutable="no">
+        <type>sf::Text</type>
+        <definition>sf::Text Button::text</definition>
+        <argsstring></argsstring>
+        <name>text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="100" column="14" bodyfile="include/GraphicElement/Button.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classButton_1a30b76ab312dc7f66e67596ae20540ec2" prot="private" static="no" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; Button::onClick</definition>
+        <argsstring></argsstring>
+        <name>onClick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="101" column="19" bodyfile="include/GraphicElement/Button.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classButton_1ae823b05599aa1650bdc496c0d377c106" prot="private" static="no" mutable="no">
+        <type>ButtonState</type>
+        <definition>ButtonState Button::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="102" column="17" bodyfile="include/GraphicElement/Button.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classButton_1afd3823c96d76e1152fda9fc080f45b01" prot="private" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Button::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="103" column="18" bodyfile="include/GraphicElement/Button.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classButton_1ae2858ccb82273767d44ec2bc952dd07c" prot="private" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Button::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="104" column="18" bodyfile="include/GraphicElement/Button.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classButton_1ae21c733fe0de298bec692fa93dfe56bf" prot="private" static="no" mutable="no">
+        <type>ButtonType</type>
+        <definition>ButtonType Button::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="105" column="16" bodyfile="include/GraphicElement/Button.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classButton_1adfddfd4942df8f291e0c06059363456a" prot="private" static="no" mutable="no">
+        <type>sf::Clock</type>
+        <definition>sf::Clock Button::lastClickClock</definition>
+        <argsstring></argsstring>
+        <name>lastClickClock</name>
+        <initializer>= sf::Clock()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="106" column="15" bodyfile="include/GraphicElement/Button.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classButton_1a3b36df1ae23c58aedb9e15a713159459" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Button::Button</definition>
+        <argsstring>()</argsstring>
+        <name>Button</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Button.cpp</para>
+<para>Implements a clickable button UI element.</para>
+<para>Methods:</para>
+<para><itemizedlist>
+<listitem><para><ref refid="classButton_1a3b36df1ae23c58aedb9e15a713159459" kindref="member">Button()</ref> Default constructor.</para>
+</listitem><listitem><para><ref refid="classButton_1a3b36df1ae23c58aedb9e15a713159459" kindref="member">Button()</ref> Constructor taking texture, position, click handler and resolution. Calculates pixel position from normalized input. Sets sprite texture and position.</para>
+</listitem><listitem><para>~Button() Destructor.</para>
+</listitem><listitem><para>handleEvent() Handles click events on the button. Calls onClick handler if button is clicked.</para>
+</listitem><listitem><para>draw() Draws the button sprite and text.</para>
+</listitem><listitem><para>setText() Sets the text string, font, and size. Centers text in button.</para>
+</listitem></itemizedlist>
+</para>
+<para>Members:</para>
+<para><itemizedlist>
+<listitem><para>sprite The button sprite.</para>
+</listitem><listitem><para>text The text displayed on the button.</para>
+</listitem><listitem><para>onClick The click handler function.</para>
+</listitem><listitem><para>position The pixel position of the button.</para>
+</listitem><listitem><para>size The size of the button.</para>
+</listitem><listitem><para>lastClickClock Tracks time since last click to prevent double clicks. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="89" column="5" bodyfile="src/GraphicElement/Button.cpp" bodystart="61" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classButton_1ae26477c4960a428134c22946291e1ee5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Button::Button</definition>
+        <argsstring>(const sf::Texture &amp;texture, const sf::Vector2f &amp;position, std::function&lt; void()&gt; onClick, std::pair&lt; int, int &gt; res)</argsstring>
+        <name>Button</name>
+        <param>
+          <type>const sf::Texture &amp;</type>
+          <declname>texture</declname>
+        </param>
+        <param>
+          <type>const sf::Vector2f &amp;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>onClick</declname>
+        </param>
+        <param>
+          <type>std::pair&lt; int, int &gt;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="90" column="5" bodyfile="src/GraphicElement/Button.cpp" bodystart="64" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classButton_1a2a001eb9c3cc8ae54768a850dd345002" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Button::~Button</definition>
+        <argsstring>()</argsstring>
+        <name>~Button</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="91" column="5" bodyfile="src/GraphicElement/Button.cpp" bodystart="79" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classButton_1afb894e6a153170d89a55a3cfba0a329b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Button::handleEvent</definition>
+        <argsstring>(const sf::Event &amp;event, const sf::RenderWindow &amp;window)</argsstring>
+        <name>handleEvent</name>
+        <param>
+          <type>const sf::Event &amp;</type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>const sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="93" column="10" bodyfile="src/GraphicElement/Button.cpp" bodystart="82" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classButton_1adf65892636ea303a84e1391106ea7cb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Button::draw</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>draw</name>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="94" column="10" bodyfile="src/GraphicElement/Button.cpp" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classButton_1a8e1824de082552349cd969bf47e303c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Button::setText</definition>
+        <argsstring>(const std::string &amp;text, const sf::Font &amp;font, unsigned int characterSize)</argsstring>
+        <name>setText</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>const sf::Font &amp;</type>
+          <declname>font</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>characterSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="95" column="10" bodyfile="src/GraphicElement/Button.cpp" bodystart="103" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Button</label>
+        <link refid="classButton"/>
+      </node>
+      <node id="2">
+        <label>RectangleButton</label>
+        <link refid="classRectangleButton"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="include/GraphicElement/Button.hpp" line="87" column="1" bodyfile="include/GraphicElement/Button.hpp" bodystart="87" bodyend="108"/>
+    <listofallmembers>
+      <member refid="classButton_1a3b36df1ae23c58aedb9e15a713159459" prot="public" virt="non-virtual"><scope>Button</scope><name>Button</name></member>
+      <member refid="classButton_1ae26477c4960a428134c22946291e1ee5" prot="public" virt="non-virtual"><scope>Button</scope><name>Button</name></member>
+      <member refid="classButton_1adf65892636ea303a84e1391106ea7cb0" prot="public" virt="non-virtual"><scope>Button</scope><name>draw</name></member>
+      <member refid="classButton_1afb894e6a153170d89a55a3cfba0a329b" prot="public" virt="non-virtual"><scope>Button</scope><name>handleEvent</name></member>
+      <member refid="classButton_1adfddfd4942df8f291e0c06059363456a" prot="private" virt="non-virtual"><scope>Button</scope><name>lastClickClock</name></member>
+      <member refid="classButton_1a30b76ab312dc7f66e67596ae20540ec2" prot="private" virt="non-virtual"><scope>Button</scope><name>onClick</name></member>
+      <member refid="classButton_1afd3823c96d76e1152fda9fc080f45b01" prot="private" virt="non-virtual"><scope>Button</scope><name>position</name></member>
+      <member refid="classButton_1a8e1824de082552349cd969bf47e303c4" prot="public" virt="non-virtual"><scope>Button</scope><name>setText</name></member>
+      <member refid="classButton_1ae2858ccb82273767d44ec2bc952dd07c" prot="private" virt="non-virtual"><scope>Button</scope><name>size</name></member>
+      <member refid="classButton_1a218e6848dba1a9928b25cc5a1ae0f712" prot="private" virt="non-virtual"><scope>Button</scope><name>sprite</name></member>
+      <member refid="classButton_1ae823b05599aa1650bdc496c0d377c106" prot="private" virt="non-virtual"><scope>Button</scope><name>state</name></member>
+      <member refid="classButton_1aadf908b0777f2ae5c28d949fda3384c1" prot="private" virt="non-virtual"><scope>Button</scope><name>text</name></member>
+      <member refid="classButton_1aa0cf48f8db00201090fbbd702ee81fb9" prot="private" virt="non-virtual"><scope>Button</scope><name>texture</name></member>
+      <member refid="classButton_1ae21c733fe0de298bec692fa93dfe56bf" prot="private" virt="non-virtual"><scope>Button</scope><name>type</name></member>
+      <member refid="classButton_1a2a001eb9c3cc8ae54768a850dd345002" prot="public" virt="non-virtual"><scope>Button</scope><name>~Button</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

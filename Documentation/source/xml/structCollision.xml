@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structCollision" kind="struct" language="C++" prot="public">
+    <compoundname>Collision</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structCollision_1aa2b9a66b2041fac08e802c451b8deb88" prot="public" static="no" mutable="no">
+        <type>EntityType</type>
+        <definition>EntityType Collision::entityType</definition>
+        <argsstring></argsstring>
+        <name>entityType</name>
+        <initializer>= EntityType::OBSTACLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="172" column="16" bodyfile="include/Component.hpp" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCollision_1ae5d4bbf602c8bd81b7a327977b2a6484" prot="public" static="no" mutable="no">
+        <type>ColliderType</type>
+        <definition>ColliderType Collision::colliderType</definition>
+        <argsstring></argsstring>
+        <name>colliderType</name>
+        <initializer>= ColliderType::DESTROY</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="173" column="18" bodyfile="include/Component.hpp" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Component.hpp" line="171" column="1" bodyfile="include/Component.hpp" bodystart="171" bodyend="175"/>
+    <listofallmembers>
+      <member refid="structCollision_1ae5d4bbf602c8bd81b7a327977b2a6484" prot="public" virt="non-virtual"><scope>Collision</scope><name>colliderType</name></member>
+      <member refid="structCollision_1aa2b9a66b2041fac08e802c451b8deb88" prot="public" virt="non-virtual"><scope>Collision</scope><name>entityType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,3 +1,41 @@
+/*
+** EPITECH PROJECT, 2023
+** Rtype
+** File description:
+** main.cpp
+*/
+
+/**
+** main.cpp
+**
+** Implements a simple UDP server that echoes back received messages.
+**
+** Methods:
+**
+** - main()
+**   Entry point of the program.
+**   Initializes a UDP socket, binds it to a port, and enters a loop
+**   where it waits for incoming messages and echoes them back.
+**
+** Members:
+**
+** - PORT
+**   The port on which the server listens for incoming messages.
+**
+** - BUFFER_SIZE
+**   The size of the buffer used for receiving messages.
+**
+** - sockfd
+**   The socket file descriptor.
+**
+** - serverAddr
+**   The server's address structure.
+**
+** - clientAddr
+**   The client's address structure, filled in by recvfrom.
+**
+*/
+
 #include <iostream>
 #include <cstring>
 #include <arpa/inet.h>
@@ -37,7 +75,6 @@ int main() {
             break;
         }
         buffer[recvLen] = '\0';
-        std::cout << "Received from " << inet_ntoa(clientAddr.sin_addr) << ": " << buffer << std::endl;
     }
     close(sockfd);
     return 0;

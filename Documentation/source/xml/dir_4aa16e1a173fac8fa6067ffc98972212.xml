@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_4aa16e1a173fac8fa6067ffc98972212" kind="dir">
+    <compoundname>include/System</compoundname>
+    <innerfile refid="AnimationSystem_8hpp">AnimationSystem.hpp</innerfile>
+    <innerfile refid="BehaviourSystem_8hpp">BehaviourSystem.hpp</innerfile>
+    <innerfile refid="ClickableSystem_8hpp">ClickableSystem.hpp</innerfile>
+    <innerfile refid="ClientSystem_8hpp">ClientSystem.hpp</innerfile>
+    <innerfile refid="ControlSystem_8hpp">ControlSystem.hpp</innerfile>
+    <innerfile refid="DeathEffectSystem_8hpp">DeathEffectSystem.hpp</innerfile>
+    <innerfile refid="DrawSystem_8hpp">DrawSystem.hpp</innerfile>
+    <innerfile refid="EffectsFunctions_8hpp">EffectsFunctions.hpp</innerfile>
+    <innerfile refid="FFTSystem_8hpp">FFTSystem.hpp</innerfile>
+    <innerfile refid="FollowerSystem_8hpp">FollowerSystem.hpp</innerfile>
+    <innerfile refid="ISystem_8hpp">ISystem.hpp</innerfile>
+    <innerfile refid="MenuSystem_8hpp">MenuSystem.hpp</innerfile>
+    <innerfile refid="PosSystem_8hpp">PosSystem.hpp</innerfile>
+    <innerfile refid="Quadtree_8hpp">Quadtree.hpp</innerfile>
+    <innerfile refid="ServerSystem_8hpp">ServerSystem.hpp</innerfile>
+    <innerfile refid="SpawnSystem_8hpp">SpawnSystem.hpp</innerfile>
+    <innerfile refid="System_8hpp">System.hpp</innerfile>
+    <innerfile refid="VelocitySystem_8hpp">VelocitySystem.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/System/"/>
+  </compounddef>
+</doxygen>

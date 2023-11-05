@@ -1,0 +1,802 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="ServerMain_8hpp" kind="file" language="C++">
+    <compoundname>ServerMain.hpp</compoundname>
+    <includes refid="Component_8hpp" local="yes">Component.hpp</includes>
+    <includes refid="SparseArray_8hpp" local="yes">SparseArray.hpp</includes>
+    <includes refid="GUI_8hpp" local="yes">GUI/GUI.hpp</includes>
+    <includes refid="Spawner_8hpp" local="yes">Spawner.hpp</includes>
+    <includes refid="TextureManager_8hpp" local="yes">TextureManager.hpp</includes>
+    <includes refid="Global_8hpp" local="yes">Global.hpp</includes>
+    <includes refid="Database_8hpp" local="yes">Database/Database.hpp</includes>
+    <includes refid="Config_8hpp" local="yes">Config/Config.hpp</includes>
+    <includes refid="taskLoader_8hpp" local="yes">taskLoader.hpp</includes>
+    <includedby refid="ServerMain_8cpp" local="yes">src/ServerMain.cpp</includedby>
+    <incdepgraph>
+      <node id="42">
+        <label>valarray</label>
+      </node>
+      <node id="17">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="3">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="59">
+        <label>Behaviour.hpp</label>
+        <link refid="Behaviour_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>GUI/GUIConfig.hpp</label>
+        <link refid="GUIConfig_8hpp_source"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>functional</label>
+      </node>
+      <node id="27">
+        <label>queue</label>
+      </node>
+      <node id="37">
+        <label>filesystem</label>
+      </node>
+      <node id="57">
+        <label>Beatmap/Beatmap.hpp</label>
+        <link refid="Beatmap_8hpp_source"/>
+      </node>
+      <node id="39">
+        <label>Beatmap/BeatmapConfig.hpp</label>
+        <link refid="BeatmapConfig_8hpp_source"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>Menu/Menu.hpp</label>
+        <link refid="Menu_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>GameState.hpp</label>
+        <link refid="GameState_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>Registry.hpp</label>
+        <link refid="Registry_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>cmath</label>
+      </node>
+      <node id="44">
+        <label>numeric</label>
+      </node>
+      <node id="20">
+        <label>string</label>
+      </node>
+      <node id="23">
+        <label>Entity.hpp</label>
+        <link refid="Entity_8hpp_source"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/ServerMain.hpp</label>
+        <link refid="ServerMain_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="58">
+        <label>Spawner.hpp</label>
+        <link refid="Spawner_8hpp_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>map</label>
+      </node>
+      <node id="31">
+        <label>unordered_set</label>
+      </node>
+      <node id="51">
+        <label>GraphicElement/LoadingScreen.hpp</label>
+        <link refid="LoadingScreen_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>fftw3.h</label>
+      </node>
+      <node id="53">
+        <label>fstream</label>
+      </node>
+      <node id="60">
+        <label>Global.hpp</label>
+        <link refid="Global_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>any</label>
+      </node>
+      <node id="26">
+        <label>ThreadPool.hpp</label>
+        <link refid="ThreadPool_8hpp_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>condition_variable</label>
+      </node>
+      <node id="48">
+        <label>SFML/Window.hpp</label>
+      </node>
+      <node id="15">
+        <label>Event.hpp</label>
+        <link refid="Event_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>tuple</label>
+      </node>
+      <node id="30">
+        <label>future</label>
+      </node>
+      <node id="13">
+        <label>optional</label>
+      </node>
+      <node id="12">
+        <label>vector</label>
+      </node>
+      <node id="62">
+        <label>Config/Config.hpp</label>
+        <link refid="Config_8hpp_source"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>utility</label>
+      </node>
+      <node id="45">
+        <label>array</label>
+      </node>
+      <node id="54">
+        <label>sstream</label>
+      </node>
+      <node id="47">
+        <label>GUI/GUI.hpp</label>
+        <link refid="GUI_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>taskLoader.hpp</label>
+        <link refid="taskLoader_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>GraphicElement/Button.hpp</label>
+        <link refid="Button_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>iostream</label>
+      </node>
+      <node id="24">
+        <label>cstddef</label>
+      </node>
+      <node id="7">
+        <label>unordered_map</label>
+      </node>
+      <node id="38">
+        <label>Database/Database.hpp</label>
+        <link refid="Database_8hpp_source"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>GraphicElement/BeatmapPanel.hpp</label>
+        <link refid="BeatmapPanel_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>shared_mutex</label>
+      </node>
+      <node id="14">
+        <label>mutex</label>
+      </node>
+      <node id="11">
+        <label>SparseArray.hpp</label>
+        <link refid="SparseArray_8hpp_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>chrono</label>
+      </node>
+      <node id="28">
+        <label>thread</label>
+      </node>
+      <node id="2">
+        <label>Component.hpp</label>
+        <link refid="Component_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>../include/System/ISystem.hpp</label>
+        <link refid="ISystem_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>set</label>
+      </node>
+      <node id="35">
+        <label>TextureManager.hpp</label>
+        <link refid="TextureManager_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>complex</label>
+      </node>
+      <node id="33">
+        <label>algorithm</label>
+      </node>
+      <node id="61">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>libconfig.h++</label>
+      </node>
+      <node id="49">
+        <label>SFML/System.hpp</label>
+      </node>
+      <node id="21">
+        <label>memory</label>
+      </node>
+      <node id="8">
+        <label>typeindex</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="ServerMain_8hpp_1a36d9ec3a67612d1416c126b7a2e8cbf6" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, ComponentAdder &gt;</type>
+        <definition>std::unordered_map&lt;std::string, ComponentAdder&gt; componentAdderMap</definition>
+        <argsstring></argsstring>
+        <name>componentAdderMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SceneParsing.cpp</para>
+<para>This file includes functionality to parse and translate configurations from a file into usable in-game components. It utilizes the libconfig library to read configurations and a set of defined component adding functions to populate the game&apos;s <ref refid="classRegistry" kindref="compound">Registry</ref> with corresponding entities and components.</para>
+<para>Variables:</para>
+<para><itemizedlist>
+<listitem><para>componentAdderMap A global unordered map associating strings representing component types to functions that know how to add these components to entities.</para>
+</listitem></itemizedlist>
+</para>
+<para>Functions:</para>
+<para><itemizedlist>
+<listitem><para>getComponentAdderByName(const std::string&amp; name) This function returns a pointer to a ComponentAdder function associated with a given component name, or null if no such function is found.</para>
+</listitem><listitem><para>makeAdder(entity_t parent, const std::string&amp; name, const libconfig::Setting&amp; params) A factory function to create ComponentSpawner functions for a specified component type and parameters, for a specified parent entity.</para>
+</listitem><listitem><para>addPosition(entity_t entity, Registry&amp; registry, const libconfig::Setting&amp; componentData) Adds a <ref refid="structPosition" kindref="compound">Position</ref> component to a specified entity in the registry using provided data.</para>
+</listitem><listitem><para>addVelocity(entity_t entity, Registry&amp; registry, const libconfig::Setting&amp; componentData) Adds a <ref refid="structVelocity" kindref="compound">Velocity</ref> component to a specified entity in the registry using provided data.</para>
+</listitem><listitem><para>addCollision(entity_t entity, Registry&amp; registry, const libconfig::Setting&amp; componentData) Adds a <ref refid="structCollision" kindref="compound">Collision</ref> component to a specified entity in the registry using provided data.</para>
+</listitem><listitem><para>addDrawable(entity_t entity, Registry&amp; registry, const libconfig::Setting&amp; componentData) Adds a <ref refid="structDrawable" kindref="compound">Drawable</ref> component to a specified entity in the registry using provided data.</para>
+</listitem><listitem><para>addAcceleration(entity_t entity, Registry&amp; registry, const libconfig::Setting&amp; componentData) Adds an <ref refid="structAcceleration" kindref="compound">Acceleration</ref> component to a specified entity in the registry using provided data.</para>
+</listitem><listitem><para>addAnimation(entity_t entity, Registry&amp; registry, const libconfig::Setting&amp; componentData) Adds an <ref refid="structAnimation" kindref="compound">Animation</ref> component to a specified entity in the registry using provided data.</para>
+</listitem><listitem><para>addGameConfig(entity_t entity, Registry&amp; registry, const libconfig::Setting&amp; componentData) Adds a <ref refid="structGameConfig" kindref="compound">GameConfig</ref> component to a specified entity in the registry using provided data.</para>
+</listitem><listitem><para>addControllable(entity_t entity, Registry&amp; registry, const libconfig::Setting&amp; componentData) Adds a <ref refid="structControllable" kindref="compound">Controllable</ref> component to a specified entity in the registry using provided data.</para>
+</listitem><listitem><para>addLaser(entity_t entity, Registry&amp; registry, const libconfig::Setting&amp; componentData) Adds a <ref refid="structLaser" kindref="compound">Laser</ref> component to a specified entity in the registry using provided data.</para>
+</listitem><listitem><para>addDepth(entity_t entity, Registry&amp; registry, const libconfig::Setting&amp; componentData) Adds a <ref refid="structDepth" kindref="compound">Depth</ref> component to a specified entity in the registry using provided data.</para>
+</listitem><listitem><para>addBehavior(entity_t entity, Registry&amp; registry, const libconfig::Setting&amp; componentData) Adds a <ref refid="structBehavior" kindref="compound">Behavior</ref> component to a specified entity in the registry using provided data.</para>
+</listitem><listitem><para>addFFT(entity_t entity, Registry&amp; registry, const libconfig::Setting&amp; componentData) Adds a <ref refid="structFFT" kindref="compound">FFT</ref> component to a specified entity in the registry using provided data.</para>
+</listitem><listitem><para>addSpawner(entity_t entity, Registry&amp; registry, const libconfig::Setting&amp; componentData) Adds a <ref refid="structSpawner" kindref="compound">Spawner</ref> component to a specified entity in the registry using provided data.</para>
+</listitem><listitem><para>addFollower(entity_t parentEntity, Registry&amp; registry, const libconfig::Setting&amp; componentData) Adds a <ref refid="structFollower" kindref="compound">Follower</ref> component to a specified entity in the registry using provided data.</para>
+</listitem><listitem><para>addDeathEffect(entity_t entity, Registry&amp; registry, const libconfig::Setting&amp; componentData) Adds a <ref refid="structDeathEffect" kindref="compound">DeathEffect</ref> component to a specified entity in the registry using provided data.</para>
+</listitem><listitem><para>initializeGameEntitiesFromConfig(Registry &amp;registry, const std::string &amp;configFilePath) Reads a configuration file to populate the <ref refid="classRegistry" kindref="compound">Registry</ref> with entities and components as specified in the configuration.</para>
+</listitem></itemizedlist>
+</para>
+<para>Dependencies:</para>
+<para><itemizedlist>
+<listitem><para>&quot;SceneParsing.hpp&quot; for the declarations of parsing functions and component adders.</para>
+</listitem><listitem><para>&quot;Global.hpp&quot; for global game settings and typedefs.</para>
+</listitem><listitem><para>&lt;unordered_map&gt; for std::unordered_map.</para>
+</listitem><listitem><para>&lt;iostream&gt; for standard I/O operations.</para>
+</listitem><listitem><para>&lt;libconfig.h++&gt; for reading configuration files.</para>
+</listitem><listitem><para>&lt;vector&gt; for std::vector.</para>
+</listitem><listitem><para>&lt;string&gt; for std::string. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ServerMain.hpp" line="54" column="27" bodyfile="src/SceneParsing.cpp" bodystart="95" bodyend="-1" declfile="include/ServerMain.hpp" declline="54" declcolumn="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ServerMain_8hpp_1a9c2747db0eef9aa2e6838857f9b1d786" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initializeGameEntitiesServer</definition>
+        <argsstring>(Registry &amp;registry)</argsstring>
+        <name>initializeGameEntitiesServer</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>serverMain</para>
+<para>This file contains functions related to initializing and running the server.</para>
+<para>Functions:</para>
+<para><itemizedlist>
+<listitem><para>initializeGameEntitiesServer() Initializes game entities on the server.</para>
+</listitem><listitem><para>initializeGameServerSystems() Initializes server systems like physics.</para>
+</listitem><listitem><para>initializeDatabaseAndConfig() Initializes database and config.</para>
+</listitem><listitem><para>firstLoadingScreen() Displays initial loading screen.</para>
+</listitem><listitem><para>serverLoop() Main server loop.</para>
+</listitem><listitem><para>componentAdderMap Map to add components to entities. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ServerMain.hpp" line="48" column="6" declfile="include/ServerMain.hpp" declline="48" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ServerMain_8hpp_1a2d9999ae2c46cc63b01991d74e515c66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initializeGameServerSystems</definition>
+        <argsstring>(Registry &amp;registry, sf::RenderWindow &amp;window, AssetManager &amp;assetManager, float &amp;elapsed_time)</argsstring>
+        <name>initializeGameServerSystems</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="classAssetManager" kindref="compound">AssetManager</ref> &amp;</type>
+          <declname>assetManager</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>elapsed_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ServerMain.cpp</para>
+<para>This file houses the primary functions required for initializing and running the server-side game systems. It encapsulates the setup for the game server systems, database, configurations, and the initial loading screen.</para>
+<para>Functions:</para>
+<para><itemizedlist>
+<listitem><para>initializeGameServerSystems(Registry &amp;registry, sf::RenderWindow &amp;window, AssetManager &amp;assetManager, float &amp;elapsed_time) This function encapsulates the process of initializing the game server systems by registering server systems with the game&apos;s <ref refid="classRegistry" kindref="compound">Registry</ref>, window, asset manager, and tracking the elapsed time.</para>
+</listitem><listitem><para>initializeDatabaseAndConfig(Config &amp;config, Database &amp;database, GUI &amp;gui) This function encapsulates the process of initializing the game&apos;s configuration and database by loading configurations from files and validating the database contents.</para>
+</listitem><listitem><para>firstLoadingScreen(GUI &amp;gui, Database &amp;database, Registry &amp;registry, sf::RenderWindow &amp;window) This function encapsulates the initial loading screen setup, including creating the loading screen, setting up loading tasks, executing these tasks, and transitioning to the main game loop.</para>
+</listitem></itemizedlist>
+</para>
+<para>Dependencies:</para>
+<para><itemizedlist>
+<listitem><para>&quot;ServerMain.hpp&quot; for the declarations of the initialization functions.</para>
+</listitem><listitem><para>&quot;SceneParsing.hpp&quot; for parsing scene configurations.</para>
+</listitem><listitem><para>&lt;iostream&gt; for standard I/O operations.</para>
+</listitem><listitem><para>&lt;vector&gt; for std::vector.</para>
+</listitem><listitem><para>&lt;functional&gt; for std::function.</para>
+</listitem><listitem><para>&lt;SFML/Graphics.hpp&gt; for rendering and window management. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ServerMain.hpp" line="49" column="6" bodyfile="src/ServerMain.cpp" bodystart="43" bodyend="47" declfile="include/ServerMain.hpp" declline="49" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ServerMain_8hpp_1ac78b7058d15eae77b4bf87d4ba310034" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initializeDatabaseAndConfig</definition>
+        <argsstring>(Config &amp;config, Database &amp;database, GUI &amp;gui)</argsstring>
+        <name>initializeDatabaseAndConfig</name>
+        <param>
+          <type><ref refid="classConfig" kindref="compound">Config</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type><ref refid="classDatabase" kindref="compound">Database</ref> &amp;</type>
+          <declname>database</declname>
+        </param>
+        <param>
+          <type><ref refid="classGUI" kindref="compound">GUI</ref> &amp;</type>
+          <declname>gui</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ServerMain.hpp" line="50" column="6" bodyfile="src/ServerMain.cpp" bodystart="51" bodyend="59" declfile="include/ServerMain.hpp" declline="50" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ServerMain_8hpp_1afdea8fa4574ff786c1bc060f4400badc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void firstLoadingScreen</definition>
+        <argsstring>(GUI &amp;gui, Database &amp;database, Registry &amp;registry, sf::RenderWindow &amp;window)</argsstring>
+        <name>firstLoadingScreen</name>
+        <param>
+          <type><ref refid="classGUI" kindref="compound">GUI</ref> &amp;</type>
+          <declname>gui</declname>
+        </param>
+        <param>
+          <type><ref refid="classDatabase" kindref="compound">Database</ref> &amp;</type>
+          <declname>database</declname>
+        </param>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ServerMain.hpp" line="51" column="6" bodyfile="src/ServerMain.cpp" bodystart="61" bodyend="79" declfile="include/ServerMain.hpp" declline="51" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ServerMain_8hpp_1abb319c717246e0554e216ddbc7a0edb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void serverLoop</definition>
+        <argsstring>(Registry &amp;registry, sf::RenderWindow &amp;window, sf::Clock &amp;clock, float &amp;elapsed_time, GUI &amp;gui, Database &amp;database)</argsstring>
+        <name>serverLoop</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>sf::Clock &amp;</type>
+          <declname>clock</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>elapsed_time</declname>
+        </param>
+        <param>
+          <type><ref refid="classGUI" kindref="compound">GUI</ref> &amp;</type>
+          <declname>gui</declname>
+        </param>
+        <param>
+          <type><ref refid="classDatabase" kindref="compound">Database</ref> &amp;</type>
+          <declname>database</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ServerMain.hpp" line="52" column="6" declfile="include/ServerMain.hpp" declline="52" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Rtype</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>serverMain</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERVERMAIN_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVERMAIN_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Component.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SparseArray.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GUI/GUI.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Spawner.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TextureManager.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Global.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Database/Database.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Config/Config.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;taskLoader.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initializeGameEntitiesServer(<ref refid="classRegistry" kindref="compound">Registry</ref>&amp;<sp/>registry);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initializeGameServerSystems(<ref refid="classRegistry" kindref="compound">Registry</ref>&amp;<sp/>registry,<sp/>sf::RenderWindow&amp;<sp/>window,<sp/><sp/><ref refid="classAssetManager" kindref="compound">AssetManager</ref>&amp;<sp/>assetManager,<sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>elapsed_time);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initializeDatabaseAndConfig(<ref refid="classConfig" kindref="compound">Config</ref>&amp;<sp/>config,<sp/><ref refid="classDatabase" kindref="compound">Database</ref>&amp;<sp/>database,<sp/><ref refid="classGUI" kindref="compound">GUI</ref>&amp;<sp/>gui);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>firstLoadingScreen(<ref refid="classGUI" kindref="compound">GUI</ref>&amp;<sp/>gui,<sp/><ref refid="classDatabase" kindref="compound">Database</ref>&amp;<sp/>database,<sp/><ref refid="classRegistry" kindref="compound">Registry</ref>&amp;<sp/>registry,sf::RenderWindow&amp;<sp/>window);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>serverLoop(<ref refid="classRegistry" kindref="compound">Registry</ref>&amp;<sp/>registry,<sp/>sf::RenderWindow&amp;<sp/>window,<sp/>sf::Clock&amp;<sp/>clock,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>elapsed_time,<sp/><ref refid="classGUI" kindref="compound">GUI</ref>&amp;<sp/>gui,<sp/><ref refid="classDatabase" kindref="compound">Database</ref>&amp;<sp/>database);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>std::unordered_map&lt;std::string,<sp/>ComponentAdder&gt;<sp/>componentAdderMap;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!SERVERMAIN_HPP_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/ServerMain.hpp"/>
+  </compounddef>
+</doxygen>

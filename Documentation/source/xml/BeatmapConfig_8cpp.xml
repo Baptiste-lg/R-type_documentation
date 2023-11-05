@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="BeatmapConfig_8cpp" kind="file" language="C++">
+    <compoundname>BeatmapConfig.cpp</compoundname>
+    <includes refid="BeatmapConfig_8hpp" local="yes">Beatmap/BeatmapConfig.hpp</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>Beatmap/BeatmapConfig.hpp</label>
+        <link refid="BeatmapConfig_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>map</label>
+      </node>
+      <node id="1">
+        <label>src/Beatmap/BeatmapConfig.cpp</label>
+        <link refid="BeatmapConfig_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>libconfig.h++</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2023</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Rtype</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>BeatmapConfig.cpp</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Beatmap/BeatmapConfig.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><ref refid="classBeatmapConfig_1aa6d9585b250f4c54583c1aea961abf71" kindref="member">BeatmapConfig::BeatmapConfig</ref>()</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">BeatmapConfig::~BeatmapConfig()</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BeatmapConfig::load(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>libconfig::Setting&amp;<sp/>beatmapSetting)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>beatmapSetting.lookupValue(</highlight><highlight class="stringliteral">&quot;Name&quot;</highlight><highlight class="normal">,<sp/>Name);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>beatmapSetting.lookupValue(</highlight><highlight class="stringliteral">&quot;Artist&quot;</highlight><highlight class="normal">,<sp/>Artist);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>beatmapSetting.lookupValue(</highlight><highlight class="stringliteral">&quot;FolderPath&quot;</highlight><highlight class="normal">,<sp/>FolderPath);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>beatmapSetting.lookupValue(</highlight><highlight class="stringliteral">&quot;Difficulty&quot;</highlight><highlight class="normal">,<sp/>Difficulty);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>beatmapSetting.lookupValue(</highlight><highlight class="stringliteral">&quot;BPM&quot;</highlight><highlight class="normal">,<sp/>BPM);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>beatmapSetting.lookupValue(</highlight><highlight class="stringliteral">&quot;id&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>beatmapSetting.lookupValue(</highlight><highlight class="stringliteral">&quot;offset&quot;</highlight><highlight class="normal">,<sp/>offset);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BeatmapConfig::print()</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Beatmap/BeatmapConfig.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,15 +1,70 @@
 /*
 ** EPITECH PROJECT, 2023
-** Yiang
+** Rtype
 ** File description:
 ** beatmappanell.cpp
 */
 
+/**
+** BeatmapPanel.cpp
+**
+** This file implements the BeatmapPanel class which represents a panel
+** displaying information about a beatmap.
+**
+** Methods:
+**
+** - BeatmapPanel()
+**   Default constructor.
+**
+** - BeatmapPanel()
+**   Constructor taking textures, position, resolution, BeatmapConfig,
+**   and font. Calculates screen position. Sets up sprites and text.
+**
+** - ~BeatmapPanel()
+**   Destructor.
+**
+** - draw()
+**   Draws the panel sprites and text.
+**
+** - setText()
+**   Sets the text of the panel.
+**
+** - adjustPanel()
+**   Adjusts the panel sprite.
+**
+** - adjustCover()
+**   Adjusts the cover sprite.
+**
+** - adjustGrade()
+**   Adjusts the grade text.
+**
+** - adjust()
+**   Adjusts position, scale, opacity of the panel, cover, and text.
+**
+** Members:
+**
+** - sprites
+**   Stores sprites like panel and cover.
+**
+** - texts
+**   Stores text elements like title and artist.
+**
+** - buttons
+**   Stores UI buttons.
+**
+** - difficultyUser
+**   Stores selected difficulty level.
+**
+** - folderPath
+**   Stores beatmap folder path.
+**
+*/
+
 #include "GraphicElement/BeatmapPanel.hpp"
-#include <cmath>
 
 void adjustDifficultyUserMinus(int * difficultyUser, sf::Text * textDifficultyUser);
 void adjustDifficultyUserPlus(int * difficultyUser, sf::Text * textDifficultyUser);
+
 BeatmapPanel::BeatmapPanel(){
 
 }
@@ -49,11 +104,8 @@ BeatmapPanel::BeatmapPanel(const sf::Texture& texturePanel, const sf::Texture& t
     texts["difficulty_user"].setFont(fonts);
     texts["difficulty_user"].setCharacterSize(20); // Adjust as needed
     std::string stringDifficultyUser = std::to_string(this->difficultyUser);
-    std::cout << "DifficultyUser init : " << difficultyUser << std::endl;
-    std::cout << "adress of difficultyUser : " << &difficultyUser << std::endl;
     texts["difficulty_user"].setString("Difficulty selected : " + stringDifficultyUser);
     texts["difficulty_user"].setPosition(textStartX, texts["difficulty"].getPosition().y + texts["artist"].getGlobalBounds().height + 5);
-
 
     texts["grade"].setFont(fonts);
     texts["grade"].setCharacterSize(20); // Adjust as needed
@@ -65,21 +117,15 @@ BeatmapPanel::BeatmapPanel(const sf::Texture& texturePanel, const sf::Texture& t
     buttonConfigs["ArrowLeft"] = {"ArrowLeft", [this](){ adjustDifficultyUserMinus(&this->difficultyUser, &this->texts["difficulty_user"]);}};
     buttonConfigs["ArrowRight"] ={"ArrowRight", [this](){ adjustDifficultyUserPlus(&this->difficultyUser, &this->texts["difficulty_user"]);}};
 
-    std::cout << "Creating panel position : " << screenX << " " << screenY << std::endl;
-    std::cout << "position are set to : " << position.x << " " << position.y << std::endl;
     this->position = sf::Vector2f(screenX, screenY);
     // Assuming the cover is a smaller sprite displayed on the panel
-    //check if the cover is not empty
-    if (textureCover.getSize().x == 0 || textureCover.getSize().y == 0)
-        std::cout << "Cover is empty" << std::endl;
-//set the rectangle to 240x240 if the texture is not 240x240 than resize it
+    //set the rectangle to 240x240 if the texture is not 240x240 than resize it
 
     sprites["cover"].setTexture(textureCover);
     sprites["cover"].setPosition(position); // Adjust this as needed
     //button
     float arrowLeftX = 50;
     float arrowLeftY = 50;
-    //std::pair<int, int> fakeRes = std::make_pair(sprites["panel"].getGlobalBounds().width, sprites["panel"].getGlobalBounds().height);
     buttons.emplace("ArrowLeft", Button(textureArrowLeft, sf::Vector2f(arrowLeftX, arrowLeftY), buttonConfigs["ArrowLeft"].onClick, std::pair<int, int>(1920, 1080)));
     buttons["ArrowLeft"].setText("", fonts, 20);
     buttons.emplace("ArrowRight", Button(textureArrowRight, sf::Vector2f(arrowLeftX + sprites["arrowLeft"].getGlobalBounds().width + 10, arrowLeftY), buttonConfigs["ArrowRight"].onClick, std::pair<int, int>(1920, 1080)));
@@ -104,7 +150,6 @@ void BeatmapPanel::draw(sf::RenderWindow& window) {
     window.draw(texts["difficulty_user"]);
     window.draw(texts["grade"]);
 
-     //    std::cout << "Drawing panel" << std::endl;
 }
 
 void BeatmapPanel::setText(const std::string& text, const sf::Font& font, unsigned int characterSize) {
@@ -117,8 +162,10 @@ void BeatmapPanel::adjustPanel(float scale, float opacity, const sf::Vector2f& o
 
 void BeatmapPanel::adjustCover(float scale, float opacity, const sf::Vector2f& offset, std::pair<int, int> res) {
 }
+
 void BeatmapPanel::adjustGrade(float scale, float opacity, const sf::Vector2f& offset, std::pair<int, int> res) {
 }
+
 void BeatmapPanel::adjust(float scale, float opacity, const sf::Vector2f& offset, std::pair<int, int> res) {
     //we need to split the res by 10 to get the real resolution
     float screenOffsetX = std::fmod(offset.x, 10.0f) / 10.0f * res.first;
@@ -139,9 +186,7 @@ void BeatmapPanel::adjust(float scale, float opacity, const sf::Vector2f& offset
 
     for (auto& text : texts) {
         text.second.setCharacterSize(textSize * scale);
-        //text.second.setColor(sf::Color(255, 255, 255, opacity));
     }
-    //std::cout << "sprite[cover] position : " << sprites["cover"].getPosition().x << " " << sprites["cover"].getPosition().y << std::endl;
     texts["title"].setPosition(sprites["cover"].getPosition().x + sprites["cover"].getGlobalBounds().width + PercentX, sprites["cover"].getPosition().y);
     texts["artist"].setPosition(sprites["cover"].getPosition().x + sprites["cover"].getGlobalBounds().width + PercentX, texts["title"].getPosition().y + PercentY * 3);
     texts["difficulty"].setPosition(sprites["cover"].getPosition().x + sprites["cover"].getGlobalBounds().width + PercentX, texts["artist"].getPosition().y + PercentY * 3);
@@ -161,22 +206,15 @@ void adjustDifficultyUserPlus(int * difficultyUser, sf::Text * difficultyUserTex
           *difficultyUser = 10;
     std::string stringDifficultyUser = std::to_string(*difficultyUser);
     difficultyUserText->setString("Difficulty selected : " + stringDifficultyUser);
-    std::cout << "Difficulty selected : " << stringDifficultyUser << std::endl;
-    //texts["difficulty_user"].setString("Difficulty selected : " + stringDifficultyUser);
 }
 
 void adjustDifficultyUserMinus(int * difficultyUser, sf::Text * difficultyUserText) {
     // Update the difficultyText or any other required elements
-    //std::cout << "Size of texts map: " << texts.size() << std::endl;
-    std::cout << "this->difficultyUser minus b: " << *difficultyUser << std::endl;
-    std::cout << "this->difficultyUser minus adress: " << difficultyUser << std::endl;
-
     *difficultyUser -= 1;
     if (*difficultyUser < 0)
         *difficultyUser = 0;
     std::string stringDifficultyUser = std::to_string(*difficultyUser);
     difficultyUserText->setString("Difficulty selected : " + stringDifficultyUser);
-    std::cout << "Difficulty selected : " << stringDifficultyUser << std::endl;
 }
 
 void BeatmapPanel::handleEvent(const sf::Event& event, const sf::RenderWindow& window)

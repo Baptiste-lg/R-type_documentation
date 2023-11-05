@@ -1,9 +1,40 @@
 /*
 ** EPITECH PROJECT, 2024
-** ECS
+** Rtype
 ** File description:
 ** Zipper
 */
+
+/**
+** Zipper
+**
+** This class provides a zipper iterator to traverse multiple containers simultaneously.
+**
+** Methods:
+**
+** - zipper()
+**   Constructor that stores begin and end iterators for each container.
+**
+** - begin()
+**   Returns a zipper iterator pointing to the beginning.
+**
+** - end()
+**   Returns a zipper iterator pointing to the end.
+**
+** Members:
+**
+** - _begin
+**   Tuple of begin iterators for each container.
+**
+** - _end
+**   Tuple of end iterators for each container.
+**
+** - _size
+**   Size of the zipper sequence.
+**
+** The zipper_iterator is declared as friend to allow accessing private members.
+*/
+
 #ifndef ZIPPER_HPP_
 #define ZIPPER_HPP_
 
@@ -27,9 +58,7 @@ public:
             : _begin(std::make_tuple(std::begin(cs)...)),
               _end(std::make_tuple(std::end(cs)...)),
               _size(_compute_size(cs...)) {
-        //std::cout << "Zipper constructor called. Size: " << _size << std::endl;
     }
-
 
     iterator begin() {
         return iterator(_begin, _size, 0);  // Added an additional argument for _idx

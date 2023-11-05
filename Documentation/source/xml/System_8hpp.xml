@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="System_8hpp" kind="file" language="C++">
+    <compoundname>System.hpp</compoundname>
+    <includes local="no">SFML/Graphics.hpp</includes>
+    <includedby refid="DeathEffectSystem_8hpp" local="yes">include/System/DeathEffectSystem.hpp</includedby>
+    <includedby refid="Component_8cpp" local="yes">src/Component.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/System/System.hpp</label>
+        <link refid="System_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/System/DeathEffectSystem.hpp</label>
+        <link refid="DeathEffectSystem_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>include/System/System.hpp</label>
+        <link refid="System_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="System_8hpp_1a3c730f37b1b3a893159bada67637fdb1" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>PlayerState</name>
+        <enumvalue id="System_8hpp_1a3c730f37b1b3a893159bada67637fdb1aed2dc8c66bc8fbf1126273f63f522abc" prot="public">
+          <name>InMenu</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="System_8hpp_1a3c730f37b1b3a893159bada67637fdb1a7f3d370e94c8b1fea09838572013d8ec" prot="public">
+          <name>InGame</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="System_8hpp_1a3c730f37b1b3a893159bada67637fdb1a8d107da0fdffa879f15668804d40156d" prot="public">
+          <name>InLobby</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="System_8hpp_source" kindref="compound">System.hpp</ref></para>
+<para>Defines enums for global player state.</para>
+<para>Enums:</para>
+<para><itemizedlist>
+<listitem><para>PlayerState Overall player state.<itemizedlist>
+<listitem><para>InMenu</para>
+</listitem><listitem><para>InGame</para>
+</listitem><listitem><para>InLobby</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>PlayerSubState Detailed player sub-state when in game.<itemizedlist>
+<listitem><para>isLoading</para>
+</listitem><listitem><para>isDownloading</para>
+</listitem><listitem><para>isWaiting</para>
+</listitem><listitem><para>isReady</para>
+</listitem><listitem><para>isPlaying</para>
+</listitem><listitem><para>isDead</para>
+</listitem><listitem><para>isWin</para>
+</listitem><listitem><para>isLose</para>
+</listitem><listitem><para>isDisconnected</para>
+</listitem><listitem><para>isReconnecting</para>
+</listitem><listitem><para>isReconnected</para>
+</listitem><listitem><para>isReconnectingFailed </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/System.hpp" line="42" column="1" bodyfile="include/System/System.hpp" bodystart="42" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="enum" id="System_8hpp_1a3cad5b3ae6603564131b1d8ced6129c1" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>PlayerSubState</name>
+        <enumvalue id="System_8hpp_1a3cad5b3ae6603564131b1d8ced6129c1a3812519aeed64756e7bb77b6f765af6b" prot="public">
+          <name>isLoading</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="System_8hpp_1a3cad5b3ae6603564131b1d8ced6129c1afccd5fdfc682fa8c9e673e9584364008" prot="public">
+          <name>isDownloading</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="System_8hpp_1a3cad5b3ae6603564131b1d8ced6129c1a27190e97b695e09e4ec8ca9501610968" prot="public">
+          <name>isWaiting</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="System_8hpp_1a3cad5b3ae6603564131b1d8ced6129c1a9d44bee4fccc00cf807b1ecb141e7fe5" prot="public">
+          <name>isReady</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="System_8hpp_1a3cad5b3ae6603564131b1d8ced6129c1a041b69ced2ebbd19e2bc9814e67a759b" prot="public">
+          <name>isPlaying</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="System_8hpp_1a3cad5b3ae6603564131b1d8ced6129c1a2c40361d58284526af09edfd313833a0" prot="public">
+          <name>isDead</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="System_8hpp_1a3cad5b3ae6603564131b1d8ced6129c1a4816b818d6279f41624c32270bdf56f9" prot="public">
+          <name>isWin</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="System_8hpp_1a3cad5b3ae6603564131b1d8ced6129c1a3bc4e1b5a35813bc01f654eaa07ae6bb" prot="public">
+          <name>isLose</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="System_8hpp_1a3cad5b3ae6603564131b1d8ced6129c1a29729835f5b5e45ebe471eedbecf4e8a" prot="public">
+          <name>isDisconnected</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="System_8hpp_1a3cad5b3ae6603564131b1d8ced6129c1a49c899966a9422fe4504c85e090c05c9" prot="public">
+          <name>isReconnecting</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="System_8hpp_1a3cad5b3ae6603564131b1d8ced6129c1a1cb664fbd90036f0043fbe4d13721c06" prot="public">
+          <name>isReconnected</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="System_8hpp_1a3cad5b3ae6603564131b1d8ced6129c1a6f7586a7d0ce1f31349cae89157fa09c" prot="public">
+          <name>isReconnectingFailed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/System.hpp" line="47" column="1" bodyfile="include/System/System.hpp" bodystart="47" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Rtype</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>System.hpp</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SYSTEM_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYSTEM_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Graphics.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>PlayerState<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>InMenu,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>InGame,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>InLobby</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>PlayerSubState<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>isLoading,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>isDownloading,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>isWaiting,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>isReady,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>isPlaying,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>isDead,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>isWin,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>isLose,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>isDisconnected,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>isReconnecting,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>isReconnected,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>isReconnectingFailed</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!SYSTEM_HPP_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/System/System.hpp"/>
+  </compounddef>
+</doxygen>

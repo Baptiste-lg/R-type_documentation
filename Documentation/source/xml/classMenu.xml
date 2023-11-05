@@ -1,0 +1,442 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classMenu" kind="class" language="C++" prot="public">
+    <compoundname>Menu</compoundname>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classMenu_1a2518bcc907aec3aa2258168af5659a18" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Menu::selectedPanelIndex</definition>
+        <argsstring></argsstring>
+        <name>selectedPanelIndex</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="129" column="9" bodyfile="include/Menu/Menu.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1a20cfd2dda5eb65ecd37df7a50c2a778e" prot="protected" static="no" mutable="no">
+        <type>map&lt; string, <ref refid="classButton" kindref="compound">Button</ref> &gt;</type>
+        <definition>map&lt;string, Button&gt; Menu::buttons</definition>
+        <argsstring></argsstring>
+        <name>buttons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="130" column="9" bodyfile="include/Menu/Menu.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1a08c10a9f64f628929fc8cd800d2f7c87" prot="protected" static="no" mutable="no">
+        <type>map&lt; string, <ref refid="structButtonConfig__s" kindref="compound">ButtonConfig</ref> &gt;</type>
+        <definition>map&lt;string, ButtonConfig&gt; Menu::buttonConfigs</definition>
+        <argsstring></argsstring>
+        <name>buttonConfigs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="131" column="9" bodyfile="include/Menu/Menu.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1addb760b7ff7fb57605f2b2eb0850d845" prot="protected" static="no" mutable="no">
+        <type>map&lt; string, sf::Text &gt;</type>
+        <definition>map&lt;string, sf::Text&gt; Menu::texts</definition>
+        <argsstring></argsstring>
+        <name>texts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="132" column="9" bodyfile="include/Menu/Menu.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1a5a772941426b7198632cf8df6561b2c9" prot="protected" static="no" mutable="no">
+        <type>map&lt; string, sf::Texture &gt;</type>
+        <definition>map&lt;string, sf::Texture&gt; Menu::textures</definition>
+        <argsstring></argsstring>
+        <name>textures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="133" column="9" bodyfile="include/Menu/Menu.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1ab98433246354689ca756b5ca66bd65df" prot="protected" static="no" mutable="no">
+        <type>map&lt; string, sf::Sprite &gt;</type>
+        <definition>map&lt;string, sf::Sprite&gt; Menu::sprites</definition>
+        <argsstring></argsstring>
+        <name>sprites</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="134" column="9" bodyfile="include/Menu/Menu.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1a951935db11fba3bb4a6822bd8b4bb3a0" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classBeatmapPanel" kindref="compound">BeatmapPanel</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::unique_ptr&lt;BeatmapPanel&gt; &gt; Menu::beatmapPanel</definition>
+        <argsstring></argsstring>
+        <name>beatmapPanel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="136" column="17" bodyfile="include/Menu/Menu.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1a3163e570d77c4f03453e3ac9c69882ae" prot="protected" static="no" mutable="no">
+        <type>map&lt; string, sf::Font &gt;</type>
+        <definition>map&lt;string, sf::Font&gt; Menu::fonts</definition>
+        <argsstring></argsstring>
+        <name>fonts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="137" column="9" bodyfile="include/Menu/Menu.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1aa74b9a21643667ce7f6d5439005465bd" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Menu::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <initializer>= SONGSELECT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="138" column="9" bodyfile="include/Menu/Menu.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1a9e90b612a38e8b5dfb432a830a398c9b" prot="protected" static="no" mutable="no">
+        <type>pair&lt; int, int &gt;</type>
+        <definition>pair&lt;int, int&gt; Menu::_res</definition>
+        <argsstring></argsstring>
+        <name>_res</name>
+        <initializer>= {0, 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="139" column="10" bodyfile="include/Menu/Menu.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1aa46489254b67a2f17d8bb739a120065a" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Menu::theme</definition>
+        <argsstring></argsstring>
+        <name>theme</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="140" column="9" bodyfile="include/Menu/Menu.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMenu_1ad466dd83355124a6ed958430450bfe94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Menu::Menu</definition>
+        <argsstring>()</argsstring>
+        <name>Menu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Menu.cpp</para>
+<para>Implements the main menu UI.</para>
+<para>Methods:</para>
+<para><itemizedlist>
+<listitem><para><ref refid="classMenu_1ad466dd83355124a6ed958430450bfe94" kindref="member">Menu()</ref> Constructor.</para>
+</listitem><listitem><para>~Menu() Destructor.</para>
+</listitem><listitem><para>loadTextures() Loads menu textures from files.</para>
+</listitem><listitem><para>load() Loads menu buttons, fonts, backgrounds. Calls loadBeatmaps().</para>
+</listitem><listitem><para>loadBeatmaps() Loads <ref refid="classBeatmapPanel" kindref="compound">BeatmapPanel</ref> objects for each beatmap.</para>
+</listitem><listitem><para>update() Handles events and updates selected panel. Returns current menu state.</para>
+</listitem><listitem><para>draw() Draws menu elements on render window.</para>
+</listitem><listitem><para>slideLeft() Slides selection left by one panel.</para>
+</listitem><listitem><para>slideRight() Slides selection right by one panel.</para>
+</listitem><listitem><para>onAnalyzeButtonClicked() Called when Analyze button clicked. Prints message and loads music.</para>
+</listitem><listitem><para>getActualSongName() Gets folder path of selected beatmap.</para>
+</listitem><listitem><para>setDifficulty() Sets difficulty on selected panel.</para>
+</listitem><listitem><para>getDifficulty() Gets difficulty from selected panel.</para>
+</listitem></itemizedlist>
+</para>
+<para>Members:</para>
+<para><itemizedlist>
+<listitem><para>textures Loaded texture map.</para>
+</listitem><listitem><para>fonts Loaded font map.</para>
+</listitem><listitem><para>buttons <ref refid="classMenu" kindref="compound">Menu</ref> buttons.</para>
+</listitem><listitem><para>sprites <ref refid="classMenu" kindref="compound">Menu</ref> sprites.</para>
+</listitem><listitem><para>beatmapPanel Vector of <ref refid="classBeatmapPanel" kindref="compound">BeatmapPanel</ref> objects.</para>
+</listitem><listitem><para>selectedPanelIndex Index of currently selected panel.</para>
+</listitem><listitem><para>state Current menu state.</para>
+</listitem><listitem><para>_res Window resolution. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="112" column="5" bodyfile="src/Menu/Menu.cpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1a831387f51358cfb88cd018e1777bc980" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Menu::~Menu</definition>
+        <argsstring>()</argsstring>
+        <name>~Menu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="113" column="5" bodyfile="src/Menu/Menu.cpp" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1a90b5ef3eb046d1e7dfafb5da76b5aaba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::load</definition>
+        <argsstring>(const std::pair&lt; int, int &gt; &amp;res, Database &amp;database)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const std::pair&lt; int, int &gt; &amp;</type>
+          <declname>res</declname>
+        </param>
+        <param>
+          <type><ref refid="classDatabase" kindref="compound">Database</ref> &amp;</type>
+          <declname>database</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="114" column="10" bodyfile="src/Menu/Menu.cpp" bodystart="144" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1a7474dc4aba4f35fedfddac8521d4ded6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::loadTextures</definition>
+        <argsstring>(Database &amp;database)</argsstring>
+        <name>loadTextures</name>
+        <param>
+          <type><ref refid="classDatabase" kindref="compound">Database</ref> &amp;</type>
+          <declname>database</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="115" column="10" bodyfile="src/Menu/Menu.cpp" bodystart="96" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1a7ae0186fce846248d57d002575565313" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Menu::update</definition>
+        <argsstring>(const sf::Event &amp;event, const sf::RenderWindow &amp;window)</argsstring>
+        <name>update</name>
+        <param>
+          <type>const sf::Event &amp;</type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>const sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="116" column="9" bodyfile="src/Menu/Menu.cpp" bodystart="196" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1a1443dcfd1c1c9844c40658d752c1fbab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::draw</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>draw</name>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="117" column="10" bodyfile="src/Menu/Menu.cpp" bodystart="226" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1aa5599acb967e56200e940277f7ea3e37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::loadBeatmaps</definition>
+        <argsstring>(Database &amp;database)</argsstring>
+        <name>loadBeatmaps</name>
+        <param>
+          <type><ref refid="classDatabase" kindref="compound">Database</ref> &amp;</type>
+          <declname>database</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="118" column="10" bodyfile="src/Menu/Menu.cpp" bodystart="181" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1ac2569e2fff6edbc91174422da73256db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::slideLeft</definition>
+        <argsstring>()</argsstring>
+        <name>slideLeft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="119" column="10" bodyfile="src/Menu/Menu.cpp" bodystart="239" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1aaa1e24b6a6ec44595effb6524037113f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::slideRight</definition>
+        <argsstring>()</argsstring>
+        <name>slideRight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="120" column="10" bodyfile="src/Menu/Menu.cpp" bodystart="246" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1a0af9543d81c9777f20a3d0726168481b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::onAnalyzeButtonClicked</definition>
+        <argsstring>(const std::string &amp;beatmapPath)</argsstring>
+        <name>onAnalyzeButtonClicked</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>beatmapPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="121" column="10" bodyfile="src/Menu/Menu.cpp" bodystart="254" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1a73ad46717b2d1471d6f2285e7d1cd567" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Menu::getDifficulty</definition>
+        <argsstring>()</argsstring>
+        <name>getDifficulty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="122" column="9" bodyfile="src/Menu/Menu.cpp" bodystart="270" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1aceae726cc7e0353c7339a449d8e7f52c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Menu::getActualSongName</definition>
+        <argsstring>()</argsstring>
+        <name>getActualSongName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="123" column="17" bodyfile="src/Menu/Menu.cpp" bodystart="259" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1aaede4a750361bc2a00ef21e37a83c30d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::setDifficulty</definition>
+        <argsstring>(int difficulty)</argsstring>
+        <name>setDifficulty</name>
+        <param>
+          <type>int</type>
+          <declname>difficulty</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="124" column="10" bodyfile="src/Menu/Menu.cpp" bodystart="266" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1a32bc40f54f7ec378eeb04fbd20be5ab0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::setState</definition>
+        <argsstring>(int nState)</argsstring>
+        <name>setState</name>
+        <param>
+          <type>int</type>
+          <declname>nState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Menu/Menu.hpp" line="125" column="10" bodyfile="include/Menu/Menu.hpp" bodystart="125" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Menu/Menu.hpp" line="110" column="1" bodyfile="include/Menu/Menu.hpp" bodystart="110" bodyend="143"/>
+    <listofallmembers>
+      <member refid="classMenu_1a9e90b612a38e8b5dfb432a830a398c9b" prot="protected" virt="non-virtual"><scope>Menu</scope><name>_res</name></member>
+      <member refid="classMenu_1a951935db11fba3bb4a6822bd8b4bb3a0" prot="protected" virt="non-virtual"><scope>Menu</scope><name>beatmapPanel</name></member>
+      <member refid="classMenu_1a08c10a9f64f628929fc8cd800d2f7c87" prot="protected" virt="non-virtual"><scope>Menu</scope><name>buttonConfigs</name></member>
+      <member refid="classMenu_1a20cfd2dda5eb65ecd37df7a50c2a778e" prot="protected" virt="non-virtual"><scope>Menu</scope><name>buttons</name></member>
+      <member refid="classMenu_1a1443dcfd1c1c9844c40658d752c1fbab" prot="public" virt="non-virtual"><scope>Menu</scope><name>draw</name></member>
+      <member refid="classMenu_1a3163e570d77c4f03453e3ac9c69882ae" prot="protected" virt="non-virtual"><scope>Menu</scope><name>fonts</name></member>
+      <member refid="classMenu_1aceae726cc7e0353c7339a449d8e7f52c" prot="public" virt="non-virtual"><scope>Menu</scope><name>getActualSongName</name></member>
+      <member refid="classMenu_1a73ad46717b2d1471d6f2285e7d1cd567" prot="public" virt="non-virtual"><scope>Menu</scope><name>getDifficulty</name></member>
+      <member refid="classMenu_1a90b5ef3eb046d1e7dfafb5da76b5aaba" prot="public" virt="non-virtual"><scope>Menu</scope><name>load</name></member>
+      <member refid="classMenu_1aa5599acb967e56200e940277f7ea3e37" prot="public" virt="non-virtual"><scope>Menu</scope><name>loadBeatmaps</name></member>
+      <member refid="classMenu_1a7474dc4aba4f35fedfddac8521d4ded6" prot="public" virt="non-virtual"><scope>Menu</scope><name>loadTextures</name></member>
+      <member refid="classMenu_1ad466dd83355124a6ed958430450bfe94" prot="public" virt="non-virtual"><scope>Menu</scope><name>Menu</name></member>
+      <member refid="classMenu_1a0af9543d81c9777f20a3d0726168481b" prot="public" virt="non-virtual"><scope>Menu</scope><name>onAnalyzeButtonClicked</name></member>
+      <member refid="classMenu_1a2518bcc907aec3aa2258168af5659a18" prot="protected" virt="non-virtual"><scope>Menu</scope><name>selectedPanelIndex</name></member>
+      <member refid="classMenu_1aaede4a750361bc2a00ef21e37a83c30d" prot="public" virt="non-virtual"><scope>Menu</scope><name>setDifficulty</name></member>
+      <member refid="classMenu_1a32bc40f54f7ec378eeb04fbd20be5ab0" prot="public" virt="non-virtual"><scope>Menu</scope><name>setState</name></member>
+      <member refid="classMenu_1ac2569e2fff6edbc91174422da73256db" prot="public" virt="non-virtual"><scope>Menu</scope><name>slideLeft</name></member>
+      <member refid="classMenu_1aaa1e24b6a6ec44595effb6524037113f" prot="public" virt="non-virtual"><scope>Menu</scope><name>slideRight</name></member>
+      <member refid="classMenu_1ab98433246354689ca756b5ca66bd65df" prot="protected" virt="non-virtual"><scope>Menu</scope><name>sprites</name></member>
+      <member refid="classMenu_1aa74b9a21643667ce7f6d5439005465bd" prot="protected" virt="non-virtual"><scope>Menu</scope><name>state</name></member>
+      <member refid="classMenu_1addb760b7ff7fb57605f2b2eb0850d845" prot="protected" virt="non-virtual"><scope>Menu</scope><name>texts</name></member>
+      <member refid="classMenu_1a5a772941426b7198632cf8df6561b2c9" prot="protected" virt="non-virtual"><scope>Menu</scope><name>textures</name></member>
+      <member refid="classMenu_1aa46489254b67a2f17d8bb739a120065a" prot="protected" virt="non-virtual"><scope>Menu</scope><name>theme</name></member>
+      <member refid="classMenu_1a7ae0186fce846248d57d002575565313" prot="public" virt="non-virtual"><scope>Menu</scope><name>update</name></member>
+      <member refid="classMenu_1a831387f51358cfb88cd018e1777bc980" prot="public" virt="non-virtual"><scope>Menu</scope><name>~Menu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

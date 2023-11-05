@@ -1,9 +1,42 @@
 /*
 ** EPITECH PROJECT, 2023
-** Yiang
+** Rtype
 ** File description:
 ** Config.cpp
 */
+
+/**
+** Config.cpp
+**
+** This file implements the Config class which loads configuration
+** data from a file.
+**
+** Methods:
+**
+** - Config()
+**   Default constructor.
+**
+** - ~Config()
+**   Destructor.
+**
+** - load()
+**   Loads configuration from a file.
+**   Parses the file with libconfig and handles errors.
+**   Loads GUI and player configurations.
+**
+** - print()
+**   Prints the loaded configuration.
+**
+** - getGUIConfig()
+**   Getter for the GUIConfig member.
+**
+** Members:
+**
+** - guiConfig
+**   Stores the loaded GUI configuration.
+**
+*/
+
 #include "Config/Config.hpp"
 
 Config::Config() {
@@ -38,9 +71,7 @@ void Config::load(const std::string& file) {
 }
 
 void Config::print() {
-    std::cout << "GUI:" << std::endl;
     guiConfig.print();
-    std::cout << "Player:" << std::endl;
 }
 
 GUIConfig Config::getGUIConfig() const {

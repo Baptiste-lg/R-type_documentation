@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structGameConfig" kind="struct" language="C++" prot="public">
+    <compoundname>GameConfig</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structGameConfig_1a4aadf51b101b8d807bef67d2d2bd9798" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float GameConfig::screenWidth</definition>
+        <argsstring></argsstring>
+        <name>screenWidth</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="225" column="11" bodyfile="include/Component.hpp" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGameConfig_1a3107d0cdc7648ff0c30a015c9fbd1ea3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float GameConfig::screenHeight</definition>
+        <argsstring></argsstring>
+        <name>screenHeight</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="226" column="11" bodyfile="include/Component.hpp" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGameConfig_1ad24882453746b688f21b0dff4b68fcf7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float GameConfig::playerSpeed</definition>
+        <argsstring></argsstring>
+        <name>playerSpeed</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="227" column="11" bodyfile="include/Component.hpp" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGameConfig_1a34e4243f3897dab8d7ffbc963c7bbaa1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GameConfig::playerScore</definition>
+        <argsstring></argsstring>
+        <name>playerScore</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="228" column="9" bodyfile="include/Component.hpp" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGameConfig_1aed8a5d73d3a88d02ac9f7b65b0497847" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string GameConfig::playerSkin</definition>
+        <argsstring></argsstring>
+        <name>playerSkin</name>
+        <initializer>= &quot;skin_default&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="229" column="17" bodyfile="include/Component.hpp" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Component.hpp" line="224" column="1" bodyfile="include/Component.hpp" bodystart="224" bodyend="230"/>
+    <listofallmembers>
+      <member refid="structGameConfig_1a34e4243f3897dab8d7ffbc963c7bbaa1" prot="public" virt="non-virtual"><scope>GameConfig</scope><name>playerScore</name></member>
+      <member refid="structGameConfig_1aed8a5d73d3a88d02ac9f7b65b0497847" prot="public" virt="non-virtual"><scope>GameConfig</scope><name>playerSkin</name></member>
+      <member refid="structGameConfig_1ad24882453746b688f21b0dff4b68fcf7" prot="public" virt="non-virtual"><scope>GameConfig</scope><name>playerSpeed</name></member>
+      <member refid="structGameConfig_1a3107d0cdc7648ff0c30a015c9fbd1ea3" prot="public" virt="non-virtual"><scope>GameConfig</scope><name>screenHeight</name></member>
+      <member refid="structGameConfig_1a4aadf51b101b8d807bef67d2d2bd9798" prot="public" virt="non-virtual"><scope>GameConfig</scope><name>screenWidth</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

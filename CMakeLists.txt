@@ -124,10 +124,7 @@ set (COMMON_SRC_FILES
         src/Spawner.cpp
         include/Batch.hpp
         src/Batch.cpp
-        include/ISystem.hpp
-        include/System.hpp
         src/QuadTree.cpp
-        include/Quadtree.hpp
         include/ThreadPool.hpp
         include/Database/Database.hpp
         src/Database/Database.cpp
@@ -149,6 +146,9 @@ set (COMMON_SRC_FILES
         src/Event.cpp
         src/global.cpp
         src/SceneParsing.cpp
+        src/MenuSystem.cpp
+        src/EffectsFunctions.cpp
+        src/Encode.cpp
 )
 
 

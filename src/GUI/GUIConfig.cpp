@@ -1,8 +1,64 @@
 /*
 ** EPITECH PROJECT, 2023
-** Yiang
+** Rtype
 ** File description:
 ** GUIConfig.cpp
+*/
+
+/**
+* GUIConfig.cpp
+*
+* Handles loading and storing configuration data for the GUI.
+*
+* Methods:
+*
+* - GUIConfig()
+*   Default constructor.
+*
+* - ~GUIConfig()
+*   Destructor.
+*
+* - load()
+*   Loads GUI configuration from libconfig Setting.
+*
+* - print()
+*   Prints GUI configuration to console.
+*
+* - getResolution()
+*   Returns resolution pair.
+*
+* - getTitle()
+*   Returns window title string.
+*
+* - getFPS()
+*   Returns target FPS.
+*
+* - getTheme()
+*   Returns theme data struct.
+*
+* - setResolution()
+*   Sets resolution pair.
+*
+* - setFPS()
+*   Sets target FPS.
+*
+* - setTheme()
+*   Sets theme data struct.
+*
+* Members:
+*
+* - title
+*   Window title string.
+*
+* - fps
+*   Target frames per second.
+*
+* - res
+*   Resolution pair (width, height).
+*
+* - theme
+*   Theme data struct.
+*
 */
 
 #include "GUI/GUIConfig.hpp"
@@ -25,11 +81,7 @@ void GUIConfig::load(const libconfig::Setting& guiSetting) {
 }
 
 void GUIConfig::print() {
-    cout << "GUIConfig:" << endl;
-    cout << "title: " << title << endl;
-    cout << "fps: " << fps << endl;
-    cout << "res: " << res.first << "x" << res.second << endl;
-    cout << "theme: " << theme.id << " " << theme.name << endl;
+
 }
 
 pair<int, int> GUIConfig::getResolution() const {

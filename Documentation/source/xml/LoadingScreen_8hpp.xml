@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="LoadingScreen_8hpp" kind="file" language="C++">
+    <compoundname>LoadingScreen.hpp</compoundname>
+    <includes local="no">SFML/Graphics.hpp</includes>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="GUI_8hpp" local="yes">include/GUI/GUI.hpp</includedby>
+    <includedby refid="LoadingScreen_8cpp" local="yes">src/GraphicElement/LoadingScreen.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>include/GraphicElement/LoadingScreen.hpp</label>
+        <link refid="LoadingScreen_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>include/ServerMain.hpp</label>
+        <link refid="ServerMain_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>include/GraphicElement/LoadingScreen.hpp</label>
+        <link refid="LoadingScreen_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/ClientMain.hpp</label>
+        <link refid="ClientMain_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>include/GUI/GUI.hpp</label>
+        <link refid="GUI_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>include/taskLoader.hpp</label>
+        <link refid="taskLoader_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classLoadingScreen" prot="public">LoadingScreen</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="LoadingScreen_8hpp_1a04631564aaf4ca446af0debdfede6b95" prot="public" static="no">
+        <name>ARROW_03_SIZE_X</name>
+        <initializer>197</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classLoadingScreen" kindref="compound">LoadingScreen</ref></para>
+<para>This class represents a loading screen.</para>
+<para>Public Methods:</para>
+<para><itemizedlist>
+<listitem><para><ref refid="classLoadingScreen" kindref="compound">LoadingScreen()</ref><itemizedlist>
+<listitem><para>Default constructor</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>~LoadingScreen()<itemizedlist>
+<listitem><para>Destructor</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>load()<itemizedlist>
+<listitem><para>Loads the loading screen resources</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>update()<itemizedlist>
+<listitem><para>Updates the loading progress percentage</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>draw()<itemizedlist>
+<listitem><para>Draws the loading screen</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>Private Attributes:</para>
+<para><itemizedlist>
+<listitem><para>texture<itemizedlist>
+<listitem><para>Background texture</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>sprite<itemizedlist>
+<listitem><para>Background sprite</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>font<itemizedlist>
+<listitem><para>Text font</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>text<itemizedlist>
+<listitem><para>Loading progress text </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/LoadingScreen.hpp" line="52" column="9" bodyfile="include/GraphicElement/LoadingScreen.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="LoadingScreen_8hpp_1ab2dc3ec193f68262ed8e6559405c7329" prot="public" static="no">
+        <name>ARROW_03_SIZE_Y</name>
+        <initializer>75</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/LoadingScreen.hpp" line="53" column="9" bodyfile="include/GraphicElement/LoadingScreen.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2023</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Rtype</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>LoadingScreen.hpp</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LOADINGSCREEN_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LOADINGSCREEN_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Graphics.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ARROW_03_SIZE_X<sp/>197</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ARROW_03_SIZE_Y<sp/>75</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classLoadingScreen" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classLoadingScreen" kindref="compound">LoadingScreen</ref><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLoadingScreen_1ad280e1a8f065e9a1efa9e308479ee12d" kindref="member">LoadingScreen</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="classLoadingScreen" kindref="compound">LoadingScreen</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>load(std::pair&lt;int,<sp/>int&gt;<sp/>res);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>percent);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>draw(sf::RenderWindow&amp;<sp/>window);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Texture<sp/>texture;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Sprite<sp/>sprite;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Font<sp/>font;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Text<sp/>text;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*LOADINGSCREEN_HPP_*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/GraphicElement/LoadingScreen.hpp"/>
+  </compounddef>
+</doxygen>

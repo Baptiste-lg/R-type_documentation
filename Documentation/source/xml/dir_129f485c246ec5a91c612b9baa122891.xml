@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_129f485c246ec5a91c612b9baa122891" kind="dir">
+    <compoundname>src/server/client</compoundname>
+    <innerfile refid="client_8cpp">client.cpp</innerfile>
+    <innerfile refid="client__tcp__udp_8cpp">client_tcp_udp.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/server/client/"/>
+  </compounddef>
+</doxygen>

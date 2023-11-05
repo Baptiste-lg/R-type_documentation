@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classSpritePool" kind="class" language="C++" prot="public">
+    <compoundname>SpritePool</compoundname>
+    <includes refid="SpritePool_8hpp" local="no">SpritePool.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSpritePool_1a41e0458453eef1e76c78c66b9a6bc403" prot="private" static="no" mutable="no">
+        <type>std::list&lt; sf::Sprite * &gt;</type>
+        <definition>std::list&lt;sf::Sprite*&gt; SpritePool::available</definition>
+        <argsstring></argsstring>
+        <name>available</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SpritePool.hpp" line="52" column="15" bodyfile="include/SpritePool.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpritePool_1a8e6325ba7e1a7c969f43cb6d7c417943" prot="private" static="no" mutable="no">
+        <type>std::list&lt; sf::Sprite * &gt;</type>
+        <definition>std::list&lt;sf::Sprite*&gt; SpritePool::inUse</definition>
+        <argsstring></argsstring>
+        <name>inUse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SpritePool.hpp" line="53" column="15" bodyfile="include/SpritePool.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSpritePool_1af1362e5cb53a550b094561d69229102a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>sf::Sprite *</type>
+        <definition>sf::Sprite * SpritePool::getSprite</definition>
+        <argsstring>()</argsstring>
+        <name>getSprite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SpritePool.cpp</para>
+<para>This file defines the implementation of the <ref refid="classSpritePool" kindref="compound">SpritePool</ref> class, which is designed to manage a pool of sprite objects. It provides mechanisms to obtain a sprite from the pool and to return a sprite back to the pool after use. This pool management helps in reusing sprite objects, thereby improving the performance and reducing the memory allocations.</para>
+<para>Functions:</para>
+<para><itemizedlist>
+<listitem><para>sf::Sprite* <ref refid="classSpritePool_1af1362e5cb53a550b094561d69229102a" kindref="member">SpritePool::getSprite()</ref>: This function checks if there are any available sprites in the pool. If the pool is empty, it creates a new sprite, adds it to the available pool, and then moves it to the in-use pool before returning it. If there are available sprites, it simply moves the first available sprite from the available pool to the in-use pool and returns it.</para>
+</listitem><listitem><para>void SpritePool::returnSprite(sf::Sprite* sprite): This function takes a sprite pointer as an argument, removes this sprite from the in-use pool, and adds it back to the available pool for future use.</para>
+</listitem></itemizedlist>
+</para>
+<para>Dependencies:</para>
+<para><itemizedlist>
+<listitem><para>&quot;SpritePool.hpp&quot; for the declaration of the <ref refid="classSpritePool" kindref="compound">SpritePool</ref> class and its methods.</para>
+</listitem><listitem><para>&lt;SFML/Graphics.hpp&gt; for the sf::Sprite class. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SpritePool.hpp" line="36" column="16" bodyfile="src/SpritePool.cpp" bodystart="35" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpritePool_1a0ae776e2c3ea90f62e5c500d9af61acc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpritePool::returnSprite</definition>
+        <argsstring>(sf::Sprite *sprite)</argsstring>
+        <name>returnSprite</name>
+        <param>
+          <type>sf::Sprite *</type>
+          <declname>sprite</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SpritePool.hpp" line="37" column="10" bodyfile="src/SpritePool.cpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpritePool_1a225cec38d6557f304d2279005a8aa523" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpritePool::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SpritePool.hpp" line="39" column="10" bodyfile="include/SpritePool.hpp" bodystart="39" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="SpritePool_8hpp_source" kindref="compound">SpritePool.hpp</ref> defines a pool for reusing SFML sprites.</para>
+<para>The sprite pool prevents constantly allocating and freeing sprites. Sprites are reused from an available pool instead of created/destroyed.</para>
+<para>This improves performance by reducing memory allocations.</para>
+<para>Usage:<itemizedlist>
+<listitem><para>GetSprite(): Gets a sprite from the available pool.</para>
+</listitem><listitem><para>ReturnSprite(): Returns a sprite to the pool when done.</para>
+</listitem></itemizedlist>
+</para>
+<para>Methods:<itemizedlist>
+<listitem><para><ref refid="classSpritePool_1af1362e5cb53a550b094561d69229102a" kindref="member">getSprite()</ref>: Moves a sprite from available to inUse pool.</para>
+</listitem><listitem><para>returnSprite(): Moves it back to available.</para>
+</listitem></itemizedlist>
+</para>
+<para>Pools:<itemizedlist>
+<listitem><para>available: List of unused sprites.</para>
+</listitem><listitem><para>inUse: List of sprites currently in use. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="include/SpritePool.hpp" line="34" column="1" bodyfile="include/SpritePool.hpp" bodystart="34" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classSpritePool_1a41e0458453eef1e76c78c66b9a6bc403" prot="private" virt="non-virtual"><scope>SpritePool</scope><name>available</name></member>
+      <member refid="classSpritePool_1a225cec38d6557f304d2279005a8aa523" prot="public" virt="non-virtual"><scope>SpritePool</scope><name>clear</name></member>
+      <member refid="classSpritePool_1af1362e5cb53a550b094561d69229102a" prot="public" virt="non-virtual"><scope>SpritePool</scope><name>getSprite</name></member>
+      <member refid="classSpritePool_1a8e6325ba7e1a7c969f43cb6d7c417943" prot="private" virt="non-virtual"><scope>SpritePool</scope><name>inUse</name></member>
+      <member refid="classSpritePool_1a0ae776e2c3ea90f62e5c500d9af61acc" prot="public" virt="non-virtual"><scope>SpritePool</scope><name>returnSprite</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

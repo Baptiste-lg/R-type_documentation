@@ -1,9 +1,31 @@
 /*
 ** EPITECH PROJECT, 2024
-** ECS
+** Rtype
 ** File description:
 ** SparseArray
 */
+/**
+ * sparse_array is a templated container for storing sparse component data.
+ *
+ * It allows efficient insertion, removal and random access of components.
+ * Components are stored in a std::optional wrapper.
+ *
+ * Template Parameters:
+ * - Component: The component type stored in the array.
+ *
+ * Usage:
+ * - sparse_array<Position> positions;
+ * - positions.insert_at(entity, Position{x, y});
+ * - auto& pos = positions[entity];
+ * - pos->x = 10;
+ *
+ * Methods:
+ * - insert_at: Inserts a component at an index.
+ * - erase: Removes the component at an index.
+ * - operator[]: Accesses the component optional at an index.
+ * - contains: Checks if an index has a component.
+*/
+
 #ifndef SPARSEARRAY_HPP_
 #define SPARSEARRAY_HPP_
 #include <vector>

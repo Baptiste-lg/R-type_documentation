@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="Button_8hpp" kind="file" language="C++">
+    <compoundname>Button.hpp</compoundname>
+    <includes local="no">functional</includes>
+    <includes local="no">SFML/Graphics.hpp</includes>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="BeatmapPanel_8hpp" local="yes">include/GraphicElement/BeatmapPanel.hpp</includedby>
+    <includedby refid="RectangleButton_8hpp" local="yes">include/GraphicElement/RectangleButton.hpp</includedby>
+    <includedby refid="Menu_8hpp" local="yes">include/Menu/Menu.hpp</includedby>
+    <includedby refid="Button_8cpp" local="yes">src/GraphicElement/Button.cpp</includedby>
+    <includedby refid="ButtonConfig_8cpp" local="yes">src/GraphicElement/ButtonConfig.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="2">
+        <label>functional</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>include/GraphicElement/Button.hpp</label>
+        <link refid="Button_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>include/Menu/Menu.hpp</label>
+        <link refid="Menu_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>include/ServerMain.hpp</label>
+        <link refid="ServerMain_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>include/ClientMain.hpp</label>
+        <link refid="ClientMain_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>include/GUI/GUI.hpp</label>
+        <link refid="GUI_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>include/taskLoader.hpp</label>
+        <link refid="taskLoader_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/GraphicElement/Button.hpp</label>
+        <link refid="Button_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/GraphicElement/BeatmapPanel.hpp</label>
+        <link refid="BeatmapPanel_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>include/GraphicElement/RectangleButton.hpp</label>
+        <link refid="RectangleButton_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structButtonConfig__s" prot="public">ButtonConfig_s</innerclass>
+    <innerclass refid="classButton" prot="public">Button</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="Button_8hpp_1ae2d5c50fae96a83cc4f5974af78e6943" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ButtonType</name>
+        <enumvalue id="Button_8hpp_1ae2d5c50fae96a83cc4f5974af78e6943ae552ab0a96c0384a6e918e726b7f6102" prot="public">
+          <name>RECTANGLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Button_8hpp_1ae2d5c50fae96a83cc4f5974af78e6943a2fd33892864d1c342d3bead2f2d9ad56" prot="public">
+          <name>TRIANGLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Button_8hpp_1ae2d5c50fae96a83cc4f5974af78e6943aa79c827759ea48f0735386c4b1188911" prot="public">
+          <name>CIRCLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Button_8hpp_1ae2d5c50fae96a83cc4f5974af78e6943a9a4a47c1606e295076055a9cc4373197" prot="public">
+          <name>TEXT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classButton" kindref="compound">Button</ref></para>
+<para>This class represents a clickable button.</para>
+<para>Public Methods:</para>
+<para><itemizedlist>
+<listitem><para><ref refid="classButton" kindref="compound">Button()</ref><itemizedlist>
+<listitem><para>Default constructor</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><ref refid="classButton" kindref="compound">Button(texture, position, onClick, res)</ref><itemizedlist>
+<listitem><para>Constructor with texture, position, click handler and resolution</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>~Button()<itemizedlist>
+<listitem><para>Destructor</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>handleEvent()<itemizedlist>
+<listitem><para>Handles mouse events on the button</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>draw()<itemizedlist>
+<listitem><para>Draws the button</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>setText()<itemizedlist>
+<listitem><para>Sets the text on the button</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>Private Attributes:</para>
+<para><itemizedlist>
+<listitem><para>texture<itemizedlist>
+<listitem><para><ref refid="classButton" kindref="compound">Button</ref> texture</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>sprite<itemizedlist>
+<listitem><para><ref refid="classButton" kindref="compound">Button</ref> sprite</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>text<itemizedlist>
+<listitem><para><ref refid="classButton" kindref="compound">Button</ref> text</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>onClick<itemizedlist>
+<listitem><para>Click handler function</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>state<itemizedlist>
+<listitem><para>Current state of the button</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>position<itemizedlist>
+<listitem><para><ref refid="structPosition" kindref="compound">Position</ref> of the button</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>size<itemizedlist>
+<listitem><para>Size of the button</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>type<itemizedlist>
+<listitem><para>Type of the button (rectangle, circle, etc)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>lastClickClock<itemizedlist>
+<listitem><para>Clock to prevent double clicks </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="70" column="1" bodyfile="include/GraphicElement/Button.hpp" bodystart="70" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="enum" id="Button_8hpp_1aa46074d34fe2d6631c6bd9dc74633657" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ButtonState</name>
+        <enumvalue id="Button_8hpp_1aa46074d34fe2d6631c6bd9dc74633657a50d1448013c6f17125caee18aa418af7" prot="public">
+          <name>NORMAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Button_8hpp_1aa46074d34fe2d6631c6bd9dc74633657a8df21af5ed7da4b83ff86f107b52ef75" prot="public">
+          <name>HOVER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Button_8hpp_1aa46074d34fe2d6631c6bd9dc74633657a5ef9a100ac8b4b8d6dec477c377b7901" prot="public">
+          <name>PRESSED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Button_8hpp_1aa46074d34fe2d6631c6bd9dc74633657a40f39385238042f6ec0cbac821a19fc4" prot="public">
+          <name>DISABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="77" column="1" bodyfile="include/GraphicElement/Button.hpp" bodystart="77" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="Button_8hpp_1a783a78c94e512289d4352e03d695f165" prot="public" static="no">
+        <type>struct <ref refid="structButtonConfig__s" kindref="compound">ButtonConfig_s</ref></type>
+        <definition>typedef struct ButtonConfig_s ButtonConfig</definition>
+        <argsstring></argsstring>
+        <name>ButtonConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/GraphicElement/Button.hpp" line="86" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2023</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Rtype</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>Button.hpp</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BUTTON_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUTTON_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Graphics.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>ButtonType<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>RECTANGLE,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>TRIANGLE,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>CIRCLE,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>TEXT</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>ButtonState<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>NORMAL,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>HOVER,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>PRESSED,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>DISABLED</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="83" refid="structButtonConfig__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structButtonConfig__s" kindref="compound">ButtonConfig_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>text;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;void()&gt;<sp/>onClick;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}<sp/><ref refid="structButtonConfig__s" kindref="compound">ButtonConfig</ref>;</highlight></codeline>
+<codeline lineno="87" refid="classButton" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classButton" kindref="compound">Button</ref><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classButton_1a3b36df1ae23c58aedb9e15a713159459" kindref="member">Button</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classButton_1a3b36df1ae23c58aedb9e15a713159459" kindref="member">Button</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sf::Texture&amp;<sp/>texture,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sf::Vector2f&amp;<sp/>position,<sp/>std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">()&gt;<sp/>onClick,<sp/>std::pair&lt;int,<sp/>int&gt;<sp/>res);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="classButton" kindref="compound">Button</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleEvent(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sf::Event&amp;<sp/>event,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sf::RenderWindow&amp;<sp/>window);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>draw(sf::RenderWindow&amp;<sp/>window);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setText(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>text,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sf::Font&amp;<sp/>font,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>characterSize);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Texture<sp/>texture;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Sprite<sp/>sprite;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Text<sp/>text;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;void()&gt;<sp/>onClick;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>ButtonState<sp/>state;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Vector2f<sp/>position;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Vector2f<sp/>size;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>ButtonType<sp/>type;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Clock<sp/>lastClickClock<sp/>=<sp/>sf::Clock();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*BUTTON_HPP_*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/GraphicElement/Button.hpp"/>
+  </compounddef>
+</doxygen>

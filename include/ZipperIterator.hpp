@@ -1,3 +1,55 @@
+/*
+** EPITECH PROJECT, 2024
+** Rtype
+** File description:
+** ZipperIterator
+*/
+
+/**
+** ZipperIterator
+**
+** This class implements an iterator for the Zipper class to
+** traverse multiple containers simultaneously.
+**
+** Methods:
+**
+** - ZipperIterator()
+**   Constructs the iterator with begin tuple, max size, and index.
+**
+** - operator++()
+**   Prefix increment. Increments index and all underlying iterators.
+**
+** - operator++(int)
+**   Postfix increment.
+**
+** - operator*()
+**   Dereference. Returns tuple of references to current elements.
+**
+** - operator->()
+**   Arrow operator.
+**
+** - operator==()
+**   Equality comparison. Compares indices.
+**
+** - operator!=()
+**   Inequality comparison.
+**
+** Members:
+**
+** - _current
+**   Tuple of current iterators.
+**
+** - _max
+**   Max size of the zipper.
+**
+** - _idx
+**   Current index.
+**
+** - _seq
+**   Integer sequence for template parameters.
+**
+*/
+
 #ifndef ZIPPERITTERATOR_HPP_
 #define ZIPPERITTERATOR_HPP_
 

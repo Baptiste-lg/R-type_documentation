@@ -1,8 +1,54 @@
 /*
 ** EPITECH PROJECT, 2023
-** B-CPP-500-PAR-5-1-rtype-sofiane.bassaler
+** Rtype
 ** File description:
 ** server_tcp
+*/
+
+/**
+** server_tcp.cpp
+**
+** Implements a simple server that handles both TCP and UDP connections.
+** The server maintains a list of connected clients and has the ability to broadcast messages to all clients.
+**
+** Methods:
+**
+** - add_client(struct sockaddr_in new_client)
+**   Adds a new client to the clients vector if it doesn't already exist.
+**
+** - broadcast(int sockfd, const char *message, ssize_t len, struct sockaddr_in *exclude_addr = nullptr)
+**   Sends a message to all clients except the one specified by exclude_addr.
+**
+** - handle_tcp_client(int client_sock)
+**   Handles a new TCP client connection, reads a message, prints it, and closes the connection.
+**
+** - start_tcp_server()
+**   Initializes a TCP server socket, binds it, and enters a loop where it waits for and accepts new client connections.
+**
+** - start_udp_server()
+**   Initializes a UDP server socket, binds it, and enters a loop where it waits for and processes incoming messages.
+**
+** - main()
+**   Entry point of the program.
+**   Creates two separate threads for the TCP and UDP servers, and waits for them to finish.
+**
+** Members:
+**
+** - TCP_PORT
+**   The port on which the TCP server listens for incoming connections.
+**
+** - UDP_PORT
+**   The port on which the UDP server listens for incoming messages.
+**
+** - BUFFER_SIZE
+**   The size of the buffer used for receiving messages.
+**
+** - clients
+**   A vector of pairs containing the address of each connected client and a unique client ID.
+**
+** - clientIdCounter
+**   A counter used to assign unique IDs to clients.
+**
 */
 
 #include <iostream>
@@ -54,10 +100,7 @@ void handle_tcp_client(int client_sock)
         close(client_sock);
         return;
     }
-
     buffer[bytes_received] = '\0';
-    std::cout << "Received (TCP): " << buffer << std::endl;
-
     close(client_sock); // Close the client's socket when done.
 }
 
@@ -152,16 +195,6 @@ void start_udp_server()
                 break;
             }
         }
-
-        if (client_id != -1)
-        {
-            std::cout << "Received from client_" << client_id << ": " << buffer << std::endl;
-        }
-        else
-        {
-            std::cout << "Received from unknown client: " << buffer << std::endl;
-        }
-
         broadcast(sockfd, buffer, recvLen, &clientAddr); // Send to all other clients
     }
     close(sockfd);

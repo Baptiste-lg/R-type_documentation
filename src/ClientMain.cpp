@@ -1,3 +1,37 @@
+/*
+** EPITECH PROJECT, 2023
+** Rtype
+** File description:
+** ClientMain.cpp
+*/
+
+/**
+** ClientMain.cpp
+**
+** Implements functionality for client-side game entity initialization
+** and terminal input handling for the game.
+**
+** Functions:
+**
+** - getch()
+**   Captures a single character from the terminal input in non-blocking mode,
+**   without echoing the input character to the terminal.
+**
+** - initializeGameEntitiesClient(Registry& registry)
+**   Initializes the game entities on the client-side by invoking
+**   the spawnClientEntity function with the provided registry.
+**
+** Dependencies:
+**
+** - ClientMain.hpp
+**   Header file which may contain declarations relevant to client-side operations.
+**
+** - Spawner.hpp
+**   Header file containing the declaration of spawnClientEntity function
+**   and possibly other entity spawning related functionalities.
+**
+*/
+
 #include "ClientMain.hpp"
 #include "Spawner.hpp"
 

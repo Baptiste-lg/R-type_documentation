@@ -1,8 +1,59 @@
 /*
 ** EPITECH PROJECT, 2023
-** Yiang
+** Rtype
 ** File description:
 ** Button.cpp
+*/
+
+/**
+** Button.cpp
+**
+** Implements a clickable button UI element.
+**
+** Methods:
+**
+** - Button()
+**   Default constructor.
+**
+** - Button()
+**   Constructor taking texture, position, click handler and resolution.
+**   Calculates pixel position from normalized input.
+**   Sets sprite texture and position.
+**
+** - ~Button()
+**   Destructor.
+**
+** - handleEvent()
+**   Handles click events on the button.
+**   Calls onClick handler if button is clicked.
+**
+** - draw()
+**   Draws the button sprite and text.
+**
+** - setText()
+**   Sets the text string, font, and size.
+**   Centers text in button.
+**
+** Members:
+**
+** - sprite
+**   The button sprite.
+**
+** - text
+**   The text displayed on the button.
+**
+** - onClick
+**   The click handler function.
+**
+** - position
+**   The pixel position of the button.
+**
+** - size
+**   The size of the button.
+**
+** - lastClickClock
+**   Tracks time since last click to prevent double clicks.
+**
 */
 
 #include "GraphicElement/Button.hpp"

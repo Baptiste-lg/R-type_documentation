@@ -1,0 +1,479 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classClientSystem" kind="class" language="C++" prot="public">
+    <compoundname>ClientSystem</compoundname>
+    <basecompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; State &gt;</basecompoundref>
+    <includes refid="ClientSystem_8hpp" local="no">ClientSystem.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classClientSystem_1a07b557156d00f0d3283f5acd8255038b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ClientSystem::tcp_sockfd</definition>
+        <argsstring></argsstring>
+        <name>tcp_sockfd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="59" column="9" bodyfile="include/System/ClientSystem.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classClientSystem_1ac17e8ea3c729b2c41546538457ae1cef" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ClientSystem::udp_sockfd</definition>
+        <argsstring></argsstring>
+        <name>udp_sockfd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="60" column="9" bodyfile="include/System/ClientSystem.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classClientSystem_1a29c923261ca61b3a6cca95c5d676593f" prot="private" static="no" mutable="no">
+        <type>std::thread</type>
+        <definition>std::thread ClientSystem::listener_thread</definition>
+        <argsstring></argsstring>
+        <name>listener_thread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="61" column="17" bodyfile="include/System/ClientSystem.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classClientSystem_1a2175926b9c5759749bd54b0e2b971fa5" prot="private" static="no" mutable="no">
+        <type>std::thread</type>
+        <definition>std::thread ClientSystem::tcp_listener_thread</definition>
+        <argsstring></argsstring>
+        <name>tcp_listener_thread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="62" column="17" bodyfile="include/System/ClientSystem.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classClientSystem_1afaad695642bdad9ddc142cfe21a8aa00" prot="private" static="no" mutable="no">
+        <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+        <definition>Registry&amp; ClientSystem::registry</definition>
+        <argsstring></argsstring>
+        <name>registry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="64" column="14" bodyfile="include/System/ClientSystem.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classClientSystem_1a9ad0670d01a0b1d70a9725ee5c14b43e" prot="private" static="no" mutable="no">
+        <type>float &amp;</type>
+        <definition>float&amp; ClientSystem::deltaTime</definition>
+        <argsstring></argsstring>
+        <name>deltaTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="65" column="11" bodyfile="include/System/ClientSystem.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classClientSystem_1acbf1f0ac087aca574616bab31e156bbf" prot="private" static="no" mutable="no">
+        <type>struct sockaddr_in</type>
+        <definition>struct sockaddr_in ClientSystem::serverAddr</definition>
+        <argsstring></argsstring>
+        <name>serverAddr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="65" column="11" bodyfile="include/System/ClientSystem.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classClientSystem_1a47ab02d61b33c9616d39bf188ee1997b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClientSystem::isConnected</definition>
+        <argsstring></argsstring>
+        <name>isConnected</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="67" column="10" bodyfile="include/System/ClientSystem.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classClientSystem_1a341c9424156ec573994114dcf7326eb0" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClientSystem::isTryingToConnect</definition>
+        <argsstring></argsstring>
+        <name>isTryingToConnect</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="68" column="10" bodyfile="include/System/ClientSystem.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classClientSystem_1a18b18cb317a94d2ce91a7e18c0f0cce9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClientSystem::askForLobby</definition>
+        <argsstring></argsstring>
+        <name>askForLobby</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="69" column="10" bodyfile="include/System/ClientSystem.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classClientSystem_1aa76f5a13b2fc69eba35a1614a2542349" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClientSystem::askForListLobby</definition>
+        <argsstring></argsstring>
+        <name>askForListLobby</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="70" column="10" bodyfile="include/System/ClientSystem.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classClientSystem_1ab7719df11845c72ae4b8d2bed146f501" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClientSystem::isReady</definition>
+        <argsstring></argsstring>
+        <name>isReady</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="71" column="10" bodyfile="include/System/ClientSystem.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classClientSystem_1a100fe009907b63d52bb03cfcf3cc47c2" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ClientSystem::requestContent</definition>
+        <argsstring></argsstring>
+        <name>requestContent</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="72" column="17" bodyfile="include/System/ClientSystem.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classClientSystem_1aa6b27be797afc0d32f0a9ad5245d74a5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ClientSystem::idUdp</definition>
+        <argsstring></argsstring>
+        <name>idUdp</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="73" column="9" bodyfile="include/System/ClientSystem.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classClientSystem_1aaa10af077d8c41fc9a79866a0ae9860f" prot="private" static="no" mutable="no">
+        <type>std::chrono::steady_clock::time_point</type>
+        <definition>std::chrono::steady_clock::time_point ClientSystem::lastHeartbeatTime</definition>
+        <argsstring></argsstring>
+        <name>lastHeartbeatTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="74" column="43" bodyfile="include/System/ClientSystem.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classClientSystem_1a041a8435cd72f8b9690ebd9f27f6cc85" prot="private" static="no" mutable="no">
+        <type>const std::chrono::seconds</type>
+        <definition>const std::chrono::seconds ClientSystem::heartbeatInterval</definition>
+        <argsstring></argsstring>
+        <name>heartbeatInterval</name>
+        <initializer>= std::chrono::seconds(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="75" column="32" bodyfile="include/System/ClientSystem.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classClientSystem_1aa6c96a9a9bc4e4835d0131de9d75c812" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::string const</type>
+        <definition>std::string const ClientSystem::getSystemName</definition>
+        <argsstring>() override</argsstring>
+        <name>getSystemName</name>
+        <reimplements refid="classISystemBase_1a68bd336682af94d8e0fc5a191b83e616">getSystemName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="78" column="23" bodyfile="include/System/ClientSystem.hpp" bodystart="78" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classClientSystem_1a086760c46de0e3f7d6bf2c31786c8bd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ClientSystem::ClientSystem</definition>
+        <argsstring>(Registry &amp;registry, float &amp;deltaTime)</argsstring>
+        <name>ClientSystem</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="81" column="5" bodyfile="include/System/ClientSystem.hpp" bodystart="81" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classClientSystem_1a97d61edd9e0ee043089d54220f10cca3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ClientSystem::tryToJoin</definition>
+        <argsstring>()</argsstring>
+        <name>tryToJoin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="211" column="13" bodyfile="include/System/ClientSystem.hpp" bodystart="211" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="classClientSystem_1acb76c1644afb8cb85343b3f123efd8b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ClientSystem::~ClientSystem</definition>
+        <argsstring>()</argsstring>
+        <name>~ClientSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="261" column="5" bodyfile="include/System/ClientSystem.hpp" bodystart="261" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="classClientSystem_1a08cda48a3c8e8a2bb05c97a2b9c34adf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientSystem::listen_to_server_tcp</definition>
+        <argsstring>()</argsstring>
+        <name>listen_to_server_tcp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="268" column="10" bodyfile="include/System/ClientSystem.hpp" bodystart="268" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="classClientSystem_1a498a17f7e9d364851e8e5c5839639955" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientSystem::listen_to_server</definition>
+        <argsstring>()</argsstring>
+        <name>listen_to_server</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="291" column="10" bodyfile="include/System/ClientSystem.hpp" bodystart="291" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="classClientSystem_1a5e9bd46a307e77c78dff1aece2ea1208" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientSystem::send_message</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>send_message</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="311" column="10" bodyfile="include/System/ClientSystem.hpp" bodystart="311" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classClientSystem_1ab9b04e75e25ca1f6e4e52aa10fadce93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientSystem::sendMessageTCP</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>sendMessageTCP</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="329" column="10" bodyfile="include/System/ClientSystem.hpp" bodystart="329" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="classClientSystem_1a43ba387190ea7727783b10c07569e4bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientSystem::operator()</definition>
+        <argsstring>(entity_t entity, sparse_array&lt; State &gt; &amp;states) override</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>entity_t</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type><ref refid="classsparse__array" kindref="compound">sparse_array</ref>&lt; <ref refid="structState" kindref="compound">State</ref> &gt; &amp;</type>
+          <declname>states</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="334" column="10" bodyfile="include/System/ClientSystem.hpp" bodystart="334" bodyend="361"/>
+      </memberdef>
+      <memberdef kind="function" id="classClientSystem_1aedb36ec69f43168add4259672c529b7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ClientSystem::PostUpdate</definition>
+        <argsstring>() override</argsstring>
+        <name>PostUpdate</name>
+        <reimplements refid="classISystemBase_1a15450364e9f21ebae6e2633eef35d7d5">PostUpdate</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/System/ClientSystem.hpp" line="363" column="10" bodyfile="include/System/ClientSystem.hpp" bodystart="363" bodyend="382"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classClientSystem" kindref="compound">ClientSystem</ref> handles client-server communication.</para>
+<para>It initializes TCP and UDP sockets to connect to the server. Spawns a thread to listen for incoming UDP messages. Fires events on the registry when messages are received. Sends UDP messages to server when events occur.</para>
+<para>Usage:<itemizedlist>
+<listitem><para>Call tryToJoin() to connect to the server.</para>
+</listitem><listitem><para>Implement event handling for server messages.</para>
+</listitem><listitem><para>Fire events to trigger messages sent to server.</para>
+</listitem></itemizedlist>
+</para>
+<para>Parameters:<itemizedlist>
+<listitem><para>registry: Reference to the ECS registry.</para>
+</listitem><listitem><para>deltaTime: Time elapsed since last tick.</para>
+</listitem></itemizedlist>
+</para>
+<para>Components used:<itemizedlist>
+<listitem><para><ref refid="structState" kindref="compound">State</ref>: Game state component, not directly used.</para>
+</listitem></itemizedlist>
+</para>
+<para>Events:<itemizedlist>
+<listitem><para>PlayerJoined: Sent to server on connection.</para>
+</listitem><listitem><para>PlayerMoved: Sent to server on input.</para>
+</listitem><listitem><para>Server event types: Received from server. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ClientSystem</label>
+        <link refid="classClientSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ISystem&lt; State &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ISystemBase</label>
+        <link refid="classISystemBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ClientSystem</label>
+        <link refid="classClientSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ISystem&lt; State &gt;</label>
+        <link refid="classISystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ISystemBase</label>
+        <link refid="classISystemBase"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/System/ClientSystem.hpp" line="57" column="1" bodyfile="include/System/ClientSystem.hpp" bodystart="57" bodyend="383"/>
+    <listofallmembers>
+      <member refid="classClientSystem_1aa76f5a13b2fc69eba35a1614a2542349" prot="private" virt="non-virtual"><scope>ClientSystem</scope><name>askForListLobby</name></member>
+      <member refid="classClientSystem_1a18b18cb317a94d2ce91a7e18c0f0cce9" prot="private" virt="non-virtual"><scope>ClientSystem</scope><name>askForLobby</name></member>
+      <member refid="classClientSystem_1a086760c46de0e3f7d6bf2c31786c8bd4" prot="public" virt="non-virtual"><scope>ClientSystem</scope><name>ClientSystem</name></member>
+      <member refid="classClientSystem_1a9ad0670d01a0b1d70a9725ee5c14b43e" prot="private" virt="non-virtual"><scope>ClientSystem</scope><name>deltaTime</name></member>
+      <member refid="classClientSystem_1aa6c96a9a9bc4e4835d0131de9d75c812" prot="public" virt="virtual"><scope>ClientSystem</scope><name>getSystemName</name></member>
+      <member refid="classClientSystem_1a041a8435cd72f8b9690ebd9f27f6cc85" prot="private" virt="non-virtual"><scope>ClientSystem</scope><name>heartbeatInterval</name></member>
+      <member refid="classClientSystem_1aa6b27be797afc0d32f0a9ad5245d74a5" prot="private" virt="non-virtual"><scope>ClientSystem</scope><name>idUdp</name></member>
+      <member refid="classClientSystem_1a47ab02d61b33c9616d39bf188ee1997b" prot="private" virt="non-virtual"><scope>ClientSystem</scope><name>isConnected</name></member>
+      <member refid="classClientSystem_1ab7719df11845c72ae4b8d2bed146f501" prot="private" virt="non-virtual"><scope>ClientSystem</scope><name>isReady</name></member>
+      <member refid="classClientSystem_1a341c9424156ec573994114dcf7326eb0" prot="private" virt="non-virtual"><scope>ClientSystem</scope><name>isTryingToConnect</name></member>
+      <member refid="classClientSystem_1aaa10af077d8c41fc9a79866a0ae9860f" prot="private" virt="non-virtual"><scope>ClientSystem</scope><name>lastHeartbeatTime</name></member>
+      <member refid="classClientSystem_1a498a17f7e9d364851e8e5c5839639955" prot="public" virt="non-virtual"><scope>ClientSystem</scope><name>listen_to_server</name></member>
+      <member refid="classClientSystem_1a08cda48a3c8e8a2bb05c97a2b9c34adf" prot="public" virt="non-virtual"><scope>ClientSystem</scope><name>listen_to_server_tcp</name></member>
+      <member refid="classClientSystem_1a29c923261ca61b3a6cca95c5d676593f" prot="private" virt="non-virtual"><scope>ClientSystem</scope><name>listener_thread</name></member>
+      <member refid="classClientSystem_1a43ba387190ea7727783b10c07569e4bf" prot="public" virt="non-virtual"><scope>ClientSystem</scope><name>operator()</name></member>
+      <member refid="classISystem_1a31573ab1dbe256ad82453452bc1a76b8" prot="public" virt="pure-virtual" ambiguityscope="ISystem&lt; State &gt;::"><scope>ClientSystem</scope><name>operator()</name></member>
+      <member refid="classClientSystem_1aedb36ec69f43168add4259672c529b7b" prot="public" virt="virtual"><scope>ClientSystem</scope><name>PostUpdate</name></member>
+      <member refid="classClientSystem_1afaad695642bdad9ddc142cfe21a8aa00" prot="private" virt="non-virtual"><scope>ClientSystem</scope><name>registry</name></member>
+      <member refid="classClientSystem_1a100fe009907b63d52bb03cfcf3cc47c2" prot="private" virt="non-virtual"><scope>ClientSystem</scope><name>requestContent</name></member>
+      <member refid="classClientSystem_1a5e9bd46a307e77c78dff1aece2ea1208" prot="public" virt="non-virtual"><scope>ClientSystem</scope><name>send_message</name></member>
+      <member refid="classClientSystem_1ab9b04e75e25ca1f6e4e52aa10fadce93" prot="public" virt="non-virtual"><scope>ClientSystem</scope><name>sendMessageTCP</name></member>
+      <member refid="classClientSystem_1acbf1f0ac087aca574616bab31e156bbf" prot="private" virt="non-virtual"><scope>ClientSystem</scope><name>serverAddr</name></member>
+      <member refid="classClientSystem_1a2175926b9c5759749bd54b0e2b971fa5" prot="private" virt="non-virtual"><scope>ClientSystem</scope><name>tcp_listener_thread</name></member>
+      <member refid="classClientSystem_1a07b557156d00f0d3283f5acd8255038b" prot="private" virt="non-virtual"><scope>ClientSystem</scope><name>tcp_sockfd</name></member>
+      <member refid="classClientSystem_1a97d61edd9e0ee043089d54220f10cca3" prot="public" virt="non-virtual"><scope>ClientSystem</scope><name>tryToJoin</name></member>
+      <member refid="classClientSystem_1ac17e8ea3c729b2c41546538457ae1cef" prot="private" virt="non-virtual"><scope>ClientSystem</scope><name>udp_sockfd</name></member>
+      <member refid="classClientSystem_1acb76c1644afb8cb85343b3f123efd8b0" prot="public" virt="non-virtual"><scope>ClientSystem</scope><name>~ClientSystem</name></member>
+      <member refid="classISystem_1a8b403989cf1780ab99f91272b3098648" prot="public" virt="virtual"><scope>ClientSystem</scope><name>~ISystem</name></member>
+      <member refid="classISystemBase_1ae71b84b72f1d4eab3f8acdf50d5ee540" prot="public" virt="virtual"><scope>ClientSystem</scope><name>~ISystemBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

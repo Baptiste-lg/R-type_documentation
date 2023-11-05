@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="Global_8hpp" kind="file" language="C++">
+    <compoundname>Global.hpp</compoundname>
+    <includes local="no">SFML/Graphics.hpp</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="ServerMain_8hpp" local="yes">include/ServerMain.hpp</includedby>
+    <includedby refid="ConfigServer_8cpp" local="yes">src/ConfigServer.cpp</includedby>
+    <includedby refid="global_8cpp" local="yes">src/global.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
+    <includedby refid="SceneParsing_8cpp" local="yes">src/SceneParsing.cpp</includedby>
+    <includedby refid="Spawner_8cpp" local="yes">src/Spawner.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/Global.hpp</label>
+        <link refid="Global_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>unordered_map</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/ServerMain.hpp</label>
+        <link refid="ServerMain_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>include/Global.hpp</label>
+        <link refid="Global_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="Global_8hpp_1ad27df8516d357659fb3181edcda549ab" prot="public" static="no">
+        <name>FRAMERATE</name>
+        <initializer>60</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Global</para>
+<para>This file contains global definitions and variables.</para>
+<para>Defines:</para>
+<para><itemizedlist>
+<listitem><para>FRAMERATE Frames per second rate.</para>
+</listitem></itemizedlist>
+</para>
+<para>Variables:</para>
+<para><itemizedlist>
+<listitem><para>configMap Global map containing loaded configuration values.</para>
+</listitem></itemizedlist>
+</para>
+<para>Functions:</para>
+<para><itemizedlist>
+<listitem><para>tokenize() Tokenizes a string into a vector of tokens. Takes message string and delimiter string. Returns vector of token strings. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Global.hpp" line="40" column="9" bodyfile="include/Global.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="Global_8hpp_1a2e49c4cbfe9154a91188d813707eb47a" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::string &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::string&gt; configMap</definition>
+        <argsstring></argsstring>
+        <name>configMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Global.cpp</para>
+<para>This file contains the global variables and utility functions used throughout the project. It defines a global configuration map <computeroutput>configMap</computeroutput> and a utility function <computeroutput>tokenize</computeroutput> for splitting a string into tokens based on a specified delimiter.</para>
+<para>Variables:</para>
+<para><itemizedlist>
+<listitem><para>configMap An unordered map to store key-value pairs representing configuration settings.</para>
+</listitem></itemizedlist>
+</para>
+<para>Functions:</para>
+<para><itemizedlist>
+<listitem><para>tokenize(std::string message, std::string delimiter) This function takes a message string and a delimiter string as arguments, and returns a vector of strings where each string is a token obtained by splitting the message string at each occurrence of the delimiter string.</para>
+</listitem></itemizedlist>
+</para>
+<para>Dependencies:</para>
+<para><itemizedlist>
+<listitem><para>&quot;Global.hpp&quot; for declarations of global variables and utility functions.</para>
+</listitem><listitem><para>&lt;unordered_map&gt; for std::unordered_map.</para>
+</listitem><listitem><para>&lt;vector&gt; for std::vector.</para>
+</listitem><listitem><para>&lt;string&gt; for std::string. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Global.hpp" line="41" column="27" bodyfile="src/global.cpp" bodystart="38" bodyend="-1" declfile="include/Global.hpp" declline="41" declcolumn="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="Global_8hpp_1aa06c86901886f7263efb113d87605801" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; tokenize</definition>
+        <argsstring>(std::string message, std::string delimiter)</argsstring>
+        <name>tokenize</name>
+        <param>
+          <type>std::string</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>delimiter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Global.hpp" line="42" column="13" bodyfile="src/global.cpp" bodystart="39" bodyend="50" declfile="include/Global.hpp" declline="42" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Rtype</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>global</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GLOBAL_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GLOBAL_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Graphics.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FRAMERATE<sp/>60</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>std::unordered_map&lt;std::string,<sp/>std::string&gt;<sp/>configMap;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">std::vector&lt;std::string&gt;<sp/>tokenize(std::string<sp/>message,<sp/>std::string<sp/>delimiter);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!GLOBAL_HPP_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/Global.hpp"/>
+  </compounddef>
+</doxygen>

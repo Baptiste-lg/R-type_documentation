@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structisClickable" kind="struct" language="C++" prot="public">
+    <compoundname>isClickable</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structisClickable_1a6bd3dff0e8021e19a276bf76be079f50" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool isClickable::isClicked</definition>
+        <argsstring></argsstring>
+        <name>isClicked</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="219" column="10" bodyfile="include/Component.hpp" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structisClickable_1abdc5b519c6813d744c5598f55d4faf9f" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; isClickable::onClick</definition>
+        <argsstring></argsstring>
+        <name>onClick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="220" column="19" bodyfile="include/Component.hpp" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structisClickable_1a27755b575fa8c560fad3919dbd6a9f9a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float isClickable::elapsedTimeSinceLastClick</definition>
+        <argsstring></argsstring>
+        <name>elapsedTimeSinceLastClick</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="221" column="11" bodyfile="include/Component.hpp" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Component.hpp" line="218" column="1" bodyfile="include/Component.hpp" bodystart="218" bodyend="222"/>
+    <listofallmembers>
+      <member refid="structisClickable_1a27755b575fa8c560fad3919dbd6a9f9a" prot="public" virt="non-virtual"><scope>isClickable</scope><name>elapsedTimeSinceLastClick</name></member>
+      <member refid="structisClickable_1a6bd3dff0e8021e19a276bf76be079f50" prot="public" virt="non-virtual"><scope>isClickable</scope><name>isClicked</name></member>
+      <member refid="structisClickable_1abdc5b519c6813d744c5598f55d4faf9f" prot="public" virt="non-virtual"><scope>isClickable</scope><name>onClick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

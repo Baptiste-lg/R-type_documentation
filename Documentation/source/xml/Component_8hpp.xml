@@ -1,0 +1,1172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="Component_8hpp" kind="file" language="C++">
+    <compoundname>Component.hpp</compoundname>
+    <includes local="no">SFML/Graphics.hpp</includes>
+    <includes local="no">libconfig.h++</includes>
+    <includes local="no">any</includes>
+    <includes refid="Registry_8hpp" local="yes">Registry.hpp</includes>
+    <includes refid="TextureManager_8hpp" local="yes">TextureManager.hpp</includes>
+    <includes local="no">complex</includes>
+    <includes local="no">valarray</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">numeric</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">array</includes>
+    <includes local="no">map</includes>
+    <includes local="no">set</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="Behaviour_8hpp" local="yes">include/Behaviour.hpp</includedby>
+    <includedby refid="ClientMain_8hpp" local="yes">include/ClientMain.hpp</includedby>
+    <includedby refid="Registry_8hpp" local="yes">include/Registry.hpp</includedby>
+    <includedby refid="SceneParsing_8hpp" local="yes">include/SceneParsing.hpp</includedby>
+    <includedby refid="ServerMain_8hpp" local="yes">include/ServerMain.hpp</includedby>
+    <includedby refid="Spawner_8hpp" local="yes">include/Spawner.hpp</includedby>
+    <includedby refid="DeathEffectSystem_8hpp" local="yes">include/System/DeathEffectSystem.hpp</includedby>
+    <includedby refid="EffectsFunctions_8hpp" local="yes">include/System/EffectsFunctions.hpp</includedby>
+    <includedby refid="FFTSystem_8hpp" local="yes">include/System/FFTSystem.hpp</includedby>
+    <includedby refid="ISystem_8hpp" local="yes">include/System/ISystem.hpp</includedby>
+    <includedby refid="VelocitySystem_8hpp" local="yes">include/System/VelocitySystem.hpp</includedby>
+    <includedby refid="taskLoader_8hpp" local="yes">include/taskLoader.hpp</includedby>
+    <includedby refid="Zipper_8hpp" local="yes">include/Zipper.hpp</includedby>
+    <includedby refid="ZipperIterator_8hpp" local="yes">include/ZipperIterator.hpp</includedby>
+    <includedby refid="Component_8cpp" local="yes">src/Component.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
+    <incdepgraph>
+      <node id="41">
+        <label>valarray</label>
+      </node>
+      <node id="16">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="2">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="8">
+        <label>functional</label>
+      </node>
+      <node id="26">
+        <label>queue</label>
+      </node>
+      <node id="36">
+        <label>filesystem</label>
+      </node>
+      <node id="38">
+        <label>Beatmap/BeatmapConfig.hpp</label>
+        <link refid="BeatmapConfig_8hpp_source"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>GameState.hpp</label>
+        <link refid="GameState_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>Registry.hpp</label>
+        <link refid="Registry_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>cmath</label>
+      </node>
+      <node id="43">
+        <label>numeric</label>
+      </node>
+      <node id="19">
+        <label>string</label>
+      </node>
+      <node id="22">
+        <label>Entity.hpp</label>
+        <link refid="Entity_8hpp_source"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="39">
+        <label>map</label>
+      </node>
+      <node id="30">
+        <label>unordered_set</label>
+      </node>
+      <node id="24">
+        <label>fftw3.h</label>
+      </node>
+      <node id="4">
+        <label>any</label>
+      </node>
+      <node id="25">
+        <label>ThreadPool.hpp</label>
+        <link refid="ThreadPool_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>condition_variable</label>
+      </node>
+      <node id="14">
+        <label>Event.hpp</label>
+        <link refid="Event_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>tuple</label>
+      </node>
+      <node id="29">
+        <label>future</label>
+      </node>
+      <node id="12">
+        <label>optional</label>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+      <node id="21">
+        <label>utility</label>
+      </node>
+      <node id="44">
+        <label>array</label>
+      </node>
+      <node id="15">
+        <label>iostream</label>
+      </node>
+      <node id="23">
+        <label>cstddef</label>
+      </node>
+      <node id="6">
+        <label>unordered_map</label>
+      </node>
+      <node id="37">
+        <label>Database/Database.hpp</label>
+        <link refid="Database_8hpp_source"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>shared_mutex</label>
+      </node>
+      <node id="13">
+        <label>mutex</label>
+      </node>
+      <node id="10">
+        <label>SparseArray.hpp</label>
+        <link refid="SparseArray_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>chrono</label>
+      </node>
+      <node id="27">
+        <label>thread</label>
+      </node>
+      <node id="1">
+        <label>include/Component.hpp</label>
+        <link refid="Component_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>../include/System/ISystem.hpp</label>
+        <link refid="ISystem_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>set</label>
+      </node>
+      <node id="34">
+        <label>TextureManager.hpp</label>
+        <link refid="TextureManager_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>complex</label>
+      </node>
+      <node id="32">
+        <label>algorithm</label>
+      </node>
+      <node id="3">
+        <label>libconfig.h++</label>
+      </node>
+      <node id="20">
+        <label>memory</label>
+      </node>
+      <node id="7">
+        <label>typeindex</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/Behaviour.hpp</label>
+        <link refid="Behaviour_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>include/System/VelocitySystem.hpp</label>
+        <link refid="VelocitySystem_8hpp_source"/>
+      </node>
+      <node id="9">
+        <label>include/System/DeathEffectSystem.hpp</label>
+        <link refid="DeathEffectSystem_8hpp_source"/>
+      </node>
+      <node id="16">
+        <label>include/Zipper.hpp</label>
+        <link refid="Zipper_8hpp_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>include/Registry.hpp</label>
+        <link refid="Registry_8hpp_source"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/ServerMain.hpp</label>
+        <link refid="ServerMain_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>include/Spawner.hpp</label>
+        <link refid="Spawner_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>include/System/EffectsFunctions.hpp</label>
+        <link refid="EffectsFunctions_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>include/SceneParsing.hpp</label>
+        <link refid="SceneParsing_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>include/ZipperIterator.hpp</label>
+        <link refid="ZipperIterator_8hpp_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>include/ClientMain.hpp</label>
+        <link refid="ClientMain_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>include/System/MenuSystem.hpp</label>
+        <link refid="MenuSystem_8hpp_source"/>
+      </node>
+      <node id="15">
+        <label>include/taskLoader.hpp</label>
+        <link refid="taskLoader_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/Component.hpp</label>
+        <link refid="Component_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>include/System/ISystem.hpp</label>
+        <link refid="ISystem_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>include/System/Quadtree.hpp</label>
+        <link refid="Quadtree_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>include/System/FFTSystem.hpp</label>
+        <link refid="FFTSystem_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structMyRect" prot="public">MyRect</innerclass>
+    <innerclass refid="structMyVector2" prot="public">MyVector2</innerclass>
+    <innerclass refid="structPosition" prot="public">Position</innerclass>
+    <innerclass refid="structCollision" prot="public">Collision</innerclass>
+    <innerclass refid="structTextDrawable" prot="public">TextDrawable</innerclass>
+    <innerclass refid="structVelocity" prot="public">Velocity</innerclass>
+    <innerclass refid="structAcceleration" prot="public">Acceleration</innerclass>
+    <innerclass refid="structFollower" prot="public">Follower</innerclass>
+    <innerclass refid="structDrawable" prot="public">Drawable</innerclass>
+    <innerclass refid="structAnimation" prot="public">Animation</innerclass>
+    <innerclass refid="structisClickable" prot="public">isClickable</innerclass>
+    <innerclass refid="structGameConfig" prot="public">GameConfig</innerclass>
+    <innerclass refid="structControllable" prot="public">Controllable</innerclass>
+    <innerclass refid="structLaser" prot="public">Laser</innerclass>
+    <innerclass refid="structDepth" prot="public">Depth</innerclass>
+    <innerclass refid="structBehavior" prot="public">Behavior</innerclass>
+    <innerclass refid="structEnemy" prot="public">Enemy</innerclass>
+    <innerclass refid="structFFT" prot="public">FFT</innerclass>
+    <innerclass refid="structSpawner" prot="public">Spawner</innerclass>
+    <innerclass refid="structHealth" prot="public">Health</innerclass>
+    <innerclass refid="structNetwork" prot="public">Network</innerclass>
+    <innerclass refid="structState" prot="public">State</innerclass>
+    <innerclass refid="structClient" prot="public">Client</innerclass>
+    <innerclass refid="structUserInput" prot="public">UserInput</innerclass>
+    <innerclass refid="structUserInputBuffer" prot="public">UserInputBuffer</innerclass>
+    <innerclass refid="structDeathEffect" prot="public">DeathEffect</innerclass>
+    <innerclass refid="structidSync" prot="public">idSync</innerclass>
+    <innerclass refid="structIsChild" prot="public">IsChild</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="Component_8hpp_1a7f138e75fc3cc79e825c39e040690395" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ColliderType</name>
+        <enumvalue id="Component_8hpp_1a7f138e75fc3cc79e825c39e040690395a679ee5320d66c8322e310daeb2ee99b8" prot="public">
+          <name>STOP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Component_8hpp_1a7f138e75fc3cc79e825c39e040690395a11d923a34482e282f3aacb225eda6b08" prot="public">
+          <name>BOUNCING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Component_8hpp_1a7f138e75fc3cc79e825c39e040690395a534df644e3182226cd53827fee0589a4" prot="public">
+          <name>DESTROY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="129" column="1" bodyfile="include/Component.hpp" bodystart="129" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="enum" id="Component_8hpp_1ad79a57ed3105eb60d991a1aeb4a9dc44" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EntityType</name>
+        <enumvalue id="Component_8hpp_1ad79a57ed3105eb60d991a1aeb4a9dc44a5ce368bdfc444a87fef6c208b4101571" prot="public">
+          <name>ENEMY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Component_8hpp_1ad79a57ed3105eb60d991a1aeb4a9dc44ad8816eadb8a34a22af39081b655a1121" prot="public">
+          <name>FRIENDLY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Component_8hpp_1ad79a57ed3105eb60d991a1aeb4a9dc44aeb6bd97056c6f53e3a868f28b17cf759" prot="public">
+          <name>FRIENDLY_HOST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Component_8hpp_1ad79a57ed3105eb60d991a1aeb4a9dc44a4616b0e86abcd0a2eed34e22b58bc36a" prot="public">
+          <name>FRIENDLY_BULLET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Component_8hpp_1ad79a57ed3105eb60d991a1aeb4a9dc44a6db3f701ca1cb6efb3bce06472a45de9" prot="public">
+          <name>FRIENDLY_PROJECTILE_HOST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Component_8hpp_1ad79a57ed3105eb60d991a1aeb4a9dc44a007c8d1719ecaf8c520afeaa0927a857" prot="public">
+          <name>OBSTACLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="135" column="1" bodyfile="include/Component.hpp" bodystart="135" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="enum" id="Component_8hpp_1a820db8c36485a6a7f2c9abf89c5c3a8f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>DeathApplyType</name>
+        <enumvalue id="Component_8hpp_1a820db8c36485a6a7f2c9abf89c5c3a8fa960caa32d189284e82c66099b0b94f05" prot="public">
+          <name>TO_HOST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Component_8hpp_1a820db8c36485a6a7f2c9abf89c5c3a8fa1a633e07796b07ac5e933fc005d37f28" prot="public">
+          <name>TO_CLIENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Component_8hpp_1a820db8c36485a6a7f2c9abf89c5c3a8fac23dce3979f99e8f384666811c7e98ee" prot="public">
+          <name>TO_ALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Component_8hpp_1a820db8c36485a6a7f2c9abf89c5c3a8fa2613794becefd1c1afc8451d984d7f70" prot="public">
+          <name>TO_PARENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="144" column="1" bodyfile="include/Component.hpp" bodystart="144" bodyend="149"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="Component_8hpp_1a9633ed5e22e786aa99c269f2fb0c005c" prot="public" static="no">
+        <type>std::complex&lt; double &gt;</type>
+        <definition>using Complex =  std::complex&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>Complex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Component</para>
+<para>This file defines component structs used in the ECS (<ref refid="classEntity" kindref="compound">Entity</ref> Component System).</para>
+<para>Component Structs:</para>
+<para><itemizedlist>
+<listitem><para><ref refid="structPosition" kindref="compound">Position</ref> Stores x and y coordinate floats.</para>
+</listitem><listitem><para><ref refid="structCollision" kindref="compound">Collision</ref> Stores entity type, collider type and colliding entity info.</para>
+</listitem><listitem><para><ref refid="structTextDrawable" kindref="compound">TextDrawable</ref> Stores text, font name, font size, and color.</para>
+</listitem><listitem><para><ref refid="structVelocity" kindref="compound">Velocity</ref> Stores x and y velocity floats.</para>
+</listitem><listitem><para><ref refid="structAcceleration" kindref="compound">Acceleration</ref> Stores x and y acceleration floats.</para>
+</listitem><listitem><para><ref refid="structFollower" kindref="compound">Follower</ref> Stores target entity and x/y offsets.</para>
+</listitem><listitem><para><ref refid="structDrawable" kindref="compound">Drawable</ref> Stores texture name, source rect, and scale.</para>
+</listitem><listitem><para><ref refid="structAnimation" kindref="compound">Animation</ref> Stores animation frames and timing data.</para>
+</listitem><listitem><para><ref refid="structisClickable" kindref="compound">isClickable</ref> Stores click handling data.</para>
+</listitem><listitem><para><ref refid="structGameConfig" kindref="compound">GameConfig</ref> Stores game configuration data.</para>
+</listitem><listitem><para><ref refid="structControllable" kindref="compound">Controllable</ref> Stores local control and client ID data.</para>
+</listitem><listitem><para><ref refid="structLaser" kindref="compound">Laser</ref></para>
+</listitem><listitem><para><ref refid="structDepth" kindref="compound">Depth</ref> Stores z depth float.</para>
+</listitem><listitem><para><ref refid="structBehavior" kindref="compound">Behavior</ref> Stores behavior ID and origin coords.</para>
+</listitem><listitem><para><ref refid="structEnemy" kindref="compound">Enemy</ref> Stores enemy health points.</para>
+</listitem><listitem><para><ref refid="structFFT" kindref="compound">FFT</ref></para>
+</listitem><listitem><para><ref refid="structSpawner" kindref="compound">Spawner</ref> Stores spawning configuration and timing.</para>
+</listitem><listitem><para><ref refid="structHealth" kindref="compound">Health</ref> Stores health points.</para>
+</listitem><listitem><para><ref refid="structNetwork" kindref="compound">Network</ref> Stores network connection data.</para>
+</listitem><listitem><para><ref refid="structState" kindref="compound">State</ref> Stores current game state enum.</para>
+</listitem><listitem><para><ref refid="structClient" kindref="compound">Client</ref> Stores client connection data.</para>
+</listitem><listitem><para><ref refid="structUserInput" kindref="compound">UserInput</ref> Stores user input character.</para>
+</listitem><listitem><para><ref refid="structUserInputBuffer" kindref="compound">UserInputBuffer</ref> Stores user input character buffer.</para>
+</listitem><listitem><para><ref refid="structDeathEffect" kindref="compound">DeathEffect</ref> Stores death effect name and function.</para>
+</listitem><listitem><para><ref refid="structidSync" kindref="compound">idSync</ref> Stores synced ID integer.</para>
+</listitem><listitem><para><ref refid="structIsChild" kindref="compound">IsChild</ref> Stores parent entity ID. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="115" column="1" bodyfile="include/Component.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="Component_8hpp_1a20bd7aaf05e3003c202a979ef0636cd0" prot="public" static="no">
+        <type>std::valarray&lt; Complex &gt;</type>
+        <definition>using ComplAr =  std::valarray&lt;Complex&gt;</definition>
+        <argsstring></argsstring>
+        <name>ComplAr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="116" column="1" bodyfile="include/Component.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="Component_8hpp_1ad444f9d908cf78e4983247e12fef4632" prot="public" static="no">
+        <type>std::function&lt; void(entity_t, <ref refid="classRegistry" kindref="compound">Registry</ref> &amp;, const libconfig::Setting &amp;)&gt;</type>
+        <definition>using ComponentAdder =  std::function&lt;void(entity_t, Registry&amp;, const libconfig::Setting&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>ComponentAdder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="119" column="1" bodyfile="include/Component.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="Component_8hpp_1a7bea3d96cef330d352894d56ce4ed9bd" prot="public" static="no">
+        <type>std::function&lt; void(entity_t, <ref refid="classRegistry" kindref="compound">Registry</ref> &amp;)&gt;</type>
+        <definition>using ComponentSpawner =  std::function&lt;void(entity_t, Registry&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>ComponentSpawner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="120" column="1" bodyfile="include/Component.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="Component_8hpp_1aa08a577393243b86dfd2a97e61443673" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float PI</definition>
+        <argsstring></argsstring>
+        <name>PI</name>
+        <initializer>= static_cast&lt;float&gt;(3.14159265358979323846)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="117" column="13" bodyfile="include/Component.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="Component_8hpp_1ac7aaa5ba79744ccb23698cd35f536b2b" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, ColliderType &gt;</type>
+        <definition>std::unordered_map&lt;std::string, ColliderType&gt; colliderTypeMap</definition>
+        <argsstring></argsstring>
+        <name>colliderTypeMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Component.cpp</para>
+<para>Implements various utility functions, system registration functions, and component registration for the game&apos;s entity component system (ECS).</para>
+<para>Functions:</para>
+<para><itemizedlist>
+<listitem><para>registerServerSystem(Registry &amp;registry, sf::RenderWindow &amp;window, AssetManager &amp;textureManager, float &amp;elapsed_time) Registers server systems to the registry, with the necessary dependencies injected.</para>
+</listitem><listitem><para>registerClientSystem(Registry &amp;registry, sf::RenderWindow &amp;window, AssetManager &amp;textureManager, float &amp;elapsed_time) Registers client systems to the registry, with the necessary dependencies injected.</para>
+</listitem><listitem><para>cleanup_system(Registry &amp;registry) Cleans up entities that have moved out of the screen bounds, or meet other conditions for cleanup.</para>
+</listitem><listitem><para>register_all_components(Registry &amp;registry) Registers all the components used in the game to the registry.</para>
+</listitem></itemizedlist>
+</para>
+<para>Global Variables:</para>
+<para><itemizedlist>
+<listitem><para>colliderTypeMap, entityTypeMap, deathApplyTypeMap These maps map string names to enum values for different types.</para>
+</listitem></itemizedlist>
+</para>
+<para>Dependencies:</para>
+<para><itemizedlist>
+<listitem><para>Various headers for the ECS framework, systems, and components.</para>
+</listitem><listitem><para>SFML for rendering and other game-related functionalities.</para>
+</listitem></itemizedlist>
+</para>
+<para>Notes:</para>
+<para><itemizedlist>
+<listitem><para>Each system registration function and cleanup function could be part of a larger game initialization and management module or class. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="150" column="27" bodyfile="src/Component.cpp" bodystart="65" bodyend="-1" declfile="include/Component.hpp" declline="150" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="variable" id="Component_8hpp_1a54b5708bbaae0460ae23ffc64b812a60" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, EntityType &gt;</type>
+        <definition>std::unordered_map&lt;std::string, EntityType&gt; entityTypeMap</definition>
+        <argsstring></argsstring>
+        <name>entityTypeMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="152" column="27" bodyfile="src/Component.cpp" bodystart="71" bodyend="-1" declfile="include/Component.hpp" declline="152" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="variable" id="Component_8hpp_1a194912b602b17086ad1beeaa4e66d2a1" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, DeathApplyType &gt;</type>
+        <definition>std::unordered_map&lt;std::string, DeathApplyType&gt; deathApplyTypeMap</definition>
+        <argsstring></argsstring>
+        <name>deathApplyTypeMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="153" column="27" bodyfile="src/Component.cpp" bodystart="80" bodyend="-1" declfile="include/Component.hpp" declline="153" declcolumn="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="Component_8hpp_1aba5090269a23a1d28757ee8cdda43c78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void register_all_components</definition>
+        <argsstring>(Registry &amp;registry)</argsstring>
+        <name>register_all_components</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="322" column="6" bodyfile="src/Component.cpp" bodystart="143" bodyend="169" declfile="include/Component.hpp" declline="322" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Component_8hpp_1a90a60eaa2deb0500ac2cedd9215b9e09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void registerClientSystem</definition>
+        <argsstring>(Registry &amp;registry, sf::RenderWindow &amp;window, AssetManager &amp;textureManager, float &amp;elapsed_time)</argsstring>
+        <name>registerClientSystem</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="classAssetManager" kindref="compound">AssetManager</ref> &amp;</type>
+          <declname>textureManager</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>elapsed_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="323" column="6" bodyfile="src/Component.cpp" bodystart="91" bodyend="105" declfile="include/Component.hpp" declline="323" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Component_8hpp_1a1bd9458d73ed89be68c679fc8a536783" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void registerServerSystem</definition>
+        <argsstring>(Registry &amp;registry, sf::RenderWindow &amp;window, AssetManager &amp;textureManager, float &amp;elapsed_time)</argsstring>
+        <name>registerServerSystem</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="classAssetManager" kindref="compound">AssetManager</ref> &amp;</type>
+          <declname>textureManager</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>elapsed_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="324" column="6" bodyfile="src/Component.cpp" bodystart="87" bodyend="89" declfile="include/Component.hpp" declline="324" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Component_8hpp_1a6fc0eef9deae1cd7bbf7b00567726910" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cleanup_system</definition>
+        <argsstring>(Registry &amp;registry)</argsstring>
+        <name>cleanup_system</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="325" column="6" bodyfile="src/Component.cpp" bodystart="107" bodyend="140" declfile="include/Component.hpp" declline="325" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Component_8hpp_1a4a9fe5013e9812b96533d84352379884" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addEnemyMovementSystem</definition>
+        <argsstring>(Registry &amp;registry)</argsstring>
+        <name>addEnemyMovementSystem</name>
+        <param>
+          <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Component.hpp" line="326" column="6" declfile="include/Component.hpp" declline="326" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Rtype</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>COMPONENT</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>COMPONENT_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COMPONENT_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Graphics.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libconfig.h++&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;any&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Registry.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TextureManager.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;complex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;valarray&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numeric&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;set&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Complex<sp/>=<sp/>std::complex&lt;double&gt;;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>ComplAr<sp/>=<sp/>std::valarray&lt;Complex&gt;;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>PI<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(3.14159265358979323846);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classRegistry" kindref="compound">Registry</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>ComponentAdder<sp/>=<sp/>std::function&lt;void(entity_t,<sp/><ref refid="classRegistry" kindref="compound">Registry</ref>&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>libconfig::Setting&amp;)&gt;;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>ComponentSpawner<sp/>=<sp/>std::function&lt;void(entity_t,<sp/><ref refid="classRegistry" kindref="compound">Registry</ref>&amp;)&gt;;</highlight></codeline>
+<codeline lineno="121" refid="structMyRect" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structMyRect" kindref="compound">MyRect</ref><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>left,<sp/>top,<sp/>width,<sp/>height;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="structMyVector2" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structMyVector2" kindref="compound">MyVector2</ref><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/>y;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>ColliderType<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>STOP,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>BOUNCING,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>DESTROY</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>EntityType<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>ENEMY,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Represents<sp/>an<sp/>enemy<sp/>entity.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>FRIENDLY,<sp/><sp/></highlight><highlight class="comment">//<sp/>Represents<sp/>a<sp/>friendly<sp/>or<sp/>neutral<sp/>entity.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>FRIENDLY_HOST,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>FRIENDLY_BULLET,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>FRIENDLY_PROJECTILE_HOST,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>OBSTACLE<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Represents<sp/>an<sp/>environmental<sp/>obstacle.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>DeathApplyType<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>TO_HOST,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>TO_CLIENT,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>TO_ALL,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>TO_PARENT</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>std::unordered_map&lt;std::string,<sp/>ColliderType&gt;<sp/>colliderTypeMap;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>std::unordered_map&lt;std::string,<sp/>EntityType&gt;<sp/>entityTypeMap;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>std::unordered_map&lt;std::string,<sp/>DeathApplyType&gt;<sp/>deathApplyTypeMap;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="comment">//component<sp/>structs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="structPosition" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>prevX<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>prevY<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/>operator&lt;&lt;(std::ostream&amp;<sp/>os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Position(x:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>pos.x<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>y:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>pos.y<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator==(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>rhs)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>lhs.x<sp/>==<sp/>rhs.x<sp/>&amp;&amp;<sp/>lhs.y<sp/>==<sp/>rhs.y;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="structCollision" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structCollision" kindref="compound">Collision</ref><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>EntityType<sp/>entityType<sp/>=<sp/>EntityType::OBSTACLE;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>ColliderType<sp/>colliderType<sp/>=<sp/>ColliderType::DESTROY;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>std::string<sp/>collidingEntity;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="176" refid="structTextDrawable" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structTextDrawable" kindref="compound">TextDrawable</ref><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>text;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>fontName;<sp/><sp/></highlight><highlight class="comment">//<sp/>Reference<sp/>to<sp/>a<sp/>font<sp/>asset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fontSize<sp/>=<sp/>30;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Color<sp/>color<sp/>=<sp/>sf::Color::White;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="structVelocity" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structVelocity" kindref="compound">Velocity</ref></highlight></codeline>
+<codeline lineno="185"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/>operator&lt;&lt;(std::ostream&amp;<sp/>os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVelocity" kindref="compound">Velocity</ref>&amp;<sp/>vel)<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Velocity(x:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>vel.x<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>y:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>vel.y<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="structAcceleration" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structAcceleration" kindref="compound">Acceleration</ref><sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="structFollower" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structFollower" kindref="compound">Follower</ref><sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>entity_t<sp/>target;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>xOffset<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>yOffset<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="structDrawable" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structDrawable" kindref="compound">Drawable</ref><sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>textureName;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structMyRect" kindref="compound">MyRect</ref><sp/>textureRect;<sp/></highlight><highlight class="comment">//<sp/>For<sp/>animation<sp/>frames</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structMyVector2" kindref="compound">MyVector2</ref><sp/>scale<sp/>=<sp/>{1.0f,<sp/>1.0f};<sp/><sp/></highlight><highlight class="comment">//<sp/>Scale<sp/>factor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="structAnimation" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structAnimation" kindref="compound">Animation</ref><sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currentFrame<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>Current<sp/>frame<sp/>of<sp/>animation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numFrames<sp/>=<sp/>1;<sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>frames<sp/>in<sp/>animation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>frameDuration<sp/>=<sp/>0.0f;<sp/><sp/></highlight><highlight class="comment">//<sp/>Duration<sp/>of<sp/>each<sp/>frame<sp/>in<sp/>seconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>elapsedTime<sp/>=<sp/>0.0f;<sp/><sp/></highlight><highlight class="comment">//<sp/>Time<sp/>elapsed<sp/>since<sp/>last<sp/>frame<sp/>change</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>loop<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Whether<sp/>to<sp/>loop<sp/>the<sp/>animation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="218" refid="structisClickable" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structisClickable" kindref="compound">isClickable</ref><sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isClicked<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;void()&gt;<sp/>onClick;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>elapsedTimeSinceLastClick<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="structGameConfig" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGameConfig" kindref="compound">GameConfig</ref><sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>screenWidth<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>screenHeight<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>playerSpeed<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>playerScore<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>playerSkin<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;skin_default&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="structControllable" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structControllable" kindref="compound">Controllable</ref></highlight></codeline>
+<codeline lineno="233"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isLocal<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>client_id<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="structLaser" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structLaser" kindref="compound">Laser</ref><sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="241" refid="structDepth" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structDepth" kindref="compound">Depth</ref><sp/>{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="244" refid="structBehavior" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structBehavior" kindref="compound">Behavior</ref><sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>behaviorID;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>originX<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>originY<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="structEnemy" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structEnemy" kindref="compound">Enemy</ref><sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>health<sp/>=<sp/>20;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="structFFT" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structFFT" kindref="compound">FFT</ref><sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259" refid="structSpawner" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structSpawner" kindref="compound">Spawner</ref><sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>spawnRate<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timeSinceLastSpawn<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>entityToSpawn;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>xOffset<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>yOffset<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>xVelocity<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>yVelocity<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;ComponentSpawner<sp/>&gt;<sp/>componentSpawners;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271" refid="structHealth" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structHealth" kindref="compound">Health</ref><sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>health<sp/>=<sp/>100.0f;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275" refid="structNetwork" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structNetwork" kindref="compound">Network</ref><sp/>{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>socket;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>ip;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>port;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>client_id;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>latency;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>last_packet_time;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>last_packet_id;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285" refid="structState" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structState" kindref="compound">State</ref></highlight></codeline>
+<codeline lineno="286"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>GameState<sp/>state<sp/>=<sp/>GameState::MENUPRELOAD;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290" refid="structClient" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structClient" kindref="compound">Client</ref></highlight></codeline>
+<codeline lineno="291"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>id;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>ip;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>entity_t<sp/>entity_id;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>port;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>latency;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>last_packet_time;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>last_packet_id;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301" refid="structUserInput" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structUserInput" kindref="compound">UserInput</ref><sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>input;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305" refid="structUserInputBuffer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structUserInputBuffer" kindref="compound">UserInputBuffer</ref><sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;char&gt;<sp/>buffer;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309" refid="structDeathEffect" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structDeathEffect" kindref="compound">DeathEffect</ref><sp/>{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>Name;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;void(<ref refid="classRegistry" kindref="compound">Registry</ref><sp/>&amp;)&gt;<sp/>Effect;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>applyTo<sp/>=<sp/>DeathApplyType::TO_HOST;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="314" refid="structidSync" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structidSync" kindref="compound">idSync</ref><sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>id;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318" refid="structIsChild" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structIsChild" kindref="compound">IsChild</ref><sp/>{</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>entity_t<sp/>parent;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>register_all_components(<ref refid="classRegistry" kindref="compound">Registry</ref>&amp;<sp/>registry);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>registerClientSystem(<ref refid="classRegistry" kindref="compound">Registry</ref>&amp;<sp/>registry,<sp/>sf::RenderWindow&amp;<sp/>window,<sp/><ref refid="classAssetManager" kindref="compound">AssetManager</ref>&amp;<sp/>textureManager,</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;elapsed_time);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>registerServerSystem(<ref refid="classRegistry" kindref="compound">Registry</ref>&amp;<sp/>registry,<sp/>sf::RenderWindow&amp;<sp/>window,<sp/><ref refid="classAssetManager" kindref="compound">AssetManager</ref>&amp;<sp/>textureManager,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;elapsed_time);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cleanup_system(<ref refid="classRegistry" kindref="compound">Registry</ref>&amp;<sp/>registry);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>addEnemyMovementSystem(<ref refid="classRegistry" kindref="compound">Registry</ref>&amp;<sp/>registry);</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>COMPONENT_HPP_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/Component.hpp"/>
+  </compounddef>
+</doxygen>
