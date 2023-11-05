@@ -21,41 +21,6 @@
     <includedby refid="GUI_8cpp" local="yes">src/GUI/GUI.cpp</includedby>
     <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
     <incdepgraph>
-      <node id="2">
-        <label>SFML/Graphics.hpp</label>
-      </node>
-      <node id="11">
-        <label>GUI/GUIConfig.hpp</label>
-        <link refid="GUIConfig_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>functional</label>
-      </node>
-      <node id="17">
-        <label>filesystem</label>
-      </node>
-      <node id="26">
-        <label>Beatmap/Beatmap.hpp</label>
-        <link refid="Beatmap_8hpp_source"/>
-      </node>
-      <node id="15">
-        <label>Beatmap/BeatmapConfig.hpp</label>
-        <link refid="BeatmapConfig_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
       <node id="18">
         <label>Menu/Menu.hpp</label>
         <link refid="Menu_8hpp_source"/>
@@ -80,17 +45,18 @@
         <childnode refid="23" relation="include">
         </childnode>
       </node>
-      <node id="25">
-        <label>cmath</label>
+      <node id="2">
+        <label>SFML/Graphics.hpp</label>
       </node>
-      <node id="7">
-        <label>string</label>
+      <node id="9">
+        <label>functional</label>
       </node>
-      <node id="5">
-        <label>SFML/Audio.hpp</label>
+      <node id="17">
+        <label>filesystem</label>
       </node>
-      <node id="16">
-        <label>map</label>
+      <node id="26">
+        <label>Beatmap/Beatmap.hpp</label>
+        <link refid="Beatmap_8hpp_source"/>
       </node>
       <node id="13">
         <label>GraphicElement/LoadingScreen.hpp</label>
@@ -102,23 +68,20 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="20">
-        <label>fstream</label>
+      <node id="22">
+        <label>GraphicElement/Button.hpp</label>
+        <link refid="Button_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
-      <node id="3">
-        <label>SFML/Window.hpp</label>
-      </node>
-      <node id="19">
-        <label>tuple</label>
-      </node>
-      <node id="8">
-        <label>vector</label>
-      </node>
-      <node id="24">
-        <label>utility</label>
-      </node>
-      <node id="21">
-        <label>sstream</label>
+      <node id="25">
+        <label>cmath</label>
       </node>
       <node id="1">
         <label>include/GUI/GUI.hpp</label>
@@ -150,17 +113,42 @@
         <childnode refid="18" relation="include">
         </childnode>
       </node>
-      <node id="22">
-        <label>GraphicElement/Button.hpp</label>
-        <link refid="Button_8hpp_source"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="16">
+        <label>map</label>
+      </node>
+      <node id="11">
+        <label>GUI/GUIConfig.hpp</label>
+        <link refid="GUIConfig_8hpp_source"/>
         <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+      </node>
+      <node id="20">
+        <label>fstream</label>
+      </node>
+      <node id="3">
+        <label>SFML/Window.hpp</label>
+      </node>
+      <node id="19">
+        <label>tuple</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="24">
+        <label>utility</label>
+      </node>
+      <node id="21">
+        <label>sstream</label>
       </node>
       <node id="6">
         <label>iostream</label>
@@ -178,6 +166,27 @@
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
+      </node>
+      <node id="10">
+        <label>thread</label>
+      </node>
+      <node id="15">
+        <label>Beatmap/BeatmapConfig.hpp</label>
+        <link refid="BeatmapConfig_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>libconfig.h++</label>
+      </node>
+      <node id="4">
+        <label>SFML/System.hpp</label>
       </node>
       <node id="23">
         <label>GraphicElement/BeatmapPanel.hpp</label>
@@ -201,21 +210,8 @@
         <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="10">
-        <label>thread</label>
-      </node>
-      <node id="12">
-        <label>libconfig.h++</label>
-      </node>
-      <node id="4">
-        <label>SFML/System.hpp</label>
-      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3">
-        <label>include/ServerMain.hpp</label>
-        <link refid="ServerMain_8hpp_source"/>
-      </node>
       <node id="2">
         <label>include/ClientMain.hpp</label>
         <link refid="ClientMain_8hpp_source"/>
@@ -229,6 +225,10 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+      </node>
+      <node id="3">
+        <label>include/ServerMain.hpp</label>
+        <link refid="ServerMain_8hpp_source"/>
       </node>
       <node id="4">
         <label>include/taskLoader.hpp</label>

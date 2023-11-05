@@ -4,31 +4,6 @@
     <compoundname>Menu.cpp</compoundname>
     <includes refid="Menu_8hpp" local="yes">Menu/Menu.hpp</includes>
     <incdepgraph>
-      <node id="3">
-        <label>SFML/Graphics.hpp</label>
-      </node>
-      <node id="11">
-        <label>functional</label>
-      </node>
-      <node id="16">
-        <label>filesystem</label>
-      </node>
-      <node id="20">
-        <label>Beatmap/Beatmap.hpp</label>
-        <link refid="Beatmap_8hpp_source"/>
-      </node>
-      <node id="13">
-        <label>Beatmap/BeatmapConfig.hpp</label>
-        <link refid="BeatmapConfig_8hpp_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-      </node>
       <node id="2">
         <label>Menu/Menu.hpp</label>
         <link refid="Menu_8hpp_source"/>
@@ -51,6 +26,37 @@
         <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="11">
+        <label>functional</label>
+      </node>
+      <node id="16">
+        <label>filesystem</label>
+      </node>
+      <node id="20">
+        <label>Beatmap/Beatmap.hpp</label>
+        <link refid="Beatmap_8hpp_source"/>
+      </node>
+      <node id="10">
+        <label>GraphicElement/Button.hpp</label>
+        <link refid="Button_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/Menu/Menu.cpp</label>
+        <link refid="Menu_8cpp"/>
+        <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="19">
@@ -77,18 +83,6 @@
       <node id="8">
         <label>sstream</label>
       </node>
-      <node id="10">
-        <label>GraphicElement/Button.hpp</label>
-        <link refid="Button_8hpp_source"/>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
       <node id="9">
         <label>iostream</label>
       </node>
@@ -105,6 +99,21 @@
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
+      </node>
+      <node id="13">
+        <label>Beatmap/BeatmapConfig.hpp</label>
+        <link refid="BeatmapConfig_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>libconfig.h++</label>
       </node>
       <node id="17">
         <label>GraphicElement/BeatmapPanel.hpp</label>
@@ -126,15 +135,6 @@
         <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
-        </childnode>
-      </node>
-      <node id="15">
-        <label>libconfig.h++</label>
-      </node>
-      <node id="1">
-        <label>src/Menu/Menu.cpp</label>
-        <link refid="Menu_8cpp"/>
-        <childnode refid="2" relation="include">
         </childnode>
       </node>
     </incdepgraph>

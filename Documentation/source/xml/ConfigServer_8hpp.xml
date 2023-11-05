@@ -10,6 +10,20 @@
     <includedby refid="ServerSystem_8hpp" local="yes">include/System/ServerSystem.hpp</includedby>
     <includedby refid="ConfigServer_8cpp" local="yes">src/ConfigServer.cpp</includedby>
     <incdepgraph>
+      <node id="1">
+        <label>include/ConfigServer.hpp</label>
+        <link refid="ConfigServer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
       <node id="4">
         <label>string</label>
       </node>
@@ -25,31 +39,17 @@
       <node id="5">
         <label>unordered_map</label>
       </node>
-      <node id="1">
-        <label>include/ConfigServer.hpp</label>
-        <link refid="ConfigServer_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1">
-        <label>include/ConfigServer.hpp</label>
-        <link refid="ConfigServer_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
         <label>include/System/ServerSystem.hpp</label>
         <link refid="ServerSystem_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>include/ConfigServer.hpp</label>
+        <link refid="ConfigServer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
       <sectiondef kind="func">

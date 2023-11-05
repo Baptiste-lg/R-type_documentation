@@ -12,12 +12,6 @@
       <node id="2">
         <label>../include/System/ISystem.hpp</label>
       </node>
-      <node id="6">
-        <label>../include/Spawner.hpp</label>
-      </node>
-      <node id="3">
-        <label>../include/System/System.hpp</label>
-      </node>
       <node id="1">
         <label>include/System/ControlSystem.hpp</label>
         <link refid="ControlSystem_8hpp"/>
@@ -31,6 +25,12 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+      </node>
+      <node id="6">
+        <label>../include/Spawner.hpp</label>
+      </node>
+      <node id="3">
+        <label>../include/System/System.hpp</label>
       </node>
       <node id="5">
         <label>../include/Registry.hpp</label>

@@ -10,15 +10,6 @@
       <node id="4">
         <label>functional</label>
       </node>
-      <node id="6">
-        <label>string</label>
-      </node>
-      <node id="1">
-        <label>src/GraphicElement/RectangleButton.cpp</label>
-        <link refid="RectangleButton_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="3">
         <label>Button.hpp</label>
         <link refid="Button_8hpp_source"/>
@@ -31,8 +22,17 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
+      <node id="6">
+        <label>string</label>
+      </node>
       <node id="7">
         <label>iostream</label>
+      </node>
+      <node id="1">
+        <label>src/GraphicElement/RectangleButton.cpp</label>
+        <link refid="RectangleButton_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>GraphicElement/RectangleButton.hpp</label>

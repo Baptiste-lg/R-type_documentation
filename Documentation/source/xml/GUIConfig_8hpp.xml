@@ -9,6 +9,9 @@
     <includedby refid="GUI_8hpp" local="yes">include/GUI/GUI.hpp</includedby>
     <includedby refid="GUIConfig_8cpp" local="yes">src/GUI/GUIConfig.cpp</includedby>
     <incdepgraph>
+      <node id="2">
+        <label>string</label>
+      </node>
       <node id="1">
         <label>include/GUI/GUIConfig.hpp</label>
         <link refid="GUIConfig_8hpp"/>
@@ -18,9 +21,6 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-      </node>
-      <node id="2">
-        <label>string</label>
       </node>
       <node id="4">
         <label>iostream</label>
@@ -30,27 +30,9 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1">
-        <label>include/GUI/GUIConfig.hpp</label>
-        <link refid="GUIConfig_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>include/ServerMain.hpp</label>
-        <link refid="ServerMain_8hpp_source"/>
-      </node>
       <node id="5">
         <label>include/ClientMain.hpp</label>
         <link refid="ClientMain_8hpp_source"/>
-      </node>
-      <node id="2">
-        <label>include/Config/Config.hpp</label>
-        <link refid="Config_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
       </node>
       <node id="4">
         <label>include/GUI/GUI.hpp</label>
@@ -60,6 +42,24 @@
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/Config/Config.hpp</label>
+        <link refid="Config_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/ServerMain.hpp</label>
+        <link refid="ServerMain_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>include/GUI/GUIConfig.hpp</label>
+        <link refid="GUIConfig_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="6">

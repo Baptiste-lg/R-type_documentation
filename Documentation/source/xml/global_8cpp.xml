@@ -4,14 +4,14 @@
     <compoundname>global.cpp</compoundname>
     <includes refid="Global_8hpp" local="yes">Global.hpp</includes>
     <incdepgraph>
+      <node id="3">
+        <label>SFML/Graphics.hpp</label>
+      </node>
       <node id="1">
         <label>src/global.cpp</label>
         <link refid="global_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>SFML/Graphics.hpp</label>
       </node>
       <node id="2">
         <label>Global.hpp</label>
