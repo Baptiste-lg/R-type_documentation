@@ -10,10 +10,6 @@ R-type Documentation
 Welcome to R-type's documentation!
 ==================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
 .. breathe::
 
    .. doxygenindex::
