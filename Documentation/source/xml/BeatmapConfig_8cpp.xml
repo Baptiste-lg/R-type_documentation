@@ -4,18 +4,6 @@
     <compoundname>BeatmapConfig.cpp</compoundname>
     <includes refid="BeatmapConfig_8hpp" local="yes">Beatmap/BeatmapConfig.hpp</includes>
     <incdepgraph>
-      <node id="2">
-        <label>Beatmap/BeatmapConfig.hpp</label>
-        <link refid="BeatmapConfig_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
       <node id="3">
         <label>string</label>
       </node>
@@ -30,6 +18,18 @@
       </node>
       <node id="5">
         <label>iostream</label>
+      </node>
+      <node id="2">
+        <label>Beatmap/BeatmapConfig.hpp</label>
+        <link refid="BeatmapConfig_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
       <node id="6">
         <label>libconfig.h++</label>

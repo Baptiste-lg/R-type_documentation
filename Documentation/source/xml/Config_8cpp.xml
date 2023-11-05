@@ -4,39 +4,11 @@
     <compoundname>Config.cpp</compoundname>
     <includes refid="Config_8hpp" local="yes">Config/Config.hpp</includes>
     <incdepgraph>
-      <node id="7">
-        <label>GUI/GUIConfig.hpp</label>
-        <link refid="GUIConfig_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>Beatmap/BeatmapConfig.hpp</label>
-        <link refid="BeatmapConfig_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
       <node id="1">
         <label>src/Config/Config.cpp</label>
         <link refid="Config_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>string</label>
-      </node>
-      <node id="4">
-        <label>map</label>
       </node>
       <node id="2">
         <label>Config/Config.hpp</label>
@@ -54,8 +26,36 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>map</label>
+      </node>
+      <node id="7">
+        <label>GUI/GUIConfig.hpp</label>
+        <link refid="GUIConfig_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
       <node id="6">
         <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>Beatmap/BeatmapConfig.hpp</label>
+        <link refid="BeatmapConfig_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
       <node id="5">
         <label>libconfig.h++</label>

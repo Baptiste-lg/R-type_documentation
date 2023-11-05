@@ -5,14 +5,22 @@
     <includes refid="ConfigServer_8hpp" local="yes">ConfigServer.hpp</includes>
     <includes refid="Global_8hpp" local="yes">Global.hpp</includes>
     <incdepgraph>
+      <node id="2">
+        <label>ConfigServer.hpp</label>
+        <link refid="ConfigServer_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
       <node id="9">
         <label>SFML/Graphics.hpp</label>
-      </node>
-      <node id="5">
-        <label>string</label>
-      </node>
-      <node id="3">
-        <label>fstream</label>
       </node>
       <node id="1">
         <label>src/ConfigServer.cpp</label>
@@ -21,6 +29,12 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>fstream</label>
       </node>
       <node id="8">
         <label>Global.hpp</label>
@@ -42,20 +56,6 @@
       </node>
       <node id="6">
         <label>unordered_map</label>
-      </node>
-      <node id="2">
-        <label>ConfigServer.hpp</label>
-        <link refid="ConfigServer_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
       </node>
       <node id="10">
         <label>stdio.h</label>

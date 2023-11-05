@@ -17,16 +17,6 @@
       <node id="3">
         <label>SFML/Graphics.hpp</label>
       </node>
-      <node id="1">
-        <label>include/Behaviour.hpp</label>
-        <link refid="Behaviour_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="43" relation="include">
-        </childnode>
-      </node>
       <node id="9">
         <label>functional</label>
       </node>
@@ -36,21 +26,17 @@
       <node id="37">
         <label>filesystem</label>
       </node>
-      <node id="39">
-        <label>Beatmap/BeatmapConfig.hpp</label>
-        <link refid="BeatmapConfig_8hpp_source"/>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="40" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
+      <node id="43">
+        <label>cmath</label>
       </node>
-      <node id="10">
-        <label>GameState.hpp</label>
-        <link refid="GameState_8hpp_source"/>
+      <node id="44">
+        <label>numeric</label>
+      </node>
+      <node id="20">
+        <label>string</label>
+      </node>
+      <node id="36">
+        <label>SFML/Audio.hpp</label>
       </node>
       <node id="6">
         <label>Registry.hpp</label>
@@ -96,24 +82,6 @@
         <childnode refid="34" relation="include">
         </childnode>
       </node>
-      <node id="43">
-        <label>cmath</label>
-      </node>
-      <node id="44">
-        <label>numeric</label>
-      </node>
-      <node id="20">
-        <label>string</label>
-      </node>
-      <node id="23">
-        <label>Entity.hpp</label>
-        <link refid="Entity_8hpp_source"/>
-        <childnode refid="24" relation="include">
-        </childnode>
-      </node>
-      <node id="36">
-        <label>SFML/Audio.hpp</label>
-      </node>
       <node id="40">
         <label>map</label>
       </node>
@@ -123,8 +91,64 @@
       <node id="25">
         <label>fftw3.h</label>
       </node>
+      <node id="10">
+        <label>GameState.hpp</label>
+        <link refid="GameState_8hpp_source"/>
+      </node>
       <node id="5">
         <label>any</label>
+      </node>
+      <node id="35">
+        <label>TextureManager.hpp</label>
+        <link refid="TextureManager_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>condition_variable</label>
+      </node>
+      <node id="11">
+        <label>SparseArray.hpp</label>
+        <link refid="SparseArray_8hpp_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/Behaviour.hpp</label>
+        <link refid="Behaviour_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>tuple</label>
+      </node>
+      <node id="30">
+        <label>future</label>
+      </node>
+      <node id="13">
+        <label>optional</label>
       </node>
       <node id="26">
         <label>ThreadPool.hpp</label>
@@ -144,28 +168,6 @@
         <childnode refid="30" relation="include">
         </childnode>
       </node>
-      <node id="29">
-        <label>condition_variable</label>
-      </node>
-      <node id="15">
-        <label>Event.hpp</label>
-        <link refid="Event_8hpp_source"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-      </node>
-      <node id="19">
-        <label>tuple</label>
-      </node>
-      <node id="30">
-        <label>future</label>
-      </node>
-      <node id="13">
-        <label>optional</label>
-      </node>
       <node id="12">
         <label>vector</label>
       </node>
@@ -174,51 +176,6 @@
       </node>
       <node id="45">
         <label>array</label>
-      </node>
-      <node id="16">
-        <label>iostream</label>
-      </node>
-      <node id="24">
-        <label>cstddef</label>
-      </node>
-      <node id="7">
-        <label>unordered_map</label>
-      </node>
-      <node id="38">
-        <label>Database/Database.hpp</label>
-        <link refid="Database_8hpp_source"/>
-        <childnode refid="39" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="37" relation="include">
-        </childnode>
-        <childnode refid="40" relation="include">
-        </childnode>
-      </node>
-      <node id="34">
-        <label>shared_mutex</label>
-      </node>
-      <node id="14">
-        <label>mutex</label>
-      </node>
-      <node id="11">
-        <label>SparseArray.hpp</label>
-        <link refid="SparseArray_8hpp_source"/>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-      </node>
-      <node id="32">
-        <label>chrono</label>
-      </node>
-      <node id="28">
-        <label>thread</label>
       </node>
       <node id="2">
         <label>Component.hpp</label>
@@ -262,6 +219,48 @@
         <childnode refid="16" relation="include">
         </childnode>
       </node>
+      <node id="15">
+        <label>Event.hpp</label>
+        <link refid="Event_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>iostream</label>
+      </node>
+      <node id="24">
+        <label>cstddef</label>
+      </node>
+      <node id="38">
+        <label>Database/Database.hpp</label>
+        <link refid="Database_8hpp_source"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>unordered_map</label>
+      </node>
+      <node id="34">
+        <label>shared_mutex</label>
+      </node>
+      <node id="14">
+        <label>mutex</label>
+      </node>
+      <node id="32">
+        <label>chrono</label>
+      </node>
       <node id="18">
         <label>../include/System/ISystem.hpp</label>
         <link refid="ISystem_8hpp_source"/>
@@ -290,28 +289,23 @@
         <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="46">
-        <label>set</label>
+      <node id="28">
+        <label>thread</label>
       </node>
-      <node id="35">
-        <label>TextureManager.hpp</label>
-        <link refid="TextureManager_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
-        <childnode refid="37" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
+      <node id="39">
+        <label>Beatmap/BeatmapConfig.hpp</label>
+        <link refid="BeatmapConfig_8hpp_source"/>
         <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="38" relation="include">
-        </childnode>
+      </node>
+      <node id="46">
+        <label>set</label>
       </node>
       <node id="41">
         <label>complex</label>
@@ -328,17 +322,27 @@
       <node id="8">
         <label>typeindex</label>
       </node>
+      <node id="23">
+        <label>Entity.hpp</label>
+        <link refid="Entity_8hpp_source"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="3">
+        <label>include/ServerMain.hpp</label>
+        <link refid="ServerMain_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>include/System/FFTSystem.hpp</label>
+        <link refid="FFTSystem_8hpp_source"/>
+      </node>
       <node id="1">
         <label>include/Behaviour.hpp</label>
         <link refid="Behaviour_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>include/ServerMain.hpp</label>
-        <link refid="ServerMain_8hpp_source"/>
       </node>
       <node id="2">
         <label>include/Spawner.hpp</label>
@@ -353,10 +357,6 @@
       <node id="5">
         <label>include/System/MenuSystem.hpp</label>
         <link refid="MenuSystem_8hpp_source"/>
-      </node>
-      <node id="4">
-        <label>include/System/FFTSystem.hpp</label>
-        <link refid="FFTSystem_8hpp_source"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="typedef">

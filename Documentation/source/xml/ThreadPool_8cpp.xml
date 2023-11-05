@@ -4,20 +4,11 @@
     <compoundname>ThreadPool.cpp</compoundname>
     <includes refid="SparseArray_8hpp" local="yes">SparseArray.hpp</includes>
     <incdepgraph>
-      <node id="4">
-        <label>optional</label>
-      </node>
-      <node id="3">
-        <label>vector</label>
-      </node>
       <node id="1">
         <label>src/ThreadPool.cpp</label>
         <link refid="ThreadPool_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="5">
-        <label>mutex</label>
       </node>
       <node id="2">
         <label>SparseArray.hpp</label>
@@ -28,6 +19,15 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+      </node>
+      <node id="4">
+        <label>optional</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="5">
+        <label>mutex</label>
       </node>
     </incdepgraph>
     <briefdescription>

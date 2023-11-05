@@ -12,34 +12,6 @@
     <includedby refid="Config_8cpp" local="yes">src/Config/Config.cpp</includedby>
     <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
     <incdepgraph>
-      <node id="6">
-        <label>GUI/GUIConfig.hpp</label>
-        <link refid="GUIConfig_8hpp_source"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>Beatmap/BeatmapConfig.hpp</label>
-        <link refid="BeatmapConfig_8hpp_source"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>string</label>
-      </node>
-      <node id="3">
-        <label>map</label>
-      </node>
       <node id="1">
         <label>include/Config/Config.hpp</label>
         <link refid="Config_8hpp"/>
@@ -56,23 +28,51 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>GUI/GUIConfig.hpp</label>
+        <link refid="GUIConfig_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
       <node id="5">
         <label>iostream</label>
+      </node>
+      <node id="7">
+        <label>Beatmap/BeatmapConfig.hpp</label>
+        <link refid="BeatmapConfig_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>libconfig.h++</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2">
-        <label>include/ServerMain.hpp</label>
-        <link refid="ServerMain_8hpp_source"/>
-      </node>
       <node id="1">
         <label>include/Config/Config.hpp</label>
         <link refid="Config_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+      </node>
+      <node id="2">
+        <label>include/ServerMain.hpp</label>
+        <link refid="ServerMain_8hpp_source"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classConfig" prot="public">Config</innerclass>

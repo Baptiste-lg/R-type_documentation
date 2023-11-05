@@ -23,18 +23,6 @@
       <node id="4">
         <label>filesystem</label>
       </node>
-      <node id="10">
-        <label>Beatmap/BeatmapConfig.hpp</label>
-        <link refid="BeatmapConfig_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
       <node id="6">
         <label>string</label>
       </node>
@@ -43,29 +31,6 @@
       </node>
       <node id="11">
         <label>map</label>
-      </node>
-      <node id="8">
-        <label>vector</label>
-      </node>
-      <node id="7">
-        <label>iostream</label>
-      </node>
-      <node id="5">
-        <label>unordered_map</label>
-      </node>
-      <node id="9">
-        <label>Database/Database.hpp</label>
-        <link refid="Database_8hpp_source"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
       </node>
       <node id="1">
         <label>include/TextureManager.hpp</label>
@@ -87,30 +52,53 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="9">
+        <label>Database/Database.hpp</label>
+        <link refid="Database_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>unordered_map</label>
+      </node>
+      <node id="10">
+        <label>Beatmap/BeatmapConfig.hpp</label>
+        <link refid="BeatmapConfig_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
       <node id="12">
         <label>libconfig.h++</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3">
-        <label>include/Behaviour.hpp</label>
-        <link refid="Behaviour_8hpp_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
+      <node id="8">
+        <label>include/ClientMain.hpp</label>
+        <link refid="ClientMain_8hpp_source"/>
       </node>
       <node id="15">
         <label>include/System/VelocitySystem.hpp</label>
         <link refid="VelocitySystem_8hpp_source"/>
-      </node>
-      <node id="10">
-        <label>include/System/DeathEffectSystem.hpp</label>
-        <link refid="DeathEffectSystem_8hpp_source"/>
-      </node>
-      <node id="17">
-        <label>include/Zipper.hpp</label>
-        <link refid="Zipper_8hpp_source"/>
-        <childnode refid="18" relation="include">
-        </childnode>
       </node>
       <node id="9">
         <label>include/Registry.hpp</label>
@@ -128,15 +116,23 @@
         <label>include/ServerMain.hpp</label>
         <link refid="ServerMain_8hpp_source"/>
       </node>
-      <node id="4">
-        <label>include/Spawner.hpp</label>
-        <link refid="Spawner_8hpp_source"/>
+      <node id="1">
+        <label>include/TextureManager.hpp</label>
+        <link refid="TextureManager_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
+      </node>
+      <node id="10">
+        <label>include/System/DeathEffectSystem.hpp</label>
+        <link refid="DeathEffectSystem_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>include/System/FFTSystem.hpp</label>
+        <link refid="FFTSystem_8hpp_source"/>
       </node>
       <node id="11">
         <label>include/System/EffectsFunctions.hpp</label>
@@ -146,30 +142,26 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
+      <node id="17">
+        <label>include/Zipper.hpp</label>
+        <link refid="Zipper_8hpp_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/Behaviour.hpp</label>
+        <link refid="Behaviour_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>include/System/Quadtree.hpp</label>
+        <link refid="Quadtree_8hpp_source"/>
+      </node>
       <node id="12">
         <label>include/SceneParsing.hpp</label>
         <link refid="SceneParsing_8hpp_source"/>
         <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="18">
-        <label>include/ZipperIterator.hpp</label>
-        <link refid="ZipperIterator_8hpp_source"/>
-        <childnode refid="17" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>include/ClientMain.hpp</label>
-        <link refid="ClientMain_8hpp_source"/>
-      </node>
-      <node id="7">
-        <label>include/System/MenuSystem.hpp</label>
-        <link refid="MenuSystem_8hpp_source"/>
-      </node>
-      <node id="16">
-        <label>include/taskLoader.hpp</label>
-        <link refid="taskLoader_8hpp_source"/>
-        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -204,6 +196,18 @@
         <childnode refid="18" relation="include">
         </childnode>
       </node>
+      <node id="18">
+        <label>include/ZipperIterator.hpp</label>
+        <link refid="ZipperIterator_8hpp_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>include/taskLoader.hpp</label>
+        <link refid="taskLoader_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
       <node id="13">
         <label>include/System/ISystem.hpp</label>
         <link refid="ISystem_8hpp_source"/>
@@ -218,23 +222,19 @@
         <childnode refid="15" relation="include">
         </childnode>
       </node>
-      <node id="14">
-        <label>include/System/Quadtree.hpp</label>
-        <link refid="Quadtree_8hpp_source"/>
-      </node>
-      <node id="1">
-        <label>include/TextureManager.hpp</label>
-        <link refid="TextureManager_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
+      <node id="4">
+        <label>include/Spawner.hpp</label>
+        <link refid="Spawner_8hpp_source"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="6">
-        <label>include/System/FFTSystem.hpp</label>
-        <link refid="FFTSystem_8hpp_source"/>
+      <node id="7">
+        <label>include/System/MenuSystem.hpp</label>
+        <link refid="MenuSystem_8hpp_source"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classAssetManager" prot="public">AssetManager</innerclass>

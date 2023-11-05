@@ -4,6 +4,15 @@
     <compoundname>GUIConfig.cpp</compoundname>
     <includes refid="GUIConfig_8hpp" local="yes">GUI/GUIConfig.hpp</includes>
     <incdepgraph>
+      <node id="1">
+        <label>src/GUI/GUIConfig.cpp</label>
+        <link refid="GUIConfig_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
       <node id="2">
         <label>GUI/GUIConfig.hpp</label>
         <link refid="GUIConfig_8hpp_source"/>
@@ -13,15 +22,6 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-      </node>
-      <node id="1">
-        <label>src/GUI/GUIConfig.cpp</label>
-        <link refid="GUIConfig_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>string</label>
       </node>
       <node id="5">
         <label>iostream</label>

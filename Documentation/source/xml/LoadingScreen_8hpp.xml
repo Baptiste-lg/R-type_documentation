@@ -11,9 +11,6 @@
       <node id="2">
         <label>SFML/Graphics.hpp</label>
       </node>
-      <node id="3">
-        <label>string</label>
-      </node>
       <node id="1">
         <label>include/GraphicElement/LoadingScreen.hpp</label>
         <link refid="LoadingScreen_8hpp"/>
@@ -24,24 +21,23 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
+      <node id="3">
+        <label>string</label>
+      </node>
       <node id="4">
         <label>iostream</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="4">
-        <label>include/ServerMain.hpp</label>
-        <link refid="ServerMain_8hpp_source"/>
+      <node id="3">
+        <label>include/ClientMain.hpp</label>
+        <link refid="ClientMain_8hpp_source"/>
       </node>
       <node id="1">
         <label>include/GraphicElement/LoadingScreen.hpp</label>
         <link refid="LoadingScreen_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>include/ClientMain.hpp</label>
-        <link refid="ClientMain_8hpp_source"/>
       </node>
       <node id="2">
         <label>include/GUI/GUI.hpp</label>
@@ -52,6 +48,10 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+      </node>
+      <node id="4">
+        <label>include/ServerMain.hpp</label>
+        <link refid="ServerMain_8hpp_source"/>
       </node>
       <node id="5">
         <label>include/taskLoader.hpp</label>

@@ -9,15 +9,6 @@
     <includes local="no">vector</includes>
     <includes local="no">thread</includes>
     <incdepgraph>
-      <node id="4">
-        <label>arpa/inet.h</label>
-      </node>
-      <node id="5">
-        <label>unistd.h</label>
-      </node>
-      <node id="6">
-        <label>vector</label>
-      </node>
       <node id="1">
         <label>src/server/server/server_tcp.cpp</label>
         <link refid="server__tcp_8cpp"/>
@@ -33,6 +24,15 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+      </node>
+      <node id="4">
+        <label>arpa/inet.h</label>
+      </node>
+      <node id="5">
+        <label>unistd.h</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
       </node>
       <node id="2">
         <label>iostream</label>

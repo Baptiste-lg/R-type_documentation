@@ -9,9 +9,6 @@
     <includes local="yes">../include/SpritePool.hpp</includes>
     <includedby refid="Component_8cpp" local="yes">src/Component.cpp</includedby>
     <incdepgraph>
-      <node id="2">
-        <label>../include/System/ISystem.hpp</label>
-      </node>
       <node id="1">
         <label>include/System/DrawSystem.hpp</label>
         <link refid="DrawSystem_8hpp"/>
@@ -25,6 +22,9 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+      </node>
+      <node id="2">
+        <label>../include/System/ISystem.hpp</label>
       </node>
       <node id="6">
         <label>../include/SpritePool.hpp</label>

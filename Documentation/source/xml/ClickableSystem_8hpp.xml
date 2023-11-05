@@ -12,9 +12,6 @@
       <node id="2">
         <label>../include/System/ISystem.hpp</label>
       </node>
-      <node id="3">
-        <label>../include/System/System.hpp</label>
-      </node>
       <node id="1">
         <label>include/System/ClickableSystem.hpp</label>
         <link refid="ClickableSystem_8hpp"/>
@@ -28,6 +25,9 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+      </node>
+      <node id="3">
+        <label>../include/System/System.hpp</label>
       </node>
       <node id="6">
         <label>../include/Event.hpp</label>

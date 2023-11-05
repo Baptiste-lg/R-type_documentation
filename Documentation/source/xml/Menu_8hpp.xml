@@ -15,31 +15,6 @@
     <includedby refid="GUI_8hpp" local="yes">include/GUI/GUI.hpp</includedby>
     <includedby refid="Menu_8cpp" local="yes">src/Menu/Menu.cpp</includedby>
     <incdepgraph>
-      <node id="2">
-        <label>SFML/Graphics.hpp</label>
-      </node>
-      <node id="10">
-        <label>functional</label>
-      </node>
-      <node id="15">
-        <label>filesystem</label>
-      </node>
-      <node id="19">
-        <label>Beatmap/Beatmap.hpp</label>
-        <link refid="Beatmap_8hpp_source"/>
-      </node>
-      <node id="12">
-        <label>Beatmap/BeatmapConfig.hpp</label>
-        <link refid="BeatmapConfig_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-      </node>
       <node id="1">
         <label>include/Menu/Menu.hpp</label>
         <link refid="Menu_8hpp"/>
@@ -62,6 +37,31 @@
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="10">
+        <label>functional</label>
+      </node>
+      <node id="15">
+        <label>filesystem</label>
+      </node>
+      <node id="19">
+        <label>Beatmap/Beatmap.hpp</label>
+        <link refid="Beatmap_8hpp_source"/>
+      </node>
+      <node id="9">
+        <label>GraphicElement/Button.hpp</label>
+        <link refid="Button_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="18">
@@ -88,18 +88,6 @@
       <node id="7">
         <label>sstream</label>
       </node>
-      <node id="9">
-        <label>GraphicElement/Button.hpp</label>
-        <link refid="Button_8hpp_source"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
       <node id="8">
         <label>iostream</label>
       </node>
@@ -116,6 +104,21 @@
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
+      </node>
+      <node id="12">
+        <label>Beatmap/BeatmapConfig.hpp</label>
+        <link refid="BeatmapConfig_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>libconfig.h++</label>
       </node>
       <node id="16">
         <label>GraphicElement/BeatmapPanel.hpp</label>
@@ -139,24 +142,17 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="14">
-        <label>libconfig.h++</label>
-      </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="3">
+        <label>include/ClientMain.hpp</label>
+        <link refid="ClientMain_8hpp_source"/>
+      </node>
       <node id="1">
         <label>include/Menu/Menu.hpp</label>
         <link refid="Menu_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="4">
-        <label>include/ServerMain.hpp</label>
-        <link refid="ServerMain_8hpp_source"/>
-      </node>
-      <node id="3">
-        <label>include/ClientMain.hpp</label>
-        <link refid="ClientMain_8hpp_source"/>
       </node>
       <node id="2">
         <label>include/GUI/GUI.hpp</label>
@@ -167,6 +163,10 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+      </node>
+      <node id="4">
+        <label>include/ServerMain.hpp</label>
+        <link refid="ServerMain_8hpp_source"/>
       </node>
       <node id="5">
         <label>include/taskLoader.hpp</label>

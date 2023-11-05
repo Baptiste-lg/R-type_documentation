@@ -17,15 +17,15 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2">
-        <label>include/System/DeathEffectSystem.hpp</label>
-        <link refid="DeathEffectSystem_8hpp_source"/>
-      </node>
       <node id="1">
         <label>include/System/System.hpp</label>
         <link refid="System_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+      </node>
+      <node id="2">
+        <label>include/System/DeathEffectSystem.hpp</label>
+        <link refid="DeathEffectSystem_8hpp_source"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="enum">
