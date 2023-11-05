@@ -3,7 +3,6 @@
   <compounddef id="classDeathEffectSystem" kind="class" language="C++" prot="public">
     <compoundname>DeathEffectSystem</compoundname>
     <basecompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; DeathEffect, Position &gt;</basecompoundref>
-    <includes refid="DeathEffectSystem_8hpp" local="no">DeathEffectSystem.hpp</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classDeathEffectSystem_1ac96ebb64bacb8400c5516e3a17bed263" prot="private" static="no" mutable="no">
         <type><ref refid="classRegistry" kindref="compound">Registry</ref> &amp;</type>
@@ -80,19 +79,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="DeathEffectSystem_8hpp_source" kindref="compound">DeathEffectSystem.hpp</ref></para>
-<para>System to handle death effect components. Inherits from <ref refid="classISystem" kindref="compound">ISystem</ref>.</para>
-<para>Methods:</para>
-<para><itemizedlist>
-<listitem><para><ref refid="classDeathEffectSystem" kindref="compound">DeathEffectSystem()</ref> Constructor, stores reference to registry.</para>
-</listitem><listitem><para>operator()() System update method. Passed entities with <ref refid="structDeathEffect" kindref="compound">DeathEffect</ref> and <ref refid="structPosition" kindref="compound">Position</ref>.</para>
-</listitem></itemizedlist>
-</para>
-<para>Members:</para>
-<para><itemizedlist>
-<listitem><para>registry Reference to global ECS registry. </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">

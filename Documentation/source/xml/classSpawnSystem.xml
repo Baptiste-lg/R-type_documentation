@@ -3,7 +3,6 @@
   <compounddef id="classSpawnSystem" kind="class" language="C++" prot="public">
     <compoundname>SpawnSystem</compoundname>
     <basecompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Spawner, Position &gt;</basecompoundref>
-    <includes refid="SpawnSystem_8hpp" local="no">SpawnSystem.hpp</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classSpawnSystem_1a327c06e8ed83549b3a3ec77bfb01caf5" prot="private" static="no" mutable="no">
         <type>float &amp;</type>
@@ -114,30 +113,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="classSpawnSystem" kindref="compound">SpawnSystem</ref> handles spawning new entities at a specified rate.</para>
-<para>It checks each entity with a <ref refid="structSpawner" kindref="compound">Spawner</ref> component and spawns new entities when enough time has elapsed.</para>
-<para>The new entities are positioned based on the spawner&apos;s offset. Additional components are added from the spawner&apos;s component list.</para>
-<para>Usage:<itemizedlist>
-<listitem><para>Add <ref refid="structSpawner" kindref="compound">Spawner</ref> component to an entity to make it a spawner.</para>
-</listitem><listitem><para>Set spawnRate, x/yOffset, and componentSpawners as needed.</para>
-</listitem></itemizedlist>
-</para>
-<para>Components:<itemizedlist>
-<listitem><para><ref refid="structSpawner" kindref="compound">Spawner</ref>: Defines spawning behavior.</para>
-</listitem><listitem><para><ref refid="structPosition" kindref="compound">Position</ref>: Used to offset spawned entities.</para>
-</listitem></itemizedlist>
-</para>
-<para>Methods:<itemizedlist>
-<listitem><para>operator(): Checks spawners and spawns entities.</para>
-</listitem></itemizedlist>
-</para>
-<para>Spawning:<itemizedlist>
-<listitem><para>Keeps track of time since last spawn.</para>
-</listitem><listitem><para>Spawns when time exceeds 1/spawnRate.</para>
-</listitem><listitem><para>Resets internal timer after spawning.</para>
-</listitem><listitem><para>Applies position offset and components. </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">

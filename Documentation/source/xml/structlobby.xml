@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="structlobby" kind="struct" language="C++" prot="public">
     <compoundname>lobby</compoundname>
-    <includes refid="ServerSystem_8hpp" local="no">ServerSystem.hpp</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structlobby_1a0cb84a16c246e4ab6a4a80f748ec6234" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -114,30 +113,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="classServerSystem" kindref="compound">ServerSystem</ref> handles server-side networking and state.</para>
-<para>It initializes TCP and UDP sockets to listen for clients. Accepts TCP connections from clients. Receives UDP messages and fires corresponding events. Maintains state like connected clients, entities, and lobbies. Sends UDP messages to clients when events occur.</para>
-<para>Usage:<itemizedlist>
-<listitem><para>Call constructor to initialize sockets.</para>
-</listitem><listitem><para>Implement event handling for client messages.</para>
-</listitem><listitem><para>Maintain server state as needed.</para>
-</listitem><listitem><para>Fire events to trigger messages sent to clients.</para>
-</listitem></itemizedlist>
-</para>
-<para>Parameters:<itemizedlist>
-<listitem><para>registry: Reference to the ECS registry.</para>
-</listitem><listitem><para>deltaTime: Time elapsed since last tick.</para>
-</listitem></itemizedlist>
-</para>
-<para>Components used:<itemizedlist>
-<listitem><para><ref refid="structNetwork" kindref="compound">Network</ref>: <ref refid="structNetwork" kindref="compound">Network</ref> component, not directly used.</para>
-</listitem></itemizedlist>
-</para>
-<para>Events:<itemizedlist>
-<listitem><para>PlayerJoined: Received when a client connects.</para>
-</listitem><listitem><para>PlayerMoved: Received on client input.</para>
-</listitem><listitem><para>Server event types: Sent to clients. </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <location file="include/System/ServerSystem.hpp" line="57" column="1" bodyfile="include/System/ServerSystem.hpp" bodystart="57" bodyend="66"/>
     <listofallmembers>

@@ -3,7 +3,6 @@
   <compounddef id="classFollowerSystem" kind="class" language="C++" prot="public">
     <compoundname>FollowerSystem</compoundname>
     <basecompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Follower, Position &gt;</basecompoundref>
-    <includes refid="FollowerSystem_8hpp" local="no">FollowerSystem.hpp</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classFollowerSystem_1aee0538d9d9f5c9fb468e742c37f52666" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -61,25 +60,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="classFollowerSystem" kindref="compound">FollowerSystem</ref> processes entities with <ref refid="structFollower" kindref="compound">Follower</ref> and <ref refid="structPosition" kindref="compound">Position</ref> components.</para>
-<para>It updates the <ref refid="structPosition" kindref="compound">Position</ref> of followers to match their targets with an offset.</para>
-<para>This allows easily making entities follow other entities.</para>
-<para>Usage:<itemizedlist>
-<listitem><para>Give follower entities <ref refid="structFollower" kindref="compound">Follower</ref> and <ref refid="structPosition" kindref="compound">Position</ref> components.</para>
-</listitem><listitem><para>Set Follower.target to the entity to follow.</para>
-</listitem><listitem><para>Set Follower.xOffset and Follower.yOffset for the offset.</para>
-</listitem><listitem><para>System will update <ref refid="structPosition" kindref="compound">Position</ref> each frame based on target&apos;s <ref refid="structPosition" kindref="compound">Position</ref>.</para>
-</listitem></itemizedlist>
-</para>
-<para>Parameters:<itemizedlist>
-<listitem><para>None</para>
-</listitem></itemizedlist>
-</para>
-<para>Components used:<itemizedlist>
-<listitem><para><ref refid="structFollower" kindref="compound">Follower</ref>: Contains target and offset.</para>
-</listitem><listitem><para><ref refid="structPosition" kindref="compound">Position</ref>: Updated to match target&apos;s <ref refid="structPosition" kindref="compound">Position</ref> + offset. </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">

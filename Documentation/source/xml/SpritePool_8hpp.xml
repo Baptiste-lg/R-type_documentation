@@ -2,25 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="SpritePool_8hpp" kind="file" language="C++">
     <compoundname>SpritePool.hpp</compoundname>
-    <includes local="no">list</includes>
-    <includes local="no">SFML/Graphics.hpp</includes>
-    <includedby refid="SpritePool_8cpp" local="yes">src/SpritePool.cpp</includedby>
-    <incdepgraph>
-      <node id="2">
-        <label>list</label>
-      </node>
-      <node id="3">
-        <label>SFML/Graphics.hpp</label>
-      </node>
-      <node id="1">
-        <label>include/SpritePool.hpp</label>
-        <link refid="SpritePool_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-    </incdepgraph>
     <innerclass refid="classSpritePool" prot="public">SpritePool</innerclass>
     <briefdescription>
     </briefdescription>

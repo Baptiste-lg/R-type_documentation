@@ -2,56 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="ConfigServer_8hpp" kind="file" language="C++">
     <compoundname>ConfigServer.hpp</compoundname>
-    <includes local="no">fstream</includes>
-    <includes local="no">sstream</includes>
-    <includes local="no">string</includes>
-    <includes local="no">unordered_map</includes>
-    <includes local="no">iostream</includes>
-    <includedby refid="ServerSystem_8hpp" local="yes">include/System/ServerSystem.hpp</includedby>
-    <includedby refid="ConfigServer_8cpp" local="yes">src/ConfigServer.cpp</includedby>
-    <incdepgraph>
-      <node id="1">
-        <label>include/ConfigServer.hpp</label>
-        <link refid="ConfigServer_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>string</label>
-      </node>
-      <node id="2">
-        <label>fstream</label>
-      </node>
-      <node id="3">
-        <label>sstream</label>
-      </node>
-      <node id="6">
-        <label>iostream</label>
-      </node>
-      <node id="5">
-        <label>unordered_map</label>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="2">
-        <label>include/System/ServerSystem.hpp</label>
-        <link refid="ServerSystem_8hpp_source"/>
-      </node>
-      <node id="1">
-        <label>include/ConfigServer.hpp</label>
-        <link refid="ConfigServer_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-    </invincdepgraph>
       <sectiondef kind="func">
       <memberdef kind="function" id="ConfigServer_8hpp_1adea5462f910cccdd19fb39e9b5280d83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -65,14 +15,6 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>ConfigServer</para>
-<para>This file provides functions to load and read server configuration.</para>
-<para>Functions:</para>
-<para><itemizedlist>
-<listitem><para>readFromConfig() Reads a config value for the given key. Takes key string. Returns value string.</para>
-</listitem><listitem><para>loadConfig() Loads the server config from a file. Takes config file path string. </para>
-</listitem></itemizedlist>
-</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

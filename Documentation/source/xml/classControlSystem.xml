@@ -3,7 +3,6 @@
   <compounddef id="classControlSystem" kind="class" language="C++" prot="public">
     <compoundname>ControlSystem</compoundname>
     <basecompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Position, Velocity, Controllable &gt;</basecompoundref>
-    <includes refid="ControlSystem_8hpp" local="no">ControlSystem.hpp</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classControlSystem_1a913349e1df5f07aec19dbf7398785aaf" prot="private" static="no" mutable="no">
         <type>float &amp;</type>
@@ -234,20 +233,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="classControlSystem" kindref="compound">ControlSystem</ref> class</para>
-<para>Inherits from <ref refid="classISystem" kindref="compound">ISystem</ref> interface. Handles controlling entities with <ref refid="structControllable" kindref="compound">Controllable</ref>, <ref refid="structPosition" kindref="compound">Position</ref>, <ref refid="structVelocity" kindref="compound">Velocity</ref>, and <ref refid="structGameConfig" kindref="compound">GameConfig</ref> components.</para>
-<para>deltaTime: Reference to delta time value for frame rate independence. registry: Reference to global ECS registry. eventQueue: Queue of input events mapped to entities.</para>
-<para>Constructor:<itemizedlist>
-<listitem><para>Initializes event listener for player input events.</para>
-</listitem></itemizedlist>
-</para>
-<para>operator():<itemizedlist>
-<listitem><para>Entry point for system.</para>
-</listitem><listitem><para>Checks for <ref refid="structControllable" kindref="compound">Controllable</ref>, <ref refid="structVelocity" kindref="compound">Velocity</ref>, and <ref refid="structGameConfig" kindref="compound">GameConfig</ref> components.</para>
-</listitem><listitem><para>Applies player input events from queue to entity velocity.</para>
-</listitem><listitem><para>Updates entity position based on velocity. </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">

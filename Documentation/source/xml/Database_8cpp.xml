@@ -2,56 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="Database_8cpp" kind="file" language="C++">
     <compoundname>Database.cpp</compoundname>
-    <includes refid="Database_8hpp" local="yes">Database/Database.hpp</includes>
-    <incdepgraph>
-      <node id="8">
-        <label>filesystem</label>
-      </node>
-      <node id="1">
-        <label>src/Database/Database.cpp</label>
-        <link refid="Database_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>string</label>
-      </node>
-      <node id="5">
-        <label>map</label>
-      </node>
-      <node id="6">
-        <label>iostream</label>
-      </node>
-      <node id="2">
-        <label>Database/Database.hpp</label>
-        <link refid="Database_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>Beatmap/BeatmapConfig.hpp</label>
-        <link refid="BeatmapConfig_8hpp_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>libconfig.h++</label>
-      </node>
-    </incdepgraph>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

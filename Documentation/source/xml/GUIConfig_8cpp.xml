@@ -2,34 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="GUIConfig_8cpp" kind="file" language="C++">
     <compoundname>GUIConfig.cpp</compoundname>
-    <includes refid="GUIConfig_8hpp" local="yes">GUI/GUIConfig.hpp</includes>
-    <incdepgraph>
-      <node id="1">
-        <label>src/GUI/GUIConfig.cpp</label>
-        <link refid="GUIConfig_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>string</label>
-      </node>
-      <node id="2">
-        <label>GUI/GUIConfig.hpp</label>
-        <link refid="GUIConfig_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>iostream</label>
-      </node>
-      <node id="4">
-        <label>libconfig.h++</label>
-      </node>
-    </incdepgraph>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

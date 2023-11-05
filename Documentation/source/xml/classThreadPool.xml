@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="classThreadPool" kind="class" language="C++" prot="public">
     <compoundname>ThreadPool</compoundname>
-    <includes refid="ThreadPool_8hpp" local="no">ThreadPool.hpp</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classThreadPool_1a9ef531ca4b7d046f3acaf4b5b36cdeff" prot="private" static="no" mutable="no">
         <type>std::vector&lt; std::thread &gt;</type>
@@ -127,24 +126,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="classThreadPool" kindref="compound">ThreadPool</ref></para>
-<para>This class implements a thread pool to run tasks asynchronously.</para>
-<para>Methods:</para>
-<para><itemizedlist>
-<listitem><para><ref refid="classThreadPool" kindref="compound">ThreadPool()</ref> Constructor that launches worker threads.</para>
-</listitem><listitem><para>enqueue() Enqueues a task and returns a future to its result.</para>
-</listitem><listitem><para>~ThreadPool() Destructor that joins worker threads.</para>
-</listitem></itemizedlist>
-</para>
-<para>Members:</para>
-<para><itemizedlist>
-<listitem><para>workers Vector of worker threads.</para>
-</listitem><listitem><para>tasks Queue of tasks to be executed.</para>
-</listitem><listitem><para>queue_mutex Mutex to synchronize access to the task queue.</para>
-</listitem><listitem><para>condition Condition variable to notify workers.</para>
-</listitem><listitem><para>stop Flag to stop the worker threads. </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <location file="include/ThreadPool.hpp" line="53" column="1" bodyfile="include/ThreadPool.hpp" bodystart="53" bodyend="104"/>
     <listofallmembers>

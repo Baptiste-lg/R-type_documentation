@@ -3,7 +3,6 @@
   <compounddef id="classDrawSystem" kind="class" language="C++" prot="public">
     <compoundname>DrawSystem</compoundname>
     <basecompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Drawable, Position, Depth, TextDrawable &gt;</basecompoundref>
-    <includes refid="DrawSystem_8hpp" local="no">DrawSystem.hpp</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classDrawSystem_1a3089970008f97d383d5cbd1873f1b8a2" prot="private" static="no" mutable="no">
         <type>std::vector&lt; entity_t &gt;</type>
@@ -266,27 +265,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="DrawSystem_8hpp_source" kindref="compound">DrawSystem.hpp</ref></para>
-<para>System to handle drawing of entities. Inherits from <ref refid="classISystem" kindref="compound">ISystem</ref>. Requires <ref refid="structDrawable" kindref="compound">Drawable</ref>, <ref refid="structPosition" kindref="compound">Position</ref>, <ref refid="structDepth" kindref="compound">Depth</ref> and <ref refid="structTextDrawable" kindref="compound">TextDrawable</ref> components.</para>
-<para>Methods:</para>
-<para><itemizedlist>
-<listitem><para><ref refid="classDrawSystem" kindref="compound">DrawSystem()</ref> Constructor, stores references to window, asset manager and registry.</para>
-</listitem><listitem><para>sortEntities() Sorts entities by depth.</para>
-</listitem><listitem><para>operator()() System update method. Draws entities.</para>
-</listitem><listitem><para>invalidateSort() Call when <ref refid="structDepth" kindref="compound">Depth</ref> changes to resort next frame.</para>
-</listitem></itemizedlist>
-</para>
-<para>Members:</para>
-<para><itemizedlist>
-<listitem><para>sortedEntities Sorted draw order.</para>
-</listitem><listitem><para>window Reference to SFML window.</para>
-</listitem><listitem><para>assetManager Reference to asset manager.</para>
-</listitem><listitem><para>registry Reference to global ECS registry.</para>
-</listitem><listitem><para>firstRun Flag to track first run.</para>
-</listitem><listitem><para>spritePool Sprite pool for reuse.</para>
-</listitem><listitem><para>deltaTime Reference to game delta time. </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">

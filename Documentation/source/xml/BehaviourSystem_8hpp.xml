@@ -2,73 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="BehaviourSystem_8hpp" kind="file" language="C++">
     <compoundname>BehaviourSystem.hpp</compoundname>
-    <includes local="yes">../include/System/ISystem.hpp</includes>
-    <includes local="yes">../include/System/System.hpp</includes>
-    <includes local="yes">../include/TextureManager.hpp</includes>
-    <includes local="yes">../include/Behaviour.hpp</includes>
-    <includes local="yes">../include/Registry.hpp</includes>
-    <includes local="yes">../include/Event.hpp</includes>
-    <includes local="no">unistd.h</includes>
-    <includes local="no">string.h</includes>
-    <includes local="no">unordered_map</includes>
-    <includes local="no">fcntl.h</includes>
-    <includedby refid="Component_8cpp" local="yes">src/Component.cpp</includedby>
-    <incdepgraph>
-      <node id="2">
-        <label>../include/System/ISystem.hpp</label>
-      </node>
-      <node id="1">
-        <label>include/System/BehaviourSystem.hpp</label>
-        <link refid="BehaviourSystem_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>fcntl.h</label>
-      </node>
-      <node id="9">
-        <label>string.h</label>
-      </node>
-      <node id="8">
-        <label>unistd.h</label>
-      </node>
-      <node id="3">
-        <label>../include/System/System.hpp</label>
-      </node>
-      <node id="7">
-        <label>../include/Event.hpp</label>
-      </node>
-      <node id="10">
-        <label>unordered_map</label>
-      </node>
-      <node id="6">
-        <label>../include/Registry.hpp</label>
-      </node>
-      <node id="5">
-        <label>../include/Behaviour.hpp</label>
-      </node>
-      <node id="4">
-        <label>../include/TextureManager.hpp</label>
-      </node>
-    </incdepgraph>
     <innerclass refid="classBehaviorSystem" prot="public">BehaviorSystem</innerclass>
       <sectiondef kind="var">
       <memberdef kind="variable" id="BehaviourSystem_8hpp_1a7c969ede2917aea2a04366a932e563a4" prot="public" static="no" mutable="no">
@@ -93,25 +26,6 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="classBehaviorSystem" kindref="compound">BehaviorSystem</ref> processes entities with <ref refid="structBehavior" kindref="compound">Behavior</ref> and <ref refid="structPosition" kindref="compound">Position</ref> components.</para>
-<para>It looks up the behavior function based on the Behavior.behaviorID and executes it, passing in the <ref refid="structPosition" kindref="compound">Position</ref> component and deltaTime.</para>
-<para>This allows easily swapping out movement behaviors for entities.</para>
-<para>Usage:<itemizedlist>
-<listitem><para>Give entities a <ref refid="structBehavior" kindref="compound">Behavior</ref> and <ref refid="structPosition" kindref="compound">Position</ref> component.</para>
-</listitem><listitem><para>Implement movement functions like moveLeft(), zigzagMovement() etc.</para>
-</listitem><listitem><para>Add function pointer to behaviorMap.</para>
-</listitem><listitem><para>System will call correct function each tick to update <ref refid="structPosition" kindref="compound">Position</ref>.</para>
-</listitem></itemizedlist>
-</para>
-<para>Parameters:<itemizedlist>
-<listitem><para>deltaTime: Time elapsed since last tick.</para>
-</listitem></itemizedlist>
-</para>
-<para>Components used:<itemizedlist>
-<listitem><para><ref refid="structBehavior" kindref="compound">Behavior</ref>: Contains behaviorID to identify movement function.</para>
-</listitem><listitem><para><ref refid="structPosition" kindref="compound">Position</ref>: Passed to behavior function to update. </para>
-</listitem></itemizedlist>
-</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

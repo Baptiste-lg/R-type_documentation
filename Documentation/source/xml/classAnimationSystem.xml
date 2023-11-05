@@ -3,7 +3,6 @@
   <compounddef id="classAnimationSystem" kind="class" language="C++" prot="public">
     <compoundname>AnimationSystem</compoundname>
     <basecompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Animation, Drawable &gt;</basecompoundref>
-    <includes refid="AnimationSystem_8hpp" local="no">AnimationSystem.hpp</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classAnimationSystem_1a295b4d7d936b371e3d3115a22af90ec3" prot="private" static="no" mutable="no">
         <type>float &amp;</type>
@@ -80,25 +79,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="classAnimationSystem" kindref="compound">AnimationSystem</ref> processes <ref refid="structAnimation" kindref="compound">Animation</ref> and <ref refid="structDrawable" kindref="compound">Drawable</ref> components each frame.</para>
-<para>It tracks elapsed time and updates the current animation frame when the frame duration has elapsed. This updates the texture rect on the <ref refid="structDrawable" kindref="compound">Drawable</ref> component if it exists.</para>
-<para>Parameters:<itemizedlist>
-<listitem><para>e: The entity being processed.</para>
-</listitem><listitem><para>animations: Sparse array of <ref refid="structAnimation" kindref="compound">Animation</ref> components.</para>
-</listitem><listitem><para>drawables: Sparse array of <ref refid="structDrawable" kindref="compound">Drawable</ref> components.</para>
-</listitem></itemizedlist>
-</para>
-<para>Usage:<itemizedlist>
-<listitem><para>Get the <ref refid="structAnimation" kindref="compound">Animation</ref> component for the entity.</para>
-</listitem><listitem><para>Increment the elapsed time by deltaTime.</para>
-</listitem><listitem><para>Check if elapsed time exceeds current frame duration.<itemizedlist>
-<listitem><para>Reset elapsed time to 0.</para>
-</listitem><listitem><para>Increment current frame, handling end of animation or looping logic.</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para>If <ref refid="structDrawable" kindref="compound">Drawable</ref> component exists, update its texture rect to the new frame. </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">

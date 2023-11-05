@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="classCollisionRectangle" kind="class" language="C++" prot="public">
     <compoundname>CollisionRectangle</compoundname>
-    <includes refid="Quadtree_8hpp" local="no">Quadtree.hpp</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="classCollisionRectangle_1a9d9d31538199614191d11589d744677a" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -150,34 +149,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="classQuadtree" kindref="compound">Quadtree</ref> implements a quadtree spatial partitioning data structure.</para>
-<para>It is used by the <ref refid="classCollisionSystem" kindref="compound">CollisionSystem</ref> to efficiently find nearby entities.</para>
-<para>The quadtree recursively subdivides space into quadrants. Entities are stored in the quadrant that contains them.</para>
-<para>This allows quickly narrowing down collisions to check to nearby entities.</para>
-<para>Usage:<itemizedlist>
-<listitem><para>Insert entities and their positions/sizes into the quadtree.</para>
-</listitem><listitem><para>Query the quadtree to get entities in a given area.</para>
-</listitem><listitem><para>Check those entities for collisions.</para>
-</listitem></itemizedlist>
-</para>
-<para>The <ref refid="classCollisionSystem" kindref="compound">CollisionSystem</ref> handles inserting and querying each frame automatically.</para>
-<para>Components used:<itemizedlist>
-<listitem><para><ref refid="structPosition" kindref="compound">Position</ref>, <ref refid="structDrawable" kindref="compound">Drawable</ref>: Used to insert into quadtree.</para>
-</listitem><listitem><para><ref refid="structCollision" kindref="compound">Collision</ref>: Checked for collisions.</para>
-</listitem></itemizedlist>
-</para>
-<para>Methods:<itemizedlist>
-<listitem><para>insert: Inserts an entity into the quadtree.</para>
-</listitem><listitem><para>queryRange: Returns entities in given area.</para>
-</listitem><listitem><para>clear: Empties the quadtree each frame.</para>
-</listitem></itemizedlist>
-</para>
-<para>Node class represents each quadtree node:<itemizedlist>
-<listitem><para>subdivide: Splits a node into 4 subnodes.</para>
-</listitem><listitem><para>insert: Inserts into a node or its subnodes.</para>
-</listitem><listitem><para>queryRange: Queries entities in node. </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <location file="include/System/Quadtree.hpp" line="71" column="1" bodyfile="include/System/Quadtree.hpp" bodystart="71" bodyend="94"/>
     <listofallmembers>

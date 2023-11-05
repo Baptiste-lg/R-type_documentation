@@ -16,7 +16,6 @@
     <derivedcompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Network &gt;</derivedcompoundref>
     <derivedcompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; State &gt;</derivedcompoundref>
     <derivedcompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Components &gt;</derivedcompoundref>
-    <includes refid="ISystem_8hpp" local="no">ISystem.hpp</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classISystemBase_1a15450364e9f21ebae6e2633eef35d7d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -82,22 +81,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="classISystem" kindref="compound">ISystem</ref> is an interface that systems inherit from. It defines the operator() method that systems must implement to process entities.</para>
-<para>Template parameters:<itemizedlist>
-<listitem><para>Components: The component types that this system needs to operate on.</para>
-</listitem></itemizedlist>
-</para>
-<para>Parameters:<itemizedlist>
-<listitem><para>entity: The entity being processed.</para>
-</listitem><listitem><para>components: Sparse arrays containing components of the types specified in the template.</para>
-</listitem></itemizedlist>
-</para>
-<para>Usage:<itemizedlist>
-<listitem><para>Systems implement operator() to access components and perform processing.</para>
-</listitem><listitem><para>The ECS framework calls operator() and passes the entity and its components.</para>
-</listitem><listitem><para>The system can then read/write the components to do its job. </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="6">

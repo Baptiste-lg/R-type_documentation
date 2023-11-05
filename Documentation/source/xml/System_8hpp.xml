@@ -2,32 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="System_8hpp" kind="file" language="C++">
     <compoundname>System.hpp</compoundname>
-    <includes local="no">SFML/Graphics.hpp</includes>
-    <includedby refid="DeathEffectSystem_8hpp" local="yes">include/System/DeathEffectSystem.hpp</includedby>
-    <includedby refid="Component_8cpp" local="yes">src/Component.cpp</includedby>
-    <incdepgraph>
-      <node id="2">
-        <label>SFML/Graphics.hpp</label>
-      </node>
-      <node id="1">
-        <label>include/System/System.hpp</label>
-        <link refid="System_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="1">
-        <label>include/System/System.hpp</label>
-        <link refid="System_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>include/System/DeathEffectSystem.hpp</label>
-        <link refid="DeathEffectSystem_8hpp_source"/>
-      </node>
-    </invincdepgraph>
       <sectiondef kind="enum">
       <memberdef kind="enum" id="System_8hpp_1a3c730f37b1b3a893159bada67637fdb1" prot="public" static="no" strong="yes">
         <type></type>
@@ -56,33 +30,6 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="System_8hpp_source" kindref="compound">System.hpp</ref></para>
-<para>Defines enums for global player state.</para>
-<para>Enums:</para>
-<para><itemizedlist>
-<listitem><para>PlayerState Overall player state.<itemizedlist>
-<listitem><para>InMenu</para>
-</listitem><listitem><para>InGame</para>
-</listitem><listitem><para>InLobby</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para>PlayerSubState Detailed player sub-state when in game.<itemizedlist>
-<listitem><para>isLoading</para>
-</listitem><listitem><para>isDownloading</para>
-</listitem><listitem><para>isWaiting</para>
-</listitem><listitem><para>isReady</para>
-</listitem><listitem><para>isPlaying</para>
-</listitem><listitem><para>isDead</para>
-</listitem><listitem><para>isWin</para>
-</listitem><listitem><para>isLose</para>
-</listitem><listitem><para>isDisconnected</para>
-</listitem><listitem><para>isReconnecting</para>
-</listitem><listitem><para>isReconnected</para>
-</listitem><listitem><para>isReconnectingFailed </para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

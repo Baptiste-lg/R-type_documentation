@@ -2,34 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="LoadingScreen_8cpp" kind="file" language="C++">
     <compoundname>LoadingScreen.cpp</compoundname>
-    <includes refid="LoadingScreen_8hpp" local="yes">GraphicElement/LoadingScreen.hpp</includes>
-    <incdepgraph>
-      <node id="3">
-        <label>SFML/Graphics.hpp</label>
-      </node>
-      <node id="2">
-        <label>GraphicElement/LoadingScreen.hpp</label>
-        <link refid="LoadingScreen_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>string</label>
-      </node>
-      <node id="1">
-        <label>src/GraphicElement/LoadingScreen.cpp</label>
-        <link refid="LoadingScreen_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>iostream</label>
-      </node>
-    </incdepgraph>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

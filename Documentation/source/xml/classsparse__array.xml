@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="classsparse__array" kind="class" language="C++" prot="public">
     <compoundname>sparse_array</compoundname>
-    <includes refid="SparseArray_8hpp" local="no">SparseArray.hpp</includes>
     <templateparamlist>
       <param>
         <type>typename Component</type>
@@ -560,26 +559,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="classsparse__array" kindref="compound">sparse_array</ref> is a templated container for storing sparse component data.</para>
-<para>It allows efficient insertion, removal and random access of components. Components are stored in a std::optional wrapper.</para>
-<para>Template Parameters:<itemizedlist>
-<listitem><para>Component: The component type stored in the array.</para>
-</listitem></itemizedlist>
-</para>
-<para>Usage:<itemizedlist>
-<listitem><para>sparse_array&lt;Position&gt; positions;</para>
-</listitem><listitem><para>positions.insert_at(entity, <ref refid="structPosition" kindref="compound">Position</ref>{x, y});</para>
-</listitem><listitem><para>auto&amp; pos = positions[entity];</para>
-</listitem><listitem><para>pos-&gt;x = 10;</para>
-</listitem></itemizedlist>
-</para>
-<para>Methods:<itemizedlist>
-<listitem><para>insert_at: Inserts a component at an index.</para>
-</listitem><listitem><para>erase: Removes the component at an index.</para>
-</listitem><listitem><para>operator[]: Accesses the component optional at an index.</para>
-</listitem><listitem><para>contains: Checks if an index has a component. </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <location file="include/SparseArray.hpp" line="36" column="1" bodyfile="include/SparseArray.hpp" bodystart="36" bodyend="178"/>
     <listofallmembers>

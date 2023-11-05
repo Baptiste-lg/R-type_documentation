@@ -3,7 +3,6 @@
   <compounddef id="classVelocitySystem" kind="class" language="C++" prot="public">
     <compoundname>VelocitySystem</compoundname>
     <basecompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; Position, Velocity &gt;</basecompoundref>
-    <includes refid="VelocitySystem_8hpp" local="no">VelocitySystem.hpp</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classVelocitySystem_1a83354aa89343ffb85f08b7d318b614b9" prot="private" static="no" mutable="no">
         <type>float &amp;</type>
@@ -149,29 +148,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="classVelocitySystem" kindref="compound">VelocitySystem</ref> handles moving entities based on their <ref refid="structVelocity" kindref="compound">Velocity</ref> component.</para>
-<para>Each frame, it updates an entity&apos;s <ref refid="structPosition" kindref="compound">Position</ref> by adding its <ref refid="structVelocity" kindref="compound">Velocity</ref> scaled by deltaTime.</para>
-<para>Usage:<itemizedlist>
-<listitem><para>Add <ref refid="structVelocity" kindref="compound">Velocity</ref> component to make an entity move.</para>
-</listitem><listitem><para><ref refid="structVelocity" kindref="compound">Velocity</ref> is scaled by deltaTime for frame rate independence.</para>
-</listitem></itemizedlist>
-</para>
-<para>Components:<itemizedlist>
-<listitem><para><ref refid="structPosition" kindref="compound">Position</ref>: Updated each frame based on <ref refid="structVelocity" kindref="compound">Velocity</ref>.</para>
-</listitem><listitem><para><ref refid="structVelocity" kindref="compound">Velocity</ref>: Defines the movement vector.</para>
-</listitem></itemizedlist>
-</para>
-<para>Methods:<itemizedlist>
-<listitem><para>operator(): Applies velocity to position each frame.</para>
-</listitem></itemizedlist>
-</para>
-<para>Movement:<itemizedlist>
-<listitem><para>Get <ref refid="structVelocity" kindref="compound">Velocity</ref> and <ref refid="structPosition" kindref="compound">Position</ref> components.</para>
-</listitem><listitem><para>Scale <ref refid="structVelocity" kindref="compound">Velocity</ref> by deltaTime.</para>
-</listitem><listitem><para>Offset <ref refid="structPosition" kindref="compound">Position</ref> by scaled <ref refid="structVelocity" kindref="compound">Velocity</ref>.</para>
-</listitem><listitem><para>Clamp <ref refid="structPosition" kindref="compound">Position</ref> to prevent going offscreen. </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">

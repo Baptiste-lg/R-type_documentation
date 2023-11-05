@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="classSpritePool" kind="class" language="C++" prot="public">
     <compoundname>SpritePool</compoundname>
-    <includes refid="SpritePool_8hpp" local="no">SpritePool.hpp</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classSpritePool_1a41e0458453eef1e76c78c66b9a6bc403" prot="private" static="no" mutable="no">
         <type>std::list&lt; sf::Sprite * &gt;</type>
@@ -93,24 +92,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="SpritePool_8hpp_source" kindref="compound">SpritePool.hpp</ref> defines a pool for reusing SFML sprites.</para>
-<para>The sprite pool prevents constantly allocating and freeing sprites. Sprites are reused from an available pool instead of created/destroyed.</para>
-<para>This improves performance by reducing memory allocations.</para>
-<para>Usage:<itemizedlist>
-<listitem><para>GetSprite(): Gets a sprite from the available pool.</para>
-</listitem><listitem><para>ReturnSprite(): Returns a sprite to the pool when done.</para>
-</listitem></itemizedlist>
-</para>
-<para>Methods:<itemizedlist>
-<listitem><para><ref refid="classSpritePool_1af1362e5cb53a550b094561d69229102a" kindref="member">getSprite()</ref>: Moves a sprite from available to inUse pool.</para>
-</listitem><listitem><para>returnSprite(): Moves it back to available.</para>
-</listitem></itemizedlist>
-</para>
-<para>Pools:<itemizedlist>
-<listitem><para>available: List of unused sprites.</para>
-</listitem><listitem><para>inUse: List of sprites currently in use. </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <location file="include/SpritePool.hpp" line="34" column="1" bodyfile="include/SpritePool.hpp" bodystart="34" bodyend="54"/>
     <listofallmembers>

@@ -3,7 +3,6 @@
   <compounddef id="classRectangleButton" kind="class" language="C++" prot="public">
     <compoundname>RectangleButton</compoundname>
     <basecompoundref refid="classButton" prot="public" virt="non-virtual">Button</basecompoundref>
-    <includes refid="RectangleButton_8hpp" local="no">RectangleButton.hpp</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classRectangleButton_1a7330d5d60530b757c91c6d4a925c7240" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -63,41 +62,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="classRectangleButton" kindref="compound">RectangleButton</ref></para>
-<para>This class represents a rectangular button. It inherits from the <ref refid="classButton" kindref="compound">Button</ref> base class.</para>
-<para>Public Methods:</para>
-<para><itemizedlist>
-<listitem><para><ref refid="classRectangleButton" kindref="compound">RectangleButton()</ref><itemizedlist>
-<listitem><para>Constructor with position, size, text, font, color and text size</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para>setSize()<itemizedlist>
-<listitem><para>Sets the size of the button</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para>Inherited from <ref refid="classButton" kindref="compound">Button</ref>:</para>
-<para><itemizedlist>
-<listitem><para>handleEvent()</para>
-</listitem><listitem><para>draw()</para>
-</listitem><listitem><para>setText()</para>
-</listitem></itemizedlist>
-</para>
-<para>Private Attributes:</para>
-<para>Inherited from <ref refid="classButton" kindref="compound">Button</ref>:</para>
-<para><itemizedlist>
-<listitem><para>texture</para>
-</listitem><listitem><para>sprite</para>
-</listitem><listitem><para>text</para>
-</listitem><listitem><para>onClick</para>
-</listitem><listitem><para>state</para>
-</listitem><listitem><para>position</para>
-</listitem><listitem><para>size</para>
-</listitem><listitem><para>type</para>
-</listitem><listitem><para>lastClickClock </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">

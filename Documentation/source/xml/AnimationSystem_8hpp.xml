@@ -2,67 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="AnimationSystem_8hpp" kind="file" language="C++">
     <compoundname>AnimationSystem.hpp</compoundname>
-    <includes local="yes">../include/System/ISystem.hpp</includes>
-    <includes local="yes">../include/System/System.hpp</includes>
-    <includes local="yes">../include/TextureManager.hpp</includes>
-    <includes local="yes">../include/Registry.hpp</includes>
-    <includes local="yes">../include/Event.hpp</includes>
-    <includes local="no">unistd.h</includes>
-    <includes local="no">string.h</includes>
-    <includes local="no">unordered_map</includes>
-    <includes local="no">fcntl.h</includes>
-    <includedby refid="Component_8cpp" local="yes">src/Component.cpp</includedby>
-    <incdepgraph>
-      <node id="2">
-        <label>../include/System/ISystem.hpp</label>
-      </node>
-      <node id="1">
-        <label>include/System/AnimationSystem.hpp</label>
-        <link refid="AnimationSystem_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-      </node>
-      <node id="10">
-        <label>fcntl.h</label>
-      </node>
-      <node id="8">
-        <label>string.h</label>
-      </node>
-      <node id="7">
-        <label>unistd.h</label>
-      </node>
-      <node id="3">
-        <label>../include/System/System.hpp</label>
-      </node>
-      <node id="6">
-        <label>../include/Event.hpp</label>
-      </node>
-      <node id="9">
-        <label>unordered_map</label>
-      </node>
-      <node id="5">
-        <label>../include/Registry.hpp</label>
-      </node>
-      <node id="4">
-        <label>../include/TextureManager.hpp</label>
-      </node>
-    </incdepgraph>
     <innerclass refid="classAnimationSystem" prot="public">AnimationSystem</innerclass>
     <briefdescription>
     </briefdescription>

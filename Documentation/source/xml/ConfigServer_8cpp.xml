@@ -2,65 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="ConfigServer_8cpp" kind="file" language="C++">
     <compoundname>ConfigServer.cpp</compoundname>
-    <includes refid="ConfigServer_8hpp" local="yes">ConfigServer.hpp</includes>
-    <includes refid="Global_8hpp" local="yes">Global.hpp</includes>
-    <incdepgraph>
-      <node id="2">
-        <label>ConfigServer.hpp</label>
-        <link refid="ConfigServer_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>SFML/Graphics.hpp</label>
-      </node>
-      <node id="1">
-        <label>src/ConfigServer.cpp</label>
-        <link refid="ConfigServer_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>string</label>
-      </node>
-      <node id="3">
-        <label>fstream</label>
-      </node>
-      <node id="8">
-        <label>Global.hpp</label>
-        <link refid="Global_8hpp_source"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>sstream</label>
-      </node>
-      <node id="7">
-        <label>iostream</label>
-      </node>
-      <node id="6">
-        <label>unordered_map</label>
-      </node>
-      <node id="10">
-        <label>stdio.h</label>
-      </node>
-    </incdepgraph>
       <sectiondef kind="func">
       <memberdef kind="function" id="ConfigServer_8cpp_1af0b11f3364a24e1824fe3064b2b46f09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -116,14 +57,6 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>ConfigServer</para>
-<para>This file provides functions to load and read server configuration.</para>
-<para>Functions:</para>
-<para><itemizedlist>
-<listitem><para>readFromConfig() Reads a config value for the given key. Takes key string. Returns value string.</para>
-</listitem><listitem><para>loadConfig() Loads the server config from a file. Takes config file path string. </para>
-</listitem></itemizedlist>
-</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

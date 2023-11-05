@@ -979,7 +979,6 @@
     <member refid="GameState_8hpp_1a7899b65f1ea0f655e4bbf8d2a5714285a7a10b5d68d31711288e1fe0fa17dbf4f" kind="enumvalue"><name>EXIT</name></member>
   </compound>
   <compound refid="Global_8hpp" kind="file"><name>Global.hpp</name>
-    <member refid="Global_8hpp_1ad27df8516d357659fb3181edcda549ab" kind="define"><name>FRAMERATE</name></member>
     <member refid="Global_8hpp_1a2e49c4cbfe9154a91188d813707eb47a" kind="variable"><name>configMap</name></member>
     <member refid="Global_8hpp_1aa06c86901886f7263efb113d87605801" kind="function"><name>tokenize</name></member>
   </compound>
@@ -999,8 +998,6 @@
     <member refid="Button_8hpp_1a783a78c94e512289d4352e03d695f165" kind="typedef"><name>ButtonConfig</name></member>
   </compound>
   <compound refid="LoadingScreen_8hpp" kind="file"><name>LoadingScreen.hpp</name>
-    <member refid="LoadingScreen_8hpp_1a04631564aaf4ca446af0debdfede6b95" kind="define"><name>ARROW_03_SIZE_X</name></member>
-    <member refid="LoadingScreen_8hpp_1ab2dc3ec193f68262ed8e6559405c7329" kind="define"><name>ARROW_03_SIZE_Y</name></member>
   </compound>
   <compound refid="RectangleButton_8hpp" kind="file"><name>RectangleButton.hpp</name>
   </compound>
@@ -1090,9 +1087,6 @@
     <member refid="EffectsFunctions_8hpp_1af71ed5cab18126c621d91e0ca1a29051" kind="variable"><name>EffectFunctionMap</name></member>
   </compound>
   <compound refid="FFTSystem_8hpp" kind="file"><name>FFTSystem.hpp</name>
-    <member refid="FFTSystem_8hpp_1a6b20d41d6252e9871430c242cb1a56e7" kind="define"><name>BUFFER_SIZE</name></member>
-    <member refid="FFTSystem_8hpp_1a0b3f425a91d67c1a3a4e284daaaaddd6" kind="define"><name>NB_BARS</name></member>
-    <member refid="FFTSystem_8hpp_1a4c544e3f70e04d6227858937ec6e6665" kind="define"><name>BIG_BUFFER</name></member>
     <member refid="FFTSystem_8hpp_1a75c2c660f3a713f6af43ca6e8e3cd683" kind="enum"><name>FFTState</name></member>
     <member refid="FFTSystem_8hpp_1a75c2c660f3a713f6af43ca6e8e3cd683aa5daf7f2ebbba4975d61dab1c40188c7" kind="enumvalue"><name>IDLE</name></member>
     <member refid="FFTSystem_8hpp_1a75c2c660f3a713f6af43ca6e8e3cd683ab638272ceeff54912f043465e9a28c9b" kind="enumvalue"><name>LOADED</name></member>

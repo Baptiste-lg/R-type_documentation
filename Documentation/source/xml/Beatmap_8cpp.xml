@@ -2,19 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="Beatmap_8cpp" kind="file" language="C++">
     <compoundname>Beatmap.cpp</compoundname>
-    <includes refid="Beatmap_8hpp" local="yes">Beatmap/Beatmap.hpp</includes>
-    <incdepgraph>
-      <node id="2">
-        <label>Beatmap/Beatmap.hpp</label>
-        <link refid="Beatmap_8hpp_source"/>
-      </node>
-      <node id="1">
-        <label>src/Beatmap/Beatmap.cpp</label>
-        <link refid="Beatmap_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-    </incdepgraph>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

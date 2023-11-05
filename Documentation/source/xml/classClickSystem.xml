@@ -3,7 +3,6 @@
   <compounddef id="classClickSystem" kind="class" language="C++" prot="public">
     <compoundname>ClickSystem</compoundname>
     <basecompoundref refid="classISystem" prot="public" virt="non-virtual">ISystem&lt; isClickable, Position &gt;</basecompoundref>
-    <includes refid="ClickableSystem_8hpp" local="no">ClickableSystem.hpp</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classClickSystem_1abe91c3241e1a34d3f55d54fbf2943843" prot="private" static="no" mutable="no">
         <type>sf::RenderWindow &amp;</type>
@@ -114,27 +113,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>ClickableSystem processes entities with <ref refid="structisClickable" kindref="compound">isClickable</ref> and <ref refid="structPosition" kindref="compound">Position</ref> components.</para>
-<para>It checks for mouse clicks within the entity&apos;s position/size. Applies a short cooldown before triggering clickable.onClick().</para>
-<para>This allows easily making UI elements and sprites clickable.</para>
-<para>Usage:<itemizedlist>
-<listitem><para>Give entities <ref refid="structisClickable" kindref="compound">isClickable</ref> and <ref refid="structPosition" kindref="compound">Position</ref> components.</para>
-</listitem><listitem><para>Implement onClick() function in <ref refid="structisClickable" kindref="compound">isClickable</ref>.</para>
-</listitem><listitem><para>System will check for clicks and call onClick().</para>
-</listitem></itemizedlist>
-</para>
-<para>Parameters:<itemizedlist>
-<listitem><para>window: Reference to the SFML window.</para>
-</listitem><listitem><para>registry: Reference to the ECS registry.</para>
-</listitem><listitem><para>deltaTime: Time elapsed since last tick.</para>
-</listitem></itemizedlist>
-</para>
-<para>Components used:<itemizedlist>
-<listitem><para><ref refid="structisClickable" kindref="compound">isClickable</ref>: Contains onClick() callback.</para>
-</listitem><listitem><para><ref refid="structPosition" kindref="compound">Position</ref>: Used to check click is within bounds.</para>
-</listitem><listitem><para><ref refid="structDrawable" kindref="compound">Drawable</ref> (optional): Used for width/height. </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">

@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="classzipper" kind="class" language="C++" prot="public">
     <compoundname>zipper</compoundname>
-    <includes refid="Zipper_8hpp" local="no">Zipper.hpp</includes>
     <templateparamlist>
       <param>
         <type>class...</type>
@@ -164,44 +163,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Zipper</para>
-<para>This class provides a zipper iterator to traverse multiple containers simultaneously.</para>
-<para>Methods:</para>
-<para><itemizedlist>
-<listitem><para><ref refid="classzipper" kindref="compound">zipper()</ref> Constructor that stores begin and end iterators for each container.</para>
-</listitem><listitem><para>begin() Returns a zipper iterator pointing to the beginning.</para>
-</listitem><listitem><para>end() Returns a zipper iterator pointing to the end.</para>
-</listitem></itemizedlist>
-</para>
-<para>Members:</para>
-<para><itemizedlist>
-<listitem><para>_begin Tuple of begin iterators for each container.</para>
-</listitem><listitem><para>_end Tuple of end iterators for each container.</para>
-</listitem><listitem><para>_size Size of the zipper sequence.</para>
-</listitem></itemizedlist>
-</para>
-<para>The <ref refid="classzipper__iterator" kindref="compound">zipper_iterator</ref> is declared as friend to allow accessing private members.</para>
-<para>ZipperIterator</para>
-<para>This class implements an iterator for the Zipper class to traverse multiple containers simultaneously.</para>
-<para>Methods:</para>
-<para><itemizedlist>
-<listitem><para>ZipperIterator() Constructs the iterator with begin tuple, max size, and index.</para>
-</listitem><listitem><para>operator++() Prefix increment. Increments index and all underlying iterators.</para>
-</listitem><listitem><para>operator++(int) Postfix increment.</para>
-</listitem><listitem><para>operator*() Dereference. Returns tuple of references to current elements.</para>
-</listitem><listitem><para>operator-&gt;() Arrow operator.</para>
-</listitem><listitem><para>operator==() Equality comparison. Compares indices.</para>
-</listitem><listitem><para>operator!=() Inequality comparison.</para>
-</listitem></itemizedlist>
-</para>
-<para>Members:</para>
-<para><itemizedlist>
-<listitem><para>_current Tuple of current iterators.</para>
-</listitem><listitem><para>_max Max size of the zipper.</para>
-</listitem><listitem><para>_idx Current index.</para>
-</listitem><listitem><para>_seq Integer sequence for template parameters. </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <location file="include/Zipper.hpp" line="51" column="1" bodyfile="include/Zipper.hpp" bodystart="51" bodyend="81"/>
     <listofallmembers>

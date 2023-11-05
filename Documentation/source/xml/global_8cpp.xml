@@ -2,39 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="global_8cpp" kind="file" language="C++">
     <compoundname>global.cpp</compoundname>
-    <includes refid="Global_8hpp" local="yes">Global.hpp</includes>
-    <incdepgraph>
-      <node id="3">
-        <label>SFML/Graphics.hpp</label>
-      </node>
-      <node id="1">
-        <label>src/global.cpp</label>
-        <link refid="global_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>Global.hpp</label>
-        <link refid="Global_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>iostream</label>
-      </node>
-      <node id="5">
-        <label>unordered_map</label>
-      </node>
-      <node id="4">
-        <label>stdio.h</label>
-      </node>
-    </incdepgraph>
       <sectiondef kind="var">
       <memberdef kind="variable" id="global_8cpp_1a2e49c4cbfe9154a91188d813707eb47a" prot="public" static="no" mutable="no">
         <type>std::unordered_map&lt; std::string, std::string &gt;</type>

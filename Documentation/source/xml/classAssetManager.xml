@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="classAssetManager" kind="class" language="C++" prot="public">
     <compoundname>AssetManager</compoundname>
-    <includes refid="TextureManager_8hpp" local="no">TextureManager.hpp</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classAssetManager_1a4602f08ea26e30dd391bad0560edce7d" prot="private" static="no" mutable="no">
         <type>std::unordered_map&lt; std::string, sf::Texture &gt;</type>
@@ -339,33 +338,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="TextureManager_8hpp_source" kindref="compound">TextureManager.hpp</ref> handles loading and managing game assets.</para>
-<para>Loads textures, sounds, fonts to be used by other game systems. Textures and sounds are reference counted and unloaded when no longer used.</para>
-<para>Usage:<itemizedlist>
-<listitem><para>GetTexture(), GetSound(), GetFont() to retrieve assets.</para>
-</listitem><listitem><para>LoadTexture(), LoadSound(), LoadFont() to load from files.</para>
-</listitem><listitem><para>UnloadTexture(), UnloadSound() to decrement ref count.</para>
-</listitem><listitem><para>PreloadTextures(), PreloadSounds() to load ahead of time.</para>
-</listitem></itemizedlist>
-</para>
-<para>Methods:<itemizedlist>
-<listitem><para>Load/Get methods to add and retrieve assets.</para>
-</listitem><listitem><para>Unload methods decrement ref count and remove.</para>
-</listitem><listitem><para>Preload methods load assets ahead of first use.</para>
-</listitem></itemizedlist>
-</para>
-<para>Members:<itemizedlist>
-<listitem><para>textures: Map of texture name to SFML texture.</para>
-</listitem><listitem><para>sounds: Map of sound name to SFML sound buffer.</para>
-</listitem><listitem><para>fonts: Map of font name to SFML font.</para>
-</listitem><listitem><para>refCount maps: Reference count for each asset.</para>
-</listitem></itemizedlist>
-</para>
-<para>Singleton pattern:<itemizedlist>
-<listitem><para>Private constructor, public static Instance() method.</para>
-</listitem><listitem><para>Ensures only one TextureManager instance. </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <location file="include/TextureManager.hpp" line="49" column="1" bodyfile="include/TextureManager.hpp" bodystart="49" bodyend="163"/>
     <listofallmembers>

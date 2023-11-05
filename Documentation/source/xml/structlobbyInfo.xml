@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="structlobbyInfo" kind="struct" language="C++" prot="public">
     <compoundname>lobbyInfo</compoundname>
-    <includes refid="MenuSystem_8hpp" local="no">MenuSystem.hpp</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structlobbyInfo_1ac5434b12669bc3df3832ac0a24d3282d" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -86,30 +85,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="classMenuSystem" kindref="compound">MenuSystem</ref> handles the game menu logic and UI.</para>
-<para>It loads menu assets and database. Spawns UI entities like buttons, panels, and backgrounds. Handles menu navigation and button callbacks. Triggers events on button clicks and menu actions. Transitions between menu screens.</para>
-<para>Usage:<itemizedlist>
-<listitem><para>Call InitializeMainMenu() and InitializeLobby() to set up menus.</para>
-</listitem><listitem><para>Implement button click handlers.</para>
-</listitem><listitem><para>Transition menus by setting <ref refid="structState" kindref="compound">State</ref> component&apos;s state enum.</para>
-</listitem></itemizedlist>
-</para>
-<para>Parameters:<itemizedlist>
-<listitem><para>registry: Reference to ECS registry.</para>
-</listitem><listitem><para>assetManager: Reference to asset manager.</para>
-</listitem></itemizedlist>
-</para>
-<para>Components used:<itemizedlist>
-<listitem><para><ref refid="structState" kindref="compound">State</ref>: Tracks current menu state.</para>
-</listitem><listitem><para><ref refid="structPosition" kindref="compound">Position</ref>: Used to position menu entities.</para>
-</listitem></itemizedlist>
-</para>
-<para>Events:<itemizedlist>
-<listitem><para>IndexMoved: Navigates between menu items.</para>
-</listitem><listitem><para><ref refid="classButton" kindref="compound">Button</ref> click events: Triggered by buttons.</para>
-</listitem><listitem><para><ref refid="structState" kindref="compound">State</ref> change events: Change menu screens. </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <location file="include/System/MenuSystem.hpp" line="44" column="1" bodyfile="include/System/MenuSystem.hpp" bodystart="44" bodyend="51"/>
     <listofallmembers>

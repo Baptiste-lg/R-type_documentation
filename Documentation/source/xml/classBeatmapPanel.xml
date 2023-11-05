@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="classBeatmapPanel" kind="class" language="C++" prot="public">
     <compoundname>BeatmapPanel</compoundname>
-    <includes refid="BeatmapPanel_8hpp" local="no">BeatmapPanel.hpp</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classBeatmapPanel_1a5d0444e2760840740794e2c77297f0aa" prot="private" static="no" mutable="no">
         <type>sf::Texture</type>
@@ -459,79 +458,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="classBeatmapPanel" kindref="compound">BeatmapPanel</ref></para>
-<para>This class represents a panel to display a beatmap&apos;s information.</para>
-<para>Public Methods:</para>
-<para><itemizedlist>
-<listitem><para><ref refid="classBeatmapPanel" kindref="compound">BeatmapPanel()</ref><itemizedlist>
-<listitem><para>Default constructor</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para><ref refid="classBeatmapPanel" kindref="compound">BeatmapPanel(texturePanel, textureArrowLeft, textureArrowRight, textureCover, position, res, beatmapConfig, fonts)</ref><itemizedlist>
-<listitem><para>Constructor with textures, position, resolution, beatmap config and font</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para>~BeatmapPanel()<itemizedlist>
-<listitem><para>Destructor</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para>draw()<itemizedlist>
-<listitem><para>Draws the panel</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para>setText()<itemizedlist>
-<listitem><para>Sets the text</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para>adjust()<itemizedlist>
-<listitem><para>Adjusts the panel</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para>adjustPanel()<itemizedlist>
-<listitem><para>Adjusts the panel sprite</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para>adjustCover()<itemizedlist>
-<listitem><para>Adjusts the cover sprite</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para>adjustGrade()<itemizedlist>
-<listitem><para>Adjusts the grade sprite</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para>adjustDifficulty()<itemizedlist>
-<listitem><para>Adjusts the difficulty</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para>getBeatmapName()<itemizedlist>
-<listitem><para>Gets the beatmap name</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para>getFolderPath()<itemizedlist>
-<listitem><para>Gets the beatmap folder path</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para>handleEvent()<itemizedlist>
-<listitem><para>Handles events</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para>Private Attributes:</para>
-<para><itemizedlist>
-<listitem><para>textures</para>
-</listitem><listitem><para>sprites</para>
-</listitem><listitem><para>buttons</para>
-</listitem><listitem><para>buttonConfigs</para>
-</listitem><listitem><para>texts</para>
-</listitem><listitem><para>difficultyUser</para>
-</listitem><listitem><para>position</para>
-</listitem><listitem><para>size</para>
-</listitem><listitem><para>textSize</para>
-</listitem><listitem><para>folderPath</para>
-</listitem><listitem><para>font </para>
-</listitem></itemizedlist>
-</para>
     </detaileddescription>
     <location file="include/GraphicElement/BeatmapPanel.hpp" line="82" column="1" bodyfile="include/GraphicElement/BeatmapPanel.hpp" bodystart="82" bodyend="119"/>
     <listofallmembers>

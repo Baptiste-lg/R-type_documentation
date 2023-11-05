@@ -2,18 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="Encode_8hpp" kind="file" language="C++">
     <compoundname>Encode.hpp</compoundname>
-    <includes local="no">cstdint</includes>
-    <incdepgraph>
-      <node id="2">
-        <label>cstdint</label>
-      </node>
-      <node id="1">
-        <label>include/Encode.hpp</label>
-        <link refid="Encode_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-    </incdepgraph>
       <sectiondef kind="func">
       <memberdef kind="function" id="Encode_8hpp_1a25cb6fe06f9bf9c334f4665b3f23b2eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; uint8_t &gt;</type>

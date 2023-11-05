@@ -2,52 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="Beatmap_8hpp" kind="file" language="C++">
     <compoundname>Beatmap.hpp</compoundname>
-    <includedby refid="BeatmapPanel_8hpp" local="yes">include/GraphicElement/BeatmapPanel.hpp</includedby>
-    <includedby refid="Beatmap_8cpp" local="yes">src/Beatmap/Beatmap.cpp</includedby>
-    <invincdepgraph>
-      <node id="5">
-        <label>include/ClientMain.hpp</label>
-        <link refid="ClientMain_8hpp_source"/>
-      </node>
-      <node id="3">
-        <label>include/Menu/Menu.hpp</label>
-        <link refid="Menu_8hpp_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>include/Beatmap/Beatmap.hpp</label>
-        <link refid="Beatmap_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>include/GUI/GUI.hpp</label>
-        <link refid="GUI_8hpp_source"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>include/ServerMain.hpp</label>
-        <link refid="ServerMain_8hpp_source"/>
-      </node>
-      <node id="7">
-        <label>include/taskLoader.hpp</label>
-        <link refid="taskLoader_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>include/GraphicElement/BeatmapPanel.hpp</label>
-        <link refid="BeatmapPanel_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-    </invincdepgraph>
     <innerclass refid="classBeatmap" prot="public">Beatmap</innerclass>
     <briefdescription>
     </briefdescription>

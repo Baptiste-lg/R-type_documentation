@@ -2,42 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="client_8cpp" kind="file" language="C++">
     <compoundname>client.cpp</compoundname>
-    <includes local="no">iostream</includes>
-    <includes local="no">cstring</includes>
-    <includes local="no">arpa/inet.h</includes>
-    <includes local="no">sys/socket.h</includes>
-    <includes local="no">unistd.h</includes>
-    <incdepgraph>
-      <node id="4">
-        <label>arpa/inet.h</label>
-      </node>
-      <node id="6">
-        <label>unistd.h</label>
-      </node>
-      <node id="2">
-        <label>iostream</label>
-      </node>
-      <node id="1">
-        <label>src/server/client/client.cpp</label>
-        <link refid="client_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>sys/socket.h</label>
-      </node>
-      <node id="3">
-        <label>cstring</label>
-      </node>
-    </incdepgraph>
       <sectiondef kind="func">
       <memberdef kind="function" id="client_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
