@@ -18,10 +18,3 @@ Welcome to R-type's documentation!
     usage
     classes
     instal
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
