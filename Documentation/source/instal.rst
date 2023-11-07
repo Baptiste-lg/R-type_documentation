@@ -1,4 +1,4 @@
-Full Documentation
+Index
 =====================
 
 .. doxygenindex::

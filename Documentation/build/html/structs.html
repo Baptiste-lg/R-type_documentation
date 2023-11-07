@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Structures &mdash; R-type 1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Headers" href="headers.html" />
+    <link rel="prev" title="Classes" href="classes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            R-type
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Classes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Structures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv412Acceleration"><code class="docutils literal notranslate"><span class="pre">Acceleration</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv49Animation"><code class="docutils literal notranslate"><span class="pre">Animation</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv48Behavior"><code class="docutils literal notranslate"><span class="pre">Behavior</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv414ButtonConfig_s"><code class="docutils literal notranslate"><span class="pre">ButtonConfig_s</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv46Client"><code class="docutils literal notranslate"><span class="pre">Client</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv49Collision"><code class="docutils literal notranslate"><span class="pre">Collision</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv412Controllable"><code class="docutils literal notranslate"><span class="pre">Controllable</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv411DeathEffect"><code class="docutils literal notranslate"><span class="pre">DeathEffect</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv45Depth"><code class="docutils literal notranslate"><span class="pre">Depth</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv48Drawable"><code class="docutils literal notranslate"><span class="pre">Drawable</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv45Enemy"><code class="docutils literal notranslate"><span class="pre">Enemy</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv45Event"><code class="docutils literal notranslate"><span class="pre">Event</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv43FFT"><code class="docutils literal notranslate"><span class="pre">FFT</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv49FFTActive"><code class="docutils literal notranslate"><span class="pre">FFTActive</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv48Follower"><code class="docutils literal notranslate"><span class="pre">Follower</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv410GameConfig"><code class="docutils literal notranslate"><span class="pre">GameConfig</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv46Health"><code class="docutils literal notranslate"><span class="pre">Health</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv46idSync"><code class="docutils literal notranslate"><span class="pre">idSync</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv47IsChild"><code class="docutils literal notranslate"><span class="pre">IsChild</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv411isClickable"><code class="docutils literal notranslate"><span class="pre">isClickable</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv45Laser"><code class="docutils literal notranslate"><span class="pre">Laser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv45lobby"><code class="docutils literal notranslate"><span class="pre">lobby</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv49lobbyInfo"><code class="docutils literal notranslate"><span class="pre">lobbyInfo</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv46MyRect"><code class="docutils literal notranslate"><span class="pre">MyRect</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv49MyVector2"><code class="docutils literal notranslate"><span class="pre">MyVector2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv47Network"><code class="docutils literal notranslate"><span class="pre">Network</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv48Position"><code class="docutils literal notranslate"><span class="pre">Position</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv48skinInfo"><code class="docutils literal notranslate"><span class="pre">skinInfo</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv47Spawner"><code class="docutils literal notranslate"><span class="pre">Spawner</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv410SpawnEvent"><code class="docutils literal notranslate"><span class="pre">SpawnEvent</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv45State"><code class="docutils literal notranslate"><span class="pre">State</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv412TextDrawable"><code class="docutils literal notranslate"><span class="pre">TextDrawable</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv49themeData"><code class="docutils literal notranslate"><span class="pre">themeData</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv49UserInput"><code class="docutils literal notranslate"><span class="pre">UserInput</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv415UserInputBuffer"><code class="docutils literal notranslate"><span class="pre">UserInputBuffer</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv48Velocity"><code class="docutils literal notranslate"><span class="pre">Velocity</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="headers.html">Headers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sources.html">Sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instal.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">R-type</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Structures</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/structs.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="structures">
+<h1>Structures<a class="headerlink" href="#structures" title="Link to this heading"></a></h1>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv412Acceleration">
+<span id="_CPPv312Acceleration"></span><span id="_CPPv212Acceleration"></span><span id="Acceleration"></span><span class="target" id="structAcceleration"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Acceleration</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv49Animation">
+<span id="_CPPv39Animation"></span><span id="_CPPv29Animation"></span><span id="Animation"></span><span class="target" id="structAnimation"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Animation</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv48Behavior">
+<span id="_CPPv38Behavior"></span><span id="_CPPv28Behavior"></span><span id="Behavior"></span><span class="target" id="structBehavior"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Behavior</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv414ButtonConfig_s">
+<span id="_CPPv314ButtonConfig_s"></span><span id="_CPPv214ButtonConfig_s"></span><span id="ButtonConfig_s"></span><span class="target" id="structButtonConfig__s"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ButtonConfig_s</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv46Client">
+<span id="_CPPv36Client"></span><span id="_CPPv26Client"></span><span id="Client"></span><span class="target" id="structClient"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Client</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv49Collision">
+<span id="_CPPv39Collision"></span><span id="_CPPv29Collision"></span><span id="Collision"></span><span class="target" id="structCollision"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Collision</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv412Controllable">
+<span id="_CPPv312Controllable"></span><span id="_CPPv212Controllable"></span><span id="Controllable"></span><span class="target" id="structControllable"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Controllable</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv411DeathEffect">
+<span id="_CPPv311DeathEffect"></span><span id="_CPPv211DeathEffect"></span><span id="DeathEffect"></span><span class="target" id="structDeathEffect"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DeathEffect</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv45Depth">
+<span id="_CPPv35Depth"></span><span id="_CPPv25Depth"></span><span id="Depth"></span><span class="target" id="structDepth"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Depth</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv48Drawable">
+<span id="_CPPv38Drawable"></span><span id="_CPPv28Drawable"></span><span id="Drawable"></span><span class="target" id="structDrawable"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Drawable</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv45Enemy">
+<span id="_CPPv35Enemy"></span><span id="_CPPv25Enemy"></span><span id="Enemy"></span><span class="target" id="structEnemy"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Enemy</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv45Event">
+<span id="_CPPv35Event"></span><span id="_CPPv25Event"></span><span id="Event"></span><span class="target" id="structEvent"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Event</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv43FFT">
+<span id="_CPPv33FFT"></span><span id="_CPPv23FFT"></span><span id="FFT"></span><span class="target" id="structFFT"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FFT</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv49FFTActive">
+<span id="_CPPv39FFTActive"></span><span id="_CPPv29FFTActive"></span><span id="FFTActive"></span><span class="target" id="structFFTActive"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FFTActive</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv48Follower">
+<span id="_CPPv38Follower"></span><span id="_CPPv28Follower"></span><span id="Follower"></span><span class="target" id="structFollower"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Follower</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv410GameConfig">
+<span id="_CPPv310GameConfig"></span><span id="_CPPv210GameConfig"></span><span id="GameConfig"></span><span class="target" id="structGameConfig"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GameConfig</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv46Health">
+<span id="_CPPv36Health"></span><span id="_CPPv26Health"></span><span id="Health"></span><span class="target" id="structHealth"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Health</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv46idSync">
+<span id="_CPPv36idSync"></span><span id="_CPPv26idSync"></span><span id="idSync"></span><span class="target" id="structidSync"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idSync</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv47IsChild">
+<span id="_CPPv37IsChild"></span><span id="_CPPv27IsChild"></span><span id="IsChild"></span><span class="target" id="structIsChild"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsChild</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv411isClickable">
+<span id="_CPPv311isClickable"></span><span id="_CPPv211isClickable"></span><span id="isClickable"></span><span class="target" id="structisClickable"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isClickable</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv45Laser">
+<span id="_CPPv35Laser"></span><span id="_CPPv25Laser"></span><span id="Laser"></span><span class="target" id="structLaser"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Laser</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv45lobby">
+<span id="_CPPv35lobby"></span><span id="_CPPv25lobby"></span><span id="lobby"></span><span class="target" id="structlobby"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lobby</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv49lobbyInfo">
+<span id="_CPPv39lobbyInfo"></span><span id="_CPPv29lobbyInfo"></span><span id="lobbyInfo"></span><span class="target" id="structlobbyInfo"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lobbyInfo</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv46MyRect">
+<span id="_CPPv36MyRect"></span><span id="_CPPv26MyRect"></span><span id="MyRect"></span><span class="target" id="structMyRect"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyRect</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv49MyVector2">
+<span id="_CPPv39MyVector2"></span><span id="_CPPv29MyVector2"></span><span id="MyVector2"></span><span class="target" id="structMyVector2"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyVector2</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv47Network">
+<span id="_CPPv37Network"></span><span id="_CPPv27Network"></span><span id="Network"></span><span class="target" id="structNetwork"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Network</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv48Position">
+<span id="_CPPv38Position"></span><span id="_CPPv28Position"></span><span id="Position"></span><span class="target" id="structPosition"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Position</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv48skinInfo">
+<span id="_CPPv38skinInfo"></span><span id="_CPPv28skinInfo"></span><span id="skinInfo"></span><span class="target" id="structskinInfo"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">skinInfo</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv47Spawner">
+<span id="_CPPv37Spawner"></span><span id="_CPPv27Spawner"></span><span id="Spawner"></span><span class="target" id="structSpawner"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Spawner</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv410SpawnEvent">
+<span id="_CPPv310SpawnEvent"></span><span id="_CPPv210SpawnEvent"></span><span id="SpawnEvent"></span><span class="target" id="structSpawnEvent"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SpawnEvent</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv45State">
+<span id="_CPPv35State"></span><span id="_CPPv25State"></span><span id="State"></span><span class="target" id="structState"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">State</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv412TextDrawable">
+<span id="_CPPv312TextDrawable"></span><span id="_CPPv212TextDrawable"></span><span id="TextDrawable"></span><span class="target" id="structTextDrawable"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TextDrawable</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv49themeData">
+<span id="_CPPv39themeData"></span><span id="_CPPv29themeData"></span><span id="themeData"></span><span class="target" id="structthemeData"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">themeData</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv49UserInput">
+<span id="_CPPv39UserInput"></span><span id="_CPPv29UserInput"></span><span id="UserInput"></span><span class="target" id="structUserInput"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UserInput</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv415UserInputBuffer">
+<span id="_CPPv315UserInputBuffer"></span><span id="_CPPv215UserInputBuffer"></span><span id="UserInputBuffer"></span><span class="target" id="structUserInputBuffer"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UserInputBuffer</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv48Velocity">
+<span id="_CPPv38Velocity"></span><span id="_CPPv28Velocity"></span><span id="Velocity"></span><span class="target" id="structVelocity"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Velocity</span></span></span><br /></dt>
+<dd></dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classes.html" class="btn btn-neutral float-left" title="Classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="headers.html" class="btn btn-neutral float-right" title="Headers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Jean-Cyprien, Titien, Louis, Sofiane, Baptiste.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

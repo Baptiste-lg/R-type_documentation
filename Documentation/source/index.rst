@@ -17,4 +17,13 @@ Welcome to R-type's documentation!
     Home <self>
     usage
     classes
+    structs
+    headers
+    sources
     instal
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`search`

@@ -1,5 +1,7 @@
 Classes
-=======
+========
+
+This section contains all the classes used in the R-type project.
 
 .. toctree::
    :maxdepth: 2

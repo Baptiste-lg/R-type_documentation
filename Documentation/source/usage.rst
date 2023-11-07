@@ -32,9 +32,3 @@ To launch the client application, use the following command:
 .. code-block:: bash
 
     ./ClientRtype
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
